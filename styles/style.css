@@ -1,0 +1,135 @@
+/* I am a CSS comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
+
+/*
+  It is possible
+  to write me across
+  multiple lines...
+*/
+
+/* ... or of course on a single line. */
+
+
+/*---------------------------------------------------------------------*/
+/*-- general --*/
+/*---------------------------------------------------------------------*/
+
+html {
+  font-size: 10px;
+  font-family: "Source Code Pro", monospace;
+  color: whitesmoke;
+  background-color: #1A1A1A;
+}
+
+body {
+  width: 800px;
+  width: calc(76% - 50px);
+  margin: 0 auto;
+  background-color: #2B2B2B;
+  padding: 0 30px 30px 30px;
+  border: 3px solid black;
+}
+
+/*---------------------------------------------------------------------*/
+/*-- styling --*/
+
+h1, h2, h3, h4, h5, h6 {
+  
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: #0FB55E;
+  text-shadow: 5px 5px 3px #1A1A1A;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 20px;
+  text-shadow: 4px 4px 2px #1A1A1A;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 40px 0 10px;
+  text-shadow: 2px 2px 1px #1A1A1A;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 20px 0 5px;
+  text-shadow: 1.5px 1.5px 0.5px #1A1A1A;    
+}
+
+h5, h6 {
+  font-size: 14px;
+  margin: 0;
+  padding: 20px 0 5px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: rotate(0.01turn);
+  width: 420px;
+}
+
+a {
+  color: #7CB7ED;
+}
+
+a:visited {
+
+}
+
+a:hover {
+  color: #0FB55E;
+}
+
+a:active{
+
+}
+
+a:
+
+strong {
+  color: #0FB55E;
+}
+
+ul {
+  list-style-type: square;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+div.headline {
+  display: flex;
+  justify-content: center;
+}
+
+p + blockquote {
+  font-size: 16px;
+}
