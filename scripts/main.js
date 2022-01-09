@@ -10,11 +10,22 @@
 
 
 
-// the JS code starts here:
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+// "actual" JS code starts below:
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------
+// main heading
+//---------------------------------------------------------------------
 
 const correctedHeading = document.querySelector('h1');
 correctedHeading.textContent = 'Hello, World!';
 
+//---------------------------------------------------------------------
+// click feature
 
 document.querySelector('h1').onclick = function() {
   alert('Ouch! Stop poking me!');
@@ -28,7 +39,9 @@ myHeadline1.onclick = function() {
 */
 
 
-// image and figure caption switcher code:
+//---------------------------------------------------------------------
+// image and figure caption switcher
+//---------------------------------------------------------------------
 
 let myImage = document.querySelector('img');
 let myCaption = document.querySelector('figcaption');
@@ -46,7 +59,9 @@ myImage.onclick = function() {
 }
 
 
-// personalised welcome message code:
+//---------------------------------------------------------------------
+// personalised welcome message
+//---------------------------------------------------------------------
 
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h2');

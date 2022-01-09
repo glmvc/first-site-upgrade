@@ -9,36 +9,90 @@
 /* ... or of course on a single line. */
 
 
+
+/*---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
+/*-- "actual" stylesheet starts below --*/
+/*---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
+
+
 /*---------------------------------------------------------------------*/
 /*-- general --*/
 /*---------------------------------------------------------------------*/
 
-html {
+:root {
+  --background-dark-grey: #121212;
+  --surface-dark-grey: rgba(255, 255, 255, 0.05); /* this works with rgb function too */
+  --onsurface-white: whitesmoke; /* color keyword (CSS identifier) */
+  --primary-green: #0FB55E;
+  --secondary-blue: #7CB7ED;
+
+}
+
+*, *::before, *::after { /* to inherit the alternative box model to all elements */
+  box-sizing: inherit;
+}
+
+html { /* type selector (also called tag or element selector) */
+  box-sizing: border-box; /* alternative box model */
   font-size: 10px;
   font-family: "Source Code Pro", monospace;
-  color: whitesmoke;
-  background-color: #1A1A1A;
+  font-weight: 400;
+  color: var(--onsurface-white);
+  background-color: var(--background-dark-grey);
 }
 
 body {
-  width: 800px;
-  width: calc(76% - 50px);
+  width: 1024px; /* fallback width */
+  width: 80vw; /* fallback width */
+  width: calc(80vw - 10px);
   margin: 0 auto;
-  background-color: #2B2B2B;
-  padding: 0 30px 30px 30px;
+  padding: 0 30px;
+  background: var(--surface-dark-grey);
   border: 3px solid black;
+  border-radius: 10px;
+  border-bottom-right-radius: 50px;
 }
+
 
 /*---------------------------------------------------------------------*/
 /*-- styling --*/
 
-h1, h2, h3, h4, h5, h6 {
-  
+h1, h2, h3, h4, h5, h6 { /* selector list on a single line */
+  color: var(--primary-green);
 }
 
 h1 {
+  display:inline; /* inline box (outer display type) */
+  text-align: center;;
   font-size: 60px;
+  text-shadow: 5px 5px 3px #1A1A1A;
+}
+
+h1:hover {
+  transform: rotate(-0.001turn);
+}
+
+h2 {
   text-align: center;
+  font-size: 40px;
+  text-shadow: 4px 4px 2px #1A1A1A;
+}
+
+h3 {
+  font-size: 20px;
+  text-shadow: 2px 2px 1px #1A1A1A;
+}
+
+h4 {
+  font-size: 16px;
+  text-shadow: 1.5px 1.5px 0.5px #1A1A1A;    
+}
+
+h5,
+h6 { /* selector list across 2 lines */
+  font-size: 14px;
 }
 
 p, li {
@@ -47,89 +101,195 @@ p, li {
   letter-spacing: 1px;
 }
 
-h1 {
-  color: #0FB55E;
-  text-shadow: 5px 5px 3px #1A1A1A;
+h3 ~ p { /* general sibling combinator */
+  color: lightgray;
 }
 
-h2 {
-  font-size: 40px;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0 20px;
-  text-shadow: 4px 4px 2px #1A1A1A;
+blockquote > p { /* child combinator */
+  font-size: 10px;
 }
 
-h3 {
-  font-size: 20px;
-  margin: 0;
-  padding: 40px 0 10px;
-  text-shadow: 2px 2px 1px #1A1A1A;
+p[lang="ja"] { /* attribute selector */
+  writing-mode: vertical-rl;
 }
 
-h4 {
-  font-size: 16px;
-  margin: 0;
-  padding: 20px 0 5px;
-  text-shadow: 1.5px 1.5px 0.5px #1A1A1A;    
+img + figcaption { /* adjacent sibling combinator */
+  padding-top: 20px;
 }
-
-h5, h6 {
-  font-size: 14px;
-  margin: 0;
-  padding: 20px 0 5px;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-img:hover {
-  transform: rotate(0.01turn);
-  width: 420px;
-}
-
-a {
-  color: #7CB7ED;
-}
-
-a:visited {
-
-}
-
-a:hover {
-  color: #0FB55E;
-}
-
-a:active{
-
-}
-
-a:
 
 strong {
-  color: #0FB55E;
+  color: var(--primary-green);
 }
+
+/* hyperlinks */
+
+a {
+  color: var(--secondary-blue);
+}
+
+a:hover { /* (user-action or dynamic) pseudo-class selector*/
+  text-decoration: none;
+  color: var(--primary-green);
+}
+
+a:active {
+  font-size: 105%;
+}
+
+a[href^="https://"]::after { /* (special) pseudo-element selector */
+  content: ""; /* empty string */
+  display: inline-block;
+  margin: 0 0 2px 3px;
+  height:10px;
+  width:10px;
+  background-image: url(../images/external-blue.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+a[target="_blank"]:hover::after {
+  background-image: url(../images/external-green.svg);
+}
+
+/* lists */
 
 ul {
   list-style-type: square;
 }
 
-nav ul {
+nav ul,
+aside ul { /* descendant combinators */
   list-style-type: none;
 }
 
-aside ul {
-  list-style-type: none;
-}
 
-div.headline {
-  display: flex;
+/*---------------------------------------------------------------------*/
+/*-- visuals --*/
+
+div.heading {
+  display: flex; /* inner display type = flex (outer display type = block) */
   justify-content: center;
 }
 
-p + blockquote {
-  font-size: 16px;
+img {
+  display: block; /* block box (outer display type) */
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: rotate(0.005turn);
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*-- table styling --*/
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  border: 3px solid black;
+  font-family: 'Orbitron', sans-serif;;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  background-color: black; /* fallback color */
+}
+
+caption {
+  padding: 10px;
+  text-align: right;
+  caption-side: bottom;
+}
+
+td,
+th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+tbody td {
+  text-align: center;
+}
+
+/* zebra striping */
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-- header --*/
+/*---------------------------------------------------------------------*/
+
+header {
+  min-width: 100%;
+  background: rgb(18,18,18);
+  background: radial-gradient(circle, rgba(18,18,18,0.052258403361344574) 0%, rgba(18,18,18,1) 100%);
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-- sidebar --*/
+/*---------------------------------------------------------------------*/
+
+aside > p {
+  writing-mode: vertical-rl;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-- footer --*/
+/*---------------------------------------------------------------------*/
+
+address iframe {
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: none;
+}
+
+
+button {
+  font-family : inherit;
+  font-size : 100%;
+}
+
+
+/* class selector */
+/* id selector */
+/* background-position */
+
+
+/*---------------------------------------------------------------------*/
+/*-- media queries --*/
+/*---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+/*-- light mode --*/
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+  }
 }

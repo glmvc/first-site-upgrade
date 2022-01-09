@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="glmvc">
+  <meta name="description" content="Changelog Of My Upgraded First Site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/changelog.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!--------------------------------------------------------------------->
+  <!-- header -->
+  <!--------------------------------------------------------------------->
+  <header>
+    <!--------------------------------------------------------------------->
+    <!-- SVG logo -->
+    <div class="svg-container">
+      <a href="index.html">
+        <svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="white"/>
+          <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0FB55E" stroke-width="22"/>
+          <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7CB7ED" stroke-width="22"/>
+          <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
+        </svg>
+      </a>
+    </div>
+    <!--------------------------------------------------------------------->
+    <!-- navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code.html">Source Code</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="first-site/index.html">Previous Version</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--------------------------------------------------------------------->
+  <!-- main -->
+  <!--------------------------------------------------------------------->
+  <main>
+    <!--------------------------------------------------------------------->
+    <!-- sidebar -->
+    <aside>
+      <p>Visit my</p>
+      <ul>
+        <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025;GitHub profile</a></li>
+        <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038;Twitter profile</a></li>
+      </ul>
+    </aside>
+    <!--------------------------------------------------------------------->
+    <!-- actual content -->
+    <section class="changelog">
+      <h1>&#128203;Changelog</h1>
+      <h3>&#9881;General</h3>
+
+<ul>
+<li> Space (Tab-Size) changed from 4 to 2 spaces (personal preference)</li>
+
+<li> HTML, CSS and JavaScript comments explained in more detail</li>
+
+<li> Code structures improved with comments and "separators"</li>
+</ul>
+
+<hr />
+
+<h3 id="html">HTML</h3>
+
+<ul>
+<li> HTML document language set to English (US): &lt;html lang=&quot;en-US&quot;&gt;</li>
+
+<li> Meta description and author set within the head: &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt; &amp; &lt;meta name=&quot;description&quot; content=&quot;My Upgraded First Site&quot;&gt;</li>
+
+<li> Document title changed to &quot;My Upgraded First Site&quot; within the head: &lt;title&gt;My Upgraded First Site&lt;/title&gt;</li>
+
+<li> Favicon set within the head: &lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;</li>
+
+<li> Script loading strategy changed and the script element is know within the head: &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;</li>
+
+<li> Outgoing hyperlinks changed so that they open in a new tab instead of the current one: target=&quot;_blank&quot; attribute</li>
+
+<li> Title attribute added to hyperlinks and the image so hovering over them will open a descriptive tooltip: title=&quot;description&quot; attribute</li>
+
+<li> A video added to the main content (with fallback video): &lt;video controls muted autoplay loop preload="auto" width="400"&gt;</li>
+
+<li> Figure and figure caption added to the image and video: &lt;figure&gt;; &lt;figcaption&gt;</li>
+
+<li> Quotations and citation added: &lt;blockquote&gt;; &lt;q&gt;; cite attribute; &lt;cite&gt;</li>
+
+<li> Description list added to introduce HTML, CSS and JS: &lt;dl&gt;; &lt;dt&gt;; &lt;dd&gt;</li>
+
+<li> Nested unordered list added</li>
+
+<li> Abbreviations added to abbreviate HTML, CSS and JS: &lt;abbr&gt;</li>
+
+<li> Character entity references added instead of HTML syntax characters: &amp;amp; &amp;apos; &amp;quot; &amp;lt; &amp;gt;</li>
+
+<li> Emojis added with character references: &amp;#128025; &amp;#128038;</li>
+
+<li> Header (with navigation), main (with sections &amp; sidebar) and footer structuring added: &lt;header&gt;; &lt;nav&gt;; &lt;main&gt;; &lt;section&gt;; &lt;aside&gt;; &lt;footer&gt;</li>
+
+<li> Horizontal rules added to divide the sections: &lt;hr&gt;</li>
+
+<li> Line breaks added to make paragraphs easier to read: &lt;br&gt;</li>
+
+<li> SVG logo added inline to the header (with hyperlink): &lt;svg&gt;&lt;/svg&gt;</li>
+
+<li> Social Media profiles with links added to the sidebar</li>
+
+<li> A complex table about planet data added: &lt;table&gt;&lt;/table&gt;</li>
+
+<li> Further sources attached to the ordered list</li>
+
+<li> A soundtrack added to the footer (with fallback audio): &lt;audio controls loop preload="auto"&gt;</li>
+
+<li> Fake contact details added to the footer: &lt;address&gt;; href=&quot;tel:...&quot; &amp; href=&quot;mailto:...&quot; attributes</li>
+
+<li> Iframe for a map (from OpenStreetMap) added to the footer: &lt;iframe&gt;</li>
+
+<li> Superscript added for the birthdate of the page within the footer: &lt;sup&gt;</li>
+
+<li> Subscript added for the chemical formula within the footer: &lt;sub&gt;</li>
+
+<li> A Japanese sentence added within the footer and language attribute set to Japanese: lang=&quot;ja&quot; attribute</li>
+
+<li> Date and time added for the last update and the birthdate of the page within the footer: &lt;time datetime=&quot;YYYY-MM-ddThh:mm&quot;&gt;&lt;/time&gt;</li>
+
+<li> Textual content adjusted to the changes</li>
+
+<li> Code blocks added to the created source code page (code.html): (code, pre, var, kbd, samp)</li>
+
+<li> Accessibility aspects changed and added where they were missing</li>
+</ul>
+
+<hr />
+
+<h3 id="css">CSS</h3>
+
+<ul>
+<li> External stylesheet, internal stylesheet and inline styling added to demonstrate it</li>
+
+<li> Standard box model (content-box) changed to alternative box model for all elements in the document: box-sizing:border-box;</li>
+
+<li> Global colors changed with variables</li>
+
+<li> Type (tag/element), class and ID selectors now in use</li>
+
+<li> Selector lists now in use</li>
+
+<li> Descendant, child, adjacent and general sibling combinators now in use</li>
+
+<li> Links styled with pseudo-class selectors</li>
+
+<li> SVG icon attached to external links with an attribute selector (if link starts with "https://") and a special pseudo-element selector: a[href^="https://"]::after</li>
+
+<li> Default margin &amp; padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector: *{margin:0;padding:0}</li>
+
+<li> Main heading (&lt;h1&gt;) set as inline box (outer display type) so that the click function really only affects the text and not the full width: display:inline;</li>
+
+<li> Main heading (&lt;h1&gt;) wrapped in a div container to center it with an inner display type: display:flex; justify-content:center;</li>
+
+<li> Subheading (&lt;h2&gt;) color set to whitesmoke with inline styling: style="color:whitesmoke;"</li>
+
+<li> Calc function added to the width of the body: width:calc(80% - 50px);</li>
+
+<li> Fallback width added for browsers that do not support the calc function: width:850px;</li>
+
+<li> Image and main heading (&lt;h1&gt;) will now rotate a bit on hover: transform: rotate(0.005turn); transform: rotate(-0.001turn);</li>
+
+<li> add background-image gradient</li>
+
+<li> add rgba color value</li>
+
+<li> Figure and figure caption styled</li>
+
+<li> Table styled</li>
+
+<li> Lists styled (ordered, unordered and description lists)</li>
+
+<li> Button styled</li>
+
+<li> The page is now full responsive (with media queries)</li>
+</ul>
+
+<hr />
+
+<h3 id="javascript">JavaScript</h3>
+
+<ul>
+<li> Figure caption also changing accordingly on clicking the image</li>
+
+<li> Birthday Banner added to show on December 6 every year</li>
+
+<li> Last edited date and time is now updating automatically</li>
+</ul>
+    </section>
+  </main>
+  <!--------------------------------------------------------------------->
+  <!-- footer -->
+  <!--------------------------------------------------------------------->
+  <footer>
+    <!--------------------------------------------------------------------->
+    <!-- additional page feature -->
+    <h6>Enhance your coding senses:</h6>
+    <figure>
+      <audio controls loop preload="auto">
+        <source src="audios/cyberpunk.mp3" type="audio/mp3">
+        <source src="audios/cyberpunk.ogg" type="audio/ogg">
+        <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
+      </audio>
+      <figcaption>A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
+    </figure>
+    <!--------------------------------------------------------------------->
+    <!-- contact details -->
+    <address>
+      <p>
+        secret street 1<br>
+        secret city<br>
+        secret country
+      </p>
+      <p><a href="tel:+1234567890">123-456-7890</a></p>
+      <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
+      <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;layer=cyclemap"></iframe>
+    </address>
+    <!--------------------------------------------------------------------->
+    <!-- random info -->
+    <p>The page's birthday is on the <time datetime="2021-12-06"></time>6<sup>th</sup> of December 2021</time>.</p>
+    <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+    <p lang="ja">このページはご飯としていいです。</p>
+    <p>Last edited <time datetime="2021-12-31T19:30">at 7.30pm on December 31, 2021</time>.</p>
+  </footer>
+</body>
+</html>

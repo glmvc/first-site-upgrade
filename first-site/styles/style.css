@@ -1,0 +1,79 @@
+/* i am a comment (a browser ignores comments as it renders the code) */
+
+html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+    font-family: "Source Code Pro", monospace; /* from google fonts */
+    color: whitesmoke;
+    background-color: #1A1A1A;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p, li {
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+body {
+    width: 800px; /* forces body to always be 800px */
+    margin: 0 auto; /* first value: top & bottom; second value: left & right (2 values order) */
+    background-color: #2B2B2B;
+    padding: 0 30px 30px 30px; /* 4 values order: top, right, bottom, left = clockwise (for margin the same logic) */
+    border: 3px solid black; /* values for: width, style and color of the border */
+}
+
+h1 {
+    color: #0FB55E;
+    margin: 0; /* 1 value order: all four sides */
+    padding: 20px 0 5px; /* 3 values order: top, right & left, bottom */
+    text-shadow: 5px 5px 3px #1A1A1A; /* 1. horizontal offset; 2. vertical offset; 3. blur radius 4. color */
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0 20px;
+    text-shadow: 4px 4px 2px #1A1A1A;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 40px 0 10px;
+    text-shadow: 2px 2px 1px #1A1A1A;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 0;
+    padding: 20px 0 5px;
+    text-shadow: 1.5px 1.5px 0.5px #1A1A1A;    
+}
+
+h5, h6 {
+    font-size: 14px;
+    margin: 0;
+    padding: 20px 0 5px;
+}
+
+img {
+    display: block; /* images are inline elements -> give them block-level behaviour to make the auto margin trick working */
+    margin: 0 auto;
+}
+
+a {
+    color: #7CB7ED;
+}
+
+a:hover {
+    color: #0FB55E;
+}
+
+strong {
+    color: #0FB55E;
+}

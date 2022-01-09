@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="glmvc">
+  <meta name="description" content="Source Code Of My Upgraded First Site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Source Code</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/code.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!--------------------------------------------------------------------->
+  <!-- header -->
+  <!--------------------------------------------------------------------->
+  <header>
+    <!--------------------------------------------------------------------->
+    <!-- SVG logo -->
+    <div class="svg-container">
+      <a href="index.html">
+        <svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="white"/>
+          <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0FB55E" stroke-width="22"/>
+          <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7CB7ED" stroke-width="22"/>
+          <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
+        </svg>
+      </a>
+    </div>
+    <!--------------------------------------------------------------------->
+    <!-- navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code.html">Source Code</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="first-site/index.html">Previous Version</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--------------------------------------------------------------------->
+  <!-- main -->
+  <!--------------------------------------------------------------------->
+  <main>
+    <!--------------------------------------------------------------------->
+    <!-- sidebar -->
+    <aside>
+      <p>Visit my</p>
+      <ul>
+        <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025;GitHub profile</a></li>
+        <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038;Twitter profile</a></li>
+      </ul>
+    </aside>
+    <!--------------------------------------------------------------------->
+    <!-- actual content divided into sections -->
+    <section class="html-code">
+<pre>
+<code>
+&lt;!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. --&gt;
+
+&lt;!--
+  It is possible
+  to write me across
+  multiple lines...
+--&gt;
+
+&lt;!-- ... or of course on a single line. --&gt;
+
+
+
+&lt;!---------------------------------------------------------------------&gt;
+&lt;!---------------------------------------------------------------------&gt;
+&lt;!-- &quot;actual&quot; document starts below --&gt;
+&lt;!---------------------------------------------------------------------&gt;
+&lt;!---------------------------------------------------------------------&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;!-- new meta data --&gt;
+  &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;My Upgraded First Site&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My Upgraded First Site&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Code+Pro&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/style.css&quot;&gt; &lt;!-- mainly external stylesheet in use for styling --&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
+  &lt;!-- to demonstrate the internal stylesheet --&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  &lt;/style&gt;
+  &lt;!-- new script loading method --&gt;
+  &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;!-- header --&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;header&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- new SVG logo --&gt;
+    &lt;div class=&quot;svg-container&quot;&gt;
+      &lt;a href=&quot;https://glmvc.github.io/first-site-upgrade/&quot;&gt;
+        &lt;svg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 276 255&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+          &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z&quot; fill=&quot;white&quot;/&gt;
+          &lt;path d=&quot;M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11&quot; stroke=&quot;#0FB55E&quot; stroke-width=&quot;22&quot;/&gt;
+          &lt;path d=&quot;M11 143.531V243.063H56.9375V220.094&quot; stroke=&quot;#7CB7ED&quot; stroke-width=&quot;22&quot;/&gt;
+          &lt;path d=&quot;M11 128.219V44H56.9375V204.781&quot; stroke=&quot;whitesmoke&quot; stroke-width=&quot;22&quot;/&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- new navigation --&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Source Code&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://github.com/glmvc/first-site-upgrade/blob/main/changelog.md&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://glmvc.github.io/first-site/&quot;&gt;Previous Version&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;!-- main --&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;main&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- new sidebar --&gt;
+    &lt;aside&gt;
+      &lt;p&gt;Visit my&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;https://github.com/glmvc&quot; title=&quot;My Github profile&quot; target=&quot;_blank&quot;&gt;&amp;#128025;GitHub profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://twitter.com/glmvc&quot; title=&quot;My Twitter profile&quot; target=&quot;_blank&quot;&gt;&amp;#128038;Twitter profile&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- actual content divided into sections --&gt;
+    &lt;section class=&quot;greeting&quot;&gt;
+      &lt;div class=&quot;headline&quot;&gt;&lt;h1 style=&quot;display:inline-block;&quot;&gt;hello world!&lt;/h1&gt;&lt;/div&gt; &lt;!-- just to demonstrate inline styling --&gt;
+      &lt;h2&gt;Nice to meet you!&lt;/h2&gt;
+      &lt;figure&gt;
+        &lt;img src=&quot;images/hello-world.png&quot; alt=&quot;A cartoon view of the earth saying hello and the moon&quot; title=&quot;I feel a bit wonky somehow O_o&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;
+        &lt;figcaption&gt;The earth saying hello and the moon (image downloaded from &lt;a href=&quot;https://openclipart.org/detail/190952/hello-world&quot; title=&quot;Open Clipart image source&quot; target=&quot;_blank&quot;&gt;Open Clipart&lt;/a&gt;)&lt;/figcaption&gt;
+      &lt;/figure&gt;
+      &lt;hr&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;hello-world-program&quot;&gt;
+      &lt;h3&gt;&quot;Hello, World!&quot; program&lt;/h3&gt;
+      &lt;p&gt;According to the &lt;a href=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot; title=&apos;Wikipedia entry about the &quot;Hello, World!&quot; program&apos; target=&quot;_blank&quot;&gt;&lt;cite&gt;Wikipedia article on the &quot;Hello, World!&quot; program&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;
+      &lt;blockquote cite=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot;&gt;
+        A &quot;Hello, World!&quot; program generally is a computer program that outputs or displays the message &quot;Hello, World!&quot;.&lt;br&gt;
+        Such a program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming language. It is often the first program written by people learning to code.&lt;br&gt;
+        It can also be used as a sanity test to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
+      &lt;/blockquote&gt;
+      &lt;figure&gt;
+        &lt;video controls muted autoplay loop preload=&quot;auto&quot; width=&quot;400&quot;&gt;
+          &lt;source src=&quot;videos/hello-world.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;source src=&quot;videos/hello-world.webm&quot; type=&quot;video/webm&quot;&gt;
+          &lt;p&gt;Your browser doesn&apos;t support HTML 5 video. Here is a &lt;a href=&quot;videos/hello-world.mp4&quot;&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
+        &lt;/video&gt;
+        &lt;figcaption&gt;A &quot;Hello world!&quot; terminal output (video downloaded from &lt;a href=&quot;https://pixabay.com/de/videos/hello-world-pc-retro-monitor-28320/&quot; title=&quot;Pixabay video source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
+      &lt;/figure&gt;
+      &lt;hr&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;web-dev&quot;&gt;
+      &lt;h3&gt;Web development: 3 components&lt;/h3&gt;
+      &lt;p&gt;
+        The following description is a very simple example and is especially good for beginners to get to know the three most important components of front-end web development. Note that web development is a much larger field.&lt;br&gt;
+        Imagine building a house:&lt;/p&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/dt&gt;
+        &lt;dd&gt;The basic structure of the house. So, constructing the foundation walls, perhaps a basement and installing doors, windows and the roof.&lt;/dd&gt;
+        &lt;dt&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/dt&gt;
+        &lt;dd&gt;The look of the house. So, painting the walls in nice colors, turning the roof red and painting the windows and doors with a light wood finish.&lt;/dd&gt;
+        &lt;dt&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/dt&gt;
+        &lt;dd&gt;The functionality of the house. So, installing a doorbell, laying electricity and water pipes and installing all the appliances such as telephones, TVs or the kitchen stove.&lt;/dd&gt;
+      &lt;/dl&gt;
+      &lt;h4&gt;HTML is not a programming language&lt;/h4&gt;
+      &lt;p&gt;
+        &lt;q cite=&quot;https://en.wikipedia.org/wiki/HTML&quot;&gt;&lt;strong&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/strong&gt; is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as&lt;/q&gt;
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;a stylesheet language like &lt;strong&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/strong&gt;
+          &lt;ul&gt;
+            &lt;li&gt;also not a programming language&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;and scripting languages such as &lt;strong&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/strong&gt;.
+          &lt;ul&gt;
+            &lt;li&gt;a programming language&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;hr&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;planet-table&quot;&gt;
+      &lt;h3&gt;Planets&lt;/h3&gt;
+      &lt;p&gt;To honor the other planets in our solar system as well, not just our own world.&lt;/p&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Data about the planets of our solar system (Planetary facts taken from &lt;a href=&quot;http://nssdc.gsfc.nasa.gov/planetary/factsheet/&quot; title=&quot;NASA planetary factsheet&quot; target=&quot;_blank&quot;&gt;Nasa&apos;s Planetary Fact Sheet - Metric&lt;/a&gt;).&lt;/caption&gt;
+        &lt;colgroup&gt;
+          &lt;col span=&quot;2&quot;&gt;
+          &lt;col style=&quot;border-left:2px solid black;border-right:2px solid black&quot;&gt;
+          &lt;col span=&quot;9&quot;&gt;
+        &lt;/colgroup&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Mass (10&lt;sup&gt;24&lt;/sup&gt;kg)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Diameter (km)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Density (kg/m&lt;sup&gt;3&lt;/sup&gt;)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Gravity (m/s&lt;sup&gt;2&lt;/sup&gt;)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Length of day (hours)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Distance from Sun (10&lt;sup&gt;6&lt;/sup&gt;km)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Mean temperature (°C)&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Number of moons&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Notes&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tfoot&gt;
+          &lt;td colspan=&quot;12&quot;&gt;Please do NOT ask why the sun is not listed!&lt;br&gt;That would hurt its feelings and also mine...&lt;/td&gt;
+        &lt;/tfoot&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot; rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Terrestrial planets&lt;/th&gt;
+            &lt;th scope=&quot;row&quot;&gt;Mercury&lt;/th&gt;
+            &lt;td&gt;0.330&lt;/td&gt;
+            &lt;td&gt;4,879&lt;/td&gt;
+            &lt;td&gt;5427&lt;/td&gt;
+            &lt;td&gt;3.7&lt;/td&gt;
+            &lt;td&gt;4222.6&lt;/td&gt;
+            &lt;td&gt;57.9&lt;/td&gt;
+            &lt;td&gt;167&lt;/td&gt;
+            &lt;td&gt;0&lt;/td&gt;
+            &lt;td&gt;The shrinking planet closest to the Sun&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Venus&lt;/th&gt;
+            &lt;td&gt;4.87&lt;/td&gt;
+            &lt;td&gt;12,104&lt;/td&gt;
+            &lt;td&gt;5243&lt;/td&gt;
+            &lt;td&gt;8.9&lt;/td&gt;
+            &lt;td&gt;2802.0&lt;/td&gt;
+            &lt;td&gt;108.2&lt;/td&gt;
+            &lt;td&gt;464&lt;/td&gt;
+            &lt;td&gt;0&lt;/td&gt;
+            &lt;td&gt;The most hellish and hottest planet&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Earth&lt;/th&gt;
+            &lt;td&gt;5.97 &lt;/td&gt;
+            &lt;td&gt;12,756&lt;/td&gt;
+            &lt;td&gt;5514&lt;/td&gt;
+            &lt;td&gt;9.8&lt;/td&gt;
+            &lt;td&gt;24.0&lt;/td&gt;
+            &lt;td&gt;149.6&lt;/td&gt;
+            &lt;td&gt;15&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Our world&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Mars&lt;/th&gt;
+            &lt;td&gt;0.642&lt;/td&gt;
+            &lt;td&gt;6,792&lt;/td&gt;
+            &lt;td&gt;3933&lt;/td&gt;
+            &lt;td&gt;3.7&lt;/td&gt;
+            &lt;td&gt;24.7&lt;/td&gt;
+            &lt;td&gt;227.9&lt;/td&gt;
+            &lt;td&gt;-65&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;The red planet aka Elon&apos;s planet&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Jovian planets&lt;/th&gt;
+            &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Gas giants&lt;/th&gt;
+            &lt;th scope=&quot;row&quot;&gt;Jupiter&lt;/th&gt;
+            &lt;td&gt;1898&lt;/td&gt;
+            &lt;td&gt;142,984&lt;/td&gt;
+            &lt;td&gt;1326&lt;/td&gt;
+            &lt;td&gt;23.1&lt;/td&gt;
+            &lt;td&gt;9.9&lt;/td&gt;
+            &lt;td&gt;778.6&lt;/td&gt;
+            &lt;td&gt;-110&lt;/td&gt;
+            &lt;td&gt;67&lt;/td&gt;
+            &lt;td&gt;The largest planet&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Saturn&lt;/th&gt;
+            &lt;td&gt;568&lt;/td&gt;
+            &lt;td&gt;120,536&lt;/td&gt;
+            &lt;td&gt;687&lt;/td&gt;
+            &lt;td&gt;9.0&lt;/td&gt;
+            &lt;td&gt;10.7&lt;/td&gt;
+            &lt;td&gt;1433.5&lt;/td&gt;
+            &lt;td&gt;-140&lt;/td&gt;
+            &lt;td&gt;62&lt;/td&gt;
+            &lt;td&gt;The planet with the &quot;rings&quot;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Ice giants&lt;/th&gt;
+            &lt;th scope=&quot;row&quot;&gt;Uranus&lt;/th&gt;
+            &lt;td&gt;86.8 &lt;/td&gt;
+            &lt;td&gt;51,118&lt;/td&gt;
+            &lt;td&gt;1271&lt;/td&gt;
+            &lt;td&gt;8.7&lt;/td&gt;
+            &lt;td&gt;17.2&lt;/td&gt;
+            &lt;td&gt;2872.5&lt;/td&gt;
+            &lt;td&gt;-195&lt;/td&gt;
+            &lt;td&gt;27&lt;/td&gt;
+            &lt;td&gt;The planet that is pronounced funny.&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Neptun&lt;/th&gt;
+            &lt;td&gt;102&lt;/td&gt;
+            &lt;td&gt;49,528 &lt;/td&gt;
+            &lt;td&gt;1638&lt;/td&gt;
+            &lt;td&gt;11.0&lt;/td&gt;
+            &lt;td&gt;16.1&lt;/td&gt;
+            &lt;td&gt;4495.1&lt;/td&gt;
+            &lt;td&gt;-200&lt;/td&gt;
+            &lt;td&gt;14&lt;/td&gt;
+            &lt;td&gt;The planet very far out&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Dwarf planets*&lt;/th&gt;
+            &lt;th scope=&quot;row&quot;&gt;Pluto&lt;/th&gt;
+            &lt;td&gt;0.0146&lt;/td&gt;
+            &lt;td&gt;2,370&lt;/td&gt;
+            &lt;td&gt;2095&lt;/td&gt;
+            &lt;td&gt;0.7&lt;/td&gt;
+            &lt;td&gt;153.3&lt;/td&gt;
+            &lt;td&gt;5906.4&lt;/td&gt;
+            &lt;td&gt;-225&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;Declassified as a planet in 2006, but this &lt;a href=&quot;http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/&quot; title=&quot;Article about Pluto and why he may actually be a planet&quot; target=&quot;_blank&quot;&gt;remains controversial&lt;/a&gt;.&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;hr&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;sources&quot;&gt;
+      &lt;h5&gt;Sources:&lt;/h5&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Created along with the great learning resource &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer&quot; title=&quot;MDN&amp;apos;s front-end web developer learning pathway&quot; target=&quot;_blank&quot;&gt;&amp;quot;front-end web developer learning pathway&amp;quot;&lt;/a&gt; from the &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; title=&quot;MDN homepage&quot; target=&quot;_blank&quot;&gt;MDN Web Docs&lt;/a&gt; (previously Mozilla Developer Network &amp;amp; formerly Mozilla Developer Center).&lt;/li&gt;
+        &lt;li&gt;Definitions: &lt;a href=&quot;https://wikipedia.org/&quot; title=&quot;Wikipedia homepage&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Favicon: &lt;a href=&quot;https://twemoji.twitter.com/&quot; title=&quot;Twitter emojis&quot; target=&quot;_blank&quot;&gt;Twemoji&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Image: &lt;a href=&quot;https://openclipart.org/&quot; title=&quot;Openclipart homepage&quot; target=&quot;_blank&quot;&gt;Openclipart&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Video and Audio: &lt;a href=&quot;https://pixabay.com/&quot; title=&quot;Pixabay homepage&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Planet data: &lt;a href=&quot;https://www.nasa.gov/&quot; title=&quot;NASA homepage&quot; target=&quot;_blank&quot;&gt;NASA&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;Map: &lt;a href=&quot;https://www.openstreetmap.org/&quot; title=&quot;OpenStreetMap homepage&quot; target=&quot;_blank&quot;&gt;OpenStreetMap&lt;/a&gt;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;!-- footer --&gt;
+  &lt;!---------------------------------------------------------------------&gt;
+  &lt;footer&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- additional page features --&gt;
+    &lt;h6&gt;Change your name:&lt;/h6&gt;
+    &lt;button&gt;Change user&lt;/button&gt;
+    &lt;h6&gt;Enhance your coding senses:&lt;/h6&gt;
+    &lt;figure&gt;
+      &lt;audio controls loop preload=&quot;auto&quot;&gt;
+        &lt;source src=&quot;audios/cyberpunk.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+        &lt;source src=&quot;audios/cyberpunk.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+        &lt;p&gt;Your browser doesn&apos;t support HTML 5 audio. Here is a &lt;a href=&quot;audios/cyberpunk.mp3&quot;&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
+      &lt;/audio&gt;
+      &lt;figcaption&gt;A cyberpunk soundtrack (audio downloaded from &lt;a href=&quot;https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/&quot; title=&quot;Pixabay audio source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- contact details --&gt;
+    &lt;address&gt;
+      &lt;p&gt;
+        secret street 1&lt;br&gt;
+        secret city&lt;br&gt;
+        secret country
+      &lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;tel:+1234567890&quot;&gt;123-456-7890&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;mailto:mail@example.com?subject=This%20is%20the%20subject&quot;&gt;secret@example.com&lt;/a&gt;&lt;/p&gt;
+      &lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;amp;layer=cyclemap&quot;&gt;&lt;/iframe&gt;
+    &lt;/address&gt;
+    &lt;!---------------------------------------------------------------------&gt;
+    &lt;!-- random infos --&gt;
+    &lt;p&gt;The page&apos;s birthday is on the &lt;time datetime=&quot;2021-12-06&quot;&gt;&lt;/time&gt;6&lt;sup&gt;th&lt;/sup&gt; of December 2021&lt;/time&gt;.&lt;/p&gt;
+    &lt;p&gt;Coders usually love coffee &amp;#10084; Brew yourself some coffee with the chemical formula of caffeine: C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
+    &lt;p lang=&quot;ja&quot;&gt;このページはご飯としていいです。&lt;/p&gt;
+    &lt;p&gt;Last edited &lt;time datetime=&quot;2021-12-31T19:30&quot;&gt;at 7.30pm on December 31, 2021&lt;/time&gt;.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+      <hr>
+    </section>
+    <section class="css-code">
+      
+      <hr>
+    </section>
+    <section class="js-code">
+      
+    </section>
+  </main>
+  <!--------------------------------------------------------------------->
+  <!-- footer -->
+  <!--------------------------------------------------------------------->
+  <footer>
+    <!--------------------------------------------------------------------->
+    <!-- additional page feature -->
+    <h6>Enhance your coding senses:</h6>
+    <figure>
+      <audio controls loop preload="auto">
+        <source src="audios/cyberpunk.mp3" type="audio/mp3">
+        <source src="audios/cyberpunk.ogg" type="audio/ogg">
+        <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
+      </audio>
+      <figcaption>A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
+    </figure>
+    <!--------------------------------------------------------------------->
+    <!-- contact details -->
+    <address>
+      <p>
+        secret street 1<br>
+        secret city<br>
+        secret country
+      </p>
+      <p><a href="tel:+1234567890">123-456-7890</a></p>
+      <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
+      <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;layer=cyclemap"></iframe>
+    </address>
+    <!--------------------------------------------------------------------->
+    <!-- random info -->
+    <p>The page's birthday is on the <time datetime="2021-12-06"></time>6<sup>th</sup> of December 2021</time>.</p>
+    <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+    <p lang="ja">このページはご飯としていいです。</p>
+    <p>Last edited <time datetime="2021-12-31T19:30">at 7.30pm on December 31, 2021</time>.</p>
+  </footer>
+</body>
+</html>
