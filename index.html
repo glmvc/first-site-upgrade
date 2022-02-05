@@ -18,17 +18,28 @@
 
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head>
   <meta charset="utf-8">
   <!-- new meta data -->
   <meta name="author" content="glmvc">
-  <meta name="description" content="My Upgraded First Site">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The upgraded version of my first site!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- so that responsiveness works as intended on mobile devices -->
+  <!-- meta data (open graph data & twitter card) for facebook and twitter page share -->
+  <meta property="og:image" content="images/hello-world.png">
+  <meta property="og:description" content="The upgraded version of my first site!">
+  <meta property="og:title" content="My Upgraded First Site">
+  <meta name="twitter:title" content="My Upgraded First Site">
   <title>My Upgraded First Site</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style.css"> <!-- mainly external stylesheet in use for styling -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- multiple favicon types for multiple devices/browsers -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
   <!-- to demonstrate the internal stylesheet -->
   <style>
     * {
@@ -36,10 +47,11 @@
       padding: 0;
     }
   </style>
-  <!-- new script loading method -->
+  <!-- new script (jQuery) & script loading methods -->
+  <script src="scripts/jquery-3.6.0.min.js"></script>
   <script src="scripts/main.js" defer></script>
 </head>
-<body>
+<body class="center">
   <!--------------------------------------------------------------------->
   <!-- header -->
   <!--------------------------------------------------------------------->
@@ -49,7 +61,7 @@
     <div class="svg-container">
       <a href="index.html">
         <svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="whitesmoke"/>
           <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0FB55E" stroke-width="22"/>
           <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7CB7ED" stroke-width="22"/>
           <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
@@ -60,7 +72,7 @@
     <!-- new navigation -->
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="code.html">Source Code</a></li>
         <li><a href="changelog.html">Changelog</a></li>
         <li><a href="first-site/index.html">Previous Version</a></li>
@@ -73,35 +85,38 @@
   <main>
     <!--------------------------------------------------------------------->
     <!-- new sidebar -->
-    <aside>
-      <p>Visit my</p>
-      <ul>
-        <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025;GitHub profile</a></li>
-        <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038;Twitter profile</a></li>
-      </ul>
-    </aside>
+    <div class="sidebar">
+      <aside>
+        <p>Visit my</p>
+        <ul>
+          <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025;GitHub</a></li>
+          <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038;Twitter</a></li>
+        </ul>
+      </aside>
+    </div>
     <!--------------------------------------------------------------------->
     <!-- actual content divided into sections -->
+    <!-- greeting -->
     <section class="greeting">
       <div class="heading"><h1>hello world!</h1></div>
       <h2 style="color:whitesmoke;">Nice to meet you!</h2> <!-- just to demonstrate inline styling -->
       <figure>
-        <img src="images/hello-world.png" alt="A cartoon view of the earth saying hello and the moon" title="I feel a bit wonky somehow O_o" width="400" height="300">
+        <img src="images/hello-world.png" alt="A cartoon view of the earth saying hello and the moon" title="I feel a bit wonky when you do that O_o" width="400" height="300" class="center">
         <figcaption>The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)</figcaption>
       </figure>
-      <hr>
+      <hr class="center">
     </section>
+    <!-- hello world program -->
     <section class="hello-world-program">
       <h3>"Hello, World!" program</h3>
       <p>According to the <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program" title='Wikipedia entry about the "Hello, World!" program' target="_blank"><cite>Wikipedia article on the "Hello, World!" program</cite></a>.</p>
       <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
-        <p>
-          A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!".<br>
-          Such a program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming language. It is often the first program written by people learning to code.<br>
-          It can also be used as a sanity test to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
-        </p>
+        A "Hello, World!" program generally is <mark>a computer program</mark> that outputs or displays the message "Hello, World!".<br>
+        Such a program is very simple in most programming languages, and is often used <mark>to illustrate the basic syntax</mark> of a programming language. It is often the <mark>first program</mark> written by people learning to code.<br>
+        It can also be used as a <mark>sanity test</mark> to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
       </blockquote>
-      <figure>
+      <p>So, let's just say that this is my first "program" to see if everything works properly.</p>
+      <figure class="center">
         <video controls muted autoplay loop preload="auto" width="400">
           <source src="videos/hello-world.mp4" type="video/mp4">
           <source src="videos/hello-world.webm" type="video/webm">
@@ -109,12 +124,13 @@
         </video>
         <figcaption>A "Hello world!" terminal output (video downloaded from <a href="https://pixabay.com/de/videos/hello-world-pc-retro-monitor-28320/" title="Pixabay video source" target="_blank">Pixabay</a>)</figcaption>
       </figure>
-      <hr>
+      <hr class="center">
     </section>
+    <!-- web dev -->
     <section class="web-dev">
       <h3>Web development: 3 components</h3>
       <p>
-        The following description is a very simple example and is especially good for beginners to get to know the three most important components of front-end web development. Note that web development is a much larger field.<br>
+        The following description is a <em>very</em> simple example and is especially good for beginners to get to know the three most important components of front-end web development. Note that web development is a much larger field.<br>
         Imagine building a house:</p>
       <dl>
         <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
@@ -132,6 +148,7 @@
         <li>a stylesheet language like <strong><abbr title="Cascading Style Sheets">CSS</abbr></strong>
           <ul>
             <li>also not a programming language</li>
+            <li>but indispensable for web development</li>
           </ul>
         </li>
         <li>and scripting languages such as <strong><abbr title="JavaScript">JS</abbr></strong>.
@@ -140,7 +157,7 @@
           </ul>
         </li>
       </ul>
-      <hr>
+      <hr class="center">
     </section>
     <section class="planet-table">
       <h3>Planets</h3>
@@ -270,7 +287,7 @@
           </tr>
           <tr>
             <th colspan="2" scope="rowgroup">Dwarf planets*</th>
-            <th scope="row">Pluto</th>
+            <th scope="row"><s>Pluto</s></th>
             <td>0.0146</td>
             <td>2,370</td>
             <td>2095</td>
@@ -279,7 +296,7 @@
             <td>5906.4</td>
             <td>-225</td>
             <td>5</td>
-            <td>Declassified as a planet in 2006, but this <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/" title="Article about Pluto and why he may actually be a planet" target="_blank">remains controversial</a>.</td>
+            <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/" title="Article about Pluto and why he may actually be a planet" target="_blank">remains controversial</a>.</td>
           </tr>
         </tbody>
         <tfoot>
@@ -288,7 +305,7 @@
           </tr>
         </tfoot>
       </table>
-      <hr>
+      <hr class="center">
     </section>
     <section class="sources">
       <h5>Sources:</h5>
@@ -299,7 +316,7 @@
         <li>Image: <a href="https://openclipart.org/" title="Openclipart homepage" target="_blank">Openclipart</a></li>
         <li>Video and Audio: <a href="https://pixabay.com/" title="Pixabay homepage" target="_blank">Pixabay</a></li>
         <li>Planet data: <a href="https://www.nasa.gov/" title="NASA homepage" target="_blank">NASA</a></li>
-        <li>Map: <a href="https://www.openstreetmap.org/" title="OpenStreetMap homepage" target="_blank">OpenStreetMap</a></li>
+        <li>Map: <a href="https://www.google.com/maps/about/" title="Google Maps homepage" target="_blank">Google Maps</a></li>
       </ol>
     </section>
   </main>
@@ -318,7 +335,7 @@
         <source src="audios/cyberpunk.ogg" type="audio/ogg">
         <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
       </audio>
-      <figcaption>A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
+      <figcaption class="no-print">A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
     </figure>
     <!--------------------------------------------------------------------->
     <!-- contact details -->
@@ -330,14 +347,18 @@
       </p>
       <p><a href="tel:+1234567890">123-456-7890</a></p>
       <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
-      <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;layer=cyclemap"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat" width="400" height="300" style="border:0;" loading="lazy"></iframe>
     </address>
     <!--------------------------------------------------------------------->
-    <!-- random info -->
-    <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
-    <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-    <p lang="ja">このページはご飯としていいです。</p>
-    <p>Last edited <time datetime="2021-12-31T19:30">at 7.30pm on December 31, 2021</time>.</p>
+    <!-- info -->
+    <details>
+      <summary>Info</summary>
+      <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
+      <p>This page &gt; first page and 1 &lt; 2!</p>
+      <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+      <p lang="ja">このページはご飯としていいです。</p>
+      <p><small>Last edited <time datetime="2022-02-05T17:30">at 5.30pm on February 5, 2022</time>.</small></p>
+    </details>
   </footer>
 </body>
 </html>

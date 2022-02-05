@@ -12,77 +12,110 @@
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-// "actual" JS code starts below:
+// "actual" JS code (using jQuery) starts below
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 
+//---------------------------------------------------------------------
+// DOM ready
+//---------------------------------------------------------------------
+
+$(document).ready(function() {
 
 //---------------------------------------------------------------------
-// main heading
+// corrected main heading with click function
 //---------------------------------------------------------------------
 
-const correctedHeading = document.querySelector('h1');
-correctedHeading.textContent = 'Hello, World!';
+$('h1').text('Hello, World!').on('click', function() {
 
-//---------------------------------------------------------------------
-// click feature
-
-document.querySelector('h1').onclick = function() {
   alert('Ouch! Stop poking me!');
-}
 
-/* alternative (longer) code:
-let myHeadline1 = document.querySelector('h1');
-myHeadline1.onclick = function() {
-  alert('Ouch! Stop poking me!');
-}
-*/
+})
+
 
 
 //---------------------------------------------------------------------
 // image and figure caption switcher
 //---------------------------------------------------------------------
 
-let myImage = document.querySelector('img');
-let myCaption = document.querySelector('figcaption');
+  $('img').on('click', function() {
 
-myImage.onclick = function() {
-  let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/hello-world.png') {
-    myImage.setAttribute ('src','images/js-code.png');
-    myCaption.textContent = 'A JavaScript code snippet that reveals a small "feature" (image created by myself)';
-  } else {
-    myImage.setAttribute ('src','images/hello-world.png');
-    myCaption.innerHTML = 'The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)';
+    let myImage = $('img');
+    let myCaption = $('figcaption')
+    let mySrc = $('img').attr('src');
+
+    if(mySrc === 'images/hello-world.png') {
+      myImage.attr('src', 'images/js-code.png');
+      myCaption.text('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (image created by myself)');
+    } else {
+      myImage.attr('src', 'images/hello-world.png');
+      myCaption.html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+    }
+
+  });
+
+
+
+  //---------------------------------------------------------------------
+  // personalised welcome message
+  //---------------------------------------------------------------------
+
+  let myButton = document.querySelector('button');
+  let myHeading = document.querySelector('h2');
+
+  function setUserName() {
+    let myName = prompt('Please enter your name.');
+    if(!myName) {
+      setUserName();
+    } else {
+      localStorage.setItem('name', myName);
+      myHeading.textContent = 'Nice to meet you, ' + myName + '!';
+    }
   }
-  
-}
 
-
-//---------------------------------------------------------------------
-// personalised welcome message
-//---------------------------------------------------------------------
-
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h2');
-
-function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  if(!localStorage.getItem('name')) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Nice to meet you, ' + myName + '!';
+    let storedName = localStorage.getItem('name');
+    myHeading.textContent = 'Nice to meet you, ' + storedName + '!';
   }
-}
 
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Nice to meet you, ' + storedName + '!';
-}
+  myButton.onclick = function() {
+    setUserName();
+  }
 
-myButton.onclick = function() {
-  setUserName();
-}
+
+
+  //---------------------------------------------------------------------
+  // navigation
+  //---------------------------------------------------------------------
+
+  $('nav a').on('click', function() {
+
+    $('nav a').removeClass('active');
+
+    $(this).addClass('active');
+
+  });
+
+
+
+
+});
+
+
+
+
+
+
+
+
+/*
+$(window).on('scroll', function() {
+  if($(window).scrollTop() > 20) {
+    $('body').addClass('scrolled');
+  } else {
+    $('body').removeClass('scrolled');
+  }
+});
+*/

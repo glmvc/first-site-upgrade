@@ -1,84 +1,295 @@
 # :clipboard: Changelog
 
-### :gear: General
+## :gear: General
 - [x] Space (Tab-Size) changed from 4 to 2 spaces (personal preference)
 - [x] HTML, CSS and JavaScript comments explained in more detail
 - [x] Code structures improved with comments and "separators"
 
 ---
 
-### HTML
-- [x] HTML document language set to English (US): &lt;html lang=&quot;en-US&quot;&gt;
-- [x] Meta description and author set within the head: &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt; &amp; &lt;meta name=&quot;description&quot; content=&quot;My Upgraded First Site&quot;&gt;
-- [x] Document title changed to &quot;My Upgraded First Site&quot; within the head: &lt;title&gt;My Upgraded First Site&lt;/title&gt;
-- [x] Favicon set within the head: &lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
-- [x] Script loading strategy changed and the script element is know within the head: &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
-- [x] Outgoing hyperlinks changed so that they open in a new tab instead of the current one: target=&quot;_blank&quot; attribute
-- [x] Title attribute added to hyperlinks and the image so hovering over them will open a descriptive tooltip: title=&quot;description&quot; attribute
-- [x] A video added to the main content (with fallback video): &lt;video controls muted autoplay loop preload="auto" width="400"&gt;
-- [x] Figure and figure caption added to the image and video: &lt;figure&gt;; &lt;figcaption&gt;
-- [x] Quotations and citation added: &lt;blockquote&gt;; &lt;q&gt;; cite attribute; &lt;cite&gt;
-- [x] Description list added to introduce HTML, CSS and JS: &lt;dl&gt;; &lt;dt&gt;; &lt;dd&gt;
-- [x] Nested unordered list added
-- [x] Abbreviations added to abbreviate HTML, CSS and JS: &lt;abbr&gt;
-- [x] Character entity references added instead of HTML syntax characters: &amp;amp; &amp;apos; &amp;quot; &amp;lt; &amp;gt;
-- [x] Emojis added with character references: &amp;#128025; &amp;#128038;
-- [x] Header (with navigation), main (with sections &amp; sidebar) and footer structuring added: &lt;header&gt;; &lt;nav&gt;; &lt;main&gt;; &lt;section&gt;; &lt;aside&gt;; &lt;footer&gt;
-- [x] Horizontal rules added to divide the sections: &lt;hr&gt;
-- [x] Line breaks added to make paragraphs easier to read: &lt;br&gt;
-- [x] SVG logo added inline to the header (with hyperlink): &lt;svg&gt;&lt;/svg&gt;
-- [x] Social Media profiles with links added to the sidebar
-- [x] A complex table about planet data added: &lt;table&gt;&lt;/table&gt;
-- [x] Further sources attached to the ordered list
-- [x] A soundtrack added to the footer (with fallback audio): &lt;audio controls loop preload="auto"&gt;
-- [x] Fake contact details added to the footer: &lt;address&gt;; href=&quot;tel:...&quot; &amp; href=&quot;mailto:...&quot; attributes
-- [x] Iframe for a map (from OpenStreetMap) added to the footer: &lt;iframe&gt;
-- [x] Superscript added for the birthdate of the page within the footer: &lt;sup&gt;
-- [x] Subscript added for the chemical formula within the footer: &lt;sub&gt;
-- [x] A Japanese sentence added within the footer and language attribute set to Japanese: lang=&quot;ja&quot; attribute
-- [x] Date and time added for the last update and the birthdate of the page within the footer: &lt;time datetime=&quot;YYYY-MM-ddThh:mm&quot;&gt;&lt;/time&gt;
-- [x] Textual content adjusted to the changes
-- [ ] Source codes added as code blocks to the created source code page (code.html): (pre, code, var, kbd, samp)
-- [ ] Changelog converted to HTML code and added to the created changelog page (changelog.html)
+## < / > HTML
+### `<head>`
+- [x] Document language set to English (US):
+
+  `<html lang="en-US">`
+
+- [x] Document text direction set to left-to-right:
+
+  `<html dir="ltr">`
+
+- [x] Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
+
+  `<meta name="author" content="glmvc">`
+
+  `<meta name="description" content="The upgraded version of my first site!">`
+
+  `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+  `<meta property="og:image" content="images/hello-world.png">`
+
+  `<meta property="og:description" content="The upgraded version of my first site!">`
+
+  `<meta property="og:title" content="My Upgraded First Site">`
+
+  `<meta name="twitter:title" content="My Upgraded First Site">`
+
+- [x] Document title changed to "My Upgraded First Site":
+
+  `<title>My Upgraded First Site</title>`
+
+- [x] [Normalize.css](https://necolas.github.io/normalize.css/) now in use:
+
+  `<link rel="stylesheet" href="styles/normalize.css">`
+
+- [x] Additional favicons added for multiple device/browser support:
+
+  `<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">`
+
+  `<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">`
+
+  `<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">`
+
+  `<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">`
+
+  `<link rel="manifest" href="site.webmanifest">`
+
+- [x] Script loading strategy changed (now within the head + defer attribute):
+
+  `<script src="scripts/main.js" defer></script>`
+### `</head>`
+
+
+### `<body>`
 - [x] Accessibility aspects changed and added where they were wrong/missing
 
----  
+- [x] Semantic elements used appropriately
 
-### CSS
-- [x] External stylesheet, internal stylesheet and inline styling added to demonstrate it
-- [x] Standard box model (content-box) changed to alternative box model for all elements in the document: box-sizing:border-box;
-- [x] Natural (intrinsic) and extrinsic (given size) sizes of elements now in use
-- [x] More values and units now in use (absolute and relative lengths; percentages; numbers)
-- [x] CSS functions now in use
-- [x] Different color values now in use (rgb; rgba; hexadecimal rgb, color keywords)
-- [x] Global colors set with variables
-- [x] Type (tag/element), class and ID selectors now in use
-- [x] Selector lists now in use
-- [x] Descendant, child, adjacent and general sibling combinators now in use
-- [x] Links styled with pseudo-class selectors
-- [x] SVG icon attached to external links with an attribute selector (if link starts with "https://") and a special pseudo-element selector: a[href^="https://"]::after
-- [x] Default margin & padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector: *{margin:0;padding:0}
-- [x] Main heading (&lt;h1&gt;) set as inline box (outer display type) so that the click function really only affects the text and not the full width: display:inline;
-- [x] Main heading (&lt;h1&gt;) wrapped in a div container to center it with an inner display type: display:flex; justify-content:center;
-- [x] Subheading (&lt;h2&gt;) color set to whitesmoke with inline styling: style="color:whitesmoke;"
-- [x] Calc function added to the width of the body: width:calc(80vw - 10px);
-- [x] Fallback widths added for browsers that do not support the calc function or vw unit: width:80vw;width:1024pxpx;
-- [x] Image and main heading (&lt;h1&gt;) will now rotate a bit on hover: transform: rotate(0.005turn); transform: rotate(-0.001turn);
-- [x] Backgrounds added (background shorthand property and background longhand properties)
-- [x] Borders added (border shorthand property and border longhand properties)
-- [x] Writing modes (block & inline dimensions) changed to vertical right-to-left for the sidebar text and the Japanese sentence: writing-mode:vertical-rl;
-- [ ] Page layout styled
-- [ ] Text content styled (headings, paragraphs, quotes etc.)
-- [ ] Visual content styled (image, video etc.) 
-- [ ] Figure and figure caption styled
-- [ ] Table styled
-- [ ] Lists styled (ordered, unordered and description lists)
-- [ ] Button styled
-- [ ] The page is now full responsive (with media queries)
+- [x] Semantic elements for structuring content now in use:
+
+  `<header>...</header>` with `<nav>...</nav>` within
+
+  `<main>...</main>` with `<aside>...</aside>`, multiple `<section>...</section>`'s and `<div>...</div>` containers within
+
+  `<footer>...</footer>`
+
+- [x] Horizontal rules added to divide the sections:
+
+  `<hr>`
+
+- [x] SVG logo added inline within the header (with hyperlink):
+
+  `<svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>`
+
+- [x] Outgoing hyperlinks changed so that they open in a new tab instead of the current one:
+
+  `target="_blank"` attribute
+
+- [x] Title attribute added to hyperlinks and images so hovering over them will open a descriptive tooltip:
+
+  `title="link or image description"` attribute
+
+- [x] Quotations and citation added within the main content:
+
+  `<blockquote>...</blockquote>` and `<q>...</q>` with `cite` attribute
+
+  `<cite>...</cite>`
+
+- [x] Important text content marked within the blockquote:
+
+  `<mark>...</mark>`
+
+- [x] Line breaks added to make paragraphs easier to read:
+
+  `<br>`
+
+- [x] Emphasis and importance added for certain words and text passages:
+
+  `<em>...</em>`
+
+  `<strong>...</strong>`
+
+- [x] Video added within the main content (with fallback):
+
+  `<video controls muted autoplay loop preload="auto" width="400">...</video>`
+
+- [x] Figure and figure caption added to the images and video:
+
+  `<figure>...</figure>`
+
+  `<figcaption>...</figcaption>`
+
+- [x] Description list added to introduce HTML, CSS and JS:
+
+  `<dl>...</dl>` with `<dt>...</dt>` and `<dd>...</dd>` within
+
+- [x] Nested unordered list added
+
+- [x] Abbreviations added to abbreviate HTML, CSS and JS:
+
+  `<abbr title="abbreviation title">...</abbr>`
+
+- [x] Character entity references added instead of HTML syntax characters:
+
+`&amp;`, `&apos;`, `&quot;`, `&lt;` and `&gt;`
+
+- [x] Emojis added with character references within the sidebar:
+
+  `&#128025;` and `&#128038;`
+
+- [x] A complex table about planet data added:
+
+  `<table>...</table>` with `<caption>...</caption>`, `<colgroup>...</colgroup>`, `<col>...</col>`, `<thead>...</thead>`, `<tbody>...</tbody>`, `<tr>...</tr>`, `<th>...</th>`, `<td>...</td>` and `<tfoot>...</tfoot>` within
+
+- [x] Further sources added to the ordered list
+
+- [x] A soundtrack added within the footer (with fallback):
+
+  `<audio controls loop preload="auto">...</audio>`
+
+- [x] Fake contact details added within the footer:
+
+  `<address>`
+
+  `href="tel:..."` and `href="mailto:..."` attributes
+
+- [x] Iframe for a map (from OpenStreetMap) added within the address:
+
+  `<iframe src="https:..." width="400" height="300" style="border:0;" loading="lazy"></iframe>`
+
+- [x] Addditional page information added within a detail area with a summary text:
+
+  `<details>...</details>` with `<summary>Info</summary>` within
+
+- [x] Superscript added for the birthdate of the page within the footer:
+
+  `<sup>...</sup>`
+
+- [x] Subscript added for the chemical formula within the footer:
+
+  `<sub>...</sub>`
+
+- [x] Date and time added for the last update and the birthdate of the page within the footer:
+
+  `<time datetime="YYYY-MM-ddThh:mm">...</time>`
+
+- [x] A Japanese sentence added within the footer and language attribute set to Japanese:
+
+  `lang="ja"` attribute
+
+- [x] Last update text made as a small print/side comment:
+
+  `<small>...</small>`
+
+
+- [x] Textual content adjusted to the changes
+
+- [ ] Source codes added as code blocks to the created source code page (code.html): 
+
+  `<pre>...</pre>` with `<code>...</code>` within
+
+  `var`
+
+  `kbd`
+
+  `samp`
+
+- [ ] Changelog converted to HTML code and added to the created changelog page (changelog.html)
+### `</body>`
 
 ---
 
-### JavaScript
-- [x] Figure caption also changing accordingly on clicking the image
-- [ ] Birthday Banner added to show on December 6 every year
+## &#123; &#125; CSS
+- [x] External stylesheet, internal stylesheet and inline styling added to demonstrate it
+
+- [x] Default margin & padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector:
+
+  `* { margin: 0; padding:0; }`
+
+- [x] Standard box model (content-box) changed to alternative box model for all elements in the document:
+
+  `box-sizing: border-box;`
+
+- [x] Natural (intrinsic) and extrinsic (given size) sizes of elements now in use
+
+- [x] More values and units now in use (absolute and relative lengths; percentages; numbers)
+
+- [x] CSS functions now in use
+
+- [x] Different color values now in use (rgb; rgba; hexadecimal rgb, color keywords)
+
+- [x] Global colors set with variables
+
+- [x] Type (tag/element), class and ID selectors now in use
+
+- [x] Selector lists now in use
+
+- [x] Descendant, child, adjacent and general sibling combinators now in use
+
+- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time
+
+- [x] Fallback width of the body added for browsers that do not support the vw unit:
+
+  `width: 1024px;` instead of `width: 90vw;`
+
+- [x] Green shadow styled left and right to the body:
+
+  `box-shadow: 5px 5px 10px rgba(15, 181, 94, 0.7), -5px -5px 10px rgba(15, 181, 94, 0.7);`
+
+- [x] Links styled with pseudo-class selectors
+
+- [x] SVG icon attached to external links with an attribute selector (if link starts with "https://") and a special pseudo-element selector:
+
+  `a[href^="https://"]::after`
+
+- [x] Images and main heading (`<h1>`) will now rotate a bit on hover:
+
+  `transform: rotate(0.005turn);`
+
+  `transform: rotate(-0.001turn);`
+
+- [x] Main heading (`<h1>`) set as inline box (outer display type) so that the click function really only affects the text and not the full width:
+
+  `display: inline;`
+
+- [x] Main heading (`<h1>`) wrapped in a div container to center it with an inner display type:
+
+  `display: flex;`
+
+  `justify-content: center;`
+
+- [x] Subheading (`<h2>`) color set to whitesmoke with inline styling:
+
+  `style="color:whitesmoke;"`
+
+- [x] Blur filter added to the JavaScript code image to hide the click easter egg:
+
+  `filter: blur(5px);`
+
+- [x] Backgrounds added (background shorthand property and background longhand properties)
+
+- [x] Borders added (border shorthand property and border longhand properties)
+
+- [x] Writing modes (block & inline dimensions) changed to vertical right-to-left for the sidebar text and the Japanese sentence:
+
+  `writing-mode: vertical-rl;`
+
+- [ ] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
+
+- [ ] Page layout styled (using flex, grid, multicol, positioning, floating, etc.)
+
+- [ ] Visual/functional content styled (images, table, button etc.)
+
+- [ ] The page is now full responsive (using media queries, meta viewport etc.)
+
+---
+
+## &#125; &#041; ; JavaScript
+- [x] jQuery library now in use and code rewritten using its syntax
+
+- [x] Figure caption now also changing accordingly on clicking the images
+
+- [x] The current page in the navigation is now styled with the CSS class "active" on click
+
+- [ ] Birthday Banner added to show on December 6 every year as a small easter egg
+
 - [ ] Last edited date and time is now updating automatically
