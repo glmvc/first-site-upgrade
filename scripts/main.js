@@ -24,7 +24,6 @@ $(document).ready(function() {
 
 //---------------------------------------------------------------------
 // corrected main heading with click function
-//---------------------------------------------------------------------
 
 $('h1').text('Hello, World!').on('click', function() {
 
@@ -33,20 +32,18 @@ $('h1').text('Hello, World!').on('click', function() {
 })
 
 
-
 //---------------------------------------------------------------------
 // image and figure caption switcher
-//---------------------------------------------------------------------
 
   $('img').on('click', function() {
 
     let myImage = $('img');
-    let myCaption = $('figcaption')
+    let myCaption = $('img + figcaption')
     let mySrc = $('img').attr('src');
 
     if(mySrc === 'images/hello-world.png') {
       myImage.attr('src', 'images/js-code.png');
-      myCaption.text('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (image created by myself)');
+      myCaption.html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
     } else {
       myImage.attr('src', 'images/hello-world.png');
       myCaption.html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
@@ -55,10 +52,8 @@ $('h1').text('Hello, World!').on('click', function() {
   });
 
 
-
   //---------------------------------------------------------------------
   // personalised welcome message
-  //---------------------------------------------------------------------
 
   let myButton = document.querySelector('button');
   let myHeading = document.querySelector('h2');
@@ -69,7 +64,7 @@ $('h1').text('Hello, World!').on('click', function() {
       setUserName();
     } else {
       localStorage.setItem('name', myName);
-      myHeading.textContent = 'Nice to meet you, ' + myName + '!';
+      myHeading.innerHTML = `Nice to meet you, <span>${myName}</span>!`;
     }
   }
 
@@ -77,7 +72,7 @@ $('h1').text('Hello, World!').on('click', function() {
     setUserName();
   } else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Nice to meet you, ' + storedName + '!';
+    myHeading.innerHTML = `Nice to meet you, <span>${storedName}</span>!`;
   }
 
   myButton.onclick = function() {
@@ -85,10 +80,8 @@ $('h1').text('Hello, World!').on('click', function() {
   }
 
 
-
   //---------------------------------------------------------------------
   // navigation
-  //---------------------------------------------------------------------
 
   $('nav a').on('click', function() {
 
@@ -100,22 +93,4 @@ $('h1').text('Hello, World!').on('click', function() {
 
 
 
-
 });
-
-
-
-
-
-
-
-
-/*
-$(window).on('scroll', function() {
-  if($(window).scrollTop() > 20) {
-    $('body').addClass('scrolled');
-  } else {
-    $('body').removeClass('scrolled');
-  }
-});
-*/
