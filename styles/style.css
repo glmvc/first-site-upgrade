@@ -18,19 +18,28 @@
 
 
 /*---------------------------------------------------------------------*/
-/*-- general --*/
+/*-- custom properties (variables) using the :root pseudo-class --*/
 /*---------------------------------------------------------------------*/
 
 :root {
+  /*-- website colors --*/
   --background-dark-grey: #121212;
-  --surface-dark-grey: rgba(255, 255, 255, 0.05); /* this works with just the rgb function too */
+  --surface-dark-grey: rgba(255, 255, 255, 0.05); /* works with just the rgb function too */
   --onsurface-white: whitesmoke; /* color keyword (CSS identifier) */
   --primary-green: #0fb55e;
   --primary-green-darker: #069247;
   --button-green: #0bf377;
   --secondary-blue: #7cb7ed;
   --secondary-blue-darker: #4383bb;
+  /*-- website padding --*/
+  --website-padding: 2rem;
 }
+
+
+
+/*---------------------------------------------------------------------*/
+/*-- general  --*/
+/*---------------------------------------------------------------------*/
 
 *, *::before, *::after { /* to inherit the alternative box model to all elements */
   box-sizing: inherit;
@@ -52,6 +61,7 @@ body {
   margin: 20px 0 20px;
   width: 1024px; /* fallback width */
   width: 90vw;
+  max-width: 1920px;
   background-color: rgba(255, 255, 255, 0.05);
   background-color: var(--surface-dark-grey);
   border: 3px solid black;
@@ -64,6 +74,13 @@ body {
 .center { /* class selector */
   margin-left: auto;
   margin-right: auto;
+}
+
+.website-padding {
+  padding-left: 145px;
+  padding-left: clamp(145px, 10vw, 160px);
+  padding-right: 2rem;
+  padding-right: var(--website-padding);
 }
 
 
@@ -92,9 +109,12 @@ body::-webkit-scrollbar-thumb {
 hr {
   margin: 30px 0;
   margin: clamp(15px, 2vw, 30px) 0;
-  width: 99%;
   border: none;
   border-top: 3px dashed rgba(255, 255, 255, 0.07);
+}
+
+span {
+  color: pink;
 }
 
 /*-- text --*/
@@ -108,24 +128,25 @@ h1 {
   display: inline; /* inline box (outer display type) */
   margin-bottom: 10px;
   text-align: center;
-  font-size: 10.5rem;
-  letter-spacing: -0.15rem;
-  text-shadow: 0 1px #333333, /* multiple shadows */
-              -1px 0px #999999,
-              -1px 2px #333333,
-              -2px 1px #999999,
-              -2px 3px #333333,
-              -3px 2px #999999,
-              -3px 4px #333333,
-              -4px 3px #999999,
-              -4px 5px #333333,
-              -5px 4px #999999,
-              -5px 6px #333333,
-              -6px 5px #999999,
-              -6px 7px #333333,
-              -7px 6px #999999,
-              -7px 8px #333333,
-              -8px 7px #999999;
+  font-size: 6.3rem; /* second fallback font size */
+  font-size: min(max(6.3rem, 5.46rem + 2.625vw), 10.5rem); /* first fallback font size */
+  font-size: clamp(6.3rem, 5.46rem + 2.625vw, 10.5rem);
+  letter-spacing: 0.15em;
+  text-shadow: 1px 0px 1px #121212, /* multiple shadows */
+               0px 1px 1px #212121,
+               2px 1px 1px #121212,
+               1px 2px 1px #212121,
+               3px 2px 1px #121212,
+               2px 3px 1px #212121,
+               4px 3px 1px #121212,
+               3px 4px 1px #212121,
+               5px 4px 1px #121212,
+               4px 5px 1px #212121,
+               6px 5px 1px #121212,
+               5px 6px 1px #212121,
+               7px 6px 1px #121212,
+               6px 7px 1px #212121,
+               8px 7px 1px #121212;
 }
 
 h1:hover {
@@ -135,8 +156,10 @@ h1:hover {
 h2 {
   margin-bottom: 20px;
   text-align: center;
-  font-size: 6.6rem;
-  letter-spacing: -0.05rem;
+  font-size: 3.96rem;
+  font-size: min(max(3.96rem, 3.432rem + 1.65vw), 6.6rem);
+  font-size: clamp(3.96rem, 3.432rem + 1.65vw, 6.6rem);
+  letter-spacing: 0.05em;
   text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.05),
                4px 4px 0px #121212;
   text-shadow: 2px 2px 0px var(--surface-dark-grey),
@@ -145,27 +168,37 @@ h2 {
 
 h3 {
   margin-bottom: 5px;
-  font-size: 5.2rem;
+  font-size: 3.12rem;
+  font-size: min(max(3.12rem, 2.704rem + 1.3vw), 5.2rem);
+  font-size: clamp(3.12rem, 2.704rem + 1.3vw, 5.2rem);
   text-shadow: 2px 2px 1px #1a1a1a;
 }
 
 h4 {
   padding-bottom: 5px;
-  font-size: 3.7rem;
-  letter-spacing: 0.025rem;
+  font-size: 2.22rem;
+  font-size: min(max(2.22rem, 1.924rem + 0.925vw), 3.7rem);
+  font-size: clamp(2.22rem, 1.924rem + 0.925vw, 3.7rem);
+  letter-spacing: 0.025em;
   text-shadow: 1.5px 1.5px 0.5px #1a1a1a;
 }
 
 h5 {
-  font-size: 2.6rem;
+  font-size: 1.56rem;
+  font-size: min(max(1.56rem, 1.352rem + 0.65vw), 2.6rem);
+  font-size: clamp(1.56rem, 1.352rem + 0.65vw, 2.6rem);
 }
 
 h6 {
-  font-size: 2.2rem;
-  letter-spacing: 0.015rem;
+  padding: 6rem 0 3rem;
+  font-size: 1.32rem;
+  font-size: min(max(1.32rem, 1.144rem + 0.55vw), 2.2rem);
+  font-size: clamp(1.32rem, 1.144rem + 0.55vw, 2.2rem);
+  letter-spacing: 0.015em;
   word-spacing: 0.5rem;
   text-decoration: underline overline #0fb55e wavy;
   text-decoration: underline overline var(--primary-green) wavy;
+  text-underline-offset: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -174,8 +207,10 @@ ul,
 ol,
 dl,
 blockquote {
-  font-size: 1.7rem;
-  letter-spacing: 0.05rem;
+  font-size: 1.1rem;
+  font-size: min(max(1.1rem, 0.98rem + 0.375vw), 1.7rem);
+  font-size: clamp(1.1rem, 0.98rem + 0.375vw, 1.7rem);
+  letter-spacing: 0.05em;
 }
 
 p,
@@ -191,11 +226,12 @@ dt {
 }
 
 h3 ~ p { /* general sibling combinator */
-  text-indent: 20px;
-  color: blue;
+  text-indent: 2rem;
+  font-style: italic;
 }
 
 mark {
+  padding: 0 0.5%;
   color: whitesmoke;
   color: var(--onsurface-white);
   background-color: rgba(255, 255, 255, 0.07);
@@ -211,13 +247,15 @@ p[lang="ja"] { /* attribute selector */
 }
 
 figcaption {
-  font-size: 1.3rem;
-  font-style: italic;
-  letter-spacing: 0.04rem;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  font-size: min(max(1rem, 0.94rem + 0.1875vw), 1.3rem);
+  font-size: clamp(1rem, 0.94rem + 0.1875vw, 1.3rem);
+  letter-spacing: 0.004em;
 }
 
 img + figcaption { /* adjacent sibling combinator */
-  padding-top: 30px;
+  padding-top: 3rem;
   text-align: center;
 }
 
@@ -253,11 +291,12 @@ a:visited {
 }
 
 a:focus {
+  color: #0fb55e;
+  color: var(--primary-green);
   background-color: rgba(255, 255, 255, 0.05);
   background-color: var(--surface-dark-grey);
 }
 
-a:focus,
 a:hover { /* (user-action or dynamic) pseudo-class selector*/
   text-decoration: none;
   color: #0fb55e;
@@ -272,16 +311,28 @@ a:active {
 a[href*="http"]::after { /* (special) pseudo-element selector */
   content: ""; /* empty string */
   display: inline-block;
-  margin: 0 0 2px 4px;
+  margin-left: 4px;
   height: 0.8em;
   width: 0.8em;
-  background-image: url(../images/external-blue.svg);
+  background-image: url("../images/external-red.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-a[target="_blank"]:hover::after {
-  background-image: url(../images/external-green.svg);
+a[href^="https"]::after {
+  background-image: url("../images/external-blue.svg");
+}
+
+a[href^="https"]:focus::after {
+  background-image: url("../images/external-green.svg");
+}
+
+a[href^="http"]:hover::after {
+  background-image: url("../images/external-red.svg");
+}
+
+a[href^="https"]:hover::after {
+  background-image: url("../images/external-green.svg");
 }
 
 /*-- lists --*/
@@ -399,12 +450,14 @@ tr:nth-child(odd) td {
 
 header { /* flex container */
   z-index: 9;
+  padding: 2rem;
+  padding: var(--website-padding);
   position: sticky;
-  top: 0;
+  top: -1px;
   left: 0;
   border-radius: 6px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -417,6 +470,7 @@ header { /* flex container */
 /*-- nav --*/
 
 nav li {
+  font-size: 1.6rem;
   display: inline;
 }
 
@@ -425,12 +479,11 @@ nav ul:first-child {
   padding-left: clamp(15px, 2vw, 30px);
 }
 
-/*-- active page --*/
+/*-- active page hyperlink --*/
 
 nav a.active {
   color: #069247;
   color: var(--primary-green-darker);
-  text-decoration: none;
 }
 
 nav a.active:hover {
@@ -442,49 +495,18 @@ nav a.active:hover {
 /*---------------------------------------------------------------------*/
 /*-- logo --*/
 
-header .svg-container a:focus {
+header a.logo:focus {
   background-color: unset;
   filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
 }
 
-header a:hover svg {
-  transform: scale(1.05);
+header a.logo:hover {
+  transform: scale(1.01);
 }
 
-
-
-/*---------------------------------------------------------------------*/
-/*-- sidebar --*/
-/*---------------------------------------------------------------------*/
-
-.sidebar {
-  display: flex;
-  justify-content: flex-end;
-}
-
-aside {
-  z-index: 9;
-  position: fixed;
-  top: 50%;
-  right: 6%; /* edit me */
-  padding: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  border: 3px dashed #0fb55e;
-  border: 3px dashed var(--primary-green);
-  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
-}
-
-aside > p {
-  padding: 0 0 0 10px;
-  writing-mode: vertical-rl;
-  text-transform: lowercase;
-  transform: rotate(0.5turn);
-}
-
-aside ul {
-  padding: 0;
+header svg {
+  padding-left: 7px;
+  box-sizing: content-box; /* switching to the standard box model */
 }
 
 
@@ -493,9 +515,48 @@ aside ul {
 /*-- main content --*/
 /*---------------------------------------------------------------------*/
 
-main {
-  padding: 0 30px; /* fallback padding */
-  padding: 0 clamp(15px, 2vw, 30px);
+/*---------------------------------------------------------------------*/
+/*-- sidebar --*/
+
+aside {
+  position: fixed;
+  margin-left: calc(145px * -1 + 2rem);
+  margin-left: calc(clamp(145px, 10vw, 160px) * -1 + 2rem); /* to "reset" the padding-left from the main section */
+  padding: 1rem;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: center;
+  border: 3px dashed #0fb55e;
+  border: 3px dashed var(--primary-green);
+  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+}
+
+aside > p {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+}
+
+aside ul {
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+aside li {
+  letter-spacing: -0.1rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+aside a {
+  text-decoration: none;
+}
+
+aside li a[href*="http"]::after {
+  content: none;
 }
 
 
@@ -504,12 +565,15 @@ main {
 
 section.hello-world-program { /* grid container */
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "heading heading"
-    "quote quote"
-    "para video";
+    "para video"
+    "quote video"
+    ". video";
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  grid-template-rows: auto;
+  gap: 15px;
+  gap: clamp(15px, 2vw, 20px);
 }
 
 section.hello-world-program h3 {
@@ -532,10 +596,19 @@ section.hello-world-program figure {
 /*---------------------------------------------------------------------*/
 /*-- web dev --*/
 
-.web-dev { /* multicol container */
+section.web-dev { /* multicol container */
   column-count: 4;
   column-gap: 20px;
-  column-rule: 4px dotted rgb(79, 185, 227);
+  column-rule: 4px dotted #4383bb;
+  column-rule: 4px dotted var(--secondary-blue-darker);
+}
+
+
+/*---------------------------------------------------------------------*/
+/*-- sources --*/
+
+section.sources ol {
+  margin-left: 5.5rem;
 }
 
 
@@ -593,22 +666,45 @@ button:hover:before {
 
 
 
+audio {
+  width: 100%;
+  max-width: 450px;
+  height: 45px;
+}
+
 
 /*-- to do --*/
 
 /* id selector */
-/* span */
+/* float */
 /* background-position */
 
 
 
 /*---------------------------------------------------------------------*/
-/*-- media queries --*/
+/*-- media queries (responsive) --*/
 /*---------------------------------------------------------------------*/
+
+@media only screen and (max-width: 990px) {
+
+  html {
+    font-size: 9px;
+  }
+
+}
+
+@media only screen and (max-width: 790px) {
+
+  html {
+    font-size: 8px;
+  }
+
+}
+
 
 /*---------------------------------------------------------------------*/
 /*-- light mode --*/
-
+/*
 @media (prefers-color-scheme: light) {
 
   body {
@@ -616,7 +712,7 @@ button:hover:before {
   }
 
 }
-
+*/
 
 /*---------------------------------------------------------------------*/
 /*-- print --*/
