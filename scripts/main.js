@@ -22,18 +22,41 @@
 
 $(document).ready(function() {
 
-//---------------------------------------------------------------------
-// corrected main heading with click function
+  //---------------------------------------------------------------------
+  // navigation
 
-$('h1').text('Hello, World!').on('click', function() {
+  $('nav a').on('click', function() {
 
-  alert('Ouch! Stop poking me!');
+    $('nav a').removeClass('active');
+    $(this).addClass('active');
 
-})
+  });
+
+  $('body').on('click', '.nav-icon', function() {
+
+    $('body').toggleClass('nav-open');
+
+  });
+
+  $('.nav-icon').on('click', function() {
+
+    $(this).toggleClass('open');
+
+  });
 
 
-//---------------------------------------------------------------------
-// image and figure caption switcher
+  //---------------------------------------------------------------------
+  // corrected main heading with click function
+
+  $('h1').text('Hello, World!').on('click', function() {
+
+    alert('Ouch! Stop poking me!');
+
+  })
+
+
+  //---------------------------------------------------------------------
+  // image and figure caption switcher
 
   $('img').on('click', function() {
 
@@ -81,15 +104,10 @@ $('h1').text('Hello, World!').on('click', function() {
 
 
   //---------------------------------------------------------------------
-  // navigation
+  // audio volume
 
-  $('nav a').on('click', function() {
-
-    $('nav a').removeClass('active');
-
-    $(this).addClass('active');
-
-  });
+  var audio = document.getElementById('audio');
+  audio.volume = 0.5;
 
 
 
