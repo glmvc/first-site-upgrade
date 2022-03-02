@@ -1,0 +1,92 @@
+/*---------------------------------------------------------------------*/
+/*-- fonts --*/
+/*---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+/*-- source code pro --*/
+
+/*-- regular --*/
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-regular.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-- bold --*/
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-bold.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-boldit.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-boldit.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*-- italic --*/
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-it.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-it.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*-- medium --*/
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-medium.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-mediumit.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-mediumit.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/*-- light --*/
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-light.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/sourcecodepro/sourcecodepro-lightit.woff2") format("woff2"),
+       url("../fonts/sourcecodepro/sourcecodepro-lightit.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*-- orbitron (variable font) --*/
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../fonts/orbitron/orbitron-variablefont_wght.woff2") format("woff2-variations"),
+       url("../fonts/orbitron/orbitron-variablefont_wght.woff") format("woff-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}

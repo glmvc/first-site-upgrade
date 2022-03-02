@@ -25,13 +25,25 @@
 
   `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
-  `<meta property="og:image" content="images/hello-world.png">`
+  `<meta property="og:type" content="website">`
 
-  `<meta property="og:description" content="The upgraded version of my first site!">`
+  `<meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/">`
 
   `<meta property="og:title" content="My Upgraded First Site">`
 
-  `<meta name="twitter:title" content="My Upgraded First Site">`
+  `<meta property="og:description" content="The upgraded version of my first site!">`
+
+  `<meta property="og:image" content="images/hello-world.png">`
+
+  `<meta property="twitter:card" content="summary_large_image">`
+
+  `<meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade/">`
+
+  `<meta property="twitter:title" content="My Upgraded First Site">`
+
+  `<meta property="twitter:description" content="The upgraded version of my first site!">`
+
+  `<meta property="twitter:image" content="images/hello-world.png">`
 
 - [x] Document title changed to "My Upgraded First Site":
 
@@ -40,6 +52,10 @@
 - [x] [Normalize.css](https://necolas.github.io/normalize.css/) now in use:
 
   `<link rel="stylesheet" href="styles/normalize.css">`
+
+- [x] Linking to Google's online font service removed and instead new stylesheet (fonts.css) linked:
+
+  `<link rel="stylesheet" href="styles/fonts.css">`
 
 - [x] Additional favicons added for multiple device/browser support:
 
@@ -130,7 +146,7 @@
 
 - [x] Character entity references added instead of HTML syntax characters:
 
-`&amp;`, `&apos;`, `&quot;`, `&lt;` and `&gt;`
+  `&amp;`, `&apos;`, `&quot;`, `&lt;` and `&gt;`
 
 - [x] Emojis added with character references within the sidebar:
 
@@ -144,7 +160,7 @@
 
 - [x] A soundtrack added within the footer (with fallback):
 
-  `<audio controls loop preload="auto">...</audio>`
+  `<audio id="audio" controls loop preload="auto">...</audio>`
 
 - [x] Fake contact details added within the footer:
 
@@ -180,7 +196,6 @@
 
   `<small>...</small>`
 
-
 - [x] Textual content adjusted to the changes
 
 - [ ] Source codes added as code blocks to the created source code page (code.html): 
@@ -194,11 +209,17 @@
   `samp`
 
 - [ ] Changelog converted to HTML code and added to the created changelog page (changelog.html)
+
+- [ ] 404 page created (404.html)
 ### `</body>`
 
 ---
 
 ## &#123; &#125; CSS
+- [x] Using the @font-face ruleset in the created external stylesheet (fonts.css) to include and load the web fonts in use (woff, woff2 and variable):
+
+  `@font-face {...}`
+
 - [x] External stylesheet, internal stylesheet and inline styling added to demonstrate it
 
 - [x] Default margin & padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector:
@@ -227,6 +248,10 @@
 
 - [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time
 
+- [x] The body has now a circuit looking background defined with the `background` CSS shorthand property (containing background-position, background-repeat and background-color):
+
+  `background: center repeat url("../images/background.svg"), var(--surface-dark-grey);`
+
 - [x] Fallback width of the body added for browsers that do not support the vw unit:
 
   `width: 1024px;` instead of `width: 90vw;`
@@ -239,13 +264,13 @@
 
 - [x] SVG icon attached to external links with an attribute selector (if link starts with "https://") and a special pseudo-element selector:
 
-  `a[href^="https://"]::after`
+  `a[href^="https"]::after`
 
 - [x] Images and main heading (`<h1>`) will now rotate a bit on hover:
 
   `transform: rotate(0.005turn);`
 
-  `transform: rotate(-0.001turn);`
+  `transform: rotate(-1deg);`
 
 - [x] Main heading (`<h1>`) set as inline box (outer display type) so that the click function really only affects the text and not the full width:
 
@@ -269,7 +294,9 @@
 
 - [x] Borders added (border shorthand property and border longhand properties)
 
-- [x] Writing modes (block & inline dimensions) changed to vertical right-to-left for the sidebar text and the Japanese sentence:
+- [x] Writing modes (block & inline dimensions) changed to vertical left-to-right for the sidebar and right-to-left for the Japanese sentence:
+
+  `writing-mode: vertical-lr;`
 
   `writing-mode: vertical-rl;`
 
