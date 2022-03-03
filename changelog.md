@@ -33,7 +33,7 @@
 
   `<meta property="og:description" content="The upgraded version of my first site!">`
 
-  `<meta property="og:image" content="images/hello-world.png">`
+  `<meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png/">`
 
   `<meta property="twitter:card" content="summary_large_image">`
 
@@ -43,7 +43,7 @@
 
   `<meta property="twitter:description" content="The upgraded version of my first site!">`
 
-  `<meta property="twitter:image" content="images/hello-world.png">`
+  `<meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png/">`
 
 - [x] Document title changed to "My Upgraded First Site":
 
@@ -69,7 +69,9 @@
 
   `<link rel="manifest" href="site.webmanifest">`
 
-- [x] Script loading strategy changed (now within the head + defer attribute):
+- [x] New script (jQuery library) added script loading strategy changed (now within the head + defer attribute):
+
+  `<script src="scripts/jquery-3.6.0.min.js"></script>`
 
   `<script src="scripts/main.js" defer></script>`
 ### `</head>`
@@ -110,7 +112,7 @@
 
   `<cite>...</cite>`
 
-- [x] Important text content marked within the blockquote:
+- [x] Important text content marked:
 
   `<mark>...</mark>`
 
@@ -208,7 +210,7 @@
 
   `samp`
 
-- [ ] Changelog converted to HTML code and added to the created changelog page (changelog.html)
+- [ ] Changelog (changelog.md) converted to HTML code and added to the created changelog page (changelog.html)
 
 - [ ] 404 page created (404.html)
 ### `</body>`
@@ -220,7 +222,7 @@
 
   `@font-face {...}`
 
-- [x] External stylesheet, internal stylesheet and inline styling added to demonstrate it
+- [x] External stylesheet, internal stylesheet and inline styling added to demonstrate them
 
 - [x] Default margin & padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector:
 
@@ -232,25 +234,27 @@
 
 - [x] Natural (intrinsic) and extrinsic (given size) sizes of elements now in use
 
-- [x] More values and units now in use (absolute and relative lengths; percentages; numbers)
+- [x] More values and units now in use (absolute and relative lengths, percentages, numbers)
 
 - [x] CSS functions now in use
 
 - [x] Different color values now in use (rgb; rgba; hexadecimal rgb, color keywords)
 
-- [x] Global colors set with variables
+- [x] Global colors and padding set with variables
 
 - [x] Type (tag/element), class and ID selectors now in use
 
 - [x] Selector lists now in use
 
-- [x] Descendant, child, adjacent and general sibling combinators now in use
+- [x] Descendant, child, adjacent and general sibling combinators now in use:
 
-- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time
+  ` `, `>`, `+` and `~`
 
-- [x] The body has now a circuit looking background defined with the `background` CSS shorthand property (containing background-position, background-repeat and background-color):
+- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time:
 
-  `background: center repeat url("../images/background.svg"), var(--surface-dark-grey);`
+  `calc(...)`
+
+- [x] Backgrounds added (background shorthand property and background longhand properties)
 
 - [x] Fallback width of the body added for browsers that do not support the vw unit:
 
@@ -260,9 +264,13 @@
 
   `box-shadow: 5px 5px 10px rgba(15, 181, 94, 0.7), -5px -5px 10px rgba(15, 181, 94, 0.7);`
 
-- [x] Links styled with pseudo-class selectors
+- [x] Mobile navigation and its icon styled
 
-- [x] SVG icon attached to external links with an attribute selector (if link starts with "https://") and a special pseudo-element selector:
+- [x] Hyperlinks styled with pseudo-class selectors:
+
+  `a:link`, `a:visited`, `a:focus`, `a:hover` and `a:active`
+
+- [x] SVG icon attached to external hyperlinks with an attribute selector and a special pseudo-element selector:
 
   `a[href^="https"]::after`
 
@@ -290,8 +298,6 @@
 
   `filter: blur(5px);`
 
-- [x] Backgrounds added (background shorthand property and background longhand properties)
-
 - [x] Borders added (border shorthand property and border longhand properties)
 
 - [x] Writing modes (block & inline dimensions) changed to vertical left-to-right for the sidebar and right-to-left for the Japanese sentence:
@@ -300,13 +306,19 @@
 
   `writing-mode: vertical-rl;`
 
+- [x] Transitions now in use:
+
+  `transition: <property> <duration> <timing-function> <delay>`
+
 - [ ] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
 
-- [ ] Page layout styled (using flex, grid, multicol, positioning, floating, etc.)
+- [ ] Page layout styled (using flex, grid, multicol, positioning, floating etc.)
 
 - [ ] Visual/functional content styled (images, table, button etc.)
 
 - [ ] The page is now full responsive (using media queries, meta viewport etc.)
+
+- [ ] Vendor prefixes added where necessary for optimal compatibility / browser support
 
 ---
 
@@ -316,6 +328,10 @@
 - [x] Figure caption now also changing accordingly on clicking the images
 
 - [x] The current page in the navigation is now styled with the CSS class "active" on click
+
+- [x] Clicking on the new navigation icon will toggle a class "open" to it and the class "nav-open" to the body
+
+- [x] Audio volume of the audio element now set to 50%
 
 - [ ] Birthday Banner added to show on December 6 every year as a small easter egg
 
