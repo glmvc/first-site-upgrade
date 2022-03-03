@@ -32,13 +32,13 @@ $(document).ready(function() {
 
   });
 
-  $('body').on('click', '.nav-icon', function() {
+  $('body').on('click', '#nav-icon', function() {
 
     $('body').toggleClass('nav-open');
 
   });
 
-  $('.nav-icon').on('click', function() {
+  $('#nav-icon').on('click', function() {
 
     $(this).toggleClass('open');
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
     let myCaption = $('img + figcaption')
     let mySrc = $('img').attr('src');
 
-    if(mySrc === 'images/hello-world.png') {
+    if (mySrc === 'images/hello-world.png') {
       myImage.attr('src', 'images/js-code.png');
       myCaption.html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
     } else {
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   function setUserName() {
     let myName = prompt('Please enter your name.');
-    if(!myName) {
+    if (!myName) {
       setUserName();
     } else {
       localStorage.setItem('name', myName);
@@ -91,7 +91,7 @@ $(document).ready(function() {
     }
   }
 
-  if(!localStorage.getItem('name')) {
+  if (!localStorage.getItem('name')) {
     setUserName();
   } else {
     let storedName = localStorage.getItem('name');
