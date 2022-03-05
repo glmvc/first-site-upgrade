@@ -20,25 +20,51 @@
 // DOM ready
 //---------------------------------------------------------------------
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   //---------------------------------------------------------------------
-  // navigation
+  // check scrolling (jQuery)
 
-  $('nav a').on('click', function() {
+  let checkScroll = function () {
 
-    $('nav a').removeClass('active');
-    $(this).addClass('active');
+    if ($(window).scrollTop() > 25) {
+
+      $('body').addClass('scrolled');
+
+    } else {
+
+      $('body').removeClass('scrolled');
+
+    }
+
+  }
+
+  $(window).on('scroll', function () {
+
+    checkScroll();
 
   });
 
-  $('body').on('click', '#nav-icon', function() {
+
+  //---------------------------------------------------------------------
+  // typewriter effect (jQuery)
+
+  const text = 'glmvc';
+
+  $('#typewriter-text').html(text);
+  $('#typewriter-text').css('--characters', text.length + 6);
+
+
+  //---------------------------------------------------------------------
+  // navigation (jQuery)
+
+  $('body').on('click', '#nav-icon', function () {
 
     $('body').toggleClass('nav-open');
 
   });
 
-  $('#nav-icon').on('click', function() {
+  $('#nav-icon').on('click', function () {
 
     $(this).toggleClass('open');
 
@@ -46,9 +72,9 @@ $(document).ready(function() {
 
 
   //---------------------------------------------------------------------
-  // corrected main heading with click function
+  // corrected main heading with click function (jQuery)
 
-  $('h1').text('Hello, World!').on('click', function() {
+  $('h1').text('Hello, World!').on('click', function () {
 
     alert('Ouch! Stop poking me!');
 
@@ -56,20 +82,24 @@ $(document).ready(function() {
 
 
   //---------------------------------------------------------------------
-  // image and figure caption switcher
+  // image and figure caption switcher (jQuery)
 
-  $('img').on('click', function() {
+  let imageMap;
 
-    let myImage = $('img');
-    let myCaption = $('img + figcaption')
-    let mySrc = $('img').attr('src');
+  $('img').on('click', function () {
 
-    if (mySrc === 'images/hello-world.png') {
-      myImage.attr('src', 'images/js-code.png');
-      myCaption.html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
+    if ($('img').attr('src') === 'images/hello-world.png') {
+
+      imageMap = $('map').detach();
+      $('img').attr('src', 'images/js-code.png');
+      $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
+
     } else {
-      myImage.attr('src', 'images/hello-world.png');
-      myCaption.html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+
+      $('img').before(imageMap);
+      $('img').attr('src', 'images/hello-world.png');
+      $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+
     }
 
   });
@@ -78,36 +108,57 @@ $(document).ready(function() {
   //---------------------------------------------------------------------
   // personalised welcome message
 
-  let myButton = document.querySelector('button');
-  let myHeading = document.querySelector('h2');
-
   function setUserName() {
-    let myName = prompt('Please enter your name.');
-    if (!myName) {
-      setUserName();
-    } else {
-      localStorage.setItem('name', myName);
-      myHeading.innerHTML = `Nice to meet you, <span>${myName}</span>!`;
+
+    let maxLength = 50;
+    let userName = -1;
+
+    while (userName == -1 || (userName != null && userName.length > maxLength)) {
+      userName = window.prompt(`Please enter your name. (max. characters: ${maxLength})`); // template string
     }
+
+    if (!userName) {
+
+      setUserName();
+
+    } else {
+
+      localStorage.setItem('name', userName);
+      $('h2').html(`Nice to meet you, <span>${userName}</span>!`);
+
+    }
+
   }
 
   if (!localStorage.getItem('name')) {
+
     setUserName();
+
   } else {
+
     let storedName = localStorage.getItem('name');
-    myHeading.innerHTML = `Nice to meet you, <span>${storedName}</span>!`;
+    $('h2').html(`Nice to meet you, <span>${storedName}</span>!`);
+
   }
 
-  myButton.onclick = function() {
+  $('#button').on('click', function () {
+
     setUserName();
-  }
+
+  });
 
 
   //---------------------------------------------------------------------
   // audio volume
 
-  var audio = document.getElementById('audio');
+  let audio = document.getElementById('audio');
   audio.volume = 0.5;
+
+
+  //---------------------------------------------------------------------
+  // image map resizer (jQuery)
+
+  $('map').imageMapResize();
 
 
 
