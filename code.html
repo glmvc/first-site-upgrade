@@ -1,450 +1,2112 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="author" content="glmvc">
-  <meta name="description" content="Source Code Of My Upgraded First Site">
+  <meta name="description" content="Source code of the upgraded version of my first site!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0fb55e">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade">
+  <meta property="og:title" content="Source Code">
+  <meta property="og:description" content="Source code of the upgraded version of my first site!">
+  <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
+  <meta property="twitter:title" content="Source Code">
+  <meta property="twitter:description" content="Source code of the upgraded version of my first site!">
+  <meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
   <title>Source Code</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="icon" href="images/code.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/prism.css">
+  <link rel="icon" href="images/favicons/code-favicon.ico" type="image/x-icon" sizes="any">
+  <link rel="icon" href="images/favicons/code-favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="images/favicons/code-favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/favicons/code-apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="images/favicons/code-site.webmanifest">
   <style>
     * {
       margin: 0;
       padding: 0;
     }
   </style>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <script src="scripts/prism.js"></script>
+  <script src="scripts/imageMapResizer.min.js"></script>
+  <script src="scripts/main.js" defer></script>
 </head>
-<body>
+<body class="center">
   <!--------------------------------------------------------------------->
   <!-- header -->
   <!--------------------------------------------------------------------->
   <header>
     <!--------------------------------------------------------------------->
-    <!-- SVG logo -->
-    <div class="svg-container">
-      <a href="index.html">
-        <svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="white"/>
-          <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0FB55E" stroke-width="22"/>
-          <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7CB7ED" stroke-width="22"/>
-          <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
-        </svg>
-      </a>
-    </div>
+    <!-- new SVG logo -->
+    <a class="logo" href="index.html">
+      <svg width="10rem" height="10rem" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="whitesmoke"/>
+        <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0fb55e" stroke-width="22"/>
+        <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7cb7ed" stroke-width="22"/>
+        <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
+      </svg>
+      <div class="typewriter">
+        <div class="text" id="typewriter-text"></div>
+      </div>
+    </a>
     <!--------------------------------------------------------------------->
-    <!-- navigation -->
+    <!-- new navigation -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="code.html">Source Code</a></li>
+        <li><a class="active" href="code.html">Source Code</a></li>
         <li><a href="changelog.html">Changelog</a></li>
         <li><a href="first-site/index.html">Previous Version</a></li>
       </ul>
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="code.html">Source Code</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="first-site/index.html">Previous Version</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <!--------------------------------------------------------------------->
   <!-- main -->
   <!--------------------------------------------------------------------->
-  <main>
+  <main class="website-padding">
     <!--------------------------------------------------------------------->
-    <!-- sidebar -->
+    <!-- new noscript warning -->
+    <noscript>
+      <div class="noscript">
+        Please <b>turn on JavaScript</b> in your (browser/system) <i>settings</i> to ensure that this <u>website runs properly</u>.
+      </div>
+    </noscript>
+    <!--------------------------------------------------------------------->
+    <!-- new sidebar -->
     <aside>
       <p>Visit my</p>
       <ul>
-        <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025;GitHub profile</a></li>
-        <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038;Twitter profile</a></li>
+        <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025; GitHub</a></li>
+        <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038; Twitter</a></li>
       </ul>
     </aside>
     <!--------------------------------------------------------------------->
     <!-- actual content divided into sections -->
-    <section class="html-code">
-<pre>
-<code>
-&lt;!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. --&gt;
-
-&lt;!--
-  It is possible
-  to write me across
-  multiple lines...
---&gt;
-
-&lt;!-- ... or of course on a single line. --&gt;
-
-
-
-&lt;!---------------------------------------------------------------------&gt;
-&lt;!---------------------------------------------------------------------&gt;
-&lt;!-- &quot;actual&quot; document starts below --&gt;
-&lt;!---------------------------------------------------------------------&gt;
-&lt;!---------------------------------------------------------------------&gt;
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en-US&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;!-- new meta data --&gt;
-  &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;
-  &lt;meta name=&quot;description&quot; content=&quot;My Upgraded First Site&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;My Upgraded First Site&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Code+Pro&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/style.css&quot;&gt; &lt;!-- mainly external stylesheet in use for styling --&gt;
-  &lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
-  &lt;!-- to demonstrate the internal stylesheet --&gt;
-  &lt;style&gt;
-    * {
-      margin: 0;
-      padding: 0;
-    }
-  &lt;/style&gt;
-  &lt;!-- new script loading method --&gt;
-  &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;!-- header --&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;header&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- new SVG logo --&gt;
-    &lt;div class=&quot;svg-container&quot;&gt;
-      &lt;a href=&quot;https://glmvc.github.io/first-site-upgrade/&quot;&gt;
-        &lt;svg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 276 255&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-          &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z&quot; fill=&quot;white&quot;/&gt;
-          &lt;path d=&quot;M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11&quot; stroke=&quot;#0FB55E&quot; stroke-width=&quot;22&quot;/&gt;
-          &lt;path d=&quot;M11 143.531V243.063H56.9375V220.094&quot; stroke=&quot;#7CB7ED&quot; stroke-width=&quot;22&quot;/&gt;
-          &lt;path d=&quot;M11 128.219V44H56.9375V204.781&quot; stroke=&quot;whitesmoke&quot; stroke-width=&quot;22&quot;/&gt;
-        &lt;/svg&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- new navigation --&gt;
-    &lt;nav&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Source Code&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;https://github.com/glmvc/first-site-upgrade/blob/main/changelog.md&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;https://glmvc.github.io/first-site/&quot;&gt;Previous Version&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;!-- main --&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;main&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- new sidebar --&gt;
-    &lt;aside&gt;
-      &lt;p&gt;Visit my&lt;/p&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;https://github.com/glmvc&quot; title=&quot;My Github profile&quot; target=&quot;_blank&quot;&gt;&amp;#128025;GitHub profile&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;https://twitter.com/glmvc&quot; title=&quot;My Twitter profile&quot; target=&quot;_blank&quot;&gt;&amp;#128038;Twitter profile&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/aside&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- actual content divided into sections --&gt;
-    &lt;section class=&quot;greeting&quot;&gt;
-      &lt;div class=&quot;headline&quot;&gt;&lt;h1 style=&quot;display:inline-block;&quot;&gt;hello world!&lt;/h1&gt;&lt;/div&gt; &lt;!-- just to demonstrate inline styling --&gt;
-      &lt;h2&gt;Nice to meet you!&lt;/h2&gt;
-      &lt;figure&gt;
-        &lt;img src=&quot;images/hello-world.png&quot; alt=&quot;A cartoon view of the earth saying hello and the moon&quot; title=&quot;I feel a bit wonky somehow O_o&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;
-        &lt;figcaption&gt;The earth saying hello and the moon (image downloaded from &lt;a href=&quot;https://openclipart.org/detail/190952/hello-world&quot; title=&quot;Open Clipart image source&quot; target=&quot;_blank&quot;&gt;Open Clipart&lt;/a&gt;)&lt;/figcaption&gt;
-      &lt;/figure&gt;
-      &lt;hr&gt;
-    &lt;/section&gt;
-    &lt;section class=&quot;hello-world-program&quot;&gt;
-      &lt;h3&gt;&quot;Hello, World!&quot; program&lt;/h3&gt;
-      &lt;p&gt;According to the &lt;a href=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot; title=&apos;Wikipedia entry about the &quot;Hello, World!&quot; program&apos; target=&quot;_blank&quot;&gt;&lt;cite&gt;Wikipedia article on the &quot;Hello, World!&quot; program&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;
-      &lt;blockquote cite=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot;&gt;
-        A &quot;Hello, World!&quot; program generally is a computer program that outputs or displays the message &quot;Hello, World!&quot;.&lt;br&gt;
-        Such a program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming language. It is often the first program written by people learning to code.&lt;br&gt;
-        It can also be used as a sanity test to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
-      &lt;/blockquote&gt;
-      &lt;figure&gt;
-        &lt;video controls muted autoplay loop preload=&quot;auto&quot; width=&quot;400&quot;&gt;
-          &lt;source src=&quot;videos/hello-world.mp4&quot; type=&quot;video/mp4&quot;&gt;
-          &lt;source src=&quot;videos/hello-world.webm&quot; type=&quot;video/webm&quot;&gt;
-          &lt;p&gt;Your browser doesn&apos;t support HTML 5 video. Here is a &lt;a href=&quot;videos/hello-world.mp4&quot;&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
-        &lt;/video&gt;
-        &lt;figcaption&gt;A &quot;Hello world!&quot; terminal output (video downloaded from &lt;a href=&quot;https://pixabay.com/de/videos/hello-world-pc-retro-monitor-28320/&quot; title=&quot;Pixabay video source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
-      &lt;/figure&gt;
-      &lt;hr&gt;
-    &lt;/section&gt;
-    &lt;section class=&quot;web-dev&quot;&gt;
-      &lt;h3&gt;Web development: 3 components&lt;/h3&gt;
-      &lt;p&gt;
-        The following description is a very simple example and is especially good for beginners to get to know the three most important components of front-end web development. Note that web development is a much larger field.&lt;br&gt;
-        Imagine building a house:&lt;/p&gt;
-      &lt;dl&gt;
-        &lt;dt&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/dt&gt;
-        &lt;dd&gt;The basic structure of the house. So, constructing the foundation walls, perhaps a basement and installing doors, windows and the roof.&lt;/dd&gt;
-        &lt;dt&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/dt&gt;
-        &lt;dd&gt;The look of the house. So, painting the walls in nice colors, turning the roof red and painting the windows and doors with a light wood finish.&lt;/dd&gt;
-        &lt;dt&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/dt&gt;
-        &lt;dd&gt;The functionality of the house. So, installing a doorbell, laying electricity and water pipes and installing all the appliances such as telephones, TVs or the kitchen stove.&lt;/dd&gt;
-      &lt;/dl&gt;
-      &lt;h4&gt;HTML is not a programming language&lt;/h4&gt;
-      &lt;p&gt;
-        &lt;q cite=&quot;https://en.wikipedia.org/wiki/HTML&quot;&gt;&lt;strong&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/strong&gt; is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as&lt;/q&gt;
-      &lt;/p&gt;
-      &lt;ul&gt;
-        &lt;li&gt;a stylesheet language like &lt;strong&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/strong&gt;
-          &lt;ul&gt;
-            &lt;li&gt;also not a programming language&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;and scripting languages such as &lt;strong&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/strong&gt;.
-          &lt;ul&gt;
-            &lt;li&gt;a programming language&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;hr&gt;
-    &lt;/section&gt;
-    &lt;section class=&quot;planet-table&quot;&gt;
-      &lt;h3&gt;Planets&lt;/h3&gt;
-      &lt;p&gt;To honor the other planets in our solar system as well, not just our own world.&lt;/p&gt;
-      &lt;table&gt;
-        &lt;caption&gt;Data about the planets of our solar system (Planetary facts taken from &lt;a href=&quot;http://nssdc.gsfc.nasa.gov/planetary/factsheet/&quot; title=&quot;NASA planetary factsheet&quot; target=&quot;_blank&quot;&gt;Nasa&apos;s Planetary Fact Sheet - Metric&lt;/a&gt;).&lt;/caption&gt;
-        &lt;colgroup&gt;
-          &lt;col span=&quot;2&quot;&gt;
-          &lt;col style=&quot;border-left:2px solid black;border-right:2px solid black&quot;&gt;
-          &lt;col span=&quot;9&quot;&gt;
-        &lt;/colgroup&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th colspan=&quot;2&quot;&gt;&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Mass (10&lt;sup&gt;24&lt;/sup&gt;kg)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Diameter (km)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Density (kg/m&lt;sup&gt;3&lt;/sup&gt;)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Gravity (m/s&lt;sup&gt;2&lt;/sup&gt;)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Length of day (hours)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Distance from Sun (10&lt;sup&gt;6&lt;/sup&gt;km)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Mean temperature (°C)&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Number of moons&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Notes&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tfoot&gt;
-          &lt;td colspan=&quot;12&quot;&gt;Please do NOT ask why the sun is not listed!&lt;br&gt;That would hurt its feelings and also mine...&lt;/td&gt;
-        &lt;/tfoot&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;th colspan=&quot;2&quot; rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Terrestrial planets&lt;/th&gt;
-            &lt;th scope=&quot;row&quot;&gt;Mercury&lt;/th&gt;
-            &lt;td&gt;0.330&lt;/td&gt;
-            &lt;td&gt;4,879&lt;/td&gt;
-            &lt;td&gt;5427&lt;/td&gt;
-            &lt;td&gt;3.7&lt;/td&gt;
-            &lt;td&gt;4222.6&lt;/td&gt;
-            &lt;td&gt;57.9&lt;/td&gt;
-            &lt;td&gt;167&lt;/td&gt;
-            &lt;td&gt;0&lt;/td&gt;
-            &lt;td&gt;The shrinking planet closest to the Sun&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;Venus&lt;/th&gt;
-            &lt;td&gt;4.87&lt;/td&gt;
-            &lt;td&gt;12,104&lt;/td&gt;
-            &lt;td&gt;5243&lt;/td&gt;
-            &lt;td&gt;8.9&lt;/td&gt;
-            &lt;td&gt;2802.0&lt;/td&gt;
-            &lt;td&gt;108.2&lt;/td&gt;
-            &lt;td&gt;464&lt;/td&gt;
-            &lt;td&gt;0&lt;/td&gt;
-            &lt;td&gt;The most hellish and hottest planet&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;Earth&lt;/th&gt;
-            &lt;td&gt;5.97 &lt;/td&gt;
-            &lt;td&gt;12,756&lt;/td&gt;
-            &lt;td&gt;5514&lt;/td&gt;
-            &lt;td&gt;9.8&lt;/td&gt;
-            &lt;td&gt;24.0&lt;/td&gt;
-            &lt;td&gt;149.6&lt;/td&gt;
-            &lt;td&gt;15&lt;/td&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Our world&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;Mars&lt;/th&gt;
-            &lt;td&gt;0.642&lt;/td&gt;
-            &lt;td&gt;6,792&lt;/td&gt;
-            &lt;td&gt;3933&lt;/td&gt;
-            &lt;td&gt;3.7&lt;/td&gt;
-            &lt;td&gt;24.7&lt;/td&gt;
-            &lt;td&gt;227.9&lt;/td&gt;
-            &lt;td&gt;-65&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;The red planet aka Elon&apos;s planet&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Jovian planets&lt;/th&gt;
-            &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Gas giants&lt;/th&gt;
-            &lt;th scope=&quot;row&quot;&gt;Jupiter&lt;/th&gt;
-            &lt;td&gt;1898&lt;/td&gt;
-            &lt;td&gt;142,984&lt;/td&gt;
-            &lt;td&gt;1326&lt;/td&gt;
-            &lt;td&gt;23.1&lt;/td&gt;
-            &lt;td&gt;9.9&lt;/td&gt;
-            &lt;td&gt;778.6&lt;/td&gt;
-            &lt;td&gt;-110&lt;/td&gt;
-            &lt;td&gt;67&lt;/td&gt;
-            &lt;td&gt;The largest planet&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;Saturn&lt;/th&gt;
-            &lt;td&gt;568&lt;/td&gt;
-            &lt;td&gt;120,536&lt;/td&gt;
-            &lt;td&gt;687&lt;/td&gt;
-            &lt;td&gt;9.0&lt;/td&gt;
-            &lt;td&gt;10.7&lt;/td&gt;
-            &lt;td&gt;1433.5&lt;/td&gt;
-            &lt;td&gt;-140&lt;/td&gt;
-            &lt;td&gt;62&lt;/td&gt;
-            &lt;td&gt;The planet with the &quot;rings&quot;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Ice giants&lt;/th&gt;
-            &lt;th scope=&quot;row&quot;&gt;Uranus&lt;/th&gt;
-            &lt;td&gt;86.8 &lt;/td&gt;
-            &lt;td&gt;51,118&lt;/td&gt;
-            &lt;td&gt;1271&lt;/td&gt;
-            &lt;td&gt;8.7&lt;/td&gt;
-            &lt;td&gt;17.2&lt;/td&gt;
-            &lt;td&gt;2872.5&lt;/td&gt;
-            &lt;td&gt;-195&lt;/td&gt;
-            &lt;td&gt;27&lt;/td&gt;
-            &lt;td&gt;The planet that is pronounced funny.&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;Neptun&lt;/th&gt;
-            &lt;td&gt;102&lt;/td&gt;
-            &lt;td&gt;49,528 &lt;/td&gt;
-            &lt;td&gt;1638&lt;/td&gt;
-            &lt;td&gt;11.0&lt;/td&gt;
-            &lt;td&gt;16.1&lt;/td&gt;
-            &lt;td&gt;4495.1&lt;/td&gt;
-            &lt;td&gt;-200&lt;/td&gt;
-            &lt;td&gt;14&lt;/td&gt;
-            &lt;td&gt;The planet very far out&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;th colspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Dwarf planets*&lt;/th&gt;
-            &lt;th scope=&quot;row&quot;&gt;Pluto&lt;/th&gt;
-            &lt;td&gt;0.0146&lt;/td&gt;
-            &lt;td&gt;2,370&lt;/td&gt;
-            &lt;td&gt;2095&lt;/td&gt;
-            &lt;td&gt;0.7&lt;/td&gt;
-            &lt;td&gt;153.3&lt;/td&gt;
-            &lt;td&gt;5906.4&lt;/td&gt;
-            &lt;td&gt;-225&lt;/td&gt;
-            &lt;td&gt;5&lt;/td&gt;
-            &lt;td&gt;Declassified as a planet in 2006, but this &lt;a href=&quot;http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/&quot; title=&quot;Article about Pluto and why he may actually be a planet&quot; target=&quot;_blank&quot;&gt;remains controversial&lt;/a&gt;.&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-      &lt;hr&gt;
-    &lt;/section&gt;
-    &lt;section class=&quot;sources&quot;&gt;
-      &lt;h5&gt;Sources:&lt;/h5&gt;
-      &lt;ol&gt;
-        &lt;li&gt;Created along with the great learning resource &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer&quot; title=&quot;MDN&amp;apos;s front-end web developer learning pathway&quot; target=&quot;_blank&quot;&gt;&amp;quot;front-end web developer learning pathway&amp;quot;&lt;/a&gt; from the &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; title=&quot;MDN homepage&quot; target=&quot;_blank&quot;&gt;MDN Web Docs&lt;/a&gt; (previously Mozilla Developer Network &amp;amp; formerly Mozilla Developer Center).&lt;/li&gt;
-        &lt;li&gt;Definitions: &lt;a href=&quot;https://wikipedia.org/&quot; title=&quot;Wikipedia homepage&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Favicon: &lt;a href=&quot;https://twemoji.twitter.com/&quot; title=&quot;Twitter emojis&quot; target=&quot;_blank&quot;&gt;Twemoji&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Image: &lt;a href=&quot;https://openclipart.org/&quot; title=&quot;Openclipart homepage&quot; target=&quot;_blank&quot;&gt;Openclipart&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Video and Audio: &lt;a href=&quot;https://pixabay.com/&quot; title=&quot;Pixabay homepage&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Planet data: &lt;a href=&quot;https://www.nasa.gov/&quot; title=&quot;NASA homepage&quot; target=&quot;_blank&quot;&gt;NASA&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Map: &lt;a href=&quot;https://www.openstreetmap.org/&quot; title=&quot;OpenStreetMap homepage&quot; target=&quot;_blank&quot;&gt;OpenStreetMap&lt;/a&gt;&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;!-- footer --&gt;
-  &lt;!---------------------------------------------------------------------&gt;
-  &lt;footer&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- additional page features --&gt;
-    &lt;h6&gt;Change your name:&lt;/h6&gt;
-    &lt;button&gt;Change user&lt;/button&gt;
-    &lt;h6&gt;Enhance your coding senses:&lt;/h6&gt;
-    &lt;figure&gt;
-      &lt;audio controls loop preload=&quot;auto&quot;&gt;
-        &lt;source src=&quot;audios/cyberpunk.mp3&quot; type=&quot;audio/mp3&quot;&gt;
-        &lt;source src=&quot;audios/cyberpunk.ogg&quot; type=&quot;audio/ogg&quot;&gt;
-        &lt;p&gt;Your browser doesn&apos;t support HTML 5 audio. Here is a &lt;a href=&quot;audios/cyberpunk.mp3&quot;&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
-      &lt;/audio&gt;
-      &lt;figcaption&gt;A cyberpunk soundtrack (audio downloaded from &lt;a href=&quot;https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/&quot; title=&quot;Pixabay audio source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
-    &lt;/figure&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- contact details --&gt;
-    &lt;address&gt;
-      &lt;p&gt;
-        secret street 1&lt;br&gt;
-        secret city&lt;br&gt;
-        secret country
-      &lt;/p&gt;
-      &lt;p&gt;&lt;a href=&quot;tel:+1234567890&quot;&gt;123-456-7890&lt;/a&gt;&lt;/p&gt;
-      &lt;p&gt;&lt;a href=&quot;mailto:mail@example.com?subject=This%20is%20the%20subject&quot;&gt;secret@example.com&lt;/a&gt;&lt;/p&gt;
-      &lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;amp;layer=cyclemap&quot;&gt;&lt;/iframe&gt;
-    &lt;/address&gt;
-    &lt;!---------------------------------------------------------------------&gt;
-    &lt;!-- random infos --&gt;
-    &lt;p&gt;The page&apos;s birthday is on the &lt;time datetime=&quot;2021-12-06&quot;&gt;&lt;/time&gt;6&lt;sup&gt;th&lt;/sup&gt; of December 2021&lt;/time&gt;.&lt;/p&gt;
-    &lt;p&gt;Coders usually love coffee &amp;#10084; Brew yourself some coffee with the chemical formula of caffeine: C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
-    &lt;p lang=&quot;ja&quot;&gt;このページはご飯としていいです。&lt;/p&gt;
-    &lt;p&gt;Last edited &lt;time datetime=&quot;2021-12-31T19:30&quot;&gt;at 7.30pm on December 31, 2021&lt;/time&gt;.&lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code>
-</pre>
+    <!-- greeting -->
+    <section class="greeting" aria-label="personalized welcome message">
+      <div class="heading center"><h1>hello world!</h1></div>
+      <h2 style="color:whitesmoke;">Nice to meet you,</h2>
       <hr>
     </section>
-    <section class="css-code">
-      
-      <hr>
+    <!-- code info -->
+    <section aria-label="source code info">
+      <h3>&#128126; Source Code Info</h3>
+      <p>This page displays the source code as code blocks/snippets of the HTML file of the homepage (index.html) and the CSS and JavaScript file of the entire website.</p>
+      <p>Feel free to copy the codes. You can either:</p>
+      <ul>
+        <li>simply copy the whole code of the wanted block into your clipboard using the <strong>"Copy" buttons</strong> in the top right corner of each code block,</li>
+        <li>or you manually select the desired lines with your input device (usually mouse) and press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>C</kbd> on Mac or <kbd>Ctrl</kbd> + <kbd>C</kbd> on Windows.</li>
+        <li>To paste what you copied to your desired location, on Mac press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd> and <kbd>Ctrl</kbd> + <kbd>V</kbd> on Windows.</li>
+      </ul>
     </section>
-    <section class="js-code">
-      
+    <hr>
+    <!-- html code block -->
+    <section aria-label="html source code">
+      <h4>&lt;/&gt; HTML Code</h4>
+      <pre>
+        <code class="language-html">
+          &lt;!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. --&gt;
+
+          &lt;!--
+            It is possible
+            to write me across
+            multiple lines...
+          --&gt;
+          
+          &lt;!-- ... or of course on a single line. --&gt;
+          
+          
+          
+          &lt;!---------------------------------------------------------------------&gt;
+          &lt;!---------------------------------------------------------------------&gt;
+          &lt;!-- &quot;actual&quot; document starts below --&gt;
+          &lt;!---------------------------------------------------------------------&gt;
+          &lt;!---------------------------------------------------------------------&gt;
+          
+          
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang=&quot;en-US&quot; dir=&quot;ltr&quot;&gt;
+          &lt;head&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- meta data --&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;!-- new meta data --&gt;
+            &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;
+            &lt;meta name=&quot;description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!-- so that responsiveness works as intended on mobile devices --&gt;
+            &lt;meta name=&quot;theme-color&quot; content=&quot;#0fb55e&quot;&gt;
+            &lt;!-- new meta data (open graph data &amp; twitter card) for facebook and twitter page share --&gt;
+            &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+            &lt;meta property=&quot;og:url&quot; content=&quot;https://glmvc.github.io/first-site-upgrade&quot;&gt;
+            &lt;meta property=&quot;og:title&quot; content=&quot;My Upgraded First Site&quot;&gt;
+            &lt;meta property=&quot;og:description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;
+            &lt;meta property=&quot;og:image&quot; content=&quot;https://glmvc.github.io/first-site-upgrade/images/hello-world.png&quot;&gt;
+            &lt;meta property=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+            &lt;meta property=&quot;twitter:url&quot; content=&quot;https://glmvc.github.io/first-site-upgrade&quot;&gt;
+            &lt;meta property=&quot;twitter:title&quot; content=&quot;My Upgraded First Site&quot;&gt;
+            &lt;meta property=&quot;twitter:description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;
+            &lt;meta property=&quot;twitter:image&quot; content=&quot;https://glmvc.github.io/first-site-upgrade/images/hello-world.png&quot;&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- title --&gt;
+            &lt;title&gt;My Upgraded First Site&lt;/title&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- linking --&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/normalize.css&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/fonts.css&quot;&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/style.css&quot;&gt; &lt;!-- mainly external stylesheet in use for styling --&gt;
+            &lt;!-- multiple favicon types for multiple devices/browsers --&gt;
+            &lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;any&quot;&gt;
+            &lt;link rel=&quot;icon&quot; href=&quot;favicon-16x16.png&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot;&gt;
+            &lt;link rel=&quot;icon&quot; href=&quot;favicon-32x32.png&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot;&gt;
+            &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;apple-touch-icon.png&quot; sizes=&quot;180x180&quot;&gt;
+            &lt;link rel=&quot;manifest&quot; href=&quot;site.webmanifest&quot;&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- to demonstrate the internal stylesheet --&gt;
+            &lt;style&gt;
+              * {
+                margin: 0;
+                padding: 0;
+              }
+            &lt;/style&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- new scripts (jQuery &amp; Image Map Resizer) &amp; script loading method --&gt;
+            &lt;script src=&quot;scripts/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;scripts/imageMapResizer.min.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
+          &lt;/head&gt;
+          &lt;body class=&quot;center&quot;&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- header --&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;header&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- new SVG logo --&gt;
+              &lt;a class=&quot;logo&quot; href=&quot;index.html&quot;&gt;
+                &lt;svg width=&quot;10rem&quot; height=&quot;10rem&quot; viewBox=&quot;0 0 276 255&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z&quot; fill=&quot;whitesmoke&quot;/&gt;
+                  &lt;path d=&quot;M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11&quot; stroke=&quot;#0fb55e&quot; stroke-width=&quot;22&quot;/&gt;
+                  &lt;path d=&quot;M11 143.531V243.063H56.9375V220.094&quot; stroke=&quot;#7cb7ed&quot; stroke-width=&quot;22&quot;/&gt;
+                  &lt;path d=&quot;M11 128.219V44H56.9375V204.781&quot; stroke=&quot;whitesmoke&quot; stroke-width=&quot;22&quot;/&gt;
+                &lt;/svg&gt;
+                &lt;div class=&quot;typewriter&quot;&gt;
+                  &lt;div class=&quot;text&quot; id=&quot;typewriter-text&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/a&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- new navigation --&gt;
+              &lt;nav&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Source Code&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;changelog.html&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;first-site/index.html&quot;&gt;Previous Version&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div id=&quot;nav-icon&quot;&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                  &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div id=&quot;mobile-nav&quot;&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;code.html&quot;&gt;Source Code&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;changelog.html&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;first-site/index.html&quot;&gt;Previous Version&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/nav&gt;
+            &lt;/header&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- main --&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;main class=&quot;website-padding&quot;&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- new noscript warning --&gt;
+              &lt;noscript&gt;
+                &lt;div class=&quot;noscript&quot;&gt;
+                  Please &lt;b&gt;turn on JavaScript&lt;/b&gt; in your (browser/system) &lt;i&gt;settings&lt;/i&gt; to ensure that this &lt;u&gt;website runs properly&lt;/u&gt;.
+                &lt;/div&gt;
+              &lt;/noscript&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- new sidebar --&gt;
+              &lt;aside&gt;
+                &lt;p&gt;Visit my&lt;/p&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href=&quot;https://github.com/glmvc&quot; title=&quot;My Github profile&quot; target=&quot;_blank&quot;&gt;&amp;#128025; GitHub&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;https://twitter.com/glmvc&quot; title=&quot;My Twitter profile&quot; target=&quot;_blank&quot;&gt;&amp;#128038; Twitter&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/aside&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- actual content divided into sections --&gt;
+              &lt;!-- greeting --&gt;
+              &lt;section class=&quot;greeting&quot; aria-label=&quot;personalized welcome message&quot;&gt;
+                &lt;div class=&quot;heading center&quot;&gt;&lt;h1&gt;hello world!&lt;/h1&gt;&lt;/div&gt;
+                &lt;h2 style=&quot;color:whitesmoke;&quot;&gt;Nice to meet you,&lt;/h2&gt; &lt;!-- just to demonstrate inline styling --&gt;
+                &lt;figure&gt;
+                  &lt;map name=&quot;hello-world&quot;&gt;
+                    &lt;area alt=&quot;Table about planets of our solarsystem&quot; title=&quot;Planet Earth&quot; href=&quot;#planets-table&quot; shape=&quot;circle&quot; coords=&quot;200,150,78&quot;&gt;
+                    &lt;area alt=&quot;NASA&apos;s solarsystem website&quot; title=&quot;Earth&apos;s Moon&quot; href=&quot;https://solarsystem.nasa.gov/moons/earths-moon/overview/&quot; target=&quot;_blank&quot; shape=&quot;circle&quot; coords=&quot;332,39,15&quot;&gt;
+                  &lt;/map&gt;
+                  &lt;img class=&quot;center&quot; width=&quot;400&quot; height=&quot;300&quot; src=&quot;images/hello-world.png&quot; alt=&quot;A cartoon view of the earth saying hello and the moon&quot; title=&quot;I feel a bit wonky when you do that O_o&quot; usemap=&quot;#hello-world&quot;&gt;
+                  &lt;figcaption&gt;The earth saying hello and the moon (image downloaded from &lt;a href=&quot;https://openclipart.org/detail/190952/hello-world&quot; title=&quot;Open Clipart image source&quot; target=&quot;_blank&quot;&gt;Open Clipart&lt;/a&gt;)&lt;/figcaption&gt;
+                &lt;/figure&gt;
+              &lt;/section&gt;
+              &lt;hr&gt;
+              &lt;!-- hello world program --&gt;
+              &lt;section class=&quot;hello-world-program&quot; aria-labelledby=&quot;hello-world-title&quot;&gt;
+                &lt;h3 id=&quot;hello-world-title&quot;&gt;&quot;Hello, World!&quot; program&lt;/h3&gt;
+                &lt;p&gt;According to the &lt;a href=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot; title=&apos;Wikipedia entry about the &quot;Hello, World!&quot; program&apos; target=&quot;_blank&quot;&gt;&lt;cite&gt;Wikipedia article on the &quot;Hello, World!&quot; program&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;
+                &lt;blockquote cite=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot;&gt;
+                  A &quot;Hello, World!&quot; program generally is &lt;mark&gt;a computer program&lt;/mark&gt; that outputs or displays the message &quot;Hello, World!&quot;.&lt;br&gt;
+                  Such a program is very simple in most programming languages, and is often used &lt;mark&gt;to illustrate the basic syntax&lt;/mark&gt; of a programming language. It is often the &lt;mark&gt;first program&lt;/mark&gt; written by people learning to code.&lt;br&gt;
+                  It can also be used as a &lt;mark&gt;sanity test&lt;/mark&gt; to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
+                &lt;/blockquote&gt;
+                &lt;p&gt;Well, let&apos;s just say that this is my first &quot;program&quot; so I can get more familiar with web development and see if everything is working properly and as intended.&lt;/p&gt;
+                &lt;figure class=&quot;center&quot;&gt;
+                  &lt;video  width=&quot;400&quot; controls muted autoplay loop preload=&quot;auto&quot;&gt;
+                    &lt;source src=&quot;videos/hello-world.mp4&quot; type=&quot;video/mp4&quot;&gt;
+                    &lt;source src=&quot;videos/hello-world.webm&quot; type=&quot;video/webm&quot;&gt;
+                    &lt;p&gt;Your browser doesn&apos;t support HTML 5 video. Here is a &lt;a href=&quot;videos/hello-world.mp4&quot;&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
+                  &lt;/video&gt;
+                  &lt;figcaption&gt;A &quot;Hello world!&quot; terminal output (video downloaded from &lt;a href=&quot;https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/&quot; title=&quot;Pixabay video source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
+                &lt;/figure&gt;
+              &lt;/section&gt;
+              &lt;hr&gt;
+              &lt;!-- web dev --&gt;
+              &lt;section aria-labelledby=&quot;web-dev-title&quot;&gt;
+                &lt;h3 id=&quot;web-dev-title&quot;&gt;Web development&lt;/h3&gt;
+                &lt;div class=&quot;web-dev&quot;&gt;
+                  &lt;p&gt;The following description is a &lt;mark&gt;&lt;em&gt;very&lt;/em&gt; simple example&lt;/mark&gt; and is especially good for beginners to get to know the &lt;mark&gt;three most important components&lt;/mark&gt; of front-end web development. Note that web development is a much larger field. So, imagine &lt;mark&gt;building a house&lt;/mark&gt;:&lt;/p&gt;
+                  &lt;dl&gt;
+                    &lt;dt&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/dt&gt;
+                    &lt;dd&gt;The basic &lt;mark&gt;structure&lt;/mark&gt; of the house. So, constructing the foundation walls, perhaps a basement and installing doors, windows and the roof.&lt;/dd&gt;
+                    &lt;dt&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/dt&gt;
+                    &lt;dd&gt;The &lt;mark&gt;look&lt;/mark&gt; of the house. So, painting the walls in nice colors, turning the roof red and painting the windows and doors with a light wood finish.&lt;/dd&gt;
+                    &lt;dt&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/dt&gt;
+                    &lt;dd&gt;The &lt;mark&gt;functionality&lt;/mark&gt; of the house. So, installing a doorbell, laying electricity and water pipes and installing all the appliances such as telephones, TVs or the kitchen stove.&lt;/dd&gt;
+                  &lt;/dl&gt;
+                &lt;/div&gt;
+                &lt;h4&gt;HTML is &lt;em&gt;not&lt;/em&gt; a programming language&lt;/h4&gt;
+                &lt;p&gt;&lt;q cite=&quot;https://en.wikipedia.org/wiki/HTML&quot;&gt;&lt;strong&gt;&lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/strong&gt; is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as&lt;/q&gt;&lt;/p&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;a stylesheet language like &lt;strong&gt;&lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/strong&gt;
+                    &lt;ul&gt;
+                      &lt;li&gt;also &lt;em&gt;not&lt;/em&gt; a programming language&lt;/li&gt;
+                      &lt;li&gt;but &lt;em&gt;indispensable&lt;/em&gt; for web development&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;and scripting languages such as &lt;strong&gt;&lt;abbr title=&quot;JavaScript&quot;&gt;JS&lt;/abbr&gt;&lt;/strong&gt;.
+                    &lt;ul&gt;
+                      &lt;li&gt;a programming language&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/section&gt;
+              &lt;hr&gt;
+              &lt;!-- planets table --&gt;
+              &lt;section id=&quot;planets-table&quot; aria-label=&quot;solar system planets table&quot;&gt;
+                &lt;h3&gt;Planets&lt;/h3&gt;
+                &lt;p&gt;To honor the other planets in our solar system as well, not just our own world.&lt;/p&gt;
+                &lt;div class=&quot;table-wrapper&quot;&gt;
+                  &lt;table&gt;
+                    &lt;caption&gt;Data about the planets of our solar system. Planetary facts taken from &lt;a href=&quot;https://nssdc.gsfc.nasa.gov/planetary/factsheet/&quot; title=&quot;NASA planetary factsheet&quot; target=&quot;_blank&quot;&gt;Nasa&apos;s Planetary Fact Sheet - Metric&lt;/a&gt;.&lt;/caption&gt;
+                    &lt;colgroup&gt;
+                      &lt;col span=&quot;2&quot;&gt;
+                      &lt;col style=&quot;border-left:2px solid black; border-right:2px solid black&quot;&gt;
+                      &lt;col span=&quot;9&quot; style=&quot;border-left:2px solid black; border-right:2px solid black&quot;&gt;
+                    &lt;/colgroup&gt;
+                    &lt;thead&gt;
+                      &lt;tr&gt;
+                        &lt;th colspan=&quot;2&quot;&gt;&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Mass (10&lt;sup&gt;24&lt;/sup&gt;kg)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Diameter (km)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Density (kg/m&lt;sup&gt;3&lt;/sup&gt;)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Gravity (m/s&lt;sup&gt;2&lt;/sup&gt;)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Length of day (hours)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Distance from Sun (10&lt;sup&gt;6&lt;/sup&gt;km)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Mean temperature (°C)&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Number of moons&lt;/th&gt;
+                        &lt;th scope=&quot;col&quot;&gt;Notes&lt;/th&gt;
+                      &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                      &lt;tr&gt;
+                        &lt;th colspan=&quot;2&quot; rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Terrestrial planets&lt;/th&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Mercury&lt;/th&gt;
+                        &lt;td&gt;0.330&lt;/td&gt;
+                        &lt;td&gt;4,879&lt;/td&gt;
+                        &lt;td&gt;5427&lt;/td&gt;
+                        &lt;td&gt;3.7&lt;/td&gt;
+                        &lt;td&gt;4222.6&lt;/td&gt;
+                        &lt;td&gt;57.9&lt;/td&gt;
+                        &lt;td&gt;167&lt;/td&gt;
+                        &lt;td&gt;0&lt;/td&gt;
+                        &lt;td&gt;The shrinking planet closest to the Sun&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Venus&lt;/th&gt;
+                        &lt;td&gt;4.87&lt;/td&gt;
+                        &lt;td&gt;12,104&lt;/td&gt;
+                        &lt;td&gt;5243&lt;/td&gt;
+                        &lt;td&gt;8.9&lt;/td&gt;
+                        &lt;td&gt;2802.0&lt;/td&gt;
+                        &lt;td&gt;108.2&lt;/td&gt;
+                        &lt;td&gt;464&lt;/td&gt;
+                        &lt;td&gt;0&lt;/td&gt;
+                        &lt;td&gt;The most hellish and hottest planet&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Earth&lt;/th&gt;
+                        &lt;td&gt;5.97 &lt;/td&gt;
+                        &lt;td&gt;12,756&lt;/td&gt;
+                        &lt;td&gt;5514&lt;/td&gt;
+                        &lt;td&gt;9.8&lt;/td&gt;
+                        &lt;td&gt;24.0&lt;/td&gt;
+                        &lt;td&gt;149.6&lt;/td&gt;
+                        &lt;td&gt;15&lt;/td&gt;
+                        &lt;td&gt;1&lt;/td&gt;
+                        &lt;td&gt;Our world&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Mars&lt;/th&gt;
+                        &lt;td&gt;0.642&lt;/td&gt;
+                        &lt;td&gt;6,792&lt;/td&gt;
+                        &lt;td&gt;3933&lt;/td&gt;
+                        &lt;td&gt;3.7&lt;/td&gt;
+                        &lt;td&gt;24.7&lt;/td&gt;
+                        &lt;td&gt;227.9&lt;/td&gt;
+                        &lt;td&gt;-65&lt;/td&gt;
+                        &lt;td&gt;2&lt;/td&gt;
+                        &lt;td&gt;The red planet aka Elon&apos;s planet&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th rowspan=&quot;4&quot; scope=&quot;rowgroup&quot;&gt;Jovian planets&lt;/th&gt;
+                        &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Gas giants&lt;/th&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Jupiter&lt;/th&gt;
+                        &lt;td&gt;1898&lt;/td&gt;
+                        &lt;td&gt;142,984&lt;/td&gt;
+                        &lt;td&gt;1326&lt;/td&gt;
+                        &lt;td&gt;23.1&lt;/td&gt;
+                        &lt;td&gt;9.9&lt;/td&gt;
+                        &lt;td&gt;778.6&lt;/td&gt;
+                        &lt;td&gt;-110&lt;/td&gt;
+                        &lt;td&gt;67&lt;/td&gt;
+                        &lt;td&gt;The largest planet&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Saturn&lt;/th&gt;
+                        &lt;td&gt;568&lt;/td&gt;
+                        &lt;td&gt;120,536&lt;/td&gt;
+                        &lt;td&gt;687&lt;/td&gt;
+                        &lt;td&gt;9.0&lt;/td&gt;
+                        &lt;td&gt;10.7&lt;/td&gt;
+                        &lt;td&gt;1433.5&lt;/td&gt;
+                        &lt;td&gt;-140&lt;/td&gt;
+                        &lt;td&gt;62&lt;/td&gt;
+                        &lt;td&gt;The planet with the &quot;rings&quot;&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th rowspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Ice giants&lt;/th&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Uranus&lt;/th&gt;
+                        &lt;td&gt;86.8 &lt;/td&gt;
+                        &lt;td&gt;51,118&lt;/td&gt;
+                        &lt;td&gt;1271&lt;/td&gt;
+                        &lt;td&gt;8.7&lt;/td&gt;
+                        &lt;td&gt;17.2&lt;/td&gt;
+                        &lt;td&gt;2872.5&lt;/td&gt;
+                        &lt;td&gt;-195&lt;/td&gt;
+                        &lt;td&gt;27&lt;/td&gt;
+                        &lt;td&gt;The planet that is pronounced funny.&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;Neptun&lt;/th&gt;
+                        &lt;td&gt;102&lt;/td&gt;
+                        &lt;td&gt;49,528 &lt;/td&gt;
+                        &lt;td&gt;1638&lt;/td&gt;
+                        &lt;td&gt;11.0&lt;/td&gt;
+                        &lt;td&gt;16.1&lt;/td&gt;
+                        &lt;td&gt;4495.1&lt;/td&gt;
+                        &lt;td&gt;-200&lt;/td&gt;
+                        &lt;td&gt;14&lt;/td&gt;
+                        &lt;td&gt;The planet very far out&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;th colspan=&quot;2&quot; scope=&quot;rowgroup&quot;&gt;Dwarf planets*&lt;/th&gt;
+                        &lt;th scope=&quot;row&quot;&gt;&lt;s&gt;Pluto&lt;/s&gt;&lt;/th&gt;
+                        &lt;td&gt;0.0146&lt;/td&gt;
+                        &lt;td&gt;2,370&lt;/td&gt;
+                        &lt;td&gt;2095&lt;/td&gt;
+                        &lt;td&gt;0.7&lt;/td&gt;
+                        &lt;td&gt;153.3&lt;/td&gt;
+                        &lt;td&gt;5906.4&lt;/td&gt;
+                        &lt;td&gt;-225&lt;/td&gt;
+                        &lt;td&gt;5&lt;/td&gt;
+                        &lt;td&gt;Declassified as a planet in 2006, but this &lt;a href=&quot;https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/&quot; title=&quot;Article about Pluto and why he may actually be a planet&quot; target=&quot;_blank&quot;&gt;remains controversial&lt;/a&gt;.&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;tfoot&gt;
+                      &lt;tr&gt;
+                        &lt;td colspan=&quot;12&quot;&gt;Please &lt;em&gt;do not&lt;/em&gt; ask why the sun is not listed!&lt;br&gt;That would hurt its feelings and also mine...&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                  &lt;/table&gt;
+                &lt;/div&gt;
+              &lt;/section&gt;
+              &lt;hr&gt;
+              &lt;!-- sources --&gt;
+              &lt;section class=&quot;sources&quot; aria-labelledby=&quot;sources-title&quot;&gt;
+                &lt;h5 id=&quot;sources-title&quot;&gt;Sources:&lt;/h5&gt;
+                &lt;ol&gt;
+                  &lt;li&gt;Created along with the great learning resource &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer&quot; title=&quot;MDN&amp;apos;s front-end web developer learning pathway&quot; target=&quot;_blank&quot;&gt;&amp;quot;front-end web developer learning pathway&amp;quot;&lt;/a&gt; from the &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot; title=&quot;MDN homepage&quot; target=&quot;_blank&quot;&gt;MDN Web Docs&lt;/a&gt; (previously Mozilla Developer Network &amp;amp; formerly Mozilla Developer Center).&lt;/li&gt;
+                  &lt;li&gt;Definitions: &lt;a href=&quot;https://www.wikipedia.org/&quot; title=&quot;Wikipedia homepage&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Favicon: &lt;a href=&quot;https://twemoji.twitter.com/&quot; title=&quot;Twitter emojis homepage&quot; target=&quot;_blank&quot;&gt;Twemoji&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;SVG Background: &lt;a href=&quot;https://bgjar.com/&quot; title=&quot;BGJar homepage&quot; target=&quot;_blank&quot;&gt;BGJar&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Typewriter effect: &lt;a href=&quot;https://www.30secondsofcode.org/&quot; title=&quot;30 seconds of code homepage&quot; target=&quot;_blank&quot;&gt;30 seconds of code&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Image: &lt;a href=&quot;https://openclipart.org/&quot; title=&quot;Openclipart homepage&quot; target=&quot;_blank&quot;&gt;Openclipart&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Video and Audio: &lt;a href=&quot;https://pixabay.com/&quot; title=&quot;Pixabay homepage&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Planet data: &lt;a href=&quot;https://www.nasa.gov/&quot; title=&quot;NASA homepage&quot; target=&quot;_blank&quot;&gt;NASA&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Button design: &lt;a href=&quot;https://cssbuttons.io/&quot; title=&quot;cssbuttons.io homepage&quot; target=&quot;_blank&quot;&gt;cssbuttons.io&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Map: &lt;a href=&quot;https://www.google.com/maps/about/&quot; title=&quot;Google Maps homepage&quot; target=&quot;_blank&quot;&gt;Google Maps&lt;/a&gt;&lt;/li&gt;
+                &lt;/ol&gt;
+              &lt;/section&gt;
+              &lt;hr&gt;
+            &lt;/main&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;!-- footer --&gt;
+            &lt;!---------------------------------------------------------------------&gt;
+            &lt;footer class=&quot;website-padding&quot;&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- additional page features --&gt;
+              &lt;div class=&quot;features-wrapper&quot;&gt;
+                &lt;div class=&quot;feature&quot;&gt;
+                  &lt;h6&gt;Change your name:&lt;/h6&gt;
+                  &lt;button id=&quot;button&quot;&gt;Change user&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;feature&quot;&gt;
+                  &lt;h6&gt;Enhance your coding senses:&lt;/h6&gt;
+                  &lt;figure&gt;
+                    &lt;audio id=&quot;audio&quot; controls loop preload=&quot;auto&quot;&gt;
+                      &lt;source src=&quot;audios/cyberpunk.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+                      &lt;source src=&quot;audios/cyberpunk.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+                      &lt;p&gt;Your browser doesn&apos;t support HTML 5 audio. Here is a &lt;a href=&quot;audios/cyberpunk.mp3&quot;&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
+                    &lt;/audio&gt;
+                    &lt;figcaption class=&quot;no-print&quot;&gt;A cyberpunk soundtrack (audio downloaded from &lt;a href=&quot;https://pixabay.com/music/elektronisch-cyberpunk-2099-10701/&quot; title=&quot;Pixabay audio source&quot; target=&quot;_blank&quot;&gt;Pixabay&lt;/a&gt;)&lt;/figcaption&gt;
+                  &lt;/figure&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;hr&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- contact details --&gt;
+              &lt;address&gt;
+                &lt;div&gt;
+                  &lt;p&gt;
+                    secret street 1&lt;br&gt;
+                    secret city&lt;br&gt;
+                    secret country
+                  &lt;/p&gt;
+                  &lt;p&gt;&lt;a href=&quot;tel:+1234567890&quot;&gt;123-456-7890&lt;/a&gt;&lt;/p&gt;
+                  &lt;p&gt;&lt;a href=&quot;mailto:mail@example.com?subject=This%20is%20the%20subject&quot;&gt;secret@example.com&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat&quot; width=&quot;400&quot; height=&quot;300&quot; style=&quot;border:0;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+              &lt;/address&gt;
+              &lt;hr&gt;
+              &lt;!---------------------------------------------------------------------&gt;
+              &lt;!-- info --&gt;
+              &lt;details open&gt;
+                &lt;summary class=&quot;center&quot;&gt;Info&lt;/summary&gt;
+                &lt;p&gt;The page&apos;s birthday is on the &lt;time datetime=&quot;2021-12-06&quot;&gt;6&lt;sup&gt;th&lt;/sup&gt; of December 2021&lt;/time&gt;.&lt;/p&gt;
+                &lt;p&gt;This page &amp;gt; first page and 1 &amp;lt; 2!&lt;/p&gt;
+                &lt;p&gt;Coders usually love coffee &lt;span class=&quot;emoji&quot;&gt;&amp;#10084; &amp;#9749;&lt;/span&gt; Brew yourself some coffee with the chemical formula of caffeine: C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
+                &lt;p&gt;The two words &quot;&lt;bdo dir=&quot;rtl&quot;&gt;Hello World&lt;/bdo&gt;&quot; are &quot;Hello World&quot; spelled backwards.&lt;/p&gt;
+                &lt;p lang=&quot;ja&quot;&gt;このページはご飯としていいです。&lt;/p&gt;
+                &lt;p&gt;&lt;small&gt;Last edited &lt;time datetime=&quot;2022-03-06T00:00&quot;&gt;at at 00:00 a.m. on March 6, 2022&lt;/time&gt;.&lt;/small&gt;&lt;/p&gt;
+              &lt;/details&gt;
+            &lt;/footer&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
     </section>
+    <hr>
+    <!-- css code block -->
+    <section aria-label="css source code">
+      <h4>{ } CSS Code</h4>
+      <pre>
+        <code class="language-css">
+          /* I am a CSS comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
+
+          /*
+            It is possible
+            to write me across
+            multiple lines...
+          */
+          
+          /* ... or of course on a single line. */
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*---------------------------------------------------------------------*/
+          /*-- "actual" stylesheet starts below --*/
+          /*---------------------------------------------------------------------*/
+          /*---------------------------------------------------------------------*/
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- custom properties (variables) using the :root pseudo-class --*/
+          /*---------------------------------------------------------------------*/
+          
+          :root {
+            /*-- website colors --*/
+            --background-dark-grey: #121212;
+            --surface-dark-grey: rgba(255, 255, 255, 0.05); /* works with just the rgb function too */
+            --onsurface-white: whitesmoke; /* color keyword (CSS identifier) */
+            --primary-green: #0fb55e;
+            --primary-green-darker: #069247;
+            --button-green: #0bf377;
+            --secondary-blue: #7cb7ed;
+            --secondary-blue-darker: #4383bb;
+            /*-- website padding --*/
+            --website-padding: 3rem;
+          }
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- general --*/
+          /*---------------------------------------------------------------------*/
+          
+          *, *::before, *::after { /* to inherit the alternative box model to all elements */
+            box-sizing: inherit;
+          }
+          
+          html { /* type selector (also called tag or element selector) */
+            box-sizing: border-box; /* alternative box model */
+            font-size: 10px;
+            font-family: "Source Code Pro", "Consolas", "Courier New", monospace; /* font-stack to guarantee the availability of the fonts across all systems */
+            font-weight: normal;
+            font-style: normal;
+            color: whitesmoke; /* fallback color */
+            color: var(--onsurface-white);
+            background-color: #121212;
+            background-color: var(--background-dark-grey);
+          }
+          
+          body {
+            margin: 20px 0 20px;
+            width: 1024px; /* fallback width */
+            width: 90vw;
+            max-width: 1920px;
+            background: center repeat url("../images/background.svg"), rgba(255, 255, 255, 0.05); /* fallback background */
+            background: center repeat url("../images/background.svg"), var(--surface-dark-grey); /* shorthand property */
+            border: 3px solid black;
+            border-radius: 10px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
+                        -5px 0px 10px rgba(15, 181, 94, 0.8); /* left */
+            overflow-x: hidden;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- classes --*/
+          
+          .center { /* class selector */
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .website-padding {
+            padding-left: 15rem;
+            padding-right: 3rem;
+            padding-right: var(--website-padding);
+          }
+          
+          .noscript {
+            margin: 4em auto 2em;
+            padding: 1em;
+            max-width: 40ch;
+            font-weight: 500;
+            font-size: 1.5rem;
+            letter-spacing: 0.001em;
+            text-align: center;
+            color: red;
+            border: 2px solid red;
+            filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.7));
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- scroll --*/
+          
+          body::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          body::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.05);
+            background-color: var(--surface-dark-grey);
+          }
+          
+          body::-webkit-scrollbar-thumb {
+            background-color: #069247;
+            background-color: var(--primary-green-darker);
+            border: 0px solid #0fb55e;
+            border: 0px solid var(--primary-green);
+            border-radius: 0px;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- styling --*/
+          
+          /*-- text --*/
+          
+          h1, h2, h3, h4, h5, h6 { /* selector list on a single line */
+            margin-bottom: 0.3em;
+            font-weight: normal;
+            color: #0fb55e;
+            color: var(--primary-green);
+          }
+          
+          h1 {
+            display: inline; /* inline box (outer display type) */
+            margin-top: 0.3em;
+            font-weight: 300; /* 300 = light */
+            font-size: 10.5rem;
+            letter-spacing: -0.015em;
+            text-align: center;
+            text-shadow: 0.01em 0 0.01em #121212, /* multiple shadows */
+                         0 0.01em 0.01em #212121,
+                         0.02em 0.01em 0.01em #121212,
+                         0.01em 0.02em 0.01em #212121,
+                         0.03em 0.02em 0.01em #121212,
+                         0.02em 0.03em 0.01em #212121,
+                         0.04em 0.03em 0.01em #121212,
+                         0.03em 0.04em 0.01em #212121,
+                         0.05em 0.04em 0.01em #121212,
+                         0.04em 0.05em 0.01em #212121,
+                         0.06em 0.05em 0.01em #121212,
+                         0.05em 0.06em 0.01em #212121,
+                         0.07em 0.06em 0.01em #121212,
+                         0.06em 0.07em 0.01em #212121,
+                         0.08em 0.07em 0.01em #121212;
+            transition: transform 0.2s;
+          }
+          
+          h1:hover {
+            transform: rotate(-1deg);
+            transition: transform 0.2s;
+            cursor: not-allowed;
+          }
+          
+          h2 {
+            font-weight: 300;
+            font-size: 6.6rem;
+            letter-spacing: -0.005em;
+            line-height: 1.3;
+            text-align: center;
+            text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), /* fallback text shadows */
+                         0.06em 0.06em 0 #121212;
+            text-shadow: 0.03em 0.03em 0 var(--surface-dark-grey),
+                         0.06em 0.06em 0 var(--background-dark-grey);
+          }
+          
+          h3 {
+            font-size: 5.2rem;
+            text-shadow: 0.06em 0.06em 0.04em #121212;
+            text-shadow: 0.06em 0.06em 0.04em var(--background-dark-grey);
+          }
+          
+          h4 {
+            margin-top: 1em;
+            font-size: 3.7rem;
+            letter-spacing: -0.0025em;
+            text-shadow: 0.05em 0.05em 0.03em #121212;
+            text-shadow: 0.05em 0.05em 0.03em var(--background-dark-grey);
+          }
+          
+          h5 {
+            font-size: 3.7rem;
+            text-shadow: 0.03em 0.03em 0.02em #121212;
+            text-shadow: 0.03em 0.03em 0.02em var(--background-dark-grey);
+          }
+          
+          h6 {
+            font-weight: 500; /* 500 = medium */
+            font-size: 2.2rem;
+            letter-spacing: 0.0015em;
+            line-height: 2.5;
+            word-spacing: 0.5em;
+            text-align: center;
+            text-decoration: underline overline #0fb55e wavy;
+            text-decoration: underline overline var(--primary-green) wavy;
+            text-underline-offset: 0.4em;
+            text-transform: uppercase;
+          }
+          
+          figcaption {
+            margin-top: 1em;
+            font-size: 1.3rem;
+            letter-spacing: 0.004em;
+          }
+          
+          img + figcaption { /* adjacent sibling combinator */
+            margin-top: 2em;
+            text-align: center;
+          }
+          
+          p, /* selector list across multiple lines */
+          ul,
+          ol,
+          dl,
+          blockquote,
+          details {
+            font-size: 1.7rem;
+            letter-spacing: 0.005em;
+          }
+          
+          p,
+          li,
+          dt,
+          dd,
+          blockquote,
+          details {
+            line-height: 1.5;
+          }
+          
+          h3 ~ p { /* general sibling combinator */
+            margin: 1em 0;
+            font-style: italic;
+          }
+          
+          mark {
+            padding: 0.02em 0.2em;
+            color: whitesmoke;
+            color: var(--onsurface-white);
+            background-color: rgba(255, 255, 255, 0.07);
+          }
+          
+          abbr {
+            text-underline-offset: 0.2em;
+          }
+          
+          abbr:hover {
+            cursor: help;
+          }
+          
+          address p:first-child {
+            text-transform: capitalize;
+          }
+          
+          p[lang="ja"] { /* attribute selector */
+            position: relative;
+            float: right;
+            writing-mode: vertical-rl;
+            color: #0fb55e;
+            color: var(--primary-green);
+            text-transform: full-width;
+            text-shadow: 0 0 0.25em #0bf377;
+            text-shadow: 0 0 0.25em var(--button-green);
+          }
+          
+          strong,
+          dt {
+            color: #0fb55e;
+            color: var(--primary-green);
+          }
+          
+          details > p { /* child combinator */
+            font-size: 1.5rem;
+            letter-spacing: 0.0025em;
+            text-align: center;
+          }
+          
+          /*-- hyperlinks --*/
+          
+          a {
+            outline: none;
+            text-underline-offset: 0.3em;
+          }
+          
+          a:link {
+            color: #7cb7ed;
+            color: var(--secondary-blue);
+          }
+          
+          a:visited {
+            color: #4383bb;
+            color: var(--secondary-blue-darker);
+          }
+          
+          a:focus {
+            color: #0fb55e;
+            color: var(--primary-green);
+            background-color: rgba(255, 255, 255, 0.05);
+            background-color: var(--surface-dark-grey);
+          }
+          
+          a:hover { /* (user-action or dynamic) pseudo-class selector*/
+            text-decoration: none;
+            color: #0fb55e;
+            color: var(--primary-green);
+            transform: scale(1.05);
+          }
+          
+          a:active {
+            font-weight: 700; /* 700 = bold */
+          }
+          
+          a[href*="http"]::after { /* (special) pseudo-element selector */
+            content: ""; /* empty string */
+            display: inline-block;
+            margin-left: 0.2em;
+            height: 0.8em;
+            width: 0.8em;
+            background-image: url("../images/external-red.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          
+          a[href^="https"]::after {
+            background-image: url("../images/external-blue.svg");
+          }
+          
+          a[href^="https"]:focus::after {
+            background-image: url("../images/external-green.svg");
+          }
+          
+          a[href^="http"]:hover::after {
+            background-image: url("../images/external-red.svg");
+          }
+          
+          a[href^="https"]:hover::after {
+            background-image: url("../images/external-green.svg");
+          }
+          
+          /*-- lists --*/
+          
+          @counter-style thumbs {
+            system: cyclic;
+            symbols: "\1F44E" "\1F44D";
+            suffix: "";
+            fallback: circle;
+          }
+          
+          ul {
+            list-style-type: square;
+          }
+          
+          section ul {
+            margin-left: 4ch;
+          }
+          
+          section ul > li {
+            line-height: 2;
+          }
+          
+          section[aria-labelledby="web-dev-title"] > ul > li:first-child {
+            margin-bottom: 0.5em;
+          }
+          
+          section ul ul {
+            margin-left: 4ch;
+            list-style-type: thumbs;
+          }
+          
+          section ul li:nth-child(2) ul > li {
+            list-style-type: circle; /* fallback list style type */
+            list-style-type: "\1F44D ";
+          }
+          
+          section ul li ul li {
+            padding-left: 1ch;
+          }
+          
+          ol {
+            list-style-type: upper-roman;
+          }
+          
+          ol li {
+            padding-bottom: 0.5em;
+          }
+          
+          ol li:last-child {
+            padding-bottom: 0;
+          }
+          
+          nav ul,
+          aside ul { /* descendant combinators */
+            list-style-type: none;
+          }
+          
+          dt {
+            margin-top: 1em;
+            font-weight: bold;
+          }
+          
+          dd {
+            font-size: 1.5rem;
+            letter-spacing: 0.025em;
+            text-indent: 1ch;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- visuals --*/
+          
+          hr {
+            margin: 3rem 0;
+            border: none;
+            border-top: 3px dashed rgba(255, 255, 255, 0.07);
+            filter: drop-shadow(1px 1px 1px black);
+          }
+          
+          img {
+            display: block; /* block box (outer display type) */
+            cursor: pointer;
+            transition: transform 0.2s;
+          }
+          
+          img:hover {
+            transform: rotate(0.005turn);
+            transition: transform 0.2s;
+          }
+          
+          img[src="images/js-code.png"] {
+            filter: blur(5px);
+          }
+          
+          img,
+          video,
+          iframe {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          audio {
+            width: 100%;
+            max-width: 400px;
+            height: 4rem;
+          }
+          
+          img,
+          video,
+          audio,
+          iframe {
+            filter: drop-shadow(4px 4px 6px black);
+          }
+          
+          /*-- glitch effect --*/
+          
+          h2 span {
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
+                         -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                         0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            animation: glitch 600ms infinite;
+          }
+          
+          @keyframes glitch {
+          
+            0% {
+              text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            14% {
+              text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            15% {
+              text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            49% {
+              text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            50% {
+              text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            99% {
+              text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            100% {
+              text-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
+                           0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- code --*/
+          
+          pre {
+            border: 2px solid #121212;
+            border: 2px solid var(--background-dark-grey);
+            border-radius: 0.5em;
+          }
+          
+          pre::-webkit-scrollbar {
+            height: 8px;
+          }
+          
+          pre::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.07);
+            background-color: var(--surface-dark-grey);
+          }
+          
+          pre::-webkit-scrollbar-thumb {
+            background-color: #069247;
+            background-color: var(--primary-green-darker);
+            border: 0px solid #0fb55e;
+            border: 0px solid var(--primary-green);
+            border-radius: 0px;
+          }
+          
+          kbd {
+            display: inline-block;
+            padding: 0.2em 0.4em;
+            font-weight: 500;
+            font-size: 0.85em;
+            line-height: 1;
+            color: #333;
+            background-color: #eee;
+            border-radius: 0.3em;
+            border: 1px solid #b4b4b4;
+            box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
+            white-space: nowrap;
+          }
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- header --*/
+          /*---------------------------------------------------------------------*/
+          
+          header { /* flex container */
+            z-index: 6;
+            position: sticky;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            padding: 1.5rem var(--website-padding);
+            background: rgb(18, 18, 18);
+            background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+          }
+          
+          body:not(.scrolled) header {
+            border-radius: 6px 6px 0 0;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- logo --*/
+          
+          header a.logo {
+            z-index: 8;
+            position: relative;
+            text-decoration: none;
+          }
+          
+          header a.logo:focus {
+            background-color: unset;
+            filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+          }
+          
+          header a.logo:hover {
+            transform: unset;
+          }
+          
+          header svg {
+            padding-left: 7px;
+            box-sizing: content-box; /* switching to the standard box model */
+          }
+          
+          /*-- typewriter effect --*/
+          
+          .typewriter {
+            display: flex;
+            margin-left: 2.2rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+          }
+          
+          .typewriter > .text {
+            max-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 6s steps(var(--characters)) infinite;
+          }
+          
+          .typewriter:after {
+            content: " |";
+            animation: blink 1s step-end infinite;
+          }
+          
+          @keyframes typing {
+          
+            60%,
+            100% {
+              max-width: calc(var(--characters) * 1ch);
+            }
+          
+          }
+          
+          @keyframes blink {
+          
+            0%,
+            75%,
+            100% {
+              opacity: 1;
+            }
+          
+            25% {
+              opacity: 0;
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- nav --*/
+          
+          #mobile-nav {
+            display: none;
+          }
+          
+          nav li {
+            display: inline;
+            font-size: 1.8rem;
+            letter-spacing: 0.0015em;
+          }
+          
+          /*-- active page hyperlink --*/
+          
+          nav a.active {
+            color: #069247;
+            color: var(--primary-green-darker);
+          }
+          
+          nav a.active:hover {
+            color: #0fb55e;
+            color: var(--primary-green);
+          }
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- main content --*/
+          /*---------------------------------------------------------------------*/
+          
+          /*---------------------------------------------------------------------*/
+          /*-- sidebar --*/
+          
+          aside {
+            position: fixed;
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+            margin-top: 5rem;
+            margin-left: -13.5rem;
+            margin-left: calc(15rem * (-1) + 1.5rem); /* to "reset" the padding-left from the main section */
+            padding: 1rem;
+            border: 3px dashed #0fb55e;
+            border: 3px dashed var(--primary-green);
+            filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+          }
+          
+          aside > p {
+            padding-right: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+          }
+          
+          aside ul {
+            display: flex;
+            gap: 0.3em;
+            padding: 0;
+          }
+          
+          aside li {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+          }
+          
+          aside a {
+            text-decoration: none;
+          }
+          
+          aside li a[href*="http"]::after {
+            content: none;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- greeting --*/
+          
+          div.heading { /* "selecting all div elements with a class of heading" */
+            display: flex; /* inner display type = flex (outer display type = block) */
+            justify-content: center;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- hello world program --*/
+          
+          @media only screen and (min-width: 790px) {
+          
+            section.hello-world-program { /* grid container */
+              display: grid;
+              grid-template-areas:
+                "heading heading"
+                "para1 para1"
+                "quote video"
+                "para2 para2";
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: auto;
+              gap: 2rem;
+            }
+          
+            section.hello-world-program h3 {
+              grid-area: heading;
+              margin-bottom: 0;
+            }
+          
+            section.hello-world-program h3 + p {
+              grid-area: para1;
+            }
+          
+            section.hello-world-program p:nth-last-child(2) {
+              grid-area: para2;
+            }
+          
+            section.hello-world-program blockquote {
+              grid-area: quote;
+            }
+          
+            section.hello-world-program figure {
+              grid-area: video;
+              align-self: center;
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- web dev --*/
+          
+          .web-dev { /* multicol container */
+            columns: 3 40ch;
+            column-gap: 4em;
+            column-rule: 4px dotted rgba(255, 255, 255, 0.07);
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- planets table --*/
+          
+          .table-wrapper {
+            overflow-x: auto;
+          }
+          
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid black;
+            font-family: "Orbitron", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 1.3rem;
+            letter-spacing: 0.0025em;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.88);
+            background-color: black;
+          }
+          
+          table caption {
+            margin: 1em 2em 2em 0;
+            font-size: 1.1rem;
+            letter-spacing: 0.004em;
+            text-align: right;
+            caption-side: bottom;
+          }
+          
+          thead {
+            border-bottom: 2px solid black;
+          }
+          
+          thead th {
+            font-weight: 800;
+          }
+          
+          tbody td {
+            text-align: center;
+          }
+          
+          tfoot {
+            font-size: 0.9rem;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            border-top: 2px solid black;
+          }
+          
+          th,
+          td {
+            padding: 1em;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+          }
+          
+          th {
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.08);
+          }
+          
+          td {
+            font-weight: 300;
+          }
+          
+          /*-- zebra striping --*/
+          
+          tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.09);
+          }
+          
+          tr:nth-child(odd) td {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+          
+          /*-- table scrollbar --*/
+          
+          .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+          }
+          
+          .table-wrapper::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.07);
+            background-color: var(--surface-dark-grey);
+          }
+          
+          .table-wrapper::-webkit-scrollbar-thumb {
+            background-color: #069247;
+            background-color: var(--primary-green-darker);
+            border: 0px solid #0fb55e;
+            border: 0px solid var(--primary-green);
+            border-radius: 0px;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- sources --*/
+          
+          section.sources ol {
+            margin-left: 4em;
+          }
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- footer --*/
+          /*---------------------------------------------------------------------*/
+          
+          /*---------------------------------------------------------------------*/
+          /*-- additional page features --*/
+          
+          .features-wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 2rem;
+          }
+          
+          .feature {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: baseline;
+            gap: 1rem;
+          }
+          
+          #audio { /* id selector */
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          /*-- button --*/
+          
+          /* inspired by @adamgiebl on cssbuttons.io */
+          
+          #button {
+            position: relative;
+            bottom: 0.2em;
+            padding: 0.7em 2.7em;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 1.5rem;
+            letter-spacing: 0.0125em;
+            line-height: 2;
+            text-transform: uppercase;
+            color: #0bf377;
+            color: var(--button-green);
+            border: 2px solid #0bf377;
+            border: 2px solid var(--button-green);
+            border-radius: 0.5em;
+            background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+            box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); /* inset for inner shadow */
+            transition: all 0.3s;
+            overflow: hidden;
+            cursor: crosshair;
+          }
+          
+          #button:hover {
+            color: #00ff91;
+            box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+          }
+          
+          #button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -4em;
+            width: 4em;
+            height: 100%;
+            background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+            transition: transform 0.4s ease-in-out;
+          }
+          
+          #button:hover:before {
+            transform: translateX(15em);
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- contact details --*/
+          
+          address {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- info --*/
+          
+          summary {
+            margin-bottom: 0.5em;
+            width: 6ch;
+            cursor: pointer;
+          }
+          
+          details p:last-of-type {
+            margin-bottom: 0.5em;
+            clear: right; /* clear right float from the japanese sentence */
+          }
+          
+          details p:nth-child(5) {
+            margin-bottom: 0.5em;
+          }
+          
+          p[lang="ja"]::before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            display: block;
+            width: 1000%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(11,243,119,0.2) 0%, rgba(11,243,119,0) 100%);
+            clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+          }
+          
+          .emoji {
+            color: red;
+            filter: drop-shadow(1px 1px 0.5px rgba(0,0,0,0.7));
+          }
+          
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- further media queries (responsive & accessibility) --*/
+          /*---------------------------------------------------------------------*/
+          
+          /*---------------------------------------------------------------------*/
+          /*-- large width (&gt; 1000px) --*/
+          
+          @media only screen and (max-width: 1090px) {
+          
+            div.heading {
+              width: 0;
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- medium width (&lt; 1000px to mobile) --*/
+          
+          @media only screen and (max-width: 990px) {
+          
+            html {
+              font-size: 9px;
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- small width (mobile) --*/
+          
+          @media only screen and (max-width: 790px) {
+          
+            html {
+              font-size: 8px;
+            }
+          
+            .website-padding {
+              padding-left: 3rem;
+              padding-left: var(--website-padding);
+            }
+          
+            /*-- mobile nav --*/
+          
+            nav ul,
+            aside {
+              display: none;
+            }
+          
+            #mobile-nav {
+              z-index: 7;
+              position: absolute;
+              right: -200%;
+              width: 100%;
+              display: block;
+              padding: 3rem;
+              padding: var(--website-padding);
+              background: rgb(18, 18, 18);
+              background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+              pointer-events: none;
+              opacity: 0;
+              transition: all 0.2s ease-in;
+            }
+          
+            .nav-open #mobile-nav {
+              right: 0;
+              pointer-events: all;
+              opacity: 1;
+              transition: all 0.2s ease-out;
+            }
+          
+          
+            #mobile-nav ul {
+              display: flex;
+              flex-flow: column nowrap;
+              gap: 0.5em;
+              text-align: center;
+            }
+          
+            /* nav icon */
+          
+            #nav-icon {
+              z-index: 9;
+              position: relative;
+              display: inline-block;
+              margin: 10px 10px;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+              transition: 0.1s;
+            }
+          
+            #nav-icon span {
+              position: absolute;
+              display: block;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: whitesmoke;
+              background-color: var(--onsurface-white);
+            }
+          
+            #nav-icon:hover span {
+              transform: scale(1.2);
+              transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            }
+          
+            #nav-icon span:nth-child(1) {
+              top: 0;
+              left: 0;
+            }
+          
+            #nav-icon span:nth-child(2) {
+              top: 0;
+              left: 12px;
+            }
+          
+            #nav-icon span:nth-child(3) {
+              top: 0;
+              right: 0;
+            }
+          
+            #nav-icon span:nth-child(4) {
+              top: 12px;
+              left: 0;
+            }
+          
+            #nav-icon span:nth-child(5) {
+              position: absolute;
+              top: 12px;
+              left: 12px;
+            }
+          
+            #nav-icon span:nth-child(6) {
+              top: 12px;
+              right: 0px;
+            }
+          
+            #nav-icon span:nth-child(7) {
+              bottom: 0px;
+              left: 0px;
+            }
+          
+            #nav-icon span:nth-child(8) {
+              position: absolute;
+              bottom: 0px;
+              left: 12px;
+            }
+          
+            #nav-icon span:nth-child(9) {
+              bottom: 0px;
+              right: 0px;
+            }
+          
+            #nav-icon.open {
+              cursor: pointer;
+              transform: rotate(180deg);
+              transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            }
+          
+            #nav-icon.open span {
+              border-radius: 50%;
+              transition-delay: 200ms;
+              transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            }
+          
+            #nav-icon.open span:nth-child(2) {
+              top: 6px;
+              left: 6px;
+            }
+          
+            #nav-icon.open span:nth-child(4) {
+              top: 18px;
+              left: 6px;
+            }
+          
+            #nav-icon.open span:nth-child(6) {
+              top: 6px;
+              right: 6px;
+            }
+          
+            #nav-icon.open span:nth-child(8) {
+              bottom: 6px;
+              left: 18px;
+            }
+          
+          }
+          
+          @media only screen and (max-width: 420px) {
+          
+            html {
+              font-size: 7px;
+            }
+          
+          }
+          
+          @media only screen and (max-width: 320px) {
+          
+            html {
+              font-size: 6px;
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- light mode --*/
+          
+          /*@media (prefers-color-scheme: light) {
+          
+            body {
+              background-color: white;
+            }
+          
+          }*/
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- print --*/
+          
+          @media print {
+          
+            .no-print,
+            header,
+            aside,
+            video,
+            h6,
+            button,
+            audio,
+            iframe {
+              display: none;
+            }
+          
+            body {
+              margin: 0;
+              width: unset;
+              max-width: unset;
+              border: none;
+              border-radius: unset;
+              border-bottom-right-radius: unset;
+              box-shadow: none;
+            }
+          
+            .website-padding {
+              padding-left: 3rem;
+              padding-left: var(--website-padding);
+            }
+          
+          }
+          
+          
+          /*---------------------------------------------------------------------*/
+          /*-- reduced motion --*/
+          
+          @media (prefers-reduced-motion: reduce) {
+          
+            *,
+            ::before,
+            ::after {
+              animation-delay: -1ms !important;
+              animation-duration: 1ms !important;
+              animation-iteration-count: 1 !important;
+              background-attachment: initial !important;
+              scroll-behavior: auto !important;
+              transition-duration: 0s !important;
+              transition-delay: 0s !important;
+            }
+          
+          }
+        </code>
+      </pre>
+    </section>
+    <hr>
+    <!-- javascript code block -->
+    <section aria-label="javascript source code">
+      <h4>}); JavaScript Code</h4>
+      <p>Used <strong>variables</strong> in the following JavaScript code (main.js) sorted by appearance:</p>
+      <ul>
+        <li><var>checkScroll</var> (let)</li>
+        <li><var>text</var> (const)</li>
+        <li><var>imageMap</var> (let)</li>
+        <li><var>maxLength</var> (let)</li>
+        <li><var>userName</var> (let)</li>
+        <li><var>storedName</var> (let)</li>
+        <li><var>audio</var> (let)</li>
+      </ul>
+      <pre>
+        <code class="language-javascript">
+          /* I am a JavaScript comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
+
+          /*
+            It is possible
+            to write me across
+            multiple lines...
+          */
+          
+          // ... or like this on a single line.
+          
+          
+          
+          //---------------------------------------------------------------------
+          //---------------------------------------------------------------------
+          // "actual" JS code (using jQuery) starts below
+          //---------------------------------------------------------------------
+          //---------------------------------------------------------------------
+          
+          //---------------------------------------------------------------------
+          // DOM ready
+          //---------------------------------------------------------------------
+          
+          $(document).ready(function () {
+          
+            //---------------------------------------------------------------------
+            // check scrolling (jQuery)
+          
+            let checkScroll = function () {
+          
+              if ($(window).scrollTop() > 25) {
+          
+                $('body').addClass('scrolled');
+          
+              } else {
+          
+                $('body').removeClass('scrolled');
+          
+              }
+          
+            }
+          
+            $(window).on('scroll', function () {
+          
+              checkScroll();
+          
+            });
+          
+          
+            //---------------------------------------------------------------------
+            // typewriter effect (jQuery)
+          
+            const text = 'glmvc';
+          
+            $('#typewriter-text').html(text);
+            $('#typewriter-text').css('--characters', text.length + 6);
+          
+          
+            //---------------------------------------------------------------------
+            // navigation (jQuery)
+          
+            $('body').on('click', '#nav-icon', function () {
+          
+              $('body').toggleClass('nav-open');
+          
+            });
+          
+            $('#nav-icon').on('click', function () {
+          
+              $(this).toggleClass('open');
+          
+            });
+          
+          
+            //---------------------------------------------------------------------
+            // corrected main heading with click function (jQuery)
+          
+            $('h1').text('Hello, World!').on('click', function () {
+          
+              alert('Ouch! Stop poking me!');
+          
+            })
+          
+          
+            //---------------------------------------------------------------------
+            // image and figure caption switcher (jQuery)
+          
+            let imageMap;
+          
+            $('img').on('click', function () {
+          
+              if ($('img').attr('src') === 'images/hello-world.png') {
+          
+                imageMap = $('map').detach();
+                $('img').attr('src', 'images/js-code.png');
+                $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
+          
+              } else {
+          
+                $('img').before(imageMap);
+                $('img').attr('src', 'images/hello-world.png');
+                $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+          
+              }
+          
+            });
+          
+          
+            //---------------------------------------------------------------------
+            // personalised welcome message
+          
+            function setUserName() {
+          
+              let maxLength = 50;
+              let userName = -1;
+          
+              while (userName == -1 || (userName != null && userName.length > maxLength)) {
+                userName = window.prompt(`Please enter your name. (max. characters: ${maxLength})`); // template string
+              }
+          
+              if (!userName) {
+          
+                setUserName();
+          
+              } else {
+          
+                localStorage.setItem('name', userName);
+                $('h2').html(`Nice to meet you, <span>${userName}</span>!`);
+          
+              }
+          
+            }
+          
+            if (!localStorage.getItem('name')) {
+          
+              setUserName();
+          
+            } else {
+          
+              let storedName = localStorage.getItem('name');
+              $('h2').html(`Nice to meet you, <span>${storedName}</span>!`);
+          
+            }
+          
+            $('#button').on('click', function () {
+          
+              setUserName();
+          
+            });
+          
+          
+            //---------------------------------------------------------------------
+            // audio volume
+          
+            let audio = document.getElementById('audio');
+            audio.volume = 0.5;
+          
+          
+            //---------------------------------------------------------------------
+            // image map resizer (jQuery)
+          
+            $('map').imageMapResize();
+          
+          
+          
+          });
+        </code>
+      </pre>
+    </section>
+    <hr>
+    <section aria-label="javascript source code">
+      <h4>$ Terminal</h4>
+      <p><small>Quick Tip: To cancel pinging in the terminal, press <kbd>&#8963; (Control/Ctrl)</kbd>  + <kbd>C</kbd> and the process will be stopped.</small></p>
+      <pre class="command-line" data-user="user" data-host="MacBook-Air" data-output="2, 2-4">
+        <code class="language-terminal">
+          <kbd>ping mozilla.org</kbd>
+          <samp>
+          PING mozilla.org (63.245.215.20): 56 data bytes
+          64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
+          </samp>
+        </code>
+      </pre>
+    </section>
+    <hr>
   </main>
   <!--------------------------------------------------------------------->
   <!-- footer -->
   <!--------------------------------------------------------------------->
-  <footer>
+  <footer class="website-padding">
     <!--------------------------------------------------------------------->
-    <!-- additional page feature -->
-    <h6>Enhance your coding senses:</h6>
-    <figure>
-      <audio controls loop preload="auto">
-        <source src="audios/cyberpunk.mp3" type="audio/mp3">
-        <source src="audios/cyberpunk.ogg" type="audio/ogg">
-        <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
-      </audio>
-      <figcaption>A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/de/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
-    </figure>
+    <!-- additional page features -->
+    <div class="features-wrapper">
+      <div class="feature">
+        <h6>Change your name:</h6>
+        <button id="button">Change user</button>
+      </div>
+      <div class="feature">
+        <h6>Enhance your coding senses:</h6>
+        <figure>
+          <audio id="audio" controls loop preload="auto">
+            <source src="audios/cyberpunk.mp3" type="audio/mp3">
+            <source src="audios/cyberpunk.ogg" type="audio/ogg">
+            <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
+          </audio>
+          <figcaption class="no-print">A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
+        </figure>
+      </div>
+    </div>
+    <hr>
     <!--------------------------------------------------------------------->
     <!-- contact details -->
     <address>
-      <p>
-        secret street 1<br>
-        secret city<br>
-        secret country
-      </p>
-      <p><a href="tel:+1234567890">123-456-7890</a></p>
-      <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
-      <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=-116.86268806457521%2C37.55713211407969%2C-116.83951377868654%2C37.57046713858676&amp;layer=cyclemap"></iframe>
+      <div>
+        <p>
+          secret street 1<br>
+          secret city<br>
+          secret country
+        </p>
+        <p><a href="tel:+1234567890">123-456-7890</a></p>
+        <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat" width="400" height="300" style="border:0;" loading="lazy"></iframe>
     </address>
+    <hr>
     <!--------------------------------------------------------------------->
-    <!-- random info -->
-    <p>The page's birthday is on the <time datetime="2021-12-06"></time>6<sup>th</sup> of December 2021</time>.</p>
-    <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-    <p lang="ja">このページはご飯としていいです。</p>
-    <p>Last edited <time datetime="2021-12-31T19:30">at 7.30pm on December 31, 2021</time>.</p>
+    <!-- info -->
+    <details open>
+      <summary class="center">Info</summary>
+      <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
+      <p>This page &gt; first page and 1 &lt; 2!</p>
+      <p>Coders usually love coffee <span class="emoji">&#10084; &#9749;</span> Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+      <p>The two words "<bdo dir="rtl">Hello World</bdo>" are "Hello World" spelled backwards.</p>
+      <p lang="ja">このページはご飯としていいです。</p>
+      <p><small>Last edited <time datetime="2022-03-06T00:00">at 00:00 a.m. on March 6, 2022</time>.</small></p>
+    </details>
   </footer>
 </body>
 </html>

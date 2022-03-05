@@ -27,23 +27,23 @@
 
   `<meta property="og:type" content="website">`
 
-  `<meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/">`
+  `<meta property="og:url" content="https://glmvc.github.io/first-site-upgrade">`
 
   `<meta property="og:title" content="My Upgraded First Site">`
 
   `<meta property="og:description" content="The upgraded version of my first site!">`
 
-  `<meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png/">`
+  `<meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">`
 
   `<meta property="twitter:card" content="summary_large_image">`
 
-  `<meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade/">`
+  `<meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade">`
 
   `<meta property="twitter:title" content="My Upgraded First Site">`
 
   `<meta property="twitter:description" content="The upgraded version of my first site!">`
 
-  `<meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png/">`
+  `<meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">`
 
 - [x] Document title changed to "My Upgraded First Site":
 
@@ -69,9 +69,11 @@
 
   `<link rel="manifest" href="site.webmanifest">`
 
-- [x] New script (jQuery library) added script loading strategy changed (now within the head + defer attribute):
+- [x] New scripts (jQuery & Image Map Resizer library) added and script loading strategy changed (now within the head + defer attribute for main.js):
 
   `<script src="scripts/jquery-3.6.0.min.js"></script>`
+
+  `<script src="scripts/imageMapResizer.min.js"></script>`
 
   `<script src="scripts/main.js" defer></script>`
 ### `</head>`
@@ -94,9 +96,15 @@
 
   `<hr>`
 
+- [x] If JavaScript is disabled (in the browser), a warning message will be displayed:
+
+  `<noscript>...</noscript>`
+
 - [x] SVG logo added inline within the header (with hyperlink):
 
   `<svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>`
+
+- [x] Two `div` container added after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
 
 - [x] Outgoing hyperlinks changed so that they open in a new tab instead of the current one:
 
@@ -125,6 +133,12 @@
   `<em>...</em>`
 
   `<strong>...</strong>`
+
+- [x] The image is now an image map with hyperlink-areas:
+
+  `<map name="hello-world">...</map>`
+
+  `<area alt="alternative text" title="point map title" href="https..." target="_blank" shape="circle" coords="x,y,radius">`
 
 - [x] Video added within the main content (with fallback):
 
@@ -200,9 +214,13 @@
 
 - [x] Textual content adjusted to the changes
 
-- [ ] Source codes added as code blocks to the created source code page (code.html): 
+- [x] Source codes added as code blocks / snippets to the created source code page (code.html) using the PrismJS syntax highlighter library:
 
-  `<pre>...</pre>` with `<code>...</code>` within
+  `<link rel="stylesheet" href="styles/prism.css">`
+
+  `<script src="scripts/prism.js"></script>`
+
+  `<pre>...</pre>` with `<code class="language-...">...</code>` within
 
   `var`
 
@@ -210,9 +228,9 @@
 
   `samp`
 
-- [ ] Changelog (changelog.md) converted to HTML code and added to the created changelog page (changelog.html)
+- [x] Changelog (changelog.md) converted to HTML code and added to the created changelog page (changelog.html)
 
-- [ ] 404 page created (404.html)
+- [x] 404 page created (404.html)
 ### `</body>`
 
 ---
@@ -250,6 +268,12 @@
 
   ` `, `>`, `+` and `~`
 
+- [x] Animations using `@keyframes` at-rules now in use for the typewriter, blinking caret and glitch effect:
+
+  `animation: typing 6s steps(var(--characters)) infinite;`
+
+  `animation: blink 1s step-end infinite;`
+
 - [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time:
 
   `calc(...)`
@@ -263,8 +287,6 @@
 - [x] Green shadow styled left and right to the body:
 
   `box-shadow: 5px 5px 10px rgba(15, 181, 94, 0.7), -5px -5px 10px rgba(15, 181, 94, 0.7);`
-
-- [x] Mobile navigation and its icon styled
 
 - [x] Hyperlinks styled with pseudo-class selectors:
 
@@ -310,29 +332,78 @@
 
   `transition: <property> <duration> <timing-function> <delay>`
 
-- [ ] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
+- [x] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
 
-- [ ] Page layout styled (using flex, grid, multicol, positioning, floating etc.)
+- [x] Page layout styled (using flex, grid, multicol, positioning, floating etc.)
 
-- [ ] Visual/functional content styled (images, table, button etc.)
+- [x] Visual/functional content styled (images, table, button etc.)
 
-- [ ] The page is now full responsive (using media queries, meta viewport etc.)
-
-- [ ] Vendor prefixes added where necessary for optimal compatibility / browser support
+- [x] The page is now full responsive (using media queries, meta viewport etc.)
 
 ---
 
 ## &#125; &#041; ; JavaScript
 - [x] jQuery library now in use and code rewritten using its syntax
 
-- [x] Figure caption now also changing accordingly on clicking the images
+- [x] PrismJS syntax highlighter library now in use on the source code page (code.html)
 
-- [x] The current page in the navigation is now styled with the CSS class "active" on click
+- [x] Image Map Resizer library now in use:
 
-- [x] Clicking on the new navigation icon will toggle a class "open" to it and the class "nav-open" to the body
+  `$('map').imageMapResize();`
 
-- [x] Audio volume of the audio element now set to 50%
+- [x] At a given scrolling value (defined in a function) the class "scrolled" is now set on the body
 
-- [ ] Birthday Banner added to show on December 6 every year as a small easter egg
+- [x] A variable (and logic for the HTML and CSS) for the text of the typewriter effect declared:
 
-- [ ] Last edited date and time is now updating automatically
+  `const text = 'glmvc';`
+
+  `$('#typewriter-text').html(text);`
+
+  `$('#typewriter-text').css('--characters', text.length + 6);`
+
+- [x] Clicking on the new navigation icon will toggle a class "open" to it and the class "nav-open" to the body:
+
+  `$(this).toggleClass('open');`
+
+  `$('body').toggleClass('nav-open');`
+
+- [x] The username input for the personalized welcome message is now limited to a certain number of characters:
+
+  `let maxLength = 50;`
+
+  `let userName = -1;`
+
+  `while (userName == -1 || (userName != null && userName.length > maxLength)) { userName = window.prompt(...) }`
+
+- [x] Image map and figure caption now also changing accordingly on clicking the images:
+
+  `let imageMap;` declares global variable
+
+  `imageMap = $('map').detach();` inside the if statement: removes the map element from the dom, but keeps its data
+
+  `$('img').before(imageMap);`  inside the else statement: restores the map element with its data before the img element
+
+  `myCaption.html('...');` inside the if and else conditional statements: for the correct figure caption
+
+- [x] Audio volume of the audio element now set to 50%:
+
+  `let audio = document.getElementById('audio');`
+
+  `audio.volume = 0.5;`
+
+---
+
+## For The Future
+- [ ] 404 page content adapted (404.html)
+
+- [ ] Vendor prefixes added where necessary for optimal compatibility / browser support
+
+- [ ] Meter / progress bars
+
+- [ ] (Contact) Form example
+
+- [ ] Dark- and Lightmode switcher
+
+- [ ] Last edited date and time within the footer is now updating automatically
+
+- [ ] Birthday banner added to show on December 6 every year as a small easter egg
