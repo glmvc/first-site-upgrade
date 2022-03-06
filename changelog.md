@@ -1,14 +1,23 @@
 # :clipboard: Changelog
 
 ## :gear: General
-- [x] Space (Tab-Size) changed from 4 to 2 spaces (personal preference)
+
+- [x] Space indentation changed from 4 to 2 spaces in the code editor (personal preference)
+
 - [x] HTML, CSS and JavaScript comments explained in more detail
+
 - [x] Code structures improved with comments and "separators"
+
+- [x] Useful tools and libraries used/now in use
+
 
 ---
 
-## < / > HTML
-### `<head>`
+
+## &lt; / &gt; HTML
+
+### &lt;head&gt;
+
 - [x] Document language set to English (US):
 
   `<html lang="en-US">`
@@ -69,17 +78,25 @@
 
   `<link rel="manifest" href="site.webmanifest">`
 
-- [x] New scripts (jQuery & Image Map Resizer library) added and script loading strategy changed (now within the head + defer attribute for main.js):
+- [x] New scripts ([jQuery](https://jquery.com/) & [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer) library) added and script loading strategy changed (now within the head + defer attribute for main.js):
 
   `<script src="scripts/jquery-3.6.0.min.js"></script>`
 
   `<script src="scripts/imageMapResizer.min.js"></script>`
 
   `<script src="scripts/main.js" defer></script>`
-### `</head>`
+
+- [x] [PrismJS syntax highlighter library](https://prismjs.com/) files (CSS and JavaScript) linked in the created source code (code.html) and changelog (changelog.html) documents:
+
+  `<link rel="stylesheet" href="styles/prism.css">`
+
+  `<script src="scripts/prism.js"></script>`
+
+### &lt;/head&gt;
 
 
-### `<body>`
+### &lt;body&gt;
+
 - [x] Accessibility aspects changed and added where they were wrong/missing
 
 - [x] Semantic elements used appropriately
@@ -100,9 +117,9 @@
 
   `<noscript>...</noscript>`
 
-- [x] SVG logo added inline within the header (with hyperlink):
+- [x] SVG logo added inline within the header (within a hyperlink to the homepage):
 
-  `<svg width="100" height="100" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>`
+  `<svg width="10rem" height="10rem" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>` with `<path .../>`'s within
 
 - [x] Two `div` container added after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
 
@@ -112,7 +129,7 @@
 
 - [x] Title attribute added to hyperlinks and images so hovering over them will open a descriptive tooltip:
 
-  `title="link or image description"` attribute
+  `title="description"` attribute
 
 - [x] Quotations and citation added within the main content:
 
@@ -142,9 +159,9 @@
 
 - [x] Video added within the main content (with fallback):
 
-  `<video controls muted autoplay loop preload="auto" width="400">...</video>`
+  `<video width="400" controls muted autoplay loop preload="auto">...</video>`
 
-- [x] Figure and figure caption added to the images and video:
+- [x] Figure and figure caption added to the images, video and audio:
 
   `<figure>...</figure>`
 
@@ -180,11 +197,11 @@
 
 - [x] Fake contact details added within the footer:
 
-  `<address>`
+  `<address>...</address>`
 
   `href="tel:..."` and `href="mailto:..."` attributes
 
-- [x] Iframe for a map (from OpenStreetMap) added within the address:
+- [x] Iframe for a map (from [Google Maps](https://www.google.com/maps/about/#!/)) added within the address:
 
   `<iframe src="https:..." width="400" height="300" style="border:0;" loading="lazy"></iframe>`
 
@@ -192,50 +209,50 @@
 
   `<details>...</details>` with `<summary>Info</summary>` within
 
-- [x] Superscript added for the birthdate of the page within the footer:
+- [x] Superscript added for the birthdate of the page within the detail area in the footer:
 
   `<sup>...</sup>`
 
-- [x] Subscript added for the chemical formula within the footer:
+- [x] Subscript added for the chemical formula within the detail area in the footer:
 
   `<sub>...</sub>`
 
-- [x] Date and time added for the last update and the birthdate of the page within the footer:
+- [x] Date and time added for the last update and the birthdate of the page within the detail area in the footer:
 
   `<time datetime="YYYY-MM-ddThh:mm">...</time>`
 
-- [x] A Japanese sentence added within the footer and language attribute set to Japanese:
+- [x] A Japanese sentence added within the detail area in the footer and language attribute set to Japanese:
 
   `lang="ja"` attribute
 
-- [x] Last update text made as a small print/side comment:
+- [x] Last update text made as a small print/side comment within the detail area in the footer:
 
   `<small>...</small>`
 
 - [x] Textual content adjusted to the changes
 
-- [x] Source codes added as code blocks / snippets to the created source code page (code.html) using the PrismJS syntax highlighter library:
+- [x] Source codes added as code blocks / snippets to the created source code (code.html) and changelog (changelog.html) pages using the [PrismJS syntax highlighter library](https://prismjs.com/):
 
-  `<link rel="stylesheet" href="styles/prism.css">`
-
-  `<script src="scripts/prism.js"></script>`
+  `<kbd>...</kbd>`
 
   `<pre>...</pre>` with `<code class="language-...">...</code>` within
 
-  `var`
+  `<var>...</var>`
 
-  `kbd`
+  `<samp>...</samp`
 
-  `samp`
+- [x] Changelog (changelog.md) converted to HTML code, adjusted and added to the created changelog page (changelog.html)
 
-- [x] Changelog (changelog.md) converted to HTML code and added to the created changelog page (changelog.html)
+- [x] 404 page created and adapted (404.html)
 
-- [x] 404 page created (404.html)
-### `</body>`
+### &lt;/body&gt;
+
 
 ---
 
+
 ## &#123; &#125; CSS
+
 - [x] Using the @font-face ruleset in the created external stylesheet (fonts.css) to include and load the web fonts in use (woff, woff2 and variable):
 
   `@font-face {...}`
@@ -256,7 +273,7 @@
 
 - [x] CSS functions now in use
 
-- [x] Different color values now in use (rgb; rgba; hexadecimal rgb, color keywords)
+- [x] Different color values now in use (rgb/rgba, hexadecimal rgb, color keywords)
 
 - [x] Global colors and padding set with variables
 
@@ -274,11 +291,13 @@
 
   `animation: blink 1s step-end infinite;`
 
-- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at the particular time:
+- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at a certain time:
 
   `calc(...)`
 
 - [x] Backgrounds added (background shorthand property and background longhand properties)
+
+- [x] Borders added (border shorthand property and border longhand properties)
 
 - [x] Fallback width of the body added for browsers that do not support the vw unit:
 
@@ -320,8 +339,6 @@
 
   `filter: blur(5px);`
 
-- [x] Borders added (border shorthand property and border longhand properties)
-
 - [x] Writing modes (block & inline dimensions) changed to vertical left-to-right for the sidebar and right-to-left for the Japanese sentence:
 
   `writing-mode: vertical-lr;`
@@ -338,16 +355,21 @@
 
 - [x] Visual/functional content styled (images, table, button etc.)
 
-- [x] The page is now full responsive (using media queries, meta viewport etc.)
+- [x] The page is now full responsive (using media queries, meta viewport, layout techniques etc.)
+
+- [x] Vendor prefixes added with the [Autoprefixer CSS online tool](https://autoprefixer.github.io/) for optimal compatibility / browser support
+
 
 ---
 
+
 ## &#125; &#041; ; JavaScript
-- [x] jQuery library now in use and code rewritten using its syntax
 
-- [x] PrismJS syntax highlighter library now in use on the source code page (code.html)
+- [x] [jQuery library](https://jquery.com/) now in use and code rewritten using its syntax
 
-- [x] Image Map Resizer library now in use:
+- [x] [PrismJS syntax highlighter library](https://prismjs.com/) now in use on the created source code (code.html) and changelog (changelog.html) pages
+
+- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/) now in use:
 
   `$('map').imageMapResize();`
 
@@ -381,7 +403,7 @@
 
   `imageMap = $('map').detach();` inside the if statement: removes the map element from the dom, but keeps its data
 
-  `$('img').before(imageMap);`  inside the else statement: restores the map element with its data before the img element
+  `$('img').before(imageMap);` inside the else statement: restores the map element with its data before the img element
 
   `myCaption.html('...');` inside the if and else conditional statements: for the correct figure caption
 
@@ -391,19 +413,18 @@
 
   `audio.volume = 0.5;`
 
+
 ---
 
-## For The Future
-- [ ] 404 page content adapted (404.html)
 
-- [ ] Vendor prefixes added where necessary for optimal compatibility / browser support
+## &#10024; For The Future
 
-- [ ] Meter / progress bars
+- [ ] Meter/progress bars
 
-- [ ] (Contact) Form example
+- [ ] (Contact) form example
 
 - [ ] Dark- and Lightmode switcher
 
-- [ ] Last edited date and time within the footer is now updating automatically
+- [ ] Last edited date and time within the detail area in the footer is now updating automatically
 
 - [ ] Birthday banner added to show on December 6 every year as a small easter egg

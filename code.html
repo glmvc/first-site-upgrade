@@ -5,7 +5,6 @@
   <meta name="author" content="glmvc">
   <meta name="description" content="Source code of the upgraded version of my first site!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0fb55e">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade">
   <meta property="og:title" content="Source Code">
@@ -111,8 +110,8 @@
     <section class="greeting" aria-label="personalized welcome message">
       <div class="heading center"><h1>hello world!</h1></div>
       <h2 style="color:whitesmoke;">Nice to meet you,</h2>
-      <hr>
     </section>
+    <hr>
     <!-- code info -->
     <section aria-label="source code info">
       <h3>&#128126; Source Code Info</h3>
@@ -120,14 +119,15 @@
       <p>Feel free to copy the codes. You can either:</p>
       <ul>
         <li>simply copy the whole code of the wanted block into your clipboard using the <strong>"Copy" buttons</strong> in the top right corner of each code block,</li>
-        <li>or you manually select the desired lines with your input device (usually mouse) and press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>C</kbd> on Mac or <kbd>Ctrl</kbd> + <kbd>C</kbd> on Windows.</li>
-        <li>To paste what you copied to your desired location, on Mac press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd> and <kbd>Ctrl</kbd> + <kbd>V</kbd> on Windows.</li>
+        <li>or you manually select the desired lines with your input device (usually mouse) and press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>C</kbd> on Mac or <kbd>Ctrl (Control)</kbd> + <kbd>C</kbd> on Windows.</li>
+        <li>To paste what you copied to your desired location, on Mac press <kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd> and <kbd>Ctrl (Control)</kbd> + <kbd>V</kbd> on Windows.</li>
       </ul>
     </section>
     <hr>
     <!-- html code block -->
     <section aria-label="html source code">
       <h4>&lt;/&gt; HTML Code</h4>
+      <p>(index.html)</p>
       <pre>
         <code class="language-html">
           &lt;!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. --&gt;
@@ -159,7 +159,6 @@
             &lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;
             &lt;meta name=&quot;description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!-- so that responsiveness works as intended on mobile devices --&gt;
-            &lt;meta name=&quot;theme-color&quot; content=&quot;#0fb55e&quot;&gt;
             &lt;!-- new meta data (open graph data &amp; twitter card) for facebook and twitter page share --&gt;
             &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
             &lt;meta property=&quot;og:url&quot; content=&quot;https://glmvc.github.io/first-site-upgrade&quot;&gt;
@@ -194,7 +193,7 @@
               }
             &lt;/style&gt;
             &lt;!---------------------------------------------------------------------&gt;
-            &lt;!-- new scripts (jQuery &amp; Image Map Resizer) &amp; script loading method --&gt;
+            &lt;!-- new scripts &amp; script loading method --&gt;
             &lt;script src=&quot;scripts/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
             &lt;script src=&quot;scripts/imageMapResizer.min.js&quot;&gt;&lt;/script&gt;
             &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
@@ -294,7 +293,7 @@
                 &lt;/blockquote&gt;
                 &lt;p&gt;Well, let&apos;s just say that this is my first &quot;program&quot; so I can get more familiar with web development and see if everything is working properly and as intended.&lt;/p&gt;
                 &lt;figure class=&quot;center&quot;&gt;
-                  &lt;video  width=&quot;400&quot; controls muted autoplay loop preload=&quot;auto&quot;&gt;
+                  &lt;video width=&quot;400&quot; controls muted autoplay loop preload=&quot;auto&quot;&gt;
                     &lt;source src=&quot;videos/hello-world.mp4&quot; type=&quot;video/mp4&quot;&gt;
                     &lt;source src=&quot;videos/hello-world.webm&quot; type=&quot;video/webm&quot;&gt;
                     &lt;p&gt;Your browser doesn&apos;t support HTML 5 video. Here is a &lt;a href=&quot;videos/hello-world.mp4&quot;&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
@@ -539,7 +538,7 @@
                   &lt;p&gt;&lt;a href=&quot;tel:+1234567890&quot;&gt;123-456-7890&lt;/a&gt;&lt;/p&gt;
                   &lt;p&gt;&lt;a href=&quot;mailto:mail@example.com?subject=This%20is%20the%20subject&quot;&gt;secret@example.com&lt;/a&gt;&lt;/p&gt;
                 &lt;/div&gt;
-                &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat&quot; width=&quot;400&quot; height=&quot;300&quot; style=&quot;border:0;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+                &lt;iframe width=&quot;400&quot; height=&quot;300&quot; style=&quot;border:0;&quot; src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
               &lt;/address&gt;
               &lt;hr&gt;
               &lt;!---------------------------------------------------------------------&gt;
@@ -551,7 +550,7 @@
                 &lt;p&gt;Coders usually love coffee &lt;span class=&quot;emoji&quot;&gt;&amp;#10084; &amp;#9749;&lt;/span&gt; Brew yourself some coffee with the chemical formula of caffeine: C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
                 &lt;p&gt;The two words &quot;&lt;bdo dir=&quot;rtl&quot;&gt;Hello World&lt;/bdo&gt;&quot; are &quot;Hello World&quot; spelled backwards.&lt;/p&gt;
                 &lt;p lang=&quot;ja&quot;&gt;このページはご飯としていいです。&lt;/p&gt;
-                &lt;p&gt;&lt;small&gt;Last edited &lt;time datetime=&quot;2022-03-06T00:00&quot;&gt;at at 00:00 a.m. on March 6, 2022&lt;/time&gt;.&lt;/small&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;small&gt;Last edited &lt;time datetime=&quot;2022-03-06T20:30&quot;&gt;at at 8:30 p.m. on March 6, 2022&lt;/time&gt;.&lt;/small&gt;&lt;/p&gt;
               &lt;/details&gt;
             &lt;/footer&gt;
           &lt;/body&gt;
@@ -563,6 +562,7 @@
     <!-- css code block -->
     <section aria-label="css source code">
       <h4>{ } CSS Code</h4>
+      <p>(style.css)</p>
       <pre>
         <code class="language-css">
           /* I am a CSS comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
@@ -609,11 +609,13 @@
           /*---------------------------------------------------------------------*/
           
           *, *::before, *::after { /* to inherit the alternative box model to all elements */
-            box-sizing: inherit;
+            -webkit-box-sizing: inherit;
+                    box-sizing: inherit;
           }
           
           html { /* type selector (also called tag or element selector) */
-            box-sizing: border-box; /* alternative box model */
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box; /* alternative box model */
             font-size: 10px;
             font-family: "Source Code Pro", "Consolas", "Courier New", monospace; /* font-stack to guarantee the availability of the fonts across all systems */
             font-weight: normal;
@@ -632,9 +634,11 @@
             background: center repeat url("../images/background.svg"), rgba(255, 255, 255, 0.05); /* fallback background */
             background: center repeat url("../images/background.svg"), var(--surface-dark-grey); /* shorthand property */
             border: 3px solid black;
-            border-radius: 10px;
-            border-bottom-right-radius: 50px;
-            box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
+            border-radius: 1em;
+            border-bottom-right-radius: 5em;
+            -webkit-box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
+                        -5px 0px 10px rgba(15, 181, 94, 0.8);
+                    box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
                         -5px 0px 10px rgba(15, 181, 94, 0.8); /* left */
             overflow-x: hidden;
           }
@@ -664,7 +668,8 @@
             text-align: center;
             color: red;
             border: 2px solid red;
-            filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.7));
+            -webkit-filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.7));
+                    filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.7));
           }
           
           
@@ -723,12 +728,22 @@
                          0.07em 0.06em 0.01em #121212,
                          0.06em 0.07em 0.01em #212121,
                          0.08em 0.07em 0.01em #121212;
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: -webkit-transform 0.2s;
+            -o-transition: transform 0.2s;
             transition: transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
           }
           
           h1:hover {
-            transform: rotate(-1deg);
+            -webkit-transform: rotate(-1deg);
+                -ms-transform: rotate(-1deg);
+                    transform: rotate(-1deg);
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: -webkit-transform 0.2s;
+            -o-transition: transform 0.2s;
             transition: transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
             cursor: not-allowed;
           }
           
@@ -771,8 +786,10 @@
             line-height: 2.5;
             word-spacing: 0.5em;
             text-align: center;
-            text-decoration: underline overline #0fb55e wavy;
-            text-decoration: underline overline var(--primary-green) wavy;
+            -webkit-text-decoration: underline overline #0fb55e wavy;
+                    text-decoration: underline overline #0fb55e wavy;
+            -webkit-text-decoration: underline overline var(--primary-green) wavy;
+                    text-decoration: underline overline var(--primary-green) wavy;
             text-underline-offset: 0.4em;
             text-transform: uppercase;
           }
@@ -834,7 +851,9 @@
           p[lang="ja"] { /* attribute selector */
             position: relative;
             float: right;
-            writing-mode: vertical-rl;
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
             color: #0fb55e;
             color: var(--primary-green);
             text-transform: full-width;
@@ -882,7 +901,9 @@
             text-decoration: none;
             color: #0fb55e;
             color: var(--primary-green);
-            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                    transform: scale(1.05);
           }
           
           a:active {
@@ -991,22 +1012,32 @@
             margin: 3rem 0;
             border: none;
             border-top: 3px dashed rgba(255, 255, 255, 0.07);
-            filter: drop-shadow(1px 1px 1px black);
           }
           
           img {
             display: block; /* block box (outer display type) */
             cursor: pointer;
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: -webkit-transform 0.2s;
+            -o-transition: transform 0.2s;
             transition: transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
           }
           
           img:hover {
-            transform: rotate(0.005turn);
+            -webkit-transform: rotate(0.005turn);
+                -ms-transform: rotate(0.005turn);
+                    transform: rotate(0.005turn);
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: -webkit-transform 0.2s;
+            -o-transition: transform 0.2s;
             transition: transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
           }
           
           img[src="images/js-code.png"] {
-            filter: blur(5px);
+            -webkit-filter: blur(5px);
+                    filter: blur(5px);
           }
           
           img,
@@ -1026,7 +1057,8 @@
           video,
           audio,
           iframe {
-            filter: drop-shadow(4px 4px 6px black);
+            -webkit-filter: drop-shadow(4px 4px 6px black);
+                    filter: drop-shadow(4px 4px 6px black);
           }
           
           /*-- glitch effect --*/
@@ -1037,7 +1069,54 @@
                          0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             word-wrap: break-word;
             overflow-wrap: break-word;
-            animation: glitch 600ms infinite;
+            -webkit-animation: glitch 600ms infinite;
+                    animation: glitch 600ms infinite;
+          }
+          
+          @-webkit-keyframes glitch {
+          
+            0% {
+              text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            14% {
+              text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            15% {
+              text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            49% {
+              text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            50% {
+              text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            99% {
+              text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+            }
+          
+            100% {
+              text-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.6),
+                           -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
+                           0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
+            }
+          
           }
           
           @keyframes glitch {
@@ -1123,7 +1202,8 @@
             background-color: #eee;
             border-radius: 0.3em;
             border: 1px solid #b4b4b4;
-            box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
+            -webkit-box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
+                    box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
             white-space: nowrap;
           }
           
@@ -1138,14 +1218,26 @@
             position: sticky;
             top: 0;
             left: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 1.5rem 3rem;
             padding: 1.5rem var(--website-padding);
             background: rgb(18, 18, 18);
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
+            background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
             background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
           }
           
@@ -1165,21 +1257,27 @@
           
           header a.logo:focus {
             background-color: unset;
-            filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+            -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+                    filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
           }
           
           header a.logo:hover {
-            transform: unset;
+            -webkit-transform: unset;
+                -ms-transform: unset;
+                    transform: unset;
           }
           
           header svg {
             padding-left: 7px;
-            box-sizing: content-box; /* switching to the standard box model */
+            -webkit-box-sizing: content-box;
+                    box-sizing: content-box; /* switching to the standard box model */
           }
           
           /*-- typewriter effect --*/
           
           .typewriter {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-left: 2.2rem;
             font-weight: 500;
@@ -1190,12 +1288,23 @@
             max-width: 0;
             white-space: nowrap;
             overflow: hidden;
-            animation: typing 6s steps(var(--characters)) infinite;
+            -webkit-animation: typing 6s steps(var(--characters)) infinite;
+                    animation: typing 6s steps(var(--characters)) infinite;
           }
           
           .typewriter:after {
             content: " |";
-            animation: blink 1s step-end infinite;
+            -webkit-animation: blink 1s step-end infinite;
+                    animation: blink 1s step-end infinite;
+          }
+          
+          @-webkit-keyframes typing {
+          
+            60%,
+            100% {
+              max-width: calc(var(--characters) * 1ch);
+            }
+          
           }
           
           @keyframes typing {
@@ -1203,6 +1312,20 @@
             60%,
             100% {
               max-width: calc(var(--characters) * 1ch);
+            }
+          
+          }
+          
+          @-webkit-keyframes blink {
+          
+            0%,
+            75%,
+            100% {
+              opacity: 1;
+            }
+          
+            25% {
+              opacity: 0;
             }
           
           }
@@ -1258,16 +1381,24 @@
           
           aside {
             position: fixed;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row-reverse nowrap;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-flow: row-reverse nowrap;
+                    flex-flow: row-reverse nowrap;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin-top: 5rem;
             margin-left: -13.5rem;
             margin-left: calc(15rem * (-1) + 1.5rem); /* to "reset" the padding-left from the main section */
             padding: 1rem;
             border: 3px dashed #0fb55e;
             border: 3px dashed var(--primary-green);
-            filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+            -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+                    filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
           }
           
           aside > p {
@@ -1275,19 +1406,28 @@
             font-size: 1.1rem;
             letter-spacing: 0.015em;
             text-transform: uppercase;
-            writing-mode: vertical-lr;
-            transform: rotate(180deg);
+            -webkit-writing-mode: vertical-lr;
+                -ms-writing-mode: tb-lr;
+                    writing-mode: vertical-lr;
+            -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
           }
           
           aside ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             gap: 0.3em;
             padding: 0;
           }
           
           aside li {
-            writing-mode: vertical-lr;
-            text-orientation: upright;
+            -webkit-writing-mode: vertical-lr;
+                -ms-writing-mode: tb-lr;
+                    writing-mode: vertical-lr;
+            -webkit-text-orientation: upright;
+                    text-orientation: upright;
           }
           
           aside a {
@@ -1303,8 +1443,12 @@
           /*-- greeting --*/
           
           div.heading { /* "selecting all div elements with a class of heading" */
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex; /* inner display type = flex (outer display type = block) */
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+              justify-content: center;
           }
           
           
@@ -1314,13 +1458,16 @@
           @media only screen and (min-width: 790px) {
           
             section.hello-world-program { /* grid container */
+              display: -ms-grid;
               display: grid;
-              grid-template-areas:
+                  grid-template-areas:
                 "heading heading"
                 "para1 para1"
                 "quote video"
                 "para2 para2";
+              -ms-grid-columns: 1fr 2rem 1fr;
               grid-template-columns: repeat(2, 1fr);
+              -ms-grid-rows: auto;
               grid-template-rows: auto;
               gap: 2rem;
             }
@@ -1344,7 +1491,8 @@
           
             section.hello-world-program figure {
               grid-area: video;
-              align-self: center;
+              -ms-grid-row-align: center;
+                      align-self: center;
             }
           
           }
@@ -1354,9 +1502,15 @@
           /*-- web dev --*/
           
           .web-dev { /* multicol container */
-            columns: 3 40ch;
-            column-gap: 4em;
-            column-rule: 4px dotted rgba(255, 255, 255, 0.07);
+            -webkit-columns: 3 40ch;
+               -moz-columns: 3 40ch;
+                    columns: 3 40ch;
+            -webkit-column-gap: 4em;
+               -moz-column-gap: 4em;
+                    column-gap: 4em;
+            -webkit-column-rule: 4px dotted rgba(255, 255, 255, 0.07);
+               -moz-column-rule: 4px dotted rgba(255, 255, 255, 0.07);
+                    column-rule: 4px dotted rgba(255, 255, 255, 0.07);
           }
           
           
@@ -1470,28 +1624,42 @@
           /*-- additional page features --*/
           
           .features-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: column nowrap;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
             gap: 2rem;
           }
           
           .feature {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            align-items: baseline;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
+            -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                    align-items: baseline;
             gap: 1rem;
           }
           
           #audio { /* id selector */
             position: relative;
             left: 50%;
-            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
           }
           
           /*-- button --*/
-          
-          /* inspired by @adamgiebl on cssbuttons.io */
           
           #button {
             position: relative;
@@ -1508,8 +1676,13 @@
             border: 2px solid #0bf377;
             border: 2px solid var(--button-green);
             border-radius: 0.5em;
+            background: -webkit-gradient(linear, left top, right top, color-stop(1%, rgba(27, 253, 156, 0.1)), color-stop(40%, transparent),color-stop(60%, transparent) , to(rgba(27, 253, 156, 0.1)));
+            background: -o-linear-gradient(left, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
             background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
-            box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); /* inset for inner shadow */
+            -webkit-box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+                    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); /* inset for inner shadow */
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             overflow: hidden;
             cursor: crosshair;
@@ -1517,7 +1690,8 @@
           
           #button:hover {
             color: #00ff91;
-            box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+            -webkit-box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+                    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
           }
           
           #button:before {
@@ -1527,12 +1701,20 @@
             left: -4em;
             width: 4em;
             height: 100%;
+            background: -webkit-gradient(linear, left top, right top, color-stop(1%, transparent), color-stop(40%, rgba(27, 253, 156, 0.1)),color-stop(60%, rgba(27, 253, 156, 0.1)) , to(transparent));
+            background: -o-linear-gradient(left, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
             background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out;
+            transition: -webkit-transform 0.4s ease-in-out;
+            -o-transition: transform 0.4s ease-in-out;
             transition: transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
           }
           
           #button:hover:before {
-            transform: translateX(15em);
+            -webkit-transform: translateX(15em);
+                -ms-transform: translateX(15em);
+                    transform: translateX(15em);
           }
           
           
@@ -1540,10 +1722,18 @@
           /*-- contact details --*/
           
           address {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             gap: 2rem;
             text-align: center;
           }
@@ -1574,13 +1764,17 @@
             display: block;
             width: 1000%;
             height: 100%;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(11,243,119,0.2)), to(rgba(11,243,119,0)));
+            background: -o-linear-gradient(left, rgba(11,243,119,0.2) 0%, rgba(11,243,119,0) 100%);
             background: linear-gradient(90deg, rgba(11,243,119,0.2) 0%, rgba(11,243,119,0) 100%);
-            clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+            -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+                    clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
           }
           
           .emoji {
             color: red;
-            filter: drop-shadow(1px 1px 0.5px rgba(0,0,0,0.7));
+            -webkit-filter: drop-shadow(1px 1px 0.5px rgba(0,0,0,0.7));
+                    filter: drop-shadow(1px 1px 0.5px rgba(0,0,0,0.7));
           }
           
           
@@ -1643,9 +1837,13 @@
               padding: 3rem;
               padding: var(--website-padding);
               background: rgb(18, 18, 18);
+              background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
+              background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
               background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
               pointer-events: none;
               opacity: 0;
+              -webkit-transition: all 0.2s ease-in;
+              -o-transition: all 0.2s ease-in;
               transition: all 0.2s ease-in;
             }
           
@@ -1653,13 +1851,19 @@
               right: 0;
               pointer-events: all;
               opacity: 1;
+              -webkit-transition: all 0.2s ease-out;
+              -o-transition: all 0.2s ease-out;
               transition: all 0.2s ease-out;
             }
           
-          
             #mobile-nav ul {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              flex-flow: column nowrap;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-flow: column nowrap;
+                      flex-flow: column nowrap;
               gap: 0.5em;
               text-align: center;
             }
@@ -1674,6 +1878,8 @@
               width: 30px;
               height: 30px;
               cursor: pointer;
+              -webkit-transition: 0.1s;
+              -o-transition: 0.1s;
               transition: 0.1s;
             }
           
@@ -1688,7 +1894,11 @@
             }
           
             #nav-icon:hover span {
-              transform: scale(1.2);
+              -webkit-transform: scale(1.2);
+                  -ms-transform: scale(1.2);
+                      transform: scale(1.2);
+              -webkit-transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
+              -o-transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
               transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
             }
           
@@ -1741,13 +1951,21 @@
           
             #nav-icon.open {
               cursor: pointer;
-              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+                  -ms-transform: rotate(180deg);
+                      transform: rotate(180deg);
+              -webkit-transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+              -o-transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
               transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
             }
           
             #nav-icon.open span {
               border-radius: 50%;
-              transition-delay: 200ms;
+              -webkit-transition-delay: 200ms;
+                   -o-transition-delay: 200ms;
+                      transition-delay: 200ms;
+              -webkit-transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+              -o-transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
               transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
             }
           
@@ -1773,6 +1991,7 @@
           
           }
           
+          
           @media only screen and (max-width: 420px) {
           
             html {
@@ -1781,6 +2000,7 @@
           
           }
           
+          
           @media only screen and (max-width: 320px) {
           
             html {
@@ -1788,18 +2008,6 @@
             }
           
           }
-          
-          
-          /*---------------------------------------------------------------------*/
-          /*-- light mode --*/
-          
-          /*@media (prefers-color-scheme: light) {
-          
-            body {
-              background-color: white;
-            }
-          
-          }*/
           
           
           /*---------------------------------------------------------------------*/
@@ -1825,7 +2033,8 @@
               border: none;
               border-radius: unset;
               border-bottom-right-radius: unset;
-              box-shadow: none;
+              -webkit-box-shadow: none;
+                      box-shadow: none;
             }
           
             .website-padding {
@@ -1844,13 +2053,20 @@
             *,
             ::before,
             ::after {
-              animation-delay: -1ms !important;
-              animation-duration: 1ms !important;
-              animation-iteration-count: 1 !important;
+              -webkit-animation-delay: -1ms !important;
+                      animation-delay: -1ms !important;
+              -webkit-animation-duration: 1ms !important;
+                      animation-duration: 1ms !important;
+              -webkit-animation-iteration-count: 1 !important;
+                      animation-iteration-count: 1 !important;
               background-attachment: initial !important;
               scroll-behavior: auto !important;
-              transition-duration: 0s !important;
-              transition-delay: 0s !important;
+              -webkit-transition-duration: 0s !important;
+                   -o-transition-duration: 0s !important;
+                      transition-duration: 0s !important;
+              -webkit-transition-delay: 0s !important;
+                   -o-transition-delay: 0s !important;
+                      transition-delay: 0s !important;
             }
           
           }
@@ -1861,16 +2077,7 @@
     <!-- javascript code block -->
     <section aria-label="javascript source code">
       <h4>}); JavaScript Code</h4>
-      <p>Used <strong>variables</strong> in the following JavaScript code (main.js) sorted by appearance:</p>
-      <ul>
-        <li><var>checkScroll</var> (let)</li>
-        <li><var>text</var> (const)</li>
-        <li><var>imageMap</var> (let)</li>
-        <li><var>maxLength</var> (let)</li>
-        <li><var>userName</var> (let)</li>
-        <li><var>storedName</var> (let)</li>
-        <li><var>audio</var> (let)</li>
-      </ul>
+      <p>(main.js)</p>
       <pre>
         <code class="language-javascript">
           /* I am a JavaScript comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
@@ -1903,13 +2110,9 @@
             let checkScroll = function () {
           
               if ($(window).scrollTop() > 25) {
-          
                 $('body').addClass('scrolled');
-          
               } else {
-          
                 $('body').removeClass('scrolled');
-          
               }
           
             }
@@ -1964,17 +2167,13 @@
             $('img').on('click', function () {
           
               if ($('img').attr('src') === 'images/hello-world.png') {
-          
                 imageMap = $('map').detach();
                 $('img').attr('src', 'images/js-code.png');
                 $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
-          
               } else {
-          
                 $('img').before(imageMap);
                 $('img').attr('src', 'images/hello-world.png');
                 $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
-          
               }
           
             });
@@ -1993,27 +2192,19 @@
               }
           
               if (!userName) {
-          
                 setUserName();
-          
               } else {
-          
                 localStorage.setItem('name', userName);
                 $('h2').html(`Nice to meet you, <span>${userName}</span>!`);
-          
               }
           
             }
           
             if (!localStorage.getItem('name')) {
-          
               setUserName();
-          
             } else {
-          
               let storedName = localStorage.getItem('name');
               $('h2').html(`Nice to meet you, <span>${storedName}</span>!`);
-          
             }
           
             $('#button').on('click', function () {
@@ -2040,20 +2231,34 @@
           });
         </code>
       </pre>
+      <p>Used <strong>variables</strong> sorted by appearance:</p>
+      <ul>
+        <li><var>checkScroll</var> (let)</li>
+        <li><var>text</var> (const)</li>
+        <li><var>imageMap</var> (let)</li>
+        <li><var>maxLength</var> (let)</li>
+        <li><var>userName</var> (let)</li>
+        <li><var>storedName</var> (let)</li>
+        <li><var>audio</var> (let)</li>
+      </ul>
     </section>
     <hr>
-    <section aria-label="javascript source code">
+    <!-- terminal code block -->
+    <section aria-label="terminal source code">
       <h4>$ Terminal</h4>
-      <p><small>Quick Tip: To cancel pinging in the terminal, press <kbd>&#8963; (Control/Ctrl)</kbd>  + <kbd>C</kbd> and the process will be stopped.</small></p>
-      <pre class="command-line" data-user="user" data-host="MacBook-Air" data-output="2, 2-4">
+      <pre class="command-line" data-user="user" data-host="MacBook-Air" data-output="2, 2-7">
         <code class="language-terminal">
           <kbd>ping mozilla.org</kbd>
           <samp>
           PING mozilla.org (63.245.215.20): 56 data bytes
           64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
+          ^C
+          --- mozilla.org ping statistics ---
+          1 packets transmitted, 1 packets received, 0.0% packet loss
           </samp>
         </code>
       </pre>
+      <p><small>Quick Tip: To cancel pinging in the terminal, press <kbd>&#8963; (Control/Ctrl)</kbd>  + <kbd>C</kbd> and the process will be stopped.</small></p>
     </section>
     <hr>
   </main>
@@ -2105,7 +2310,7 @@
       <p>Coders usually love coffee <span class="emoji">&#10084; &#9749;</span> Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
       <p>The two words "<bdo dir="rtl">Hello World</bdo>" are "Hello World" spelled backwards.</p>
       <p lang="ja">このページはご飯としていいです。</p>
-      <p><small>Last edited <time datetime="2022-03-06T00:00">at 00:00 a.m. on March 6, 2022</time>.</small></p>
+      <p><small>Last edited <time datetime="2022-03-06T20:30">at at 8:30 p.m. on March 6, 2022</time>.</small></p>
     </details>
   </footer>
 </body>
