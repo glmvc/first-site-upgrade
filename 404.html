@@ -1,154 +1,51 @@
-<!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. -->
-
-<!--
-  It is possible
-  to write me across
-  multiple lines...
--->
-
-<!-- ... or of course on a single line. -->
-
-
-
-<!--------------------------------------------------------------------->
-<!--------------------------------------------------------------------->
-<!-- "actual" document starts below -->
-<!--------------------------------------------------------------------->
-<!--------------------------------------------------------------------->
-
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
-  <!--------------------------------------------------------------------->
-  <!-- meta data -->
   <meta charset="utf-8">
-  <!-- new meta data -->
-  <meta name="author" content="glmvc">
-  <meta name="description" content="The upgraded version of my first site!">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- so that responsiveness works as intended on mobile devices -->
-  <!-- new meta data (open graph data & twitter card) for facebook and twitter page share -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/">
-  <meta property="og:title" content="My Upgraded First Site">
-  <meta property="og:description" content="The upgraded version of my first site!">
-  <meta property="og:image" content="images/hello-world.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade/">
-  <meta property="twitter:title" content="My Upgraded First Site">
-  <meta property="twitter:description" content="The upgraded version of my first site!">
-  <meta property="twitter:image" content="images/hello-world.png">
-  <!--------------------------------------------------------------------->
-  <!-- title -->
-  <title>My Upgraded First Site</title>
-  <!--------------------------------------------------------------------->
-  <!-- linking -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/style.css"> <!-- mainly external stylesheet in use for styling -->
-  <!-- multiple favicon types for multiple devices/browsers -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
-  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="site.webmanifest">
-  <!--------------------------------------------------------------------->
-  <!-- to demonstrate the internal stylesheet -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/favicons/404-favicon.ico" type="image/x-icon" sizes="any">
+  <link rel="icon" href="images/favicons/404-favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="images/favicons/404-favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/favicons/404-apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="images/favicons/404-site.webmanifest">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    body {
+      overflow-y: hidden;
+    }
+    h1:hover {
+      cursor: default;
+    }
+    h2 {
+      margin-top: 0.3em;
+    }
+    iframe {
+      display: block;
+      margin: 6em auto;
+      height: 315px;
+    }
+    a {
+      display: block;
+      max-width: 255px;
+      text-decoration: none;
+    }
+    a#button::after {
+      content: none;
+    }
+    #button:hover:before {
+      -webkit-transform: translateX(20em);
+          -ms-transform: translateX(20em);
+              transform: translateX(20em);
     }
   </style>
-  <!--------------------------------------------------------------------->
-  <!-- new script (jQuery) & script loading methods -->
-  <script src="scripts/jquery-3.6.0.min.js"></script>
-  <script src="scripts/main.js" defer></script>
 </head>
 <body class="center">
-  <!--------------------------------------------------------------------->
-  <!-- header -->
-  <!--------------------------------------------------------------------->
-  <header>
-    <!--------------------------------------------------------------------->
-    <!-- new SVG logo -->
-    <a href="index.html" class="logo">
-      <svg width="10rem" height="10rem" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="whitesmoke"/>
-        <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0FB55E" stroke-width="22"/>
-        <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7CB7ED" stroke-width="22"/>
-        <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
-      </svg>
-    </a>
-    <!--------------------------------------------------------------------->
-    <!-- new navigation -->
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="code.html">Source Code</a></li>
-        <li><a href="changelog.html">Changelog</a></li>
-        <li><a href="first-site/index.html">Previous Version</a></li>
-      </ul>
-      <div class="nav-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-  <!--------------------------------------------------------------------->
-  <!-- main -->
-  <!--------------------------------------------------------------------->
-  <main class="website-padding">
-    <!--------------------------------------------------------------------->
-    <!-- 404 -->
-    <h1>404 Page</h1>
-  </main>
-  <!--------------------------------------------------------------------->
-  <!-- footer -->
-  <!--------------------------------------------------------------------->
-  <footer class="website-padding">
-    <!--------------------------------------------------------------------->
-    <!-- additional page features -->
-    <h6>Change your name:</h6>
-    <button>Change user</button>
-    <h6>Enhance your coding senses:</h6>
-    <figure>
-      <audio id="audio" controls loop preload="auto">
-        <source src="audios/cyberpunk.mp3" type="audio/mp3">
-        <source src="audios/cyberpunk.ogg" type="audio/ogg">
-        <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
-      </audio>
-      <figcaption class="no-print">A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/music/elektronisch-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
-    </figure>
-    <!--------------------------------------------------------------------->
-    <!-- contact details -->
-    <address>
-      <p>
-        secret street 1<br>
-        secret city<br>
-        secret country
-      </p>
-      <p><a href="tel:+1234567890">123-456-7890</a></p>
-      <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat" width="400" height="300" style="border:0;" loading="lazy"></iframe>
-    </address>
-    <!--------------------------------------------------------------------->
-    <!-- info -->
-    <details open>
-      <summary>Info</summary>
-      <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
-      <p>This page &gt; first page and 1 &lt; 2!</p>
-      <p>Coders usually love coffee &#10084; Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-      <p lang="ja">このページはご飯としていいです。</p>
-      <p><small>Last edited <time datetime="2022-02-05T17:30">at 5.30pm on February 5, 2022</time>.</small></p>
-    </details>
-  </footer>
+  <div class="heading center"><h1>404</h1></div>
+  <h2>Page Not Found</h2>
+  <a id="button" class="center" href="https://glmvc.github.io/first-site-upgrade/">Return to homepage</a>
+  <iframe width="560" height="315" style="border:0;" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
