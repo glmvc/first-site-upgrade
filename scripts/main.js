@@ -28,13 +28,9 @@ $(document).ready(function () {
   let checkScroll = function () {
 
     if ($(window).scrollTop() > 25) {
-
       $('body').addClass('scrolled');
-
     } else {
-
       $('body').removeClass('scrolled');
-
     }
 
   }
@@ -89,17 +85,13 @@ $(document).ready(function () {
   $('img').on('click', function () {
 
     if ($('img').attr('src') === 'images/hello-world.png') {
-
       imageMap = $('map').detach();
       $('img').attr('src', 'images/js-code.png');
       $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
-
     } else {
-
       $('img').before(imageMap);
       $('img').attr('src', 'images/hello-world.png');
       $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
-
     }
 
   });
@@ -118,27 +110,19 @@ $(document).ready(function () {
     }
 
     if (!userName) {
-
       setUserName();
-
     } else {
-
       localStorage.setItem('name', userName);
       $('h2').html(`Nice to meet you, <span>${userName}</span>!`);
-
     }
 
   }
 
   if (!localStorage.getItem('name')) {
-
     setUserName();
-
   } else {
-
     let storedName = localStorage.getItem('name');
     $('h2').html(`Nice to meet you, <span>${storedName}</span>!`);
-
   }
 
   $('#button').on('click', function () {
