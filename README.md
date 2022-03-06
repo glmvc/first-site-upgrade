@@ -1,10 +1,17 @@
 # :crystal_ball: first-site-upgrade
 
+### :flying_saucer: with this website project i learn and challenge myself on my journey as a web developer
 
+#### :clipboard: check the [changelog](changelog.md) to see what has changed compared to the [first-site](https://github.com/glmvc/first-site)
 
-## :toolbox: used tools, libraries and inspiration for the project:
-### you do not need to go and reinvent the wheel
-this is meant to be a motivation that you can and even should use other tools as well, since it's very hard to do everything yourself these days in this fast paced industry.
+---
+
+### :toolbox: used tools, libraries and inspiration for the project
+
+#### :ferris_wheel: you do not need to go and reinvent the wheel
+
+this is meant to be a motivation that you can and even should use other stuff as well, since it's very hard to do everything yourself these days in this fast paced industry
+
 - design guidelines/inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
 - favicon generator: https://favicon.io/
