@@ -1,26 +1,35 @@
 # :crystal_ball: first-site-upgrade
 
-### :flying_saucer: with this website project i learn and challenge myself on my journey as a web developer
+## :flying_saucer: ... and with this website project i learn and challenge myself on my journey as a web developer
 
-#### :clipboard: check the [changelog](changelog.md) to see what has changed compared to the [first-site](https://github.com/glmvc/first-site)
+### :seedling: also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
+
+- #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/) and see for yourself :eyes:
+- #### check the [changelog on github](changelog.md) or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/) to see what has changed / been improved compared to the [first-site](https://github.com/glmvc/first-site) :clipboard:
+- #### do you notice anything that's wrong, not ideal or doesn't follow good practice? :face_with_spiral_eyes:
+  - let me know in a message or create an issue
+  - or fix it yourself and create a pull request afterwards
+  - i try very hard to implement everything with perfection, but as we all know 4 eyes see more than 2 and one cannot know everything
+  - for further suggestions / ideas i'm always open
 
 ---
 
-### :toolbox: used tools, libraries and inspiration for the project
+#### :toolbox: used tools, libraries and inspiration for the project
 
-#### :ferris_wheel: you do not need to go and reinvent the wheel
+:ferris_wheel: you don't need to go and reinvent the wheel
 
-this is meant to be a motivation that you can and even should use other stuff as well, since it's very hard to do everything yourself these days in this fast paced industry
+this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
 
-- design guidelines/inspiration: https://material.io/
+- frontend checklist: https://frontendchecklist.io/
+- design guidelines / inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
-- favicon generator: https://favicon.io/
 - webfont generator: https://www.fontsquirrel.com/tools/webfont-generator
+- favicon generator: https://favicon.io/
 - jquery library: https://jquery.com/
 - svg background: https://bgjar.com/
+- background gradient generator: https://cssgradient.io/
 - typwriter effect inspiration: https://www.30secondsofcode.org/css/s/typewriter-effect/
 - nav icon inspiration: https://codepen.io/ahmadbassamemran/pen/VQwPGr/
-- background gradient generator: https://cssgradient.io/
 - glitch effect tutorial: https://www.youtube.com/watch?v=7Xyg8Ja7dyY/
 - image editor: https://www.photopea.com/
 - image compression tool: https://tinypng.com/
@@ -29,5 +38,6 @@ this is meant to be a motivation that you can and even should use other stuff as
 - prismjs syntax highlighter library: https://prismjs.com/
 - html escape tool: https://codebeautify.org/html-escape-unescape/
 - markdown to html converter: https://codebeautify.org/markdown-to-html/
-- frontend checklist: https://frontendchecklist.io/
 - css autoprefixer: https://autoprefixer.github.io/
+
+> created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer) from the [MDN Web Docs](https://developer.mozilla.org/) (previously Mozilla Developer Network and formerly Mozilla Developer Center)
