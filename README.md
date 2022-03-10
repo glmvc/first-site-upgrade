@@ -20,6 +20,7 @@
 
 this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
 
+- html / css style guide: https://google.github.io/styleguide/htmlcssguide.html
 - frontend checklist: https://frontendchecklist.io/
 - design guidelines / inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
