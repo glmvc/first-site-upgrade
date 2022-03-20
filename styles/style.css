@@ -1023,7 +1023,7 @@ tr:nth-child(odd) td {
 /*-- table scrollbar --*/
 
 .table-wrapper::-webkit-scrollbar {
-  height: 8px;
+  height: 0.8em;
 }
 
 .table-wrapper::-webkit-scrollbar-track {
