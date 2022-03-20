@@ -70,9 +70,9 @@ body {
   border-radius: 1em;
   border-bottom-right-radius: 5em;
   -webkit-box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
-              -5px 0px 10px rgba(15, 181, 94, 0.8);
+                     -5px 0px 10px rgba(15, 181, 94, 0.8);
           box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
-              -5px 0px 10px rgba(15, 181, 94, 0.8); /* left */
+                     -5px 0px 10px rgba(15, 181, 94, 0.8); /* left */
   overflow-x: hidden;
 }
 
@@ -110,7 +110,7 @@ body {
 /*-- scroll --*/
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 1em;
 }
 
 body::-webkit-scrollbar-track {
@@ -345,10 +345,10 @@ a:active {
 
 a[href*="http"]::after { /* (special) pseudo-element selector */
   content: ""; /* empty string */
-  display: inline-block;
-  margin-left: 0.2em;
-  height: 0.8em;
-  width: 0.8em;
+  display: inline-flex;
+  margin-left: 0.3em;
+  height: 0.7em;
+  width: 0.7em;
   background-image: url("../images/external-red.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1219,7 +1219,16 @@ p[lang="ja"]::before {
 /*---------------------------------------------------------------------*/
 /*-- large width (> 1000px) --*/
 
-@media only screen and (max-width: 1090px) {
+@media only screen and (max-width: 1200px) {
+
+  html {
+    font-size: 9.5px;
+  }
+
+}
+
+
+@media only screen and (max-width: 1040px) {
 
   div.heading {
     width: 0;
@@ -1243,10 +1252,10 @@ p[lang="ja"]::before {
 /*---------------------------------------------------------------------*/
 /*-- small width (mobile) --*/
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 770px) {
 
   html {
-    font-size: 8px;
+    font-size: 8.5px;
   }
 
   .website-padding {
@@ -1425,10 +1434,19 @@ p[lang="ja"]::before {
 }
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 600px) {
 
   html {
-    font-size: 7px;
+    font-size: 8px;
+  }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  html {
+    font-size: 7.5px;
   }
 
 }
@@ -1437,7 +1455,7 @@ p[lang="ja"]::before {
 @media only screen and (max-width: 320px) {
 
   html {
-    font-size: 6px;
+    font-size: 7px;
   }
 
 }
