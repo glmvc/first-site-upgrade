@@ -69,7 +69,7 @@ body {
   border: 3px solid black;
   border-radius: 1em;
   border-bottom-right-radius: 5em;
-  -webkit-box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
+  -webkit-box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8),
                      -5px 0px 10px rgba(15, 181, 94, 0.8);
           box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), /* right */
                      -5px 0px 10px rgba(15, 181, 94, 0.8); /* left */
@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb {
 
 /*-- text --*/
 
-h1, h2, h3, h4, h5, h6 { /* selector list on a single line */
+h1, h2, h3, h4, h5, h6 { /* selector list on a single line (bad practice) */
   margin-bottom: 0.3em;
   font-weight: normal;
   color: #0fb55e;
@@ -238,7 +238,7 @@ img + figcaption { /* adjacent sibling combinator */
   text-align: center;
 }
 
-p, /* selector list across multiple lines */
+p, /* selector list across multiple lines (good practice) */
 ul,
 ol,
 dl,
@@ -635,8 +635,8 @@ kbd {
   background-color: #eee;
   border-radius: 0.3em;
   border: 1px solid #b4b4b4;
-  -webkit-box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
-          box-shadow: 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7) inset;
+  -webkit-box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7);
+          box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7); /* inset for inner shadow */
   white-space: nowrap;
 }
 
@@ -893,15 +893,15 @@ div.heading { /* "selecting all div elements with a class of heading" */
   section.hello-world-program { /* grid container */
     display: -ms-grid;
     display: grid;
-        grid-template-areas:
-      "heading heading"
-      "para1 para1"
-      "quote video"
-      "para2 para2";
     -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+    grid-template-areas:
+      "heading heading"
+      "para1 para1"
+      "quote video"
+      "para2 para2";
     gap: 2rem;
   }
 
@@ -1113,7 +1113,7 @@ section.sources ol {
   background: -o-linear-gradient(left, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
   background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
   -webkit-box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
-          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); /* inset for inner shadow */
+          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -1273,29 +1273,29 @@ p[lang="ja"]::before {
   #mobile-nav {
     z-index: 7;
     position: absolute;
-    right: -200%;
-    width: 100%;
+    right: -106%;
     display: block;
     padding: 3rem;
     padding: var(--website-padding);
+    width: 100%;
     background: rgb(18, 18, 18);
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
     background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
     background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
     pointer-events: none;
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .nav-open #mobile-nav {
     right: 0;
     pointer-events: all;
     opacity: 1;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   #mobile-nav ul {
