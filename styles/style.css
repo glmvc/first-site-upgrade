@@ -57,6 +57,7 @@ html { /* type selector (also called tag or element selector) */
   color: var(--onsurface-white);
   background-color: #121212;
   background-color: var(--background-dark-grey);
+  overflow-x: hidden;
 }
 
 body {

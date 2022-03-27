@@ -54,14 +54,9 @@ $(document).ready(function () {
   //---------------------------------------------------------------------
   // navigation (jQuery)
 
-  $('body').on('click', '#nav-icon', function () {
-
-    $('body').toggleClass('nav-open');
-
-  });
-
   $('#nav-icon').on('click', function () {
 
+    $('body').toggleClass('nav-open');
     $(this).toggleClass('open');
 
   });
@@ -98,7 +93,7 @@ $(document).ready(function () {
 
 
   //---------------------------------------------------------------------
-  // personalised welcome message
+  // personalized welcome message (jQuery)
 
   function setUserName() {
 
