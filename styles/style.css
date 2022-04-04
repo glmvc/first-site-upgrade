@@ -61,6 +61,7 @@ html { /* type selector (also called tag or element selector) */
 }
 
 body {
+  position: relative;
   margin: 20px 0 20px;
   width: 1024px; /* fallback width */
   width: 90vw;
@@ -649,9 +650,7 @@ kbd {
 
 header { /* flex container */
   z-index: 6;
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -669,10 +668,27 @@ header { /* flex container */
           align-items: center;
   padding: 1.5rem 3rem;
   padding: 1.5rem var(--website-padding);
+  width: 100%;
   background: rgb(18, 18, 18);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
   background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
   background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.scrolled header {
+  position: fixed;
+  top: 0;
+  width: 1018px; /* body fallback width minus 6px */
+  width: calc(90vw - 6px); /* 6px because of the body border (left 3px & right 3px) */
+  max-width: 1914px; /* body max-width minus 6px */
+  opacity: 0.93;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 body:not(.scrolled) header {
@@ -809,6 +825,11 @@ nav a.active:hover {
 /*---------------------------------------------------------------------*/
 /*-- main content --*/
 /*---------------------------------------------------------------------*/
+
+main {
+  margin-top: 150px;
+}
+
 
 /*---------------------------------------------------------------------*/
 /*-- sidebar --*/

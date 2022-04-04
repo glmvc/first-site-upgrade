@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   let checkScroll = function () {
 
-    if ($(window).scrollTop() > 25) {
+    if ($(window).scrollTop() > 23) { // 20px body margin-top plus 3px body border-top
       $('body').addClass('scrolled');
     } else {
       $('body').removeClass('scrolled');
