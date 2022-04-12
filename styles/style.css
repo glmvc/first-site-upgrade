@@ -669,14 +669,13 @@ header { /* flex container */
   padding: 1.5rem 3rem;
   padding: 1.5rem var(--website-padding);
   width: 100%;
-  background: rgb(18, 18, 18);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
-  background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
-  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  background-color: rgb(18, 18, 18);
+  background-color: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
+  background-color: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+  background-color: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .scrolled header {
@@ -685,10 +684,13 @@ header { /* flex container */
   width: 1018px; /* body fallback width minus 6px */
   width: calc(90vw - 6px); /* 6px because of the body border (left 3px & right 3px) */
   max-width: 1914px; /* body max-width minus 6px */
-  opacity: 0.93;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  background-color: rgba(18, 18, 18, 0.93);
+  background-color: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 0.93)), color-stop(95%, rgba(18, 18, 18, 0.93)), to(rgba(18, 18, 18, 0)));
+  background-color: -o-linear-gradient(top, rgba(18, 18, 18, 0.93) 0%, rgba(18, 18, 18, 0.93) 95%, rgba(18, 18, 18, 0) 100%);
+  background-color: linear-gradient(180deg, rgba(18, 18, 18, 0.93) 0%, rgba(18, 18, 18, 0.93) 95%, rgba(18, 18, 18, 0) 100%);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 body:not(.scrolled) header {
