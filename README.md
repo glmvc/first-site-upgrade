@@ -24,6 +24,7 @@ this is meant to be a **motivation** that you can and even should use other reso
 - frontend checklist: https://frontendchecklist.io/
 - design guidelines / inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
+- google webfonts helper: https://google-webfonts-helper.herokuapp.com/fonts
 - webfont generator: https://www.fontsquirrel.com/tools/webfont-generator
 - favicon generator: https://favicon.io/
 - jquery library: https://jquery.com/
