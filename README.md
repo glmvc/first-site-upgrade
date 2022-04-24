@@ -14,11 +14,15 @@
 
 ---
 
+[![google pagespeed insights performance](assets/pagespeed.svg "google pagespeed insights performance results")](https://developers.google.com/speed/docs/insights/v5/about)
+
+---
+
 #### :toolbox: used tools, libraries and inspiration for the project
 
 :ferris_wheel: you don't need to go and reinvent the wheel
 
-this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
+:joystick: this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
 
 - html / css style guide: https://google.github.io/styleguide/htmlcssguide.html
 - frontend checklist: https://frontendchecklist.io/
@@ -41,5 +45,6 @@ this is meant to be a **motivation** that you can and even should use other reso
 - html escape tool: https://codebeautify.org/html-escape-unescape/
 - markdown to html converter: https://codebeautify.org/markdown-to-html/
 - css autoprefixer: https://autoprefixer.github.io/
+- pagespeed insights svg api: https://github.com/ankurparihar/readme-pagespeed-insights
 
 > created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer) from the [MDN Web Docs](https://developer.mozilla.org/) (previously Mozilla Developer Network and formerly Mozilla Developer Center)
