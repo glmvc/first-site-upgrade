@@ -14,7 +14,11 @@
 
 ---
 
-[![google pagespeed insights performance](assets/pagespeed.svg "google pagespeed insights performance results")](https://developers.google.com/speed/docs/insights/v5/about)
+### pagespeed
+
+[![pagespeed insights performance](assets/pagespeed.svg "pagespeed insights performance results")](https://developers.google.com/speed/docs/insights/v5/about)
+
+> [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about) (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
 
 ---
 
