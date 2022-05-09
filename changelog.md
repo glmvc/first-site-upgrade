@@ -203,7 +203,7 @@
 
 - [x] Iframe for a map (from [Google Maps](https://www.google.com/maps/about/#!/)) added within the address:
 
-  `<iframe src="https:..." width="400" height="300" style="border:0;" loading="lazy"></iframe>`
+  `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border:0;" loading="lazy"></iframe>`
 
 - [x] Addditional page information added within a detail area with a summary text:
 
