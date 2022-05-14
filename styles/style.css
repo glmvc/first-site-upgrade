@@ -99,6 +99,7 @@ body {
   max-width: 40ch;
   font-weight: 500;
   font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.001em;
   text-align: center;
   color: red;
@@ -231,7 +232,7 @@ h6 {
 
 figcaption {
   margin-top: 1em;
-  font-size: 1.3rem;
+  font-size: 13px;
   letter-spacing: 0.004em;
 }
 
@@ -247,6 +248,7 @@ dl,
 blockquote,
 details {
   font-size: 1.7rem;
+  font-size: clamp(14px, 1.717vw, 1.7rem);
   letter-spacing: 0.005em;
 }
 
@@ -304,8 +306,13 @@ dt {
 
 details > p { /* child combinator */
   font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.0025em;
   text-align: center;
+}
+
+small {
+  font-size: 11px;
 }
 
 /*-- hyperlinks --*/
@@ -435,6 +442,7 @@ dt {
 
 dd {
   font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.025em;
   text-indent: 1ch;
 }
@@ -733,7 +741,7 @@ header svg {
   display: flex;
   margin-left: 2.2rem;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 13px;
 }
 
 .typewriter > .text {
@@ -807,6 +815,7 @@ header svg {
 nav li {
   display: inline;
   font-size: 1.8rem;
+  font-size: clamp(15px, 1.818vw, 1.8rem);
   letter-spacing: 0.0015em;
 }
 
@@ -860,7 +869,7 @@ aside {
 
 aside > p {
   padding-right: 1rem;
-  font-size: 1.1rem;
+  font-size: 12px;
   letter-spacing: 0.015em;
   text-transform: uppercase;
   -webkit-writing-mode: vertical-lr;
@@ -985,7 +994,7 @@ table {
   font-family: "Orbitron", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 13px;
   letter-spacing: 0.0025em;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.88);
@@ -994,7 +1003,7 @@ table {
 
 table caption {
   margin: 1em 2em 2em 0;
-  font-size: 1.1rem;
+  font-size: 12px;
   letter-spacing: 0.004em;
   text-align: right;
   caption-side: bottom;
@@ -1013,7 +1022,7 @@ tbody td {
 }
 
 tfoot {
-  font-size: 0.9rem;
+  font-size: 11px;
   letter-spacing: 0.015em;
   text-transform: uppercase;
   border-top: 2px solid black;
@@ -1125,6 +1134,7 @@ section.sources ol {
   font-family: inherit;
   font-weight: 500;
   font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.0125em;
   line-height: 2;
   text-transform: uppercase;
