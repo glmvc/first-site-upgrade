@@ -16,7 +16,9 @@
 
 ### pagespeed
 
-[![pagespeed insights performance](assets/pagespeed.svg "pagespeed insights performance results")](https://developers.google.com/speed/docs/insights/v5/about)
+![pagespeed insights performance](assets/pagespeed-dark.svg#gh-dark-mode-only)
+
+![pagespeed insights performance](assets/pagespeed-light.svg#gh-light-mode-only)
 
 > [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about) (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
 
