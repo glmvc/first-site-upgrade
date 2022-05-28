@@ -8,7 +8,7 @@
 
 - [x] Code structures improved with comments and "separators"
 
-- [x] Useful tools and libraries used/now in use
+- [x] Useful tools and libraries now in use
 
 
 ---
@@ -113,7 +113,7 @@
 
   `<hr>`
 
-- [x] If JavaScript is disabled (in the browser), a warning message will be displayed:
+- [x] If JavaScript is disabled (in the browser), a warning message will be displayed now:
 
   `<noscript>...</noscript>`
 
@@ -229,7 +229,7 @@
 
   `<small>...</small>`
 
-- [x] Textual content adjusted to the changes
+- [x] Content (textual) adjusted to the changes
 
 - [x] Source codes added as code blocks / snippets to the created source code (code.html) and changelog (changelog.html) pages using the [PrismJS syntax highlighter library](https://prismjs.com/):
 
@@ -273,11 +273,11 @@
 
 - [x] CSS functions now in use
 
-- [x] Different color values now in use (rgb/rgba, hexadecimal rgb, color keywords)
+- [x] Different color values now in use (rgb / rgba, hexadecimal, color keywords)
 
 - [x] Global colors and padding set with variables
 
-- [x] Type (tag/element), class and ID selectors now in use
+- [x] Type (tag / element), class and ID selectors now in use
 
 - [x] Selector lists now in use
 
@@ -291,7 +291,7 @@
 
   `animation: blink 1s step-end infinite;`
 
-- [x] Calc functions now in use to perform calculations for certain things (e.g. values) not known at a certain time:
+- [x] Calc functions now in use to perform calculations (e.g. for values not known at a certain time):
 
   `calc(...)`
 
@@ -301,7 +301,7 @@
 
 - [x] Fallback width of the body added for browsers that do not support the vw unit:
 
-  `width: 90%;` instead of `width: 90vw;`
+  `width: 90%;`
 
 - [x] Green shadow styled left and right to the body:
 
@@ -321,7 +321,7 @@
 
   `transform: rotate(-1deg);`
 
-- [x] Main heading (`<h1>`) set as inline box (outer display type) so that the click function really only affects the text and not the full width:
+- [x] Main heading (`<h1>`) set as inline box (outer display type) so that the click easter egg really only affects the text and not the full width:
 
   `display: inline;`
 
@@ -347,13 +347,13 @@
 
 - [x] Transitions now in use:
 
-  `transition: <property> <duration> <timing-function> <delay>`
+  `transition: <property> <duration> <timing-function> <delay>;`
 
 - [x] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
 
 - [x] Page layout styled (using flex, grid, multicol, positioning, floating etc.)
 
-- [x] Visual/functional content styled (images, table, button etc.)
+- [x] Visual / functional content styled (images, table, button etc.)
 
 - [x] The page is now full responsive (using media queries, meta viewport, layout techniques etc.)
 
@@ -367,9 +367,9 @@
 
 - [x] [jQuery library](https://jquery.com/) now in use and code rewritten using its syntax
 
-- [x] [PrismJS syntax highlighter library](https://prismjs.com/) now in use on the created source code (code.html) and changelog (changelog.html) pages
+- [x] [PrismJS syntax highlighter library](https://prismjs.com/) now in use for the created source code (code.html) and changelog (changelog.html) pages
 
-- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/) now in use:
+- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/) now in use so that the image map works repsonsive:
 
   `$('map').imageMapResize();`
 
@@ -385,9 +385,9 @@
 
 - [x] Clicking on the new navigation icon will toggle a class "open" to it and the class "nav-open" to the body:
 
-  `$(this).toggleClass('open');`
-
   `$('body').toggleClass('nav-open');`
+
+  `$(this).toggleClass('open');`
 
 - [x] The username input for the personalized welcome message is now limited to a certain number of characters:
 
@@ -418,6 +418,8 @@
 
 
 ## &#10024; For The Future
+
+- [ ] Scroll to top button
 
 - [ ] Meter/progress bars
 
