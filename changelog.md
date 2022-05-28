@@ -261,7 +261,7 @@
 
 - [x] Default margin & padding set to 0 ("reset stylesheet") with internal stylesheet using the universal selector:
 
-  `* { margin: 0; padding:0; }`
+  `* { margin: 0; padding: 0; }`
 
 - [x] Standard box model (content-box) changed to alternative box model for all elements in the document:
 
@@ -301,7 +301,7 @@
 
 - [x] Fallback width of the body added for browsers that do not support the vw unit:
 
-  `width: 1024px;` instead of `width: 90vw;`
+  `width: 90%;` instead of `width: 90vw;`
 
 - [x] Green shadow styled left and right to the body:
 
