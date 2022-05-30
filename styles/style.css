@@ -49,10 +49,10 @@
 html { /* type selector (also called element or tag selector) */
   -webkit-box-sizing: border-box;
           box-sizing: border-box; /* alternative box model */
-  font-size: 10px;
   font-family: "Source Code Pro", "Consolas", "Courier New", monospace; /* font-stack to guarantee the availability of the fonts across all systems */
   font-style: normal;
-  font-weight: normal;
+  font-weight: normal; /* 400 */
+  font-size: 10px;
   color: whitesmoke; /* fallback color */
   color: var(--onsurface-white);
   background-color: #121212;
@@ -98,8 +98,8 @@ body {
   border: 2px solid red;
   padding: 1em;
   max-width: 40ch;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 500; /* medium */
+  font-size: 1.5rem; /* fallback font-size */
   font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.001em;
   text-align: center;
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 { /* selector list on a single line (bad practice) */
 h1 {
   display: inline; /* inline box (outer display type) */
   margin-top: 0.3em;
-  font-weight: 300; /* 300 = light */
+  font-weight: 300; /* light */
   font-size: 10.5rem;
   letter-spacing: -0.015em;
   text-align: center;
@@ -217,7 +217,7 @@ h5 {
 }
 
 h6 {
-  font-weight: 500; /* 500 = medium */
+  font-weight: 500;
   font-size: 2.2rem;
   letter-spacing: 0.0015em;
   line-height: 2.5;
@@ -361,7 +361,7 @@ a:hover { /* (user-action or dynamic) pseudo-class selector*/
 }
 
 a:active {
-  font-weight: 700; /* 700 = bold */
+  font-weight: 700; /* bold */
 }
 
 a[href*="http"]::after { /* (special) pseudo-element selector */
@@ -370,8 +370,8 @@ a[href*="http"]::after { /* (special) pseudo-element selector */
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 0.3em;
-  height: 0.7em;
   width: 0.7em;
+  height: 0.7em;
   background-image: url("../images/external-red.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -460,7 +460,7 @@ aside ul { /* descendant combinators */
 
 dt {
   margin-top: 1em;
-  font-weight: bold; /* bold = 700 */
+  font-weight: bold; /* 700 */
 }
 
 dd {
@@ -660,14 +660,14 @@ pre::-webkit-scrollbar-thumb {
 
 kbd {
   display: inline-block;
-  border-radius: 0.3em;
   border: 1px solid #b4b4b4;
+  border-radius: 0.3em;
   padding: 0.2em 0.4em;
   font-weight: 500;
   font-size: 0.85em;
   line-height: 1;
   color: #333333;
-  background-color: #eee;
+  background-color: #eeeeee;
   -webkit-box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7);
           box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7); /* inset for inner shadow */
   white-space: nowrap;
@@ -849,7 +849,7 @@ nav a.active:hover {
 
 /*-- nav icon --*/
 
-#nav-icon {
+#nav-icon { /* id selector */
   display: none;
   z-index: 9;
   position: relative;
@@ -1125,9 +1125,9 @@ div.heading { /* "selecting all div elements with a class of heading" */
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   border: 3px solid black;
+  width: 100%;
   font-family: "Orbitron", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1139,11 +1139,11 @@ table {
 }
 
 table caption {
+  caption-side: bottom;
   margin: 1em 2em 2em 0;
   font-size: 12px;
   letter-spacing: 0.004em;
   text-align: right;
-  caption-side: bottom;
 }
 
 thead {
@@ -1151,7 +1151,7 @@ thead {
 }
 
 thead th {
-  font-weight: 800;
+  font-weight: 800; /* extra/ultra bold */
 }
 
 tbody td {
@@ -1172,7 +1172,7 @@ td {
 }
 
 th {
-  font-weight: 600;
+  font-weight: 600; /* semi bold */
   background-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1254,7 +1254,7 @@ section.further-info ol {
   gap: 1rem;
 }
 
-#audio { /* id selector */
+#audio {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1527,10 +1527,9 @@ p[lang="ja"]::before {
   header,
   aside,
   video,
-  h6,
-  button,
-  audio,
-  iframe {
+  .features-wrapper,
+  iframe,
+  a[href*="http"]::after {
     display: none;
   }
 
@@ -1548,6 +1547,22 @@ p[lang="ja"]::before {
   .website-padding {
     padding-left: 3rem;
     padding-left: var(--website-padding);
+  }
+
+  main,
+  h2 span,
+  table {
+    all: unset; /* resets all properties (except direction and unicode-bidi) */
+  }
+
+  table {
+    page-break-before: always;
+  }
+
+  body,
+  mark,
+  table {
+    color: black;
   }
 
 }

@@ -203,7 +203,7 @@
 
 - [x] Iframe for a map (from [Google Maps](https://www.google.com/maps/about/#!/)) added within the address:
 
-  `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border:0;" loading="lazy"></iframe>`
+  `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border: 0;" loading="lazy"></iframe>`
 
 - [x] Addditional page information added within a detail area with a summary text:
 
@@ -313,7 +313,7 @@
 
 - [x] SVG icon attached to external hyperlinks with an attribute selector and a special pseudo-element selector:
 
-  `a[href^="https"]::after`
+  `a[href*="http"]::after`
 
 - [x] Images and main heading (`<h1>`) will now rotate a bit on hover:
 
@@ -333,7 +333,7 @@
 
 - [x] Subheading (`<h2>`) color set to whitesmoke with inline styling:
 
-  `style="color:whitesmoke;"`
+  `style="color: whitesmoke;"`
 
 - [x] Blur filter added to the JavaScript code image to hide the click easter egg:
 
