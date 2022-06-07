@@ -223,10 +223,18 @@ h6 {
   line-height: 2.5;
   word-spacing: 0.5em;
   text-align: center;
-  -webkit-text-decoration: underline overline #0fb55e wavy;
-          text-decoration: underline overline #0fb55e wavy;
-  -webkit-text-decoration: underline overline var(--primary-green) wavy;
-          text-decoration: underline overline var(--primary-green) wavy;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  -webkit-text-decoration-color: #0fb55e;
+          text-decoration-line: underline overline;
+          text-decoration-style: wavy;
+          text-decoration-color: #0fb55e;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  -webkit-text-decoration-color: var(--primary-green);
+          text-decoration-line: underline overline;
+          text-decoration-style: wavy;
+          text-decoration-color: var(--primary-green);
   text-underline-offset: 0.4em;
   text-transform: uppercase;
 }
