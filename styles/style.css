@@ -275,6 +275,8 @@ mark {
 }
 
 abbr {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
   text-underline-offset: 0.2em;
 }
 
@@ -404,7 +406,7 @@ a[href^="https"]:hover::after {
 
 /*-- lists --*/
 
-@counter-style thumbs {
+@counter-style thumbs { /* support for this at-rule is insufficient at the moment, June 2022 */
   system: cyclic;
   symbols: "\1F44E" "\1F44D";
   suffix: "";
@@ -521,10 +523,14 @@ audio {
 
 img,
 video,
-audio,
 iframe {
-  -webkit-filter: drop-shadow(4px 4px 6px black);
-          filter: drop-shadow(4px 4px 6px black);
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
+}
+
+audio {
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.95));
+          filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.95));
 }
 
 /*-- glitch effect --*/
@@ -748,9 +754,8 @@ header a.logo:focus {
 }
 
 header svg {
-  padding-left: 7px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* switching to the standard box model because of the padding-left */
+  width: 10rem;
+  height: 10rem;
 }
 
 /*-- typewriter effect --*/
@@ -759,7 +764,7 @@ header svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 2.2rem;
+  margin-left: 1.2rem;
   font-weight: 500;
   font-size: 13px;
 }
@@ -1381,9 +1386,12 @@ p[lang="ja"]::before {
 }
 
 .emoji {
-  color: red;
   -webkit-filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.7));
           filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.7));
+}
+
+.emoji.heart {
+  color: red;
 }
 
 
