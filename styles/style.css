@@ -687,6 +687,12 @@ kbd {
   white-space: nowrap;
 }
 
+/*-- prismjs syntax highlighter library --*/
+
+.copy-to-clipboard-button {
+  cursor: pointer;
+}
+
 
 
 /*---------------------------------------------------------------------*/
