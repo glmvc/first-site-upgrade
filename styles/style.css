@@ -847,8 +847,15 @@ header svg {
 /*---------------------------------------------------------------------*/
 /*-- nav --*/
 
-nav li {
-  display: inline;
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5em;
   font-size: 1.8rem;
   font-size: clamp(15px, 1.818vw, 1.8rem);
   letter-spacing: 0.0015em;
@@ -1476,14 +1483,10 @@ p[lang="ja"]::before {
     position: absolute;
     top: 5.5rem;
     left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    gap: 0.5em;
     padding: 3rem;
     padding: var(--website-padding);
     width: 100%;
@@ -1494,17 +1497,32 @@ p[lang="ja"]::before {
     background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
     pointer-events: none;
     opacity: 0;
-    clip: rect(auto, auto, 0, auto);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nav-open nav ul {
+    top: 11rem;
+    padding-bottom: 100vh;
+    pointer-events: all;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  nav a {
+    padding: 0;
+    line-height: 0;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
 
-  .nav-open nav ul {
-    top: 11rem;
-    pointer-events: all;
-    opacity: 1;
-    clip: rect(auto, auto, 180px, auto);
+  .nav-open nav a {
+    padding: 0.5em;
+    line-height: 1.5;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
