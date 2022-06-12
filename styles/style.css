@@ -78,6 +78,14 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  text-shadow: none;
+  color: #0fb55e;
+  color: var(--primary-green);
+  background-color: #121212;
+  background-color: var(--background-dark-grey);
+}
+
 
 /*---------------------------------------------------------------------*/
 /*-- classes --*/
