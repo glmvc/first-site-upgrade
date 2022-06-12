@@ -39,6 +39,7 @@
 - favicon generator: https://favicon.io/
 - jquery library: https://jquery.com/
 - svg background: https://bgjar.com/
+- svg icons: https://fontawesome.com/
 - background gradient generator: https://cssgradient.io/
 - typwriter effect inspiration: https://www.30secondsofcode.org/css/s/typewriter-effect/
 - nav icon inspiration: https://codepen.io/ahmadbassamemran/pen/VQwPGr/
