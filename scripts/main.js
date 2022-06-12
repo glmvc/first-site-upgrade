@@ -73,26 +73,6 @@ $(document).ready(function () {
 
 
   //---------------------------------------------------------------------
-  // image and figure caption switcher (jQuery)
-
-  let imageMap;
-
-  $('img').on('click', function () {
-
-    if ($('img').attr('src') === 'images/hello-world.png') {
-      imageMap = $('map').detach();
-      $('img').attr('src', 'images/js-code.png');
-      $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
-    } else {
-      $('img').before(imageMap);
-      $('img').attr('src', 'images/hello-world.png');
-      $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
-    }
-
-  });
-
-
-  //---------------------------------------------------------------------
   // personalized welcome message (jQuery)
 
   function setUserName() {
@@ -128,16 +108,36 @@ $(document).ready(function () {
 
 
   //---------------------------------------------------------------------
-  // audio volume
+  // image and figure caption switcher (jQuery)
 
-  let audio = document.getElementById('audio');
-  audio.volume = 0.5;
+  let imageMap;
+
+  $('img').on('click', function () {
+
+    if ($('img').attr('src') === 'images/hello-world.png') {
+      imageMap = $('map').detach();
+      $('img').attr('src', 'images/js-code.png');
+      $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
+    } else {
+      $('img').before(imageMap);
+      $('img').attr('src', 'images/hello-world.png');
+      $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+    }
+
+  });
 
 
   //---------------------------------------------------------------------
   // image map resizer (jQuery)
 
   $('map').imageMapResize();
+
+
+  //---------------------------------------------------------------------
+  // audio volume
+
+  let audio = document.getElementById('audio');
+  audio.volume = 0.5;
 
 
 

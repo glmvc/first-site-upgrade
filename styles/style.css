@@ -41,11 +41,6 @@
 /*-- general --*/
 /*---------------------------------------------------------------------*/
 
-*, *::before, *::after { /* to inherit the alternative box model to all elements */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 html { /* type selector (also called element or tag selector) */
   -webkit-box-sizing: border-box;
           box-sizing: border-box; /* alternative box model */
@@ -58,6 +53,19 @@ html { /* type selector (also called element or tag selector) */
   background-color: #121212;
   background-color: var(--background-dark-grey);
   overflow-x: hidden;
+}
+
+*, *::before, *::after { /* to inherit the alternative box model to all elements */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::selection { /* special pseudo element */
+  text-shadow: none;
+  color: #0fb55e;
+  color: var(--primary-green);
+  background-color: #121212;
+  background-color: var(--background-dark-grey);
 }
 
 body {
@@ -385,6 +393,7 @@ a[href*="http"]::after { /* (special) pseudo-element selector */
   background-image: url("../images/external-red.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 }
 
 a[href^="https"]::after {
@@ -425,7 +434,7 @@ ul {
   list-style-type: square;
 }
 
-section ul {
+section:not([aria-label="changelog"]) ul {
   margin-left: 4ch;
 }
 
@@ -478,6 +487,26 @@ dd {
   font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.025em;
   text-indent: 1ch;
+}
+
+/* changelog */
+
+section[aria-label="changelog"] li {
+  position: relative;
+  padding-left: 3ch;
+}
+
+section[aria-label="changelog"] li::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 
@@ -1443,7 +1472,7 @@ p[lang="ja"]::before {
 
 
 /*---------------------------------------------------------------------*/
-/*-- medium width (< 1000px to mobile) --*/
+/*-- medium width (smaller than 1000px to mobile) --*/
 
 @media only screen and (max-width: 990px) {
 

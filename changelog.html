@@ -116,50 +116,37 @@
     <hr>
     <!-- changelog -->
     <section aria-label="changelog">
-      <h3 id="clipboard-changelog">&#128203; Changelog</h3>
-      <h4 id="gear-general">&#9881; General</h4>
+      <h3>&#128203; Changelog</h3>
+      <p>This changelog refers to the differences / changes between the <a href="first-site/index.html">first site (previous version)</a> and the upgraded version of it here.</p>
+      <h4>&#9881; General</h4>
       <ul>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Space indentation changed from 4 to 2 spaces in the code editor (personal preference)
-          </p>
+          Space indentation changed from 4 to 2 spaces in the code editor (personal preference)
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            HTML, CSS and JavaScript comments explained in more detail
-          </p>
+          HTML, CSS and JavaScript comments explained in more detail
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Code structures improved with comments and &quot;separators&quot;
-          </p>
+          Code structure improved with comments and &quot;separators&quot;
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Useful tools and libraries now in use
-          </p>
+          Useful tools and libraries now in use
         </li>
       </ul>
       <hr>
-      <h4 id="--html">&lt;/&gt; HTML</h4>
-      <h5 id="head">&lt;head&gt;</h5>
+      <h4>&lt;/&gt; HTML</h4>
+      <h5>&lt;head&gt;</h5>
       <ul>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Document language set to English (US):
-          </p>
+          Document language set to English (US):
           <pre><code class="language-html">&lt;html lang=&quot;en-US&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Document text direction set to left-to-right:
-          </p>
+          Document text direction set to left-to-right:
           <pre><code class="language-html">&lt;html dir=&quot;ltr&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
-          </p>
+          Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
           <pre><code class="language-html">&lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta name=&quot;description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
@@ -175,27 +162,19 @@
           <pre><code class="language-html">&lt;meta property=&quot;twitter:image&quot; content=&quot;https://glmvc.github.io/first-site-upgrade/images/hello-world.png"&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Document title changed to &quot;My Upgraded First Site&quot;:
-          </p>
+          Document title changed to &quot;My Upgraded First Site&quot;:
           <pre><code class="language-html">&lt;title&gt;My Upgraded First Site&lt;/title&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> now in use:
-          </p>
+          Linked to the new <a href="https://necolas.github.io/normalize.css/" title="Normalize.css homepage" target="_blank">normalize.css</a> file:
           <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles/normalize.css&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Linking to Google&#39;s online font service removed and instead new stylesheet (fonts.css) linked:
-          </p>
+          Linking to Google&#39;s online font service removed and instead new stylesheet (fonts.css) linked:
           <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles/fonts.css&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Additional favicons added for multiple device/browser support:
-          </p>
+          Additional favicons added for multiple device / browser support:
           <pre><code class="language-html">&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;any&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;link rel=&quot;icon&quot; href=&quot;favicon-16x16.png&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;link rel=&quot;icon&quot; href=&quot;favicon-32x32.png&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot;&gt;</code></pre>
@@ -203,39 +182,32 @@
           <pre><code class="language-html">&lt;link rel=&quot;manifest&quot; href=&quot;site.webmanifest&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            New scripts (<a href="https://jquery.com/">jQuery</a> &amp; <a href="https://github.com/davidjbradshaw/image-map-resizer">Image Map Resizer</a> library) added and script loading strategy changed (now within the head + defer attribute for main.js):
-          </p>
+          New scripts (<a href="https://jquery.com/">jQuery</a> &amp; <a href="https://github.com/davidjbradshaw/image-map-resizer">Image Map Resizer</a> library) added and script loading strategy changed (now within the head + defer attribute for main.js):
           <pre><code class="language-html">&lt;script src=&quot;scripts/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;</code></pre>
           <pre><code class="language-html">&lt;script src=&quot;scripts/imageMapResizer.min.js&quot;&gt;&lt;/script&gt;</code></pre>
           <pre><code class="language-html">&lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            <a href="https://prismjs.com/">PrismJS syntax highlighter library</a> files (CSS and JavaScript) linked in the created source code (code.html) and changelog (changelog.html) documents:
-          </p>
+          <a href="https://prismjs.com/">PrismJS syntax highlighter library</a> files (CSS and JavaScript) linked in the created source code (code.html) and changelog (changelog.html) documents:
           <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles/prism.css&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;script src=&quot;scripts/prism.js&quot;&gt;&lt;/script&gt;</code></pre>
         </li>
       </ul>
-      <h5 id="head-1">&lt;/head&gt;</h5>
+      <h5>&lt;/head&gt;</h5>
       <br>
-      <h5 id="body">&lt;body&gt;</h5>
+      <h5>&lt;body&gt;</h5>
       <ul>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Accessibility aspects changed and added where they were wrong/missing
-          </p>
+          Content (textual) adjusted to the changes
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Semantic elements used appropriately
-          </p>
+          Accessibility aspects changed and added where they were wrong/missing
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Semantic elements for structuring content now in use:
-          </p>
+          Semantic elements used appropriately
+        </li>
+        <li>
+          Semantic elements for structuring content now in use:
           <pre><code class="language-html">&lt;header&gt;...&lt;/header&gt;</code></pre>
           <pre><code class="language-html">&lt;nav&gt;...&lt;/nav&gt;</code></pre>
           <pre><code class="language-html">&lt;main&gt;...&lt;/main&gt;</code></pre>
@@ -245,111 +217,47 @@
           <pre><code class="language-html">&lt;footer&gt;...&lt;/footer&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Horizontal rules added to divide the sections:
-          </p>
+          Horizontal rules added to divide the sections:
           <pre><code class="language-html">&lt;hr&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            If JavaScript is disabled (in the browser), a warning message will be displayed now:
-          </p>
-          <pre><code class="language-html">&lt;noscript&gt;...&lt;/noscript&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            SVG logo added inline within the header (within a hyperlink to the homepage):
-          </p>
-          <pre><code class="language-html">&lt;svg width=&quot;10rem&quot; height=&quot;10rem&quot; viewBox=&quot;0 0 276 255&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;...&lt;/svg&gt;</code></pre>
+          SVG logo added inline within the header (within a hyperlink to the homepage):
+          <pre><code class="language-html">&lt;svg width=&quot;276&quot; height=&quot;255&quot; viewBox=&quot;0 0 276 255&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;...&lt;/svg&gt;</code></pre>
           <pre><code class="language-html">&lt;path .../&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Two <code>div</code> container added after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
-          </p>
+          Two <code>div</code> container added after the SVG logo for text with a typewriter effect
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Outgoing hyperlinks changed so that they open in a new tab instead of the current one:
-          </p>
+          Navigation with hyperlinks to the other HTML documents (code.html, changelog.html and "old" index.html) added withing the header:
+          <pre><code class="language-html">&lt;nav&gt;...&lt;/nav&gt;</code></pre>
+        </li>
+        <li>
+          One <code>div</code> container for the mobile nav icon added with nine <code>span</code> elements within
+        </li>
+        <li>
+          If JavaScript is disabled, a warning message will be displayed now:
+          <pre><code class="language-html">&lt;noscript&gt;...&lt;/noscript&gt;</code></pre>
+        </li>
+        <li>
+          Outgoing hyperlinks changed so that they open in a new tab instead of the current one:
           <pre><code class="language-html">target=&quot;_blank&quot;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Title attribute added to hyperlinks and images so hovering over them will open a descriptive tooltip:
-          </p>
+          Title attribute added to hyperlinks and images so hovering over them will open a descriptive tooltip:
           <pre><code class="language-html">title=&quot;description&quot;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Quotations and citation added within the main content:
-          </p>
-          <pre><code class="language-html">&lt;blockquote&gt;...&lt;/blockquote&gt;</code></pre>
-          <pre><code class="language-html">&lt;q&gt;...&lt;/q&gt;</code></pre>
-          <pre><code class="language-html">&lt;cite&gt;...&lt;/cite&gt;</code></pre>
+          Sidebar with hyperlinks to two social media accounts added:
+          <pre><code class="language-html">&lt;aside&gt;...&lt;/aside&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Important text content marked:
-          </p>
-          <pre><code class="language-html">&lt;mark&gt;...&lt;/mark&gt;</code></pre>
+          Emojis added with character references within the sidebar:
+          <pre><code class="language-html">&amp;#128025;</code></pre>
+          <pre><code class="language-html">&amp;#128038;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Line breaks added to make paragraphs easier to read:
-          </p>
-          <pre><code class="language-html">&lt;br&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Emphasis and importance added for certain words and text passages:
-          </p>
-          <pre><code class="language-html">&lt;em&gt;...&lt;/em&gt;</code></pre>
-          <pre><code class="language-html">&lt;strong&gt;...&lt;/strong&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            The image is now an image map with hyperlink-areas:
-          </p>
-          <pre><code class="language-html">&lt;map name=&quot;hello-world&quot;&gt;...&lt;/map&gt;</code></pre>
-          <pre><code class="language-html">&lt;area alt=&quot;alternative text&quot; title=&quot;point map title&quot; href=&quot;https...&quot; target=&quot;_blank&quot; shape=&quot;circle&quot; coords=&quot;x,y,radius&quot;&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Video added within the main content (with fallback):
-          </p>
-          <pre><code class="language-html">&lt;video width=&quot;400&quot; controls muted autoplay loop preload=&quot;auto&quot;&gt;...&lt;/video&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Figure and figure caption added to the images, video and audio:
-          </p>
-          <pre><code class="language-html">&lt;figure&gt;...&lt;/figure&gt;</code></pre>
-          <pre><code class="language-html">&lt;figcaption&gt;...&lt;/figcaption&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Description list added to introduce HTML, CSS and JS:
-          </p>
-          <pre><code class="language-html">&lt;dl&gt;...&lt;/dl&gt;</code></pre>
-          <pre><code class="language-html">&lt;dt&gt;...&lt;/dt&gt;</code></pre>
-          <pre><code class="language-html">&lt;dd&gt;...&lt;/dd&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Nested unordered list added
-          </p>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Abbreviations added to abbreviate &quot;HTML&quot;, &quot;CSS&quot; and &quot;JS&quot;:
-          </p>
-          <pre><code class="language-html">&lt;abbr title=&quot;abbreviation title&quot;&gt;...&lt;/abbr&gt;</code></pre>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Character entity references added instead of HTML syntax characters:
-          </p>
+          Character entity references added instead of HTML syntax characters:
           <pre><code class="language-html">&amp;amp;</code></pre>
           <pre><code class="language-html">&amp;apos;</code></pre>
           <pre><code class="language-html">&amp;quot;</code></pre>
@@ -357,16 +265,48 @@
           <pre><code class="language-html">&amp;gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Emojis added with character references within the sidebar:
-          </p>
-          <pre><code class="language-html">&amp;#128025;</code></pre>
-          <pre><code class="language-html">&amp;#128038;</code></pre>
+          The image is now an image map with hyperlink-areas:
+          <pre><code class="language-html">&lt;map name=&quot;hello-world&quot;&gt;...&lt;/map&gt;</code></pre>
+          <pre><code class="language-html">&lt;area alt=&quot;alternative text&quot; title=&quot;point map title&quot; href=&quot;https...&quot; target=&quot;_blank&quot; shape=&quot;circle&quot; coords=&quot;x,y,radius&quot;&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            A complex table about planet data added:
-          </p>
+          Quotations and citation added within the main content:
+          <pre><code class="language-html">&lt;blockquote&gt;...&lt;/blockquote&gt;</code></pre>
+          <pre><code class="language-html">&lt;q&gt;...&lt;/q&gt;</code></pre>
+          <pre><code class="language-html">&lt;cite&gt;...&lt;/cite&gt;</code></pre>
+        </li>
+        <li>
+          Important text content marked:
+          <pre><code class="language-html">&lt;mark&gt;...&lt;/mark&gt;</code></pre>
+        </li>
+        <li>
+          Line breaks added to make paragraphs easier to read:
+          <pre><code class="language-html">&lt;br&gt;</code></pre>
+        </li>
+        <li>
+          Emphasis and importance added for certain words and text passages:
+          <pre><code class="language-html">&lt;em&gt;...&lt;/em&gt;</code></pre>
+          <pre><code class="language-html">&lt;strong&gt;...&lt;/strong&gt;</code></pre>
+        </li>
+        <li>
+          Video added within the main content (with fallback):
+          <pre><code class="language-html">&lt;video width=&quot;400&quot; controls muted playsinline autoplay loop preload=&quot;auto&quot;&gt;...&lt;/video&gt;</code></pre>
+        </li>
+        <li>
+          Description list added to introduce HTML, CSS and JS:
+          <pre><code class="language-html">&lt;dl&gt;...&lt;/dl&gt;</code></pre>
+          <pre><code class="language-html">&lt;dt&gt;...&lt;/dt&gt;</code></pre>
+          <pre><code class="language-html">&lt;dd&gt;...&lt;/dd&gt;</code></pre>
+        </li>
+        <li>
+          Abbreviations added to abbreviate &quot;HTML&quot;, &quot;CSS&quot; and &quot;JS&quot;:
+          <pre><code class="language-html">&lt;abbr title=&quot;abbreviation title&quot;&gt;...&lt;/abbr&gt;</code></pre>
+        </li>
+        <li>
+          Nested unordered list added
+        </li>
+        <li>
+          A complex table about planet data added:
           <pre><code class="language-html">&lt;table&gt;...&lt;/table&gt;</code></pre>
           <pre><code class="language-html">&lt;caption&gt;...&lt;/caption&gt;</code></pre>
           <pre><code class="language-html">&lt;colgroup&gt;...&lt;/colgroup&gt;</code></pre>
@@ -379,76 +319,54 @@
           <pre><code class="language-html">&lt;tfoot&gt;...&lt;/tfoot&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Further sources added to the ordered list
-          </p>
+          Further sources added to an ordered list
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            A soundtrack added within the footer (with fallback):
-          </p>
+          A soundtrack added within the footer (with fallback):
           <pre><code class="language-html">&lt;audio id=&quot;audio&quot; controls loop preload=&quot;auto&quot;&gt;...&lt;/audio&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Fake contact details added within the footer:
-          </p>
+          Figure and figure caption added to the image, video and audio:
+          <pre><code class="language-html">&lt;figure&gt;...&lt;/figure&gt;</code></pre>
+          <pre><code class="language-html">&lt;figcaption&gt;...&lt;/figcaption&gt;</code></pre>
+        </li>
+        <li>
+          Fake contact details added within the footer:
           <pre><code class="language-html">&lt;address&gt;...&lt;/address&gt;</code></pre>
           <pre><code class="language-html">href=&quot;tel:...&quot;</code></pre>
           <pre><code class="language-html">href=&quot;mailto:...&quot;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Iframe for a map (from <a href="https://www.google.com/maps/about/#!/">Google Maps</a>) added within the address:
-          </p>
+          Iframe for a map (from <a href="https://www.google.com/maps/about/#!/">Google Maps</a>) added within the address:
           <pre><code class="language-html">&lt;iframe title=&quot;Google Maps Location&quot; src=&quot;https:...&quot; width=&quot;400&quot; height=&quot;300&quot; style=&quot;border: 0;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Addditional page information added within a detail area with a summary text:
-          </p>
+          Addditional website information added within a detail area with a summary text:
           <pre><code class="language-html">&lt;details&gt;...&lt;/details&gt;</code></pre>
           <pre><code class="language-html">&lt;summary&gt;Info&lt;/summary&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Superscript added for the birthdate of the page within the detail area in the footer:
-          </p>
+          Superscript added for the birthdate of the website within the detail area in the footer:
           <pre><code class="language-html">&lt;sup&gt;...&lt;/sup&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Subscript added for the chemical formula within the detail area in the footer:
-          </p>
+          Subscript added for the chemical formula within the detail area in the footer:
           <pre><code class="language-html">&lt;sub&gt;...&lt;/sub&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Date and time added for the last update and the birthdate of the page within the detail area in the footer:
-          </p>
+          Date and time added for the last update and the birthdate of the website within the detail area in the footer:
           <pre><code class="language-html">&lt;time datetime=&quot;YYYY-MM-ddThh:mm&quot;&gt;...&lt;/time&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            A Japanese sentence added within the detail area in the footer and language attribute set to Japanese:
-          </p>
+          A Japanese sentence added within the detail area in the footer and language attribute set to Japanese:
           <pre><code class="language-html">lang=&quot;ja&quot;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Last update text made as a small print/side comment within the detail area in the footer:
-          </p>
+          Last update text made as a small side comment within the detail area in the footer:
           <pre><code class="language-html">&lt;small&gt;...&lt;/small&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Content (textual) adjusted to the changes
-          </p>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Source codes added as code blocks / snippets to the created source code (code.html) and changelog (changelog.html) pages using the <a href="https://prismjs.com/">PrismJS syntax highlighter library</a>:
-          </p>
+          Source codes added as code blocks / snippets to the created source code (code.html) and changelog (changelog.html) pages using the <a href="https://prismjs.com/">PrismJS syntax highlighter library</a>:
           <pre><code class="language-html">&lt;kbd&gt;...&lt;/kbd&gt;</code></pre>
           <pre><code class="language-html">&lt;pre&gt;...&lt;/pre&gt;</code></pre>
           <pre><code class="language-html">&lt;code class=&quot;language-...&quot;&gt;...&lt;/code&gt;</code></pre>
@@ -456,126 +374,115 @@
           <pre><code class="language-html">&lt;samp&gt;...&lt;/samp&gt;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Changelog (changelog.md) converted to HTML code, adjusted and added to the created changelog page (changelog.html)
-          </p>
+          Changelog (changelog.md) converted to HTML code, adjusted and added to the created changelog page (changelog.html)
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            404 page created and adapted (404.html)
-          </p>
+          404 page created and adapted (404.html)
         </li>
       </ul>
-      <h5 id="body-1">&lt;/body&gt;</h5>
+      <h5>&lt;/body&gt;</h5>
       <hr>
-      <h4 id="--css">&#123; &#125; CSS</h4>
+      <h4>&#123; &#125; CSS</h4>
       <ul>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Using the @font-face ruleset in the created external stylesheet (fonts.css) to include and load the web fonts in use (woff, woff2 and variable):
-          </p>
+          Using the @font-face ruleset in the created external stylesheet (fonts.css) to include and load the web fonts in use (woff, woff2 and variable):
           <pre><code class="language-css">@font-face {...}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            External stylesheet, internal stylesheet and inline styling added to demonstrate them
-          </p>
+          External stylesheets, internal stylesheet and inline styling added (internal and inline styling just to show it off)
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Default margin &amp; padding set to 0 (&quot;reset stylesheet&quot;) with internal stylesheet using the universal selector:
-          </p>
-          <pre><code class="language-css">* { margin: 0; padding: 0; }</code></pre>
+          Default margin &amp; padding set to 0 (&quot;reset stylesheet&quot;) with internal stylesheet using the universal selector:
+          <pre><code class="language-css">* {margin: 0; padding: 0;}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Standard box model (content-box) changed to alternative box model for all elements in the document:
-          </p>
-          <pre><code class="language-css">box-sizing: border-box;</code></pre>
+          Global colors and padding set with variables using the root pseudo class:
+          <pre><code class="language-css">:root {...}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Natural (intrinsic) and extrinsic (given size) sizes of elements now in use
-          </p>
+          Standard box model (content-box) changed to the alternative box model for all elements in the document:
+          <pre><code class="language-css">html {box-sizing: border-box;}</code></pre>
+          <pre><code class="language-css">*, *::before, *::after {box-sizing: inherit;}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            More values and units now in use (absolute and relative lengths, percentages, numbers)
-          </p>
+          Special pseudo element for styling selections / highlighting with input devices used:
+          <pre><code class="language-css">::selection</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            CSS functions now in use
-          </p>
+          Horizontal overflow set to hidden on the html and body element because of unwanted horizontal scrolling on mobile devices:
+          <pre><code class="language-css">overflow-x: hidden;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Different color values now in use (rgb / rgba, hexadecimal, color keywords)
-          </p>
+          Scrollbar of the body element styled using WebKit extensions:
+          <pre><code class="language-css">body::-webkit-scrollbar {...}</code></pre>
+          <pre><code class="language-css">body::-webkit-scrollbar-track {...}</code></pre>
+          <pre><code class="language-css">body::-webkit-scrollbar-thumb {...}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Global colors and padding set with variables
-          </p>
+          Type (element / tag), class and ID selectors now in use
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Type (element / tag), class and ID selectors now in use
-          </p>
+          Selector lists now in use
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Selector lists now in use
-          </p>
-        </li>
-        <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Descendant, child, adjacent and general sibling combinators now in use:
-          </p>
+          Descendant, child, adjacent and general sibling combinators now in use:
           <pre><code class="language-css"> </code></pre>
           <pre><code class="language-css">&gt;</code></pre>
           <pre><code class="language-css">+</code></pre>
           <pre><code class="language-css">~</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Animations using <code>@keyframes</code> at-rules now in use for the typewriter, blinking caret and glitch effect:
-          </p>
-          <pre><code class="language-css">animation: typing 6s steps(var(--characters)) infinite;</code></pre>
-          <pre><code class="language-css">animation: blink 1s step-end infinite;</code></pre>
+          Natural (intrinsic) and extrinsic (given size) sizes of elements now in use
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Calc functions now in use to perform calculations (e.g. for values not known at a certain time):
-          </p>
+          More values and units now in use (absolute and relative lengths, percentages, numbers)
+        </li>
+        <li>
+          Different color values now in use (rgb / rgba, hexadecimal, color keywords)
+        </li>
+        <li>
+          Transitions now in use:
+          <pre><code class="language-css">transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt;;</code></pre>
+        </li>
+        <li>
+          CSS functions now in use
+        </li>
+        <li>
+          Calc functions now in use to perform calculations:
           <pre><code class="language-css">calc(...)</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Backgrounds added (background shorthand property and background longhand properties)
-          </p>
+          Cursor styled accordingly and as needed:
+          <pre><code class="language-css">cursor: not-allowed;</code></pre>
+          <pre><code class="language-css">cursor: pointer;</code></pre>
+          <pre><code class="language-css">cursor: help;</code></pre>
+          <pre><code class="language-css">cursor: crosshair;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Borders added (border shorthand property and border longhand properties)
-          </p>
+          Backgrounds added (background shorthand and longhand properties)
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Fallback width of the body added for browsers that do not support the vw unit:
-          </p>
+          Borders added (border shorthand and longhand properties)
+        </li>
+        <li>
+          Fallback width of the body added for browsers that do not support the vw unit:
           <pre><code class="language-css">width: 90%;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Green shadow styled left and right to the body:
-          </p>
-          <pre><code class="language-css">box-shadow: 5px 5px 10px rgba(15, 181, 94, 0.7), -5px -5px 10px rgba(15, 181, 94, 0.7);</code></pre>
+          Green shadow styled left and right to the body:
+          <pre><code class="language-css">box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), -5px -0px 10px rgba(15, 181, 94, 0.8);</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Hyperlinks styled with pseudo-class selectors:
-          </p>
+          Text content styled (headings, paragraphs, lists, captions, quotes etc.)
+        </li>
+        <li>
+          Website layout styled (using flex, grid, multicol, positioning, floating etc.)
+        </li>
+        <li>
+          Visual / functional content styled (images, table, button etc.)
+        </li>
+        <li>
+          Hyperlinks styled with pseudo-class selectors:
           <pre><code class="language-css">a:link</code></pre>
           <pre><code class="language-css">a:visited</code></pre>
           <pre><code class="language-css">a:focus</code></pre>
@@ -583,178 +490,138 @@
           <pre><code class="language-css">a:active</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            SVG icon attached to external hyperlinks with an attribute selector and a special pseudo-element selector:
-          </p>
+          SVG icon attached to external hyperlinks with an attribute selector and a special pseudo-element selector:
           <pre><code class="language-css">a[href*=&quot;http&quot;]::after</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Images and main heading (<code>&lt;h1&gt;</code>) will now rotate a bit on hover:
-          </p>
-          <pre><code class="language-css">transform: rotate(0.005turn);</code></pre>
-          <pre><code class="language-css">transform: rotate(-1deg);</code></pre>
+          Animations using <code>@keyframes</code> at-rules now in use for the typewriter, blinking caret and glitch effect:
+          <pre><code class="language-css">animation: typing 6s steps(var(--characters)) infinite;</code></pre>
+          <pre><code class="language-css">animation: blink 1s step-end infinite;</code></pre>
+          <pre><code class="language-css">animation: glitch 600ms infinite;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Main heading (<code>&lt;h1&gt;</code>) set as inline box (outer display type) so that the click easter egg really only affects the text and not the full width:
-          </p>
+          Images and main heading (<code>&lt;h1&gt;</code>) will now rotate a bit on hover:
+          <pre><code class="language-css">transform: rotate(-1deg);</code></pre>
+          <pre><code class="language-css">transform: rotate(0.005turn);</code></pre>
+        </li>
+        <li>
+          Main heading (<code>&lt;h1&gt;</code>) set as inline box (outer display type) so that the click easter egg really only affects the text and not the full width:
           <pre><code class="language-css">display: inline;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Main heading (<code>&lt;h1&gt;</code>) wrapped in a div container to center it with an inner display type:
-          </p>
+          Main heading (<code>&lt;h1&gt;</code>) wrapped in a flex container to center it with an inner display type:
           <pre><code class="language-css">display: flex;</code></pre>
           <pre><code class="language-css">justify-content: center;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Subheading (<code>&lt;h4&gt;</code>) color set to whitesmoke with inline styling:
-          </p>
-          <pre><code class="language-css">style=&quot;color:whitesmoke;&quot;</code></pre>
+          Subheading (<code>&lt;h4&gt;</code>) color set to whitesmoke with inline styling:
+          <pre><code class="language-css">style=&quot;color: whitesmoke;&quot;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Blur filter added to the JavaScript code image to hide the click easter egg:
-          </p>
+          Blur filter added to the JavaScript code image to hide the click easter egg:
           <pre><code class="language-css">filter: blur(5px);</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Writing modes (block &amp; inline dimensions) changed to vertical left-to-right for the sidebar and right-to-left for the Japanese sentence:
-          </p>
+          Writing modes (block &amp; inline dimensions) changed to vertical left-to-right for the sidebar and right-to-left for the Japanese sentence:
           <pre><code class="language-css">writing-mode: vertical-lr;</code></pre>
           <pre><code class="language-css">writing-mode: vertical-rl;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Transitions now in use:
-          </p>
-          <pre><code class="language-css">transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;</code></pre>
+          Borders of the table are styled to collapse:
+          <pre><code class="language-css">table {border-collapse: collapse;}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Text content styled (headings, paragraphs, lists, captions, quotes etc.)
-          </p>
+          Caption of the table positioned to the bottom:
+          <pre><code class="language-css">table caption {caption-side: bottom;}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Page layout styled (using flex, grid, multicol, positioning, floating etc.)
-          </p>
+          Adjusted how word breaking / wrapping and whitespace is treated:
+          <pre><code class="language-css">word-wrap: break-word;</code></pre>
+          <pre><code class="language-css">overflow-wrap: break-word;</code></pre>
+          <pre><code class="language-css">white-space: nowrap;</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Visual / functional content styled (images, table, button etc.)
-          </p>
+          The website is now full responsive (using media queries, meta viewport, layout techniques etc.)
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            The page is now full responsive (using media queries, meta viewport, layout techniques etc.)
-          </p>
+          The website is styled to be printable:
+          <pre><code class="language-css">@media print {...}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Vendor prefixes added with the <a href="https://autoprefixer.github.io/">Autoprefixer CSS online tool</a> for optimal compatibility / browser support
-          </p>
+          Users who set the settings to minimize the amount of non-essential motion are respected by turning off all animations, transitions and the like:
+          <pre><code class="language-css">@media (prefers-reduced-motion: reduce) {...}</code></pre>
+        </li>
+        <li>
+          Vendor prefixes added with the <a href="https://autoprefixer.github.io/">Autoprefixer CSS online tool</a> for optimal compatibility / browser support
         </li>
       </ul>
       <hr>
-      <h4 id="---javascript">&#125;&#041;; JavaScript</h4>
+      <h4>&#125;&#041;; JavaScript</h4>
       <ul>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            <a href="https://jquery.com/">jQuery library</a> now in use and code rewritten using its syntax
-          </p>
+          <a href="https://jquery.com/">jQuery library</a> now in use and most code rewritten using its syntax
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            <a href="https://prismjs.com/">PrismJS syntax highlighter library</a> now in use for the created source code (code.html) and changelog (changelog.html) pages
-          </p>
+          <a href="https://prismjs.com/">PrismJS syntax highlighter library</a> now in use for the created source code (code.html) and changelog (changelog.html) pages
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            <a href="https://github.com/davidjbradshaw/image-map-resizer/">Image Map Resizer library</a> now in use so that the image map works repsonsive:
-          </p>
+          <a href="https://github.com/davidjbradshaw/image-map-resizer/">Image Map Resizer library</a> now in use so that the image map works repsonsive:
           <pre><code class="language-javascript">$(&#39;map&#39;).imageMapResize();</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            At a given scrolling value (defined in a function) the class &quot;scrolled&quot; is now set on the body
-          </p>
+          At a given scrolling value (defined in a function) the class &quot;scrolled&quot; is now set on the body:
+          <pre><code class="language-javascript">if ($(window).scrollTop() > 23) {...}</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            A variable (and logic for the HTML and CSS) for the text of the typewriter effect declared:
-          </p>
+          A variable and logic for the HTML and CSS for the text of the typewriter effect declared:
           <pre><code class="language-javascript">const text = &#39;glmvc&#39;;</code></pre>
           <pre><code class="language-javascript">$(&#39;#typewriter-text&#39;).html(text);</code></pre>
           <pre><code class="language-javascript">$(&#39;#typewriter-text&#39;).css(&#39;--characters&#39;, text.length + 6);</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Clicking on the new navigation icon will toggle a class &quot;open&quot; to it and the class &quot;nav-open&quot; to the body:
-          </p>
+          Clicking on the navigation icon will toggle a class &quot;open&quot; to it and the class &quot;nav-open&quot; to the body:
           <pre><code class="language-javascript">$(&#39;body&#39;).toggleClass(&#39;nav-open&#39;);</code></pre>
           <pre><code class="language-javascript">$(this).toggleClass(&#39;open&#39;);</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            The username input for the personalized welcome message is now limited to a certain number of characters:
-          </p>
+          The username input for the personalized welcome message is now limited to a certain number of characters:
           <pre><code class="language-javascript">let maxLength = 50;</code></pre>
           <pre><code class="language-javascript">let userName = -1;</code></pre>
           <pre><code class="language-javascript">while (userName == -1 || (userName != null &amp;&amp; userName.length &gt; maxLength)) { userName = window.prompt(...) }</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Image map and figure caption now also changing accordingly on clicking the images:
-          </p>
+          Image map and figure caption now also changing accordingly on clicking the images:
           <pre><code class="language-javascript">let imageMap;</code></pre>
           <pre><code class="language-javascript">imageMap = $(&#39;map&#39;).detach();</code></pre>
           <pre><code class="language-javascript">$(&#39;img&#39;).before(imageMap);</code></pre>
           <pre><code class="language-javascript">myCaption.html(&#39;...&#39;);</code></pre>
         </li>
         <li>
-          <p><input type="checkbox" checked="" disabled="">
-            Audio volume of the audio element now set to 50%:
-          </p>
+          Audio volume of the audio element now set to 50%:
           <pre><code class="language-javascript">let audio = document.getElementById(&#39;audio&#39;);</code></pre>
           <pre><code class="language-javascript">audio.volume = 0.5;</code></pre>
         </li>
       </ul>
       <hr>
-      <h4 id="✨-for-the-future">&#10024; For The Future</h4>
+      <h4>&#10024; For The Future</h4>
       <ul>
         <li>
-          <p><input disabled="" type="checkbox">
-            Scroll to top button
-          </p>
+          Scroll to top button
         </li>
         <li>
-          <p><input disabled="" type="checkbox">
-            Meter/progress bars
-          </p>
+          Meter/progress bars
         </li>
         <li>
-          <p><input disabled="" type="checkbox">
-            (Contact) form example
-          </p>
+          (Contact) form example
         </li>
         <li>
-          <p><input disabled="" type="checkbox">
-            Dark- and Lightmode switcher
-          </p>
+          Dark- and Lightmode switcher
         </li>
         <li>
-          <p><input disabled="" type="checkbox">
-            Last edited date and time within the detail area in the footer is now updating automatically
-          </p>
+          Last edited date and time within the detail area in the footer is now updating automatically
         </li>
         <li>
-          <p><input disabled="" type="checkbox">
-            Birthday banner added to show on December 6 every year as a small easter egg
-          </p>
+          Birthday banner added to show on December 6 every year as a small easter egg
         </li>
       </ul>
     </section>
