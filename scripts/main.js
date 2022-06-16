@@ -81,7 +81,7 @@ $(document).ready(function () {
     let userName = -1;
 
     while (userName == -1 || (userName != null && userName.length > maxLength)) {
-      userName = window.prompt(`Please enter your name. (max. characters: ${maxLength})`); // template string
+      userName = window.prompt(`Please enter your username. (maximum characters: ${maxLength})`); // template string
     }
 
     if (!userName) {

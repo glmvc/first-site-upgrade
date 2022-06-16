@@ -8,7 +8,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] HTML, CSS and JavaScript comments explained in more detail
 
-- [x] Code structure improved with comments and "separators"
+- [x] Code structure improved with comments
 
 - [x] Useful tools and libraries now in use
 
