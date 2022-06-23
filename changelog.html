@@ -398,7 +398,7 @@
           <pre><code class="language-css">* {margin: 0; padding: 0;}</code></pre>
         </li>
         <li>
-          Global colors and padding set with variables using the root pseudo class:
+          Global colors and padding set with variables using the root pseudo-class:
           <pre><code class="language-css">:root {...}</code></pre>
         </li>
         <li>
@@ -407,8 +407,13 @@
           <pre><code class="language-css">*, *::before, *::after {box-sizing: inherit;}</code></pre>
         </li>
         <li>
-          Special pseudo element for styling selections / highlighting with input devices used:
+          Special pseudo-element for styling selections / highlighting with input devices used:
           <pre><code class="language-css">::selection</code></pre>
+        </li>
+        <li>
+          Special pseudo-element for styling marker boxes used:
+          <pre><code class="language-css">::marker</code></pre>
+          <pre><code class="language-css">summary::marker</code></pre>
         </li>
         <li>
           Horizontal overflow set to hidden on the html and body element because of unwanted horizontal scrolling on mobile devices:

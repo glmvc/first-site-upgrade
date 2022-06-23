@@ -60,12 +60,17 @@ html { /* type selector (also called element or tag selector) */
           box-sizing: inherit;
 }
 
-::selection { /* special pseudo element */
+::selection { /* special pseudo-element */
   text-shadow: none;
   color: #0fb55e;
   color: var(--primary-green);
   background-color: #121212;
   background-color: var(--background-dark-grey);
+}
+
+::marker {
+  color: #0fb55e;
+  color: var(--primary-green);
 }
 
 body {
@@ -1410,6 +1415,14 @@ summary {
   margin-bottom: 0.5em;
   width: 6ch;
   cursor: pointer;
+}
+
+summary::marker {
+  content: "🤖";
+}
+
+details[open] summary::marker {
+  content: "👾";
 }
 
 details p:last-of-type {

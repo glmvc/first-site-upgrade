@@ -622,12 +622,17 @@
                     box-sizing: inherit;
           }
 
-          ::selection { /* special pseudo element */
+          ::selection { /* special pseudo-element */
             text-shadow: none;
             color: #0fb55e;
             color: var(--primary-green);
             background-color: #121212;
             background-color: var(--background-dark-grey);
+          }
+
+          ::marker {
+            color: #0fb55e;
+            color: var(--primary-green);
           }
 
           body {
@@ -720,20 +725,20 @@
             letter-spacing: -0.015em;
             text-align: center;
             text-shadow: 0.01em 0 0.01em #121212, /* multiple shadows */
-                          0 0.01em 0.01em #212121,
-                          0.02em 0.01em 0.01em #121212,
-                          0.01em 0.02em 0.01em #212121,
-                          0.03em 0.02em 0.01em #121212,
-                          0.02em 0.03em 0.01em #212121,
-                          0.04em 0.03em 0.01em #121212,
-                          0.03em 0.04em 0.01em #212121,
-                          0.05em 0.04em 0.01em #121212,
-                          0.04em 0.05em 0.01em #212121,
-                          0.06em 0.05em 0.01em #121212,
-                          0.05em 0.06em 0.01em #212121,
-                          0.07em 0.06em 0.01em #121212,
-                          0.06em 0.07em 0.01em #212121,
-                          0.08em 0.07em 0.01em #121212;
+                         0 0.01em 0.01em #212121,
+                         0.02em 0.01em 0.01em #121212,
+                         0.01em 0.02em 0.01em #212121,
+                         0.03em 0.02em 0.01em #121212,
+                         0.02em 0.03em 0.01em #212121,
+                         0.04em 0.03em 0.01em #121212,
+                         0.03em 0.04em 0.01em #212121,
+                         0.05em 0.04em 0.01em #121212,
+                         0.04em 0.05em 0.01em #212121,
+                         0.06em 0.05em 0.01em #121212,
+                         0.05em 0.06em 0.01em #212121,
+                         0.07em 0.06em 0.01em #121212,
+                         0.06em 0.07em 0.01em #212121,
+                         0.08em 0.07em 0.01em #121212;
             -webkit-transition: -webkit-transform 0.2s;
             transition: -webkit-transform 0.2s;
             -o-transition: transform 0.2s;
@@ -760,9 +765,9 @@
             line-height: 1.3;
             text-align: center;
             text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), /* fallback text shadows */
-                          0.06em 0.06em 0 #121212;
+                         0.06em 0.06em 0 #121212;
             text-shadow: 0.03em 0.03em 0 var(--surface-dark-grey),
-                          0.06em 0.06em 0 var(--background-dark-grey);
+                         0.06em 0.06em 0 var(--background-dark-grey);
           }
 
           h3 {
@@ -1136,8 +1141,8 @@
 
           h2 span {
             text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
-                          -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
-                          0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+                         -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                         0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             word-wrap: break-word;
             overflow-wrap: break-word;
             -webkit-animation: glitch 600ms infinite;
@@ -1148,44 +1153,44 @@
 
             0% {
               text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             14% {
               text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             15% {
               text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.05em 0 0 rgba(0, 0, 255, 0.6);
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
             }
 
             49% {
               text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.05em 0 0 rgba(0, 0, 255, 0.6);
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
             }
 
             50% {
               text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.05em 0 0 rgba(0, 255, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             99% {
               text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.05em 0 0 rgba(0, 255, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             100% {
               text-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
-                            0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
+                           0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
             }
 
           }
@@ -1194,44 +1199,44 @@
 
             0% {
               text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             14% {
               text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.025em 0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             15% {
               text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.05em 0 0 rgba(0, 0, 255, 0.6);
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
             }
 
             49% {
               text-shadow: -0.025em -0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
-                            0.05em 0 0 rgba(0, 0, 255, 0.6);
+                           0.025em 0.03em 0 rgba(0, 255, 0, 0.6),
+                           0.05em 0 0 rgba(0, 0, 255, 0.6);
             }
 
             50% {
               text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.05em 0 0 rgba(0, 255, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             99% {
               text-shadow: 0.025em 0.03em 0 rgba(255, 0, 0, 0.6),
-                            0.05em 0 0 rgba(0, 255, 0, 0.6),
-                            -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
+                           0.05em 0 0 rgba(0, 255, 0, 0.6),
+                           -0.025em -0.03em 0 rgba(0, 0, 255, 0.6);
             }
 
             100% {
               text-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.6),
-                            -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
-                            0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
+                           -0.025em 0.025em 0 rgba(0, 255, 0, 0.6),
+                           0.035em 0.025em 0 rgba(0, 0, 255, 0.6);
             }
 
           }
@@ -1558,7 +1563,7 @@
           #nav-icon.open span {
             border-radius: 50%;
             -webkit-transition-delay: 200ms;
-                  -o-transition-delay: 200ms;
+                 -o-transition-delay: 200ms;
                     transition-delay: 200ms;
             -webkit-transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
             -o-transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -1723,13 +1728,13 @@
 
           .web-dev { /* multicol container */
             -webkit-columns: 3 40ch;
-                -moz-columns: 3 40ch;
-                    columns: 3 40ch;
+              -moz-columns: 3 40ch;
+                   columns: 3 40ch;
             -webkit-column-gap: 4em;
-                -moz-column-gap: 4em;
+               -moz-column-gap: 4em;
                     column-gap: 4em;
             -webkit-column-rule: 4px dotted rgba(255, 255, 255, 0.07);
-                -moz-column-rule: 4px dotted rgba(255, 255, 255, 0.07);
+               -moz-column-rule: 4px dotted rgba(255, 255, 255, 0.07);
                     column-rule: 4px dotted rgba(255, 255, 255, 0.07);
           }
 
@@ -1974,6 +1979,14 @@
             cursor: pointer;
           }
 
+          summary::marker {
+            content: "🤖";
+          }
+
+          details[open] summary::marker {
+            content: "👾";
+          }
+
           details p:last-of-type {
             margin-bottom: 0.5em;
             clear: right; /* clear right float from the japanese sentence */
@@ -2216,10 +2229,10 @@
               background-attachment: initial !important;
               scroll-behavior: auto !important;
               -webkit-transition-duration: 0s !important;
-                    -o-transition-duration: 0s !important;
+                   -o-transition-duration: 0s !important;
                       transition-duration: 0s !important;
               -webkit-transition-delay: 0s !important;
-                    -o-transition-delay: 0s !important;
+                   -o-transition-delay: 0s !important;
                       transition-delay: 0s !important;
             }
 
