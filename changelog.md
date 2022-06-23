@@ -8,7 +8,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] HTML, CSS and JavaScript comments explained in more detail
 
-- [x] Code structure improved with comments and "separators"
+- [x] Code structure improved with comments
 
 - [x] Useful tools and libraries now in use
 
@@ -28,13 +28,15 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<html dir="ltr">`
 
-- [x] Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
+- [x] Additional meta data added (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
 
   `<meta name="author" content="glmvc">`
 
   `<meta name="description" content="The upgraded version of my first site!">`
 
   `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+  `<meta name="theme-color" content="#0fb55e">`
 
   `<meta property="og:type" content="website">`
 
@@ -275,7 +277,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `* {margin: 0; padding: 0;}`
 
-- [x] Global colors and padding set with variables using the root pseudo class:
+- [x] Global colors and padding set with variables using the root pseudo-class:
 
   `:root {...}`
 
@@ -285,9 +287,15 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `*, *::before, *::after {box-sizing: inherit;}`
 
-- [x] Special pseudo element for styling selections / highlighting with input devices used:
+- [x] Special pseudo-element for styling selections / highlighting with input devices used:
 
   `::selection`
+
+- [x] Special pseudo-element for styling marker boxes used:
+
+  `::marker`
+
+  `summary::marker`
 
 - [x] Horizontal overflow set to hidden on the html and body element because of unwanted horizontal scrolling on mobile devices:
 

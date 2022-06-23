@@ -5,6 +5,7 @@
   <meta name="author" content="glmvc">
   <meta name="description" content="Changelog of the upgraded version of my first site!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0fb55e">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade">
   <meta property="og:title" content="Changelog">
@@ -127,7 +128,7 @@
           HTML, CSS and JavaScript comments explained in more detail
         </li>
         <li>
-          Code structure improved with comments and &quot;separators&quot;
+          Code structure improved with comments
         </li>
         <li>
           Useful tools and libraries now in use
@@ -146,10 +147,11 @@
           <pre><code class="language-html">&lt;html dir=&quot;ltr&quot;&gt;</code></pre>
         </li>
         <li>
-          Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
+          Additional meta data added (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
           <pre><code class="language-html">&lt;meta name=&quot;author&quot; content=&quot;glmvc&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta name=&quot;description&quot; content=&quot;The upgraded version of my first site!&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+          <pre><code class="language-html">&lt;meta name=&quot;theme-color&quot; content=&quot;#0fb55e&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta property=&quot;og:url&quot; content=&quot;https://glmvc.github.io/first-site-upgrade&quot;&gt;</code></pre>
           <pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;My Upgraded First Site&quot;&gt;</code></pre>
@@ -396,7 +398,7 @@
           <pre><code class="language-css">* {margin: 0; padding: 0;}</code></pre>
         </li>
         <li>
-          Global colors and padding set with variables using the root pseudo class:
+          Global colors and padding set with variables using the root pseudo-class:
           <pre><code class="language-css">:root {...}</code></pre>
         </li>
         <li>
@@ -405,8 +407,13 @@
           <pre><code class="language-css">*, *::before, *::after {box-sizing: inherit;}</code></pre>
         </li>
         <li>
-          Special pseudo element for styling selections / highlighting with input devices used:
+          Special pseudo-element for styling selections / highlighting with input devices used:
           <pre><code class="language-css">::selection</code></pre>
+        </li>
+        <li>
+          Special pseudo-element for styling marker boxes used:
+          <pre><code class="language-css">::marker</code></pre>
+          <pre><code class="language-css">summary::marker</code></pre>
         </li>
         <li>
           Horizontal overflow set to hidden on the html and body element because of unwanted horizontal scrolling on mobile devices:
@@ -635,7 +642,7 @@
     <!-- additional page features -->
     <div class="features-wrapper">
       <div class="feature">
-        <h6>Change your name:</h6>
+        <h6>Change your username:</h6>
         <button id="button">Change user</button>
       </div>
       <div class="feature">
