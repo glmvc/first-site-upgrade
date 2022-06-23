@@ -28,13 +28,15 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<html dir="ltr">`
 
-- [x] Additional meta data added (author, description, viewport, Facebook Open Graph Data and Twitter Card):
+- [x] Additional meta data added (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
 
   `<meta name="author" content="glmvc">`
 
   `<meta name="description" content="The upgraded version of my first site!">`
 
   `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+  `<meta name="theme-color" content="#0fb55e">`
 
   `<meta property="og:type" content="website">`
 
