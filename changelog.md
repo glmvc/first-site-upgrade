@@ -287,6 +287,10 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `*, *::before, *::after {box-sizing: inherit;}`
 
+- [x] Font size of the html element set to 62.5% (because it's equal to 10px in most browsers) to make it easier to calculate rem units:
+
+  `html {font-size: 62.5%;}`
+
 - [x] Special pseudo-element for styling selections / highlighting with input devices used:
 
   `::selection`
@@ -296,10 +300,6 @@ This changelog refers to the differences / changes between the [first site (prev
   `::marker`
 
   `summary::marker`
-
-- [x] Horizontal overflow set to hidden on the html and body element because of unwanted horizontal scrolling on mobile devices:
-
-  `overflow-x: hidden;`
 
 - [x] Scrollbar of the body element styled using WebKit extensions:
 
@@ -347,13 +347,17 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] Borders added (border shorthand and longhand properties)
 
-- [x] Fallback width of the body added for browsers that do not support the vw unit:
+- [x] Fallback width of the page-wrapper container added for browsers that do not support the vw unit:
 
   `width: 90%;`
 
-- [x] Green shadow styled left and right to the body:
+- [x] Green shadow styled left and right to the page-wrapper container:
 
   `box-shadow: 5px 0px 10px rgba(15, 181, 94, 0.8), -5px -0px 10px rgba(15, 181, 94, 0.8);`
+
+- [x] Utility classes created for repeating CSS tasks like centering for example:
+
+  `.center {margin-right: auto; margin-left: auto;}`
 
 - [x] Text content styled (headings, paragraphs, lists, captions, quotes etc.)
 
