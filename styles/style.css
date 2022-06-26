@@ -1315,6 +1315,7 @@ section.further-info ol {
   font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.0125em;
   line-height: 2;
+  text-align: center;
   text-transform: uppercase;
   color: #0bf377;
   color: var(--button-green);
