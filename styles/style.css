@@ -74,6 +74,7 @@ html { /* type selector (also called element or tag selector) */
 }
 
 body {
+  overflow-x: hidden;
   margin: 20px auto 20px;
   margin: var(--website-margin) auto var(--website-margin);
 }
@@ -131,6 +132,16 @@ body::-webkit-scrollbar-thumb {
   padding-right: var(--website-padding);
   padding-left: 3rem;
   padding-left: var(--website-padding);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .noscript {
@@ -905,6 +916,7 @@ nav a.active:hover {
 /*-- nav icon --*/
 
 #nav-icon { /* id selector */
+  all: unset; /* resets all properties (in this case of the button element) */
   display: none;
   z-index: 9;
   position: relative;
@@ -917,7 +929,7 @@ nav a.active:hover {
   cursor: pointer;
 }
 
-#nav-icon span {
+#nav-icon span:not(:first-of-type) {
   position: absolute;
   display: block;
   border-radius: 50%;
@@ -927,7 +939,7 @@ nav a.active:hover {
   background-color: var(--onsurface-white);
 }
 
-#nav-icon:hover span {
+#nav-icon:hover span:not(:first-of-type) {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -936,49 +948,49 @@ nav a.active:hover {
   transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
-#nav-icon span:nth-child(1) {
-  top: 0;
-  left: 0;
-}
-
 #nav-icon span:nth-child(2) {
   top: 0;
-  left: 12px;
+  left: 0;
 }
 
 #nav-icon span:nth-child(3) {
   top: 0;
-  right: 0;
+  left: 12px;
 }
 
 #nav-icon span:nth-child(4) {
+  top: 0;
+  right: 0;
+}
+
+#nav-icon span:nth-child(5) {
   top: 12px;
   left: 0;
 }
 
-#nav-icon span:nth-child(5) {
+#nav-icon span:nth-child(6) {
   position: absolute;
   top: 12px;
   left: 12px;
 }
 
-#nav-icon span:nth-child(6) {
+#nav-icon span:nth-child(7) {
   top: 12px;
   right: 0;
 }
 
-#nav-icon span:nth-child(7) {
+#nav-icon span:nth-child(8) {
   bottom: 0;
   left: 0;
 }
 
-#nav-icon span:nth-child(8) {
+#nav-icon span:nth-child(9) {
   position: absolute;
   bottom: 0;
   left: 12px;
 }
 
-#nav-icon span:nth-child(9) {
+#nav-icon span:nth-child(10) {
   right: 0;
   bottom: 0;
 }
@@ -993,7 +1005,7 @@ nav a.active:hover {
   cursor: pointer;
 }
 
-#nav-icon.open span {
+#nav-icon.open span:not(:first-of-type) {
   border-radius: 50%;
   -webkit-transition-delay: 200ms;
        -o-transition-delay: 200ms;
@@ -1003,22 +1015,22 @@ nav a.active:hover {
   transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
-#nav-icon.open span:nth-child(2) {
+#nav-icon.open span:nth-child(3) {
   top: 6px;
   left: 6px;
 }
 
-#nav-icon.open span:nth-child(4) {
+#nav-icon.open span:nth-child(5) {
   top: 18px;
   left: 6px;
 }
 
-#nav-icon.open span:nth-child(6) {
+#nav-icon.open span:nth-child(7) {
   top: 6px;
   right: 6px;
 }
 
-#nav-icon.open span:nth-child(8) {
+#nav-icon.open span:nth-child(9) {
   bottom: 6px;
   left: 18px;
 }
@@ -1499,54 +1511,54 @@ p[lang="ja"]::before {
 
   /*-- mobile nav --*/
 
+  .nav-open {
+    overflow: hidden;
+  }
+
   nav ul {
     z-index: 7;
-    position: absolute;
-    top: 5.5rem;
-    left: 0;
+    position: fixed;
+    inset: 0; /* shorthand for top, right, bottom and left - but support is insufficient at the moment, June 2022 (see supports at-rule below) */
+    transform: translateX(100%);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    padding: 3rem;
-    padding: var(--website-padding);
-    width: 100%;
+    padding: 18rem 3rem 0;
+    padding: 18rem var(--website-padding) 0;
     text-align: center;
-    background: rgb(18, 18, 18);
-    background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
-    background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
+    background: center repeat url("../images/background.svg"), rgb(18, 18, 18);
+    background: center repeat url("../images/background.svg"), var(--background-dark-grey);
     pointer-events: none;
-    opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @supports not (inset: 0) {
+    nav ul {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   .nav-open nav ul {
-    top: 11rem;
-    padding-bottom: 100vh;
+    transform: translateX(0);
     pointer-events: all;
-    opacity: 1;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
 
-  nav a {
-    padding: 0;
-    line-height: 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+  nav li {
+    transform: scaleY(0);
+    transition: transform 0.2s 0.2s ease-in-out;
   }
 
-  .nav-open nav a {
-    padding: 0.5em;
-    line-height: 1.5;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+  .nav-open nav li {
+    transform: scaleY(1);
   }
 
 }
@@ -1616,7 +1628,7 @@ p[lang="ja"]::before {
   main,
   h2 span,
   table {
-    all: unset; /* resets all properties (except direction and unicode-bidi) */
+    all: unset;
   }
 
   table {

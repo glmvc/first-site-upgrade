@@ -69,23 +69,24 @@
       <!--------------------------------------------------------------------->
       <!-- new navigation -->
       <nav>
-        <ul class="flex">
+        <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
+          <span class="visually-hidden">Menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="primary-nav" class="flex">
           <li><a href="index.html">Home</a></li>
           <li><a href="code.html">Source Code</a></li>
           <li><a class="active" href="changelog.html">Changelog</a></li>
           <li><a href="first-site/index.html">Previous Version</a></li>
         </ul>
-        <div id="nav-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
     </header>
     <!--------------------------------------------------------------------->
@@ -112,7 +113,7 @@
       <!-- actual content divided into sections -->
       <!-- greeting -->
       <section class="greeting" aria-label="personalized welcome message">
-        <div class="heading center"><h1>hello world!</h1></div>
+        <div class="heading center flex"><h1>hello world!</h1></div>
         <h2 style="color:whitesmoke;">Nice to meet you,</h2>
       </section>
       <hr>
@@ -449,6 +450,10 @@
             Different color values now in use (rgb / rgba, hexadecimal, color keywords)
           </li>
           <li>
+            @supports at-rule to specify declarations that depend on a browser's support for a specific CSS feature now in use:
+            <pre><code class="language-css">@supports not (inset: 0) {...}</code></pre>
+          </li>
+          <li>
             Transitions now in use:
             <pre><code class="language-css">transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt;;</code></pre>
           </li>
@@ -592,8 +597,14 @@
           </li>
           <li>
             Clicking on the navigation icon will toggle a class &quot;open&quot; to it and the class &quot;nav-open&quot; to the body:
-            <pre><code class="language-javascript">$(&#39;body&#39;).toggleClass(&#39;nav-open&#39;);</code></pre>
             <pre><code class="language-javascript">$(this).toggleClass(&#39;open&#39;);</code></pre>
+            <pre><code class="language-javascript">$(&#39;body&#39;).toggleClass(&#39;nav-open&#39;);</code></pre>
+          </li>
+          <li>
+            Clicking on the navigation icon will also change the <code>aria-expanded</code> attribute accordingly:
+            <pre><code class="language-javascript">let isExpanded = $(this).attr('aria-expanded');</code></pre>
+            <pre><code class="language-javascript">if (isExpanded === 'false') {$(this).attr('aria-expanded', 'true');}</code></pre>
+            <pre><code class="language-javascript">else {$(this).attr('aria-expanded', 'false');}</code></pre>
           </li>
           <li>
             The username input for the personalized welcome message is now limited to a certain number of characters:

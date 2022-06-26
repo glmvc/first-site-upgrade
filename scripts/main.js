@@ -56,8 +56,15 @@ $(document).ready(function () {
 
   $('#nav-icon').on('click', function () {
 
-    $('body').toggleClass('nav-open');
     $(this).toggleClass('open');
+    $('body').toggleClass('nav-open');
+
+    let isExpanded = $(this).attr('aria-expanded');
+    if (isExpanded === 'false') {
+      $(this).attr('aria-expanded', 'true');
+    } else {
+      $(this).attr('aria-expanded', 'false');
+    }
 
   });
 

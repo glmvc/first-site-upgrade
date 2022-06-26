@@ -323,6 +323,10 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] Different color values now in use (rgb / rgba, hexadecimal, color keywords)
 
+- [x] @supports at-rule to specify declarations that depend on a browser's support for a specific CSS feature now in use:
+
+  `@supports not (inset: 0) {...}`
+
 - [x] Transitions now in use:
 
   `transition: <property> <duration> <timing-function>;`
@@ -467,9 +471,17 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] Clicking on the navigation icon will toggle a class "open" to it and the class "nav-open" to the body:
 
+  `$(this).toggleClass('open');`
+
   `$('body').toggleClass('nav-open');`
 
-  `$(this).toggleClass('open');`
+- [x] Clicking on the navigation icon will also change the `aria-expanded` attribute accordingly:
+
+  `let isExpanded = $(this).attr('aria-expanded');`
+
+  `if (isExpanded === 'false') {$(this).attr('aria-expanded', 'true');}`
+
+  `else {$(this).attr('aria-expanded', 'false');}`
 
 - [x] The username input for the personalized welcome message is now limited to a certain number of characters:
 

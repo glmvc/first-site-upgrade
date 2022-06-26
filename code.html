@@ -60,23 +60,24 @@
       <!--------------------------------------------------------------------->
       <!-- new navigation -->
       <nav>
-        <ul class="flex">
+        <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
+          <span class="visually-hidden">Menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="primary-nav" class="flex">
           <li><a href="index.html">Home</a></li>
           <li><a class="active" href="code.html">Source Code</a></li>
           <li><a href="changelog.html">Changelog</a></li>
           <li><a href="first-site/index.html">Previous Version</a></li>
         </ul>
-        <div id="nav-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
     </header>
     <!--------------------------------------------------------------------->
@@ -103,7 +104,7 @@
       <!-- actual content divided into sections -->
       <!-- greeting -->
       <section class="greeting" aria-label="personalized welcome message">
-        <div class="heading center"><h1>hello world!</h1></div>
+        <div class="heading center flex"><h1>hello world!</h1></div>
         <h2 style="color:whitesmoke;">Nice to meet you,</h2>
       </section>
       <hr>
