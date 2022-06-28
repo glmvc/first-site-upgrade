@@ -23,11 +23,17 @@
 $(document).ready(function () {
 
   //---------------------------------------------------------------------
+  // image map resizer (jQuery)
+
+  $('map').imageMapResize();
+
+
+  //---------------------------------------------------------------------
   // check scrolling (jQuery)
 
   let checkScroll = function () {
 
-    if ($(window).scrollTop() > 23) { // 20px body margin-top plus 3px body border-top
+    if ($(window).scrollTop() > 23) { // 20px margin-top of the body plus 3px border-top of the .page-wrapper
       $('body').addClass('scrolled');
     } else {
       $('body').removeClass('scrolled');
@@ -70,7 +76,7 @@ $(document).ready(function () {
 
 
   //---------------------------------------------------------------------
-  // corrected main heading with click function (jQuery)
+  // corrected main heading with click function / easter egg (jQuery)
 
   $('h1').text('Hello, World!').on('click', function () {
 
@@ -132,12 +138,6 @@ $(document).ready(function () {
     }
 
   });
-
-
-  //---------------------------------------------------------------------
-  // image map resizer (jQuery)
-
-  $('map').imageMapResize();
 
 
   //---------------------------------------------------------------------

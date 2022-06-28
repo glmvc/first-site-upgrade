@@ -11,11 +11,15 @@
   <meta property="og:title" content="Source Code">
   <meta property="og:description" content="Source code of the upgraded version of my first site!">
   <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
-  <meta property="twitter:title" content="Source Code">
-  <meta property="twitter:description" content="Source code of the upgraded version of my first site!">
-  <meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
+  <meta name="twitter:title" content="Source Code">
+  <meta name="twitter:description" content="Source code of the upgraded version of my first site!">
+  <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:site" content="@glmvc">
+  <meta name="twitter:creator" content="@glmvc">
   <title>Source Code</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/fonts.css">
@@ -60,6 +64,12 @@
       <!--------------------------------------------------------------------->
       <!-- new navigation -->
       <nav>
+        <ul id="primary-nav" class="flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="code.html">Source Code</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="first-site/index.html">Previous Version</a></li>
+        </ul>
         <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
           <span class="visually-hidden">Menu</span>
           <span></span>
@@ -72,12 +82,6 @@
           <span></span>
           <span></span>
         </button>
-        <ul id="primary-nav" class="flex">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="code.html">Source Code</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="first-site/index.html">Previous Version</a></li>
-        </ul>
       </nav>
     </header>
     <!--------------------------------------------------------------------->

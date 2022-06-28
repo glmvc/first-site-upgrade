@@ -34,11 +34,15 @@
   <meta property="og:title" content="My Upgraded First Site">
   <meta property="og:description" content="The upgraded version of my first site!">
   <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
-  <meta property="twitter:title" content="My Upgraded First Site">
-  <meta property="twitter:description" content="The upgraded version of my first site!">
-  <meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
+  <meta name="twitter:title" content="My Upgraded First Site">
+  <meta name="twitter:description" content="The upgraded version of my first site!">
+  <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:site" content="@glmvc">
+  <meta name="twitter:creator" content="@glmvc">
   <!--------------------------------------------------------------------->
   <!-- title -->
   <title>My Upgraded First Site</title>
@@ -54,7 +58,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
   <!--------------------------------------------------------------------->
-  <!-- to demonstrate the internal stylesheet -->
+  <!-- internal stylesheet (just for demonstration) -->
   <style>
     * {
       margin: 0;
@@ -90,6 +94,12 @@
       <!--------------------------------------------------------------------->
       <!-- new navigation -->
       <nav>
+        <ul id="primary-nav" class="flex">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="code.html">Source Code</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="first-site/index.html">Previous Version</a></li>
+        </ul>
         <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
           <span class="visually-hidden">Menu</span>
           <span></span>
@@ -102,12 +112,6 @@
           <span></span>
           <span></span>
         </button>
-        <ul id="primary-nav" class="flex">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="code.html">Source Code</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="first-site/index.html">Previous Version</a></li>
-        </ul>
       </nav>
     </header>
     <!--------------------------------------------------------------------->
