@@ -89,7 +89,7 @@ html { /* type selector (also called element or tag selector) */
 
 body {
   overflow-x: hidden; /* prevents unwanted horizontal scrolling (especially on mobile devices) */
-  margin: 20px auto 20px;
+  margin: 20px auto 20px; /* fallback margin */
   margin: var(--website-margin) auto var(--website-margin);
 }
 
@@ -142,13 +142,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .website-padding {
-  padding-right: 3rem;
+  padding-right: 3rem; /* fallback padding */
   padding-right: var(--website-padding);
   padding-left: 3rem;
   padding-left: var(--website-padding);
 }
 
-.visually-hidden:not(:focus):not(:active) { /* not pseudo-class (also known as the negation pseudo-class) */
+.visually-hidden:not(:focus):not(:active) { /* :not pseudo-class (also known as the negation pseudo-class) */
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -169,8 +169,17 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.001em;
   text-align: center;
   color: red;
-  -webkit-filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0.2em 0.2em 0.06em rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0.2em 0.2em 0.06em rgba(0, 0, 0, 0.7));
+}
+
+.emoji {
+  -webkit-filter: drop-shadow(0.03em 0.03em 0.05em rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0.03em 0.03em 0.05em rgba(0, 0, 0, 0.7));
+}
+
+.emoji.heart {
+  color: red;
 }
 
 
@@ -188,11 +197,9 @@ h1, h2, h3, h4, h5, h6 { /* selector list on a single line (bad practice) */
 
 h1 {
   display: inline; /* inline box (outer display type) */
-  margin-top: 0.3em;
   font-weight: 300; /* light */
   font-size: 10.5rem;
   letter-spacing: -0.015em;
-  text-align: center;
   text-shadow: 0.01em 0 0.01em #121212, /* multiple text shadows */
                0 0.01em 0.01em #212121,
                0.02em 0.01em 0.01em #121212,
@@ -208,22 +215,6 @@ h1 {
                0.07em 0.06em 0.01em #121212,
                0.06em 0.07em 0.01em #212121,
                0.08em 0.07em 0.01em #121212;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s; /* transition for the transform property */
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-h1:hover {
-  -webkit-transform: rotate(-1deg);
-      -ms-transform: rotate(-1deg);
-          transform: rotate(-1deg);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
   cursor: not-allowed; /* sets other type of cursor on hover */
 }
 
@@ -324,6 +315,44 @@ h3 ~ p { /* general sibling combinator */
   font-style: italic;
 }
 
+p[lang="ja"] { /* attribute selector */
+  position: relative;
+  float: right;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-transform: full-width;
+  text-shadow: 0 0 0.25em #0bf377;
+  text-shadow: 0 0 0.25em var(--primary-green-button);
+  color: #0fb55e;
+  color: var(--primary-green);
+}
+
+p[lang="ja"]::before { /* (special) pseudo-element selector */
+  content: "";
+  position: absolute;
+  right: 100%;
+  display: block;
+  width: 1000%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 243, 119, 0.2)), to(rgba(11, 243, 119, 0)));
+  background: linear-gradient(90deg, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+          clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+}
+
+strong,
+dt {
+  color: #0fb55e;
+  color: var(--primary-green);
+}
+
+section[aria-label="changelog"] strong {
+  font-weight: 500;
+  color: inherit;
+}
+
 mark {
   padding: 0.02em 0.2em;
   color: whitesmoke;
@@ -341,44 +370,13 @@ abbr:hover {
   cursor: help;
 }
 
-address p:first-child {
-  margin-bottom: 0.3em;
-  text-transform: capitalize;
-}
-
-p[lang="ja"] { /* attribute selector */
-  position: relative;
-  float: right;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-transform: full-width;
-  text-shadow: 0 0 0.25em #0bf377;
-  text-shadow: 0 0 0.25em var(--primary-green-button);
-  color: #0fb55e;
-  color: var(--primary-green);
-}
-
-strong,
-dt {
-  color: #0fb55e;
-  color: var(--primary-green);
-}
-
-section[aria-label="changelog"] strong {
-  font-weight: 500;
-  color: inherit;
-}
-
-details > p { /* child combinator */
-  font-size: 1.5rem;
-  font-size: clamp(12px, 1.515vw, 1.5rem);
-  letter-spacing: 0.0025em;
-  text-align: center;
-}
-
 small {
   font-size: 11px;
+}
+
+details summary {
+  margin-bottom: 0.5em;
+  cursor: pointer;
 }
 
 /*-- hyperlinks --*/
@@ -429,7 +427,7 @@ a:active {
   font-weight: 700; /* bold */
 }
 
-a[href*="http"]::after { /* (special) pseudo-element selector */
+a[href*="http"]::after {
   content: ""; /* empty string */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -452,7 +450,7 @@ a[href^="https"]:hover::after {
   background-image: url("../images/external-green.svg");
   -webkit-transition: background-image 0.2s;
   -o-transition: background-image 0.2s;
-  transition: background-image 0.2s;
+  transition: background-image 0.2s; /* transition just for the background-image property */
 }
 
 /*-- lists --*/
@@ -547,6 +545,16 @@ section[aria-label="changelog"] li::before {
   background-position: center;
 }
 
+section[aria-label="changelog"] .future-list li::before {
+  content: "\02728";
+  top: 0;
+  width: unset;
+  height: unset;
+  background-image: none;
+  -webkit-filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.7));
+}
+
 
 /*---------------------------------------------------------------------*/
 /*-- visuals --*/
@@ -572,11 +580,6 @@ img:hover {
   -webkit-transform: rotate(0.005turn);
       -ms-transform: rotate(0.005turn);
           transform: rotate(0.005turn);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 img[src="images/js-code.png"] {
@@ -769,7 +772,9 @@ kbd {
 
 header { /* flex container */
   z-index: 6;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -784,7 +789,6 @@ header { /* flex container */
           align-items: center;
   padding: 1.5rem 3rem;
   padding: calc(var(--website-padding) * 0.5) var(--website-padding);
-  width: 100%;
   background: rgb(18, 18, 18);
   background: -o-linear-gradient(top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 95%, rgba(18, 18, 18, 0) 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 1)), color-stop(95%, rgba(18, 18, 18, 1)), to(rgba(18, 18, 18, 0)));
@@ -794,12 +798,24 @@ header { /* flex container */
   transition: background 0.3s ease-in-out;
 }
 
-.scrolled header {
-  position: fixed;
-  top: 0;
-  width: calc(90% - 6px); /* .page-wrapper fallback width minus 6px */
-  width: calc(90vw - 6px); /* minus 6px because of the left & right border of the .page-wrapper */
-  max-width: 1914px; /* .page-wrapper max-width minus 6px */
+@supports not ((position: -webkit-sticky) or (position: sticky)) {
+
+  header {
+    position: absolute;
+    width: 100%;
+  }
+
+  .scrolled header {
+    position: fixed;
+    width: calc(90% - 6px); /* .page-wrapper fallback width minus 6px */
+    width: calc(90vw - 6px); /* minus 6px because of the left & right border of the .page-wrapper */
+    max-width: 1914px; /* .page-wrapper max-width minus 6px */
+  }
+
+  main {
+    margin-top: 16rem;
+  }
+
 }
 
 .scrolled:not(.nav-open) header {
@@ -845,7 +861,7 @@ header svg {
   font-size: 13px;
 }
 
-.typewriter > .text {
+.typewriter > .text { /* child combinator */
   overflow: hidden;
   max-width: 0;
   white-space: nowrap;
@@ -1060,16 +1076,12 @@ nav a.active:hover {
 /*-- main content --*/
 /*---------------------------------------------------------------------*/
 
-main {
-  margin-top: 15rem;
-}
-
-
 /*---------------------------------------------------------------------*/
 /*-- sidebar --*/
 
 aside {
   position: fixed;
+  top: 18rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse nowrap;
@@ -1126,9 +1138,21 @@ aside li a[href*="http"]::after {
 /*-- greeting --*/
 
 div.heading { /* "selecting all div elements with a class of heading" */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-    justify-content: center;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 10.5rem; /* equal to the font-size of h1 */
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+div.heading:hover {
+  -webkit-transform: rotate(-1deg);
+      -ms-transform: rotate(-1deg);
+          transform: rotate(-1deg);
 }
 
 
@@ -1407,6 +1431,11 @@ address {
   text-align: center;
 }
 
+address p:first-child {
+  margin-bottom: 0.3em;
+  text-transform: capitalize;
+}
+
 address a {
   display: inline-block;
   padding-top: 0.3em;
@@ -1417,50 +1446,32 @@ address a {
 /*---------------------------------------------------------------------*/
 /*-- info --*/
 
-summary {
-  margin-bottom: 0.5em;
+details.footer-info summary {
   width: 6ch;
-  cursor: pointer;
 }
 
-summary::marker {
+details.footer-info summary::marker {
   content: ">";
 }
 
-details[open] summary::marker {
+details[open].footer-info summary::marker {
   content: ">";
 }
 
-details p:last-of-type {
+details.footer-info > p {
+  font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
+  letter-spacing: 0.0025em;
+  text-align: center;
+}
+
+details.footer-info p:last-of-type {
   margin-bottom: 0.5em;
   clear: right; /* clear right float from the japanese sentence */
 }
 
-details p:nth-child(5) {
+details.footer-info p:nth-child(5) {
   margin-bottom: 0.5em;
-}
-
-p[lang="ja"]::before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  display: block;
-  width: 1000%;
-  height: 100%;
-  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 243, 119, 0.2)), to(rgba(11, 243, 119, 0)));
-  background: linear-gradient(90deg, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
-          clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
-}
-
-.emoji {
-  -webkit-filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.7));
-}
-
-.emoji.heart {
-  color: red;
 }
 
 
@@ -1476,15 +1487,6 @@ p[lang="ja"]::before {
 
   html {
     font-size: 9.5px;
-  }
-
-}
-
-
-@media only screen and (max-width: 1040px) {
-
-  div.heading {
-    width: 0;
   }
 
 }
@@ -1580,7 +1582,7 @@ p[lang="ja"]::before {
     transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   }
 
-  nav li {
+  nav li a {
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);
@@ -1591,10 +1593,34 @@ p[lang="ja"]::before {
     transition: transform 0.2s 0.2s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
   }
 
-  .nav-open nav li {
+  .nav-open nav li a {
     -webkit-transform: scaleY(1);
         -ms-transform: scaleY(1);
             transform: scaleY(1);
+  }
+
+  .nav-open nav li:nth-child(1) a {
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+  }
+
+  .nav-open nav li:nth-child(2) a {
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+
+  .nav-open nav li:nth-child(3) a {
+    -webkit-transition-delay: 0.45s;
+         -o-transition-delay: 0.45s;
+            transition-delay: 0.45s;
+  }
+
+  .nav-open nav li:nth-child(4) a {
+    -webkit-transition-delay: 0.6s;
+         -o-transition-delay: 0.6s;
+            transition-delay: 0.6s;
   }
 
 }

@@ -417,21 +417,19 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `animation: blink 1s step-end infinite;`
 
-- [x] **Main heading** (`<h1>`) and **images** *will now rotate* a bit on hover:
+- [x] **Main heading wrapper** (`div.heading`) and **images** *will now rotate* a bit on hover:
 
   `transform: rotate(-1deg);`
 
   `transform: rotate(0.005turn);`
 
-- [x] **Main heading** (`<h1>`) *set* as inline box (outer display type) so that the click easter egg really only affects the text and not the full width:
+- [x] **Main heading** (`<h1>`) *set* as inline box (outer display type) so that the click easter egg really only affects the text and not the full width / block:
 
   `display: inline;`
 
-- [x] **Main heading** (`<h1>`) *wrapped* in a `.flex` container (using the according utility class) to center it with an inner display type:
+- [x] **Main heading** (`<h1>`) *wrapped* in a `div` container with the class `.heading` to center it:
 
-  `display: flex;`
-
-  `justify-content: center;`
+  `div.heading {text-align: center;}`
 
 - [x] **Subheading** (`<h2>`) **color** *set* to `whitesmoke` with inline styling (just for demonstration):
 
@@ -553,7 +551,7 @@ This changelog refers to the differences / changes between the [first site (prev
 ---
 
 
-## &#10024; For The Future
+## &#128640; For The Future
 
 - [ ] **Scroll to top button**
 

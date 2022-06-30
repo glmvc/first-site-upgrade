@@ -117,15 +117,15 @@
       <!-- actual content divided into sections -->
       <!-- greeting -->
       <section class="greeting" aria-label="personalized welcome message">
-        <div class="heading center flex"><h1>hello world!</h1></div>
+        <div class="heading"><h1>hello world!</h1></div>
         <h2 style="color:whitesmoke;">Nice to meet you,</h2>
       </section>
       <hr>
       <!-- changelog -->
       <section aria-label="changelog">
-        <h3>&#128203; Changelog</h3>
+        <h3><span class="emoji">&#128203;</span> Changelog</h3>
         <p>This changelog refers to the differences / changes between the <a href="first-site/index.html">first site (previous version)</a> and the upgraded version of it here.</p>
-        <h4>&#9881; General</h4>
+        <h4><span class="emoji">&#9881;</span> General</h4>
         <ul>
           <li>
             <strong>Space indentation</strong> <em>changed</em> from four to two spaces (personal preference)
@@ -144,7 +144,7 @@
           </li>
         </ul>
         <hr>
-        <h4>&lt;/&gt; HTML</h4>
+        <h4><span class="emoji">&lt;/&gt;</span> HTML</h4>
         <h5>&lt;head&gt;</h5>
         <ul>
           <li>
@@ -408,7 +408,7 @@
         </ul>
         <h5>&lt;/body&gt;</h5>
         <hr>
-        <h4>&#123; &#125; CSS</h4>
+        <h4><span class="emoji">&#123;</span> <span class="emoji">&#125;</span> CSS</h4>
         <ul>
           <li>
             <code class="language-">@font-face</code> rulesets in the created external stylesheet (<code class="language-">fonts.css</code>) <em>now in use</em> to <em>include</em> and <em>load</em> the <strong>web fonts</strong> that are used (eot, woff2, woff, ttf, svg and variable):
@@ -539,18 +539,17 @@
             <pre><code class="language-css">animation: blink 1s step-end infinite;</code></pre>
           </li>
           <li>
-            <strong>Main heading</strong> (<code class="language-">&lt;h1&gt;</code>) and <strong>images</strong> <em>will now rotate</em> a bit on hover:
+            <strong>Main heading wrapper</strong> (<code class="language-">div.heading</code>) and <strong>images</strong> <em>will now rotate</em> a bit on hover:
             <pre><code class="language-css">transform: rotate(-1deg);</code></pre>
             <pre><code class="language-css">transform: rotate(0.005turn);</code></pre>
           </li>
           <li>
-            <strong>Main heading</strong> (<code class="language-">&lt;h1&gt;</code>) <em>set</em> as inline box (outer display type) so that the click easter egg really only affects the text and not the full width:
+            <strong>Main heading</strong> (<code class="language-">&lt;h1&gt;</code>) <em>set</em> as inline box (outer display type) so that the click easter egg really only affects the text and not the full width / block:
             <pre><code class="language-css">display: inline;</code></pre>
           </li>
           <li>
-            <strong>Main heading</strong> (<code class="language-">&lt;h1&gt;</code>) <em>wrapped</em> in a <code class="language-">.flex</code> container (using the according utility class) to center it with an inner display type:
-            <pre><code class="language-css">display: flex;</code></pre>
-            <pre><code class="language-css">justify-content: center;</code></pre>
+            <strong>Main heading</strong> (<code class="language-">&lt;h1&gt;</code>) <em>wrapped</em> in a <code class="language-">div</code> container with the class <code class="language-">.heading</code> to center it:
+            <pre><code class="language-css">div.heading {text-align: center;}</code></pre>
           </li>
           <li>
             <strong>Subheading</strong> (<code class="language-">&lt;h4&gt;</code>) <strong>color</strong> <em>set</em> to <code class="language-">whitesmoke</code> with inline styling (just for demonstration):
@@ -599,7 +598,7 @@
           </li>
         </ul>
         <hr>
-        <h4>&#125;&#041;; JavaScript</h4>
+        <h4><span class="emoji">&#125;</span><span class="emoji">&#041;;</span> JavaScript</h4>
         <ul>
           <li>
             <a href="https://jquery.com/" title="jQuery homepage" target="_blank">jQuery library</a> <em>now in use</em> and most code in <code class="language-">main.js</code> rewritten using its syntax
@@ -657,8 +656,8 @@
           </li>
         </ul>
         <hr>
-        <h4>&#10024; For The Future</h4>
-        <ul>
+        <h4><span class="emoji">&#128640;</span> For The Future</h4>
+        <ul class="future-list">
           <li>
             <strong>Scroll to top button</strong>
           </li>
@@ -722,7 +721,7 @@
       <hr>
       <!--------------------------------------------------------------------->
       <!-- info -->
-      <details open>
+      <details class="footer-info" open>
         <summary class="center">Info</summary>
         <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
         <p>This page &gt; first page and 1 &lt; 2!</p>
