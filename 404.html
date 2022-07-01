@@ -14,14 +14,19 @@
   <link rel="apple-touch-icon" href="images/favicons/404-apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="images/favicons/404-site.webmanifest">
   <style>
-    body {
-      overflow-y: hidden;
+    .page-wrapper {
+      padding-right: var(--website-padding);
+      padding-left: var(--website-padding);
+    }
+    h1 {
+      display: block;
+      text-align: center;
     }
     h1:hover {
       cursor: default;
     }
     h2 {
-      margin-top: 0.3em;
+      margin-top: 0;
     }
     iframe {
       display: block;
@@ -45,7 +50,7 @@
 </head>
 <body>
   <div class="page-wrapper center">
-    <div class="heading center"><h1>404</h1></div>
+    <h1>404</h1>
     <h2>Page Not Found</h2>
     <a id="button" class="center" href="https://glmvc.github.io/first-site-upgrade/">Return to homepage</a>
     <iframe width="560" height="315" style="border:0;" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

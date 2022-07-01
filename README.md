@@ -10,7 +10,7 @@
   - let me know in a message or create an issue
   - or fix it yourself and create a pull request afterwards
   - i try very hard to implement everything with perfection, but as we all know 4 eyes see more than 2 and one cannot know everything
-  - for further suggestions / ideas i'm always open
+  - i'm always open for further suggestions / ideas
 
 ---
 
@@ -35,9 +35,8 @@
 - design guidelines / inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
 - google webfonts helper: https://google-webfonts-helper.herokuapp.com/fonts
-- webfont generator: https://www.fontsquirrel.com/tools/webfont-generator
-- favicon generator: https://favicon.io/
 - jquery library: https://jquery.com/
+- favicon generator: https://favicon.io/
 - svg background: https://bgjar.com/
 - svg icons: https://fontawesome.com/
 - background gradient generator: https://cssgradient.io/

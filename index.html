@@ -34,11 +34,15 @@
   <meta property="og:title" content="My Upgraded First Site">
   <meta property="og:description" content="The upgraded version of my first site!">
   <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
-  <meta property="twitter:title" content="My Upgraded First Site">
-  <meta property="twitter:description" content="The upgraded version of my first site!">
-  <meta property="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
+  <meta name="twitter:title" content="My Upgraded First Site">
+  <meta name="twitter:description" content="The upgraded version of my first site!">
+  <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
+  <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon">
+  <meta name="twitter:site" content="@glmvc">
+  <meta name="twitter:creator" content="@glmvc">
   <!--------------------------------------------------------------------->
   <!-- title -->
   <title>My Upgraded First Site</title>
@@ -47,14 +51,14 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/style.css"> <!-- mainly external stylesheet in use for styling -->
-  <!-- multiple favicon types for multiple devices/browsers -->
+  <!-- multiple favicon types for multiple device / browser support -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
   <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
   <!--------------------------------------------------------------------->
-  <!-- to demonstrate the internal stylesheet -->
+  <!-- internal stylesheet (just for demonstration) -->
   <style>
     * {
       margin: 0;
@@ -90,13 +94,14 @@
       <!--------------------------------------------------------------------->
       <!-- new navigation -->
       <nav>
-        <ul class="flex">
+        <ul id="primary-nav" class="flex">
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="code.html">Source Code</a></li>
           <li><a href="changelog.html">Changelog</a></li>
           <li><a href="first-site/index.html">Previous Version</a></li>
         </ul>
-        <div id="nav-icon">
+        <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
+          <span class="visually-hidden">Menu</span>
           <span></span>
           <span></span>
           <span></span>
@@ -106,7 +111,7 @@
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </nav>
     </header>
     <!--------------------------------------------------------------------->
@@ -133,7 +138,7 @@
       <!-- actual content divided into sections -->
       <!-- greeting -->
       <section class="greeting" aria-label="personalized welcome message">
-        <div class="heading center flex"><h1>hello world!</h1></div>
+        <div class="heading"><h1>hello world!</h1></div>
         <h2 style="color: whitesmoke;">Nice to meet you,</h2> <!-- just to demonstrate inline styling -->
         <figure>
           <map name="hello-world">
