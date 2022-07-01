@@ -80,7 +80,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<link rel="stylesheet" href="styles/fonts.css">`
 
-- [x] **Favicons** for multiple device/browser support *added*:
+- [x] **Favicons** for multiple device / browser support *added*:
 
   `<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">`
 
@@ -181,7 +181,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<area alt="alternative text" title="point map title" href="https..." target="_blank" shape="circle" coords="x,y,radius">`
 
-- [x] **Quotations and citation** *added* within the main content:
+- [x] **Quotations** and **citation** *added* within the main content:
 
   `<blockquote>...</blockquote>` and `<q>...</q>` with `cite` attribute
 
@@ -249,7 +249,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `href="tel:..."` and `href="mailto:..."` attributes
 
-- [x] **Iframe** for a map (from [Google Maps](https://www.google.com/maps/about/#!/ "Google Maps about page")) *added* within the address in the footer:
+- [x] **Iframe** for a map ([Google Maps](https://www.google.com/maps/about/#!/ "Google Maps about page")) *added* within the address in the footer:
 
   `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border: 0;" loading="lazy"></iframe>`
 
@@ -265,7 +265,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<sub>...</sub>`
 
-- [x] **Date** and **time** *added* for the last update and the birthdate of the website within the detail area in the footer:
+- [x] **Date** and **time** *added* for the birthdate and last update of the website within the detail area in the footer:
 
   `<time datetime="YYYY-MM-ddThh:mm">...</time>`
 
@@ -318,6 +318,10 @@ This changelog refers to the differences / changes between the [first site (prev
   ` `, `>`, `+` and `~`
 
 - [x] CSS **functions** *now in use*
+
+- [x] **Calc functions** *now in use* to perform calculations:
+
+  `calc(...)`
 
 - [x] **Natural** (intrinsic) and **extrinsic** (given size) sizes of elements *now in use*
 
@@ -405,10 +409,6 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] Website **layout** *styled* (using flex, grid, multicol, positioning, floating etc.)
 
-- [x] **Calc functions** *now in use* to perform calculations:
-
-  `calc(...)`
-
 - [x] **Animations** using `@keyframes` at-rules *now in use* for the glitch, typewriter and blinking caret effect:
 
   `animation: glitch 600ms infinite;`
@@ -416,6 +416,12 @@ This changelog refers to the differences / changes between the [first site (prev
   `animation: typing 6s steps(var(--characters)) infinite;`
 
   `animation: blink 1s step-end infinite;`
+
+- [x] `@supports` at-rule *now in use* to specify declarations that depend on a browser's **support for a specific CSS feature**:
+
+  `@supports not ((position: -webkit-sticky) or (position: sticky)) {..}`
+
+  `@supports not (inset: 0) {...}`
 
 - [x] **Main heading wrapper** (`div.heading`) and **images** *will now rotate* a bit on hover:
 
@@ -439,13 +445,13 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `filter: blur(5px);`
 
-- [x] **Writing modes** (block & inline dimensions) *changed* to vertical right-to-left for the Japanese sentence and left-to-right for the sidebar:
-
-  `writing-mode: vertical-rl;`
+- [x] **Writing modes** (block & inline dimensions) *changed* to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
 
   `writing-mode: vertical-lr;`
 
-- [x] **Borders of the table** are *styled* to collapse:
+  `writing-mode: vertical-rl;`
+
+- [x] **Borders of the table** *styled* to collapse:
 
   `table {border-collapse: collapse;}`
 
@@ -462,10 +468,6 @@ This changelog refers to the differences / changes between the [first site (prev
   `overflow-wrap: break-word;`
 
 - [x] The website *is now* **full responsive** (using media queries, meta viewport, layout techniques etc.)
-
-- [x] `@supports` at-rule *now in use* to specify declarations that depend on a browser's **support for a specific CSS feature**:
-
-  `@supports not (inset: 0) {...}`
 
 - [x] Website *styled* to be **printable**:
 
@@ -557,7 +559,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [ ] **Meter/progress bars**
 
-- [ ] **(Contact) form example**
+- [ ] **Complex (contact) form**
 
 - [ ] **Dark- and Lightmode switcher**
 

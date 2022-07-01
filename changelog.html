@@ -290,7 +290,7 @@
             <pre><code class="language-html">&lt;area alt=&quot;alternative text&quot; title=&quot;point map title&quot; href=&quot;https...&quot; target=&quot;_blank&quot; shape=&quot;circle&quot; coords=&quot;x,y,radius&quot;&gt;</code></pre>
           </li>
           <li>
-            <strong>Quotations and citation</strong> <em>added</em> within the main content:
+            <strong>Quotations</strong> and <strong>citation</strong> <em>added</em> within the main content:
             <pre><code class="language-html">&lt;blockquote&gt;...&lt;/blockquote&gt;</code></pre>
             <pre><code class="language-html">&lt;q&gt;...&lt;/q&gt;</code></pre>
             <pre><code class="language-html">&lt;cite&gt;...&lt;/cite&gt;</code></pre>
@@ -363,7 +363,7 @@
             <pre><code class="language-html">href=&quot;mailto:...&quot;</code></pre>
           </li>
           <li>
-            <strong>Iframe</strong> for a map (from <a href="https://www.google.com/maps/about/#!/" title="Google Maps about page" target="_blank">Google Maps</a>) <em>added</em> within the address in the footer:
+            <strong>Iframe</strong> for a map (<a href="https://www.google.com/maps/about/#!/" title="Google Maps about page" target="_blank">Google Maps</a>) <em>added</em> within the address in the footer:
             <pre><code class="language-html">&lt;iframe title=&quot;Google Maps Location&quot; src=&quot;https:...&quot; width=&quot;400&quot; height=&quot;300&quot; style=&quot;border: 0;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;</code></pre>
           </li>
           <li>
@@ -380,7 +380,7 @@
             <pre><code class="language-html">&lt;sub&gt;...&lt;/sub&gt;</code></pre>
           </li>
           <li>
-            <strong>Date</strong> and <strong>time</strong> <em>added</em> for the last update and the birthdate of the website within the detail area in the footer:
+            <strong>Date</strong> and <strong>time</strong> <em>added</em> for the birthdate and last update of the website within the detail area in the footer:
             <pre><code class="language-html">&lt;time datetime=&quot;YYYY-MM-ddThh:mm&quot;&gt;...&lt;/time&gt;</code></pre>
           </li>
           <li>
@@ -436,6 +436,10 @@
           </li>
           <li>
             CSS <strong>functions</strong> <em>now in use</em>
+          </li>
+          <li>
+            <strong>Calc functions</strong> <em>now in use</em> to perform calculations:
+            <pre><code class="language-css">calc(...)</code></pre>
           </li>
           <li>
             <strong>Natural</strong> (intrinsic) and <strong>extrinsic</strong> (given size) sizes of elements <em>now in use</em>
@@ -529,14 +533,15 @@
             Website <strong>layout</strong> <em>styled</em> (using flex, grid, multicol, positioning, floating etc.)
           </li>
           <li>
-            <strong>Calc functions</strong> <em>now in use</em> to perform calculations:
-            <pre><code class="language-css">calc(...)</code></pre>
-          </li>
-          <li>
             <strong>Animations</strong> using <code class="language-">@keyframes</code> at-rules <em>now in use</em> for the glitch, typewriter and blinking caret effect:
             <pre><code class="language-css">animation: glitch 600ms infinite;</code></pre>
             <pre><code class="language-css">animation: typing 6s steps(var(--characters)) infinite;</code></pre>
             <pre><code class="language-css">animation: blink 1s step-end infinite;</code></pre>
+          </li>
+          <li>
+            <code class="language-">@supports</code> at-rule <em>now in use</em> to specify declarations that depend on a browser's <strong>support for a specific CSS feature</strong>:
+            <pre><code class="language-css">@supports not ((position: -webkit-sticky) or (position: sticky)) {..}</code></pre>
+            <pre><code class="language-css">@supports not (inset: 0) {...}</code></pre>
           </li>
           <li>
             <strong>Main heading wrapper</strong> (<code class="language-">div.heading</code>) and <strong>images</strong> <em>will now rotate</em> a bit on hover:
@@ -560,12 +565,12 @@
             <pre><code class="language-css">filter: blur(5px);</code></pre>
           </li>
           <li>
-            <strong>Writing modes</strong> (block &amp; inline dimensions) <em>changed</em> to vertical right-to-left for the Japanese sentence and left-to-right for the sidebar:
-            <pre><code class="language-css">writing-mode: vertical-rl;</code></pre>
+            <strong>Writing modes</strong> (block &amp; inline dimensions) <em>changed</em> to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
             <pre><code class="language-css">writing-mode: vertical-lr;</code></pre>
+            <pre><code class="language-css">writing-mode: vertical-rl;</code></pre>
           </li>
           <li>
-            <strong>Borders of the table</strong> are <em>styled</em> to collapse:
+            <strong>Borders of the table</strong> <em>styled</em> to collapse:
             <pre><code class="language-css">table {border-collapse: collapse;}</code></pre>
           </li>
           <li>
@@ -580,10 +585,6 @@
           </li>
           <li>
             The website <em>is now</em> <strong>full responsive</strong> (using media queries, meta viewport, layout techniques etc.)
-          </li>
-          <li>
-            <code class="language-">@supports</code> at-rule <em>now in use</em> to specify declarations that depend on a browser's <strong>support for a specific CSS feature</strong>:
-            <pre><code class="language-css">@supports not (inset: 0) {...}</code></pre>
           </li>
           <li>
             Website <em>styled</em> to be <strong>printable</strong>:
@@ -665,7 +666,7 @@
             <strong>Meter/progress bars</strong>
           </li>
           <li>
-            <strong>(Contact) form example</strong>
+            <strong>Complex (contact) form</strong>
           </li>
           <li>
             <strong>Dark- and Lightmode switcher</strong>
@@ -721,7 +722,7 @@
       <hr>
       <!--------------------------------------------------------------------->
       <!-- info -->
-      <details class="footer-info" open>
+      <details open>
         <summary class="center">Info</summary>
         <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
         <p>This page &gt; first page and 1 &lt; 2!</p>

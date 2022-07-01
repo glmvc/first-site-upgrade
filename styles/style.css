@@ -315,40 +315,13 @@ h3 ~ p { /* general sibling combinator */
   font-style: italic;
 }
 
-p[lang="ja"] { /* attribute selector */
-  position: relative;
-  float: right;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-transform: full-width;
-  text-shadow: 0 0 0.25em #0bf377;
-  text-shadow: 0 0 0.25em var(--primary-green-button);
-  color: #0fb55e;
-  color: var(--primary-green);
-}
-
-p[lang="ja"]::before { /* (special) pseudo-element selector */
-  content: "";
-  position: absolute;
-  right: 100%;
-  display: block;
-  width: 1000%;
-  height: 100%;
-  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 243, 119, 0.2)), to(rgba(11, 243, 119, 0)));
-  background: linear-gradient(90deg, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
-          clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
-}
-
 strong,
 dt {
   color: #0fb55e;
   color: var(--primary-green);
 }
 
-section[aria-label="changelog"] strong {
+section[aria-label="changelog"] strong { /* attribute selector */
   font-weight: 500;
   color: inherit;
 }
@@ -427,7 +400,7 @@ a:active {
   font-weight: 700; /* bold */
 }
 
-a[href*="http"]::after {
+a[href*="http"]::after { /* (special) pseudo-element selector */
   content: ""; /* empty string */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -798,7 +771,7 @@ header { /* flex container */
   transition: background 0.3s ease-in-out;
 }
 
-@supports not ((position: -webkit-sticky) or (position: sticky)) {
+@supports not ((position: -webkit-sticky) or (position: sticky)) { /* "if the browser doesn't support the 'position: sticky;' declaration" */
 
   header {
     position: absolute;
@@ -1446,32 +1419,59 @@ address a {
 /*---------------------------------------------------------------------*/
 /*-- info --*/
 
-details.footer-info summary {
+details summary {
   width: 6ch;
 }
 
-details.footer-info summary::marker {
+details summary::marker {
   content: ">";
 }
 
-details[open].footer-info summary::marker {
+details[open] summary::marker {
   content: ">";
 }
 
-details.footer-info > p {
+details > p {
   font-size: 1.5rem;
   font-size: clamp(12px, 1.515vw, 1.5rem);
   letter-spacing: 0.0025em;
   text-align: center;
 }
 
-details.footer-info p:last-of-type {
+details p:last-of-type {
   margin-bottom: 0.5em;
   clear: right; /* clear right float from the japanese sentence */
 }
 
-details.footer-info p:nth-child(5) {
+details p:nth-child(5) {
   margin-bottom: 0.5em;
+}
+
+p[lang="ja"] {
+  position: relative;
+  float: right;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-transform: full-width;
+  text-shadow: 0 0 0.25em #0bf377;
+  text-shadow: 0 0 0.25em var(--primary-green-button);
+  color: #0fb55e;
+  color: var(--primary-green);
+}
+
+p[lang="ja"]::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  display: block;
+  width: 1000%;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 243, 119, 0.2)), to(rgba(11, 243, 119, 0)));
+  background: linear-gradient(90deg, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+          clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
 }
 
 
