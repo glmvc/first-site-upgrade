@@ -359,9 +359,9 @@ a {
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
   text-underline-offset: 0.03em;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s; /* transition for all properties */
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; /* transition for all properties */
 }
 
 a:link {
@@ -381,9 +381,6 @@ a:focus {
   color: var(--primary-green);
   background-color: rgba(255, 255, 255, 0.05);
   background-color: var(--surface-dark-grey);
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 a:hover { /* (user-action or dynamic) pseudo-class selector */
@@ -391,9 +388,6 @@ a:hover { /* (user-action or dynamic) pseudo-class selector */
           text-decoration-color: transparent;
   color: #0fb55e;
   color: var(--primary-green);
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 a:active {
@@ -412,6 +406,9 @@ a[href*="http"]::after { /* (special) pseudo-element selector */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  -o-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out; /* transition just for the background-image property */
 }
 
 a[href^="https"]::after {
@@ -421,9 +418,6 @@ a[href^="https"]::after {
 a[href^="https"]:focus::after,
 a[href^="https"]:hover::after {
   background-image: url("../images/external-green.svg");
-  -webkit-transition: background-image 0.2s;
-  -o-transition: background-image 0.2s;
-  transition: background-image 0.2s; /* transition just for the background-image property */
 }
 
 /*-- lists --*/
@@ -796,9 +790,6 @@ header { /* flex container */
   background: -o-linear-gradient(top, rgba(18, 18, 18, 0.93) 0%, rgba(18, 18, 18, 0.93) 95%, rgba(18, 18, 18, 0) 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 0.93)), color-stop(95%, rgba(18, 18, 18, 0.93)), to(rgba(18, 18, 18, 0)));
   background: linear-gradient(180deg, rgba(18, 18, 18, 0.93) 0%, rgba(18, 18, 18, 0.93) 95%, rgba(18, 18, 18, 0) 100%);
-  -webkit-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
 }
 
 body:not(.scrolled) header {
@@ -928,9 +919,6 @@ nav a.active:hover {
   margin: 10px;
   width: 30px;
   height: 30px;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
   cursor: pointer;
 }
 
@@ -951,9 +939,6 @@ nav a.active:hover {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: 300ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  -o-transition: 300ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  transition: 300ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
 #nav-icon span:nth-child(2) {
@@ -1373,11 +1358,11 @@ tr:nth-child(odd) td {
   background: -o-linear-gradient(left, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, transparent), color-stop(40%, rgba(27, 253, 156, 0.1)),color-stop(60%, rgba(27, 253, 156, 0.1)) , to(transparent));
   background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  -o-transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 #button:hover::before {
@@ -1574,23 +1559,12 @@ p[lang="ja"]::before {
         -ms-transform: translateX(0);
             transform: translateX(0);
     pointer-events: all;
-    -webkit-transition: transform 0.2s ease-in-out;
-    -o-transition: transform 0.2s ease-in-out;
-    -webkit-transition: -webkit-transform 0.2s ease-in-out;
-    transition: -webkit-transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   }
 
   nav li a {
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);
-    -webkit-transition: -webkit-transform 0.2s 0.2s ease-in-out;
-    transition: -webkit-transform 0.2s 0.2s ease-in-out;
-    -o-transition: transform 0.2s 0.2s ease-in-out;
-    transition: transform 0.2s 0.2s ease-in-out;
-    transition: transform 0.2s 0.2s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
   }
 
   .nav-open nav li a {
