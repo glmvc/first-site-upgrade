@@ -1279,6 +1279,11 @@ tr:nth-child(odd) td {
 /*-- footer --*/
 /*---------------------------------------------------------------------*/
 
+footer {
+  padding-bottom: var(--website-padding);
+}
+
+
 /*---------------------------------------------------------------------*/
 /*-- additional page features --*/
 
@@ -1298,10 +1303,14 @@ tr:nth-child(odd) td {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
   gap: 1rem;
+}
+
+.feature h6 {
+  margin-bottom: 0;
 }
 
 #audio {
@@ -1423,11 +1432,6 @@ details > p {
   text-align: center;
 }
 
-details p:last-of-type {
-  margin-bottom: 0.5em;
-  clear: right; /* clear right float from the japanese sentence */
-}
-
 details p:nth-child(5) {
   margin-bottom: 0.5em;
 }
@@ -1439,24 +1443,40 @@ p[lang="ja"] {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-transform: full-width;
-  text-shadow: 0 0 0.25em #0bf377;
-  text-shadow: 0 0 0.25em var(--primary-green-button);
   color: #0fb55e;
   color: var(--primary-green);
+  -webkit-animation: glow 4s infinite;
+          animation: glow 4s infinite;
 }
 
-p[lang="ja"]::before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  display: block;
-  width: 1000%;
-  height: 100%;
-  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(11, 243, 119, 0.2)), to(rgba(11, 243, 119, 0)));
-  background: linear-gradient(90deg, rgba(11, 243, 119, 0.2) 0%, rgba(11, 243, 119, 0) 100%);
-  -webkit-clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
-          clip-path: polygon(50% 0, 100% 100%, 100% 100%, 100% 50%);
+details p:last-of-type {
+  clear: right; /* clear right float from the japanese sentence */
+}
+
+@-webkit-keyframes glow {
+
+  0%, 39%, 41%, 59%, 61%, 100% {
+    text-shadow: 0 0 0.25em #0bf377;
+    text-shadow: 0 0 0.25em var(--primary-green-button);
+  }
+
+  40%, 60% {
+    text-shadow: none;
+  }
+
+}
+
+@keyframes glow {
+
+  0%, 39%, 41%, 59%, 61%, 100% {
+    text-shadow: 0 0 0.25em #0bf377;
+    text-shadow: 0 0 0.25em var(--primary-green-button);
+  }
+
+  40%, 60% {
+    text-shadow: none;
+  }
+
 }
 
 
