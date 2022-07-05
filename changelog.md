@@ -2,6 +2,22 @@
 
 This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "First site") and the upgraded version of it here.
 
+## &#128640; For The Future
+
+- [ ] **Scroll to top button**
+
+- [ ] **Meter/progress bars**
+
+- [ ] **Complex (contact) form**
+
+- [ ] **Dark- and Lightmode switcher**
+
+- [ ] *Update* **last edited date** and **time** within the detail area in the footer *automatically*
+
+- [ ] *Add* **birthday banner** to show on December 6 every year as a small easter egg
+
+---
+
 ## :gear: General
 
 - [x] **Space indentation** *changed* from four to two spaces (personal preference)
@@ -257,6 +273,10 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `<details>...</details>` with `<summary>Info</summary>` within
 
+- [x] A **Japanese sentence** *added* within the detail area in the footer and `language` attribute *set* to Japanese:
+
+  `lang="ja"` attribute
+
 - [x] **Superscript** *added* for the numbers within the table and birthdate of the website within the detail area in the footer:
 
   `<sup>...</sup>`
@@ -268,10 +288,6 @@ This changelog refers to the differences / changes between the [first site (prev
 - [x] **Date** and **time** *added* for the birthdate and last update of the website within the detail area in the footer:
 
   `<time datetime="YYYY-MM-ddThh:mm">...</time>`
-
-- [x] A **Japanese sentence** *added* within the detail area in the footer and `language` attribute *set* to Japanese:
-
-  `lang="ja"` attribute
 
 - [x] Last update text and date *added* as a **small side comment** within the detail area in the footer:
 
@@ -548,21 +564,3 @@ This changelog refers to the differences / changes between the [first site (prev
   `let audio = document.getElementById('audio');`
 
   `audio.volume = 0.5;`
-
-
----
-
-
-## &#128640; For The Future
-
-- [ ] **Scroll to top button**
-
-- [ ] **Meter/progress bars**
-
-- [ ] **Complex (contact) form**
-
-- [ ] **Dark- and Lightmode switcher**
-
-- [ ] *Update* **last edited date** and **time** within the detail area in the footer *automatically*
-
-- [ ] *Add* **birthday banner** to show on December 6 every year as a small easter egg

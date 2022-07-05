@@ -54,7 +54,7 @@ html { /* type selector (also called element or tag selector) */
   font-family: "Source Code Pro", "Consolas", "Courier New", monospace; /* font-stack to guarantee the availability of the fonts across all systems */
   font-style: normal;
   font-weight: normal; /* 400 */
-  font-size: 62.5%; /* equal to 10px in most browsers */
+  font-size: 62.5%; /* equal to 10px in most browsers: (62.5 / 100) * 16 = 10 */
   color: whitesmoke; /* fallback color */
   color: var(--onsurface-white);
   background-color: #121212; /* fallback background-color */
@@ -103,9 +103,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  border: 0px solid #0fb55e;
-  border: 0px solid var(--primary-green);
-  border-radius: 0px;
+  border: 0 solid #0fb55e;
+  border: 0 solid var(--primary-green);
+  border-radius: 0;
   background-color: #069247;
   background-color: var(--primary-green-darker);
 }
@@ -703,9 +703,9 @@ pre::-webkit-scrollbar-track {
 }
 
 pre::-webkit-scrollbar-thumb {
-  border: 0px solid #0fb55e;
-  border: 0px solid var(--primary-green);
-  border-radius: 0px;
+  border: 0 solid #0fb55e;
+  border: 0 solid var(--primary-green);
+  border-radius: 0;
   background-color: #069247;
   background-color: var(--primary-green-darker);
 }
@@ -1038,19 +1038,18 @@ nav a.active:hover {
 /*-- sidebar --*/
 
 aside {
-  position: fixed;
-  top: 18rem;
+  position: absolute;
+  top: 18.5rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse nowrap;
-          flex-flow: row-reverse nowrap;
+          flex-flow: column-reverse nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5rem;
   margin-left: -13.5rem;
-  margin-left: calc(15rem * (-1) + 1.5rem);
-  margin-left: calc(var(--website-padding) * (-4.5)); /* to "reset" the padding-left from the main section */
+  margin-left: calc(3rem * (-4.5));
+  margin-left: calc(var(--website-padding) * (-4.5)); /* to "equalize" the padding-left of the .website-padding */
   border: 3px dashed #0fb55e;
   border: 3px dashed var(--primary-green);
   padding: 1rem;
@@ -1058,21 +1057,30 @@ aside {
           filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
 }
 
+.scrolled aside {
+  position: fixed;
+}
+
 aside > p {
-  padding-right: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 1rem; /* equal to the padding-right of aside */
   font-size: 12px;
   letter-spacing: 0.015em;
   text-transform: uppercase;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
 }
 
 aside ul {
-  gap: 0.3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 aside li {
@@ -1122,7 +1130,7 @@ div.heading:hover {
   section.hello-world-program { /* grid container */
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2rem 1fr;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
     grid-template-rows: auto;
@@ -1193,9 +1201,9 @@ div.heading:hover {
 }
 
 .table-wrapper::-webkit-scrollbar-thumb {
-  border: 0px solid #0fb55e;
-  border: 0px solid var(--primary-green);
-  border-radius: 0px;
+  border: 0 solid #0fb55e;
+  border: 0 solid var(--primary-green);
+  border-radius: 0;
   background-color: #069247;
   background-color: var(--primary-green-darker);
 }
@@ -1326,10 +1334,8 @@ footer {
 #button {
   overflow: hidden;
   position: relative;
-  bottom: 0.2em;
   border: 2px solid #0bf377;
   border: 2px solid var(--primary-green-button);
-  border-radius: 0.5em;
   padding: 0.7em 2.7em;
   font-weight: 500;
   font-size: 1.5rem;
@@ -1349,6 +1355,10 @@ footer {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   cursor: crosshair;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /* stop user from selecting text of button */
 }
 
 #button:hover {
@@ -1422,38 +1432,39 @@ details summary::marker {
 }
 
 details[open] summary::marker {
-  content: ">";
-}
-
-details > p {
-  font-size: 1.5rem;
-  font-size: clamp(12px, 1.515vw, 1.5rem);
-  letter-spacing: 0.0025em;
-  text-align: center;
-}
-
-details p:nth-child(5) {
-  margin-bottom: 0.5em;
+  content: "↓";
 }
 
 p[lang="ja"] {
-  position: relative;
   float: right;
+  -webkit-padding-after: 0.3;
+          padding-block-end: 0.3rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  text-transform: full-width;
+  text-transform: full-width; /* only present in firefox, June 2022 */
   color: #0fb55e;
   color: var(--primary-green);
-  -webkit-animation: glow 4s infinite;
-          animation: glow 4s infinite;
+  -webkit-animation: flicker 4s infinite;
+          animation: flicker 4s infinite;
 }
 
 details p:last-of-type {
   clear: right; /* clear right float from the japanese sentence */
 }
 
-@-webkit-keyframes glow {
+details p:not(:first-of-type) {
+  padding-left: 0.3rem; /* to "equalize" the padding-block-end of p[lang="ja"] */
+}
+
+details p {
+  font-size: 1.5rem;
+  font-size: clamp(12px, 1.515vw, 1.5rem);
+  letter-spacing: 0.0025em;
+  text-align: center;
+}
+
+@-webkit-keyframes flicker {
 
   0%, 39%, 41%, 59%, 61%, 100% {
     text-shadow: 0 0 0.25em #0bf377;
@@ -1466,7 +1477,7 @@ details p:last-of-type {
 
 }
 
-@keyframes glow {
+@keyframes flicker {
 
   0%, 39%, 41%, 59%, 61%, 100% {
     text-shadow: 0 0 0.25em #0bf377;
@@ -1491,7 +1502,7 @@ details p:last-of-type {
 @media only screen and (max-width: 1200px) {
 
   html {
-    font-size: 9.5px;
+    font-size: 59.375%;
   }
 
 }
@@ -1503,7 +1514,7 @@ details p:last-of-type {
 @media only screen and (max-width: 990px) {
 
   html {
-    font-size: 9px;
+    font-size: 56.25%;
   }
 
 }
@@ -1523,7 +1534,7 @@ details p:last-of-type {
 @media only screen and (max-width: 770px) {
 
   html {
-    font-size: 8.5px;
+    font-size: 53.125%;
   }
 
   aside.flex {
@@ -1620,19 +1631,10 @@ details p:last-of-type {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 580px) {
 
   html {
-    font-size: 8px;
-  }
-
-}
-
-
-@media only screen and (max-width: 480px) {
-
-  html {
-    font-size: 7.5px;
+    font-size: 50%;
   }
 
 }
@@ -1641,7 +1643,7 @@ details p:last-of-type {
 @media only screen and (max-width: 320px) {
 
   html {
-    font-size: 7px;
+    font-size: 46.875%;
   }
 
 }
