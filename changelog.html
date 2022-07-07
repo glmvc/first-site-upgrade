@@ -108,7 +108,7 @@
       <!-- new sidebar -->
       <aside class="flex">
         <p>Visit my</p>
-        <ul class="flex">
+        <ul>
           <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025; GitHub</a></li>
           <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038; Twitter</a></li>
         </ul>
@@ -125,6 +125,28 @@
       <section aria-label="changelog">
         <h3><span class="emoji">&#128203;</span> Changelog</h3>
         <p>This changelog refers to the differences / changes between the <a href="first-site/index.html">first site (previous version)</a> and the upgraded version of it here.</p>
+        <h4><span class="emoji">&#128640;</span> For The Future</h4>
+        <ul class="future-list">
+          <li>
+            <strong>Scroll to top button</strong>
+          </li>
+          <li>
+            <strong>Meter/progress bars</strong>
+          </li>
+          <li>
+            <strong>Complex (contact) form</strong>
+          </li>
+          <li>
+            <strong>Dark- and Lightmode switcher</strong>
+          </li>
+          <li>
+            <em>Update</em> <strong>last edited date</strong> and <strong>time</strong> within the detail area in the footer <em>automatically</em>
+          </li>
+          <li>
+            <em>Add</em> <strong>birthday banner</strong> to show on December 6 every year as a small <strong>easter egg</strong>
+          </li>
+        </ul>
+        <hr>
         <h4><span class="emoji">&#9881;</span> General</h4>
         <ul>
           <li>
@@ -372,6 +394,10 @@
             <pre><code class="language-html">&lt;summary&gt;Info&lt;/summary&gt;</code></pre>
           </li>
           <li>
+            A <strong>Japanese sentence</strong> <em>added</em> within the detail area in the footer and <code class="language-">language</code> attribute set to Japanese:
+            <pre><code class="language-html">lang=&quot;ja&quot;</code></pre>
+          </li>
+          <li>
             <strong>Superscript</strong> <em>added</em> for the numbers within the table and birthdate of the website within the detail area in the footer:
             <pre><code class="language-html">&lt;sup&gt;...&lt;/sup&gt;</code></pre>
           </li>
@@ -382,10 +408,6 @@
           <li>
             <strong>Date</strong> and <strong>time</strong> <em>added</em> for the birthdate and last update of the website within the detail area in the footer:
             <pre><code class="language-html">&lt;time datetime=&quot;YYYY-MM-ddThh:mm&quot;&gt;...&lt;/time&gt;</code></pre>
-          </li>
-          <li>
-            A <strong>Japanese sentence</strong> <em>added</em> within the detail area in the footer and <code class="language-">language</code> attribute set to Japanese:
-            <pre><code class="language-html">lang=&quot;ja&quot;</code></pre>
           </li>
           <li>
             Last update text and date <em>added</em> as a <strong>small side comment</strong> within the detail area in the footer:
@@ -656,28 +678,6 @@
             <pre><code class="language-javascript">audio.volume = 0.5;</code></pre>
           </li>
         </ul>
-        <hr>
-        <h4><span class="emoji">&#128640;</span> For The Future</h4>
-        <ul class="future-list">
-          <li>
-            <strong>Scroll to top button</strong>
-          </li>
-          <li>
-            <strong>Meter/progress bars</strong>
-          </li>
-          <li>
-            <strong>Complex (contact) form</strong>
-          </li>
-          <li>
-            <strong>Dark- and Lightmode switcher</strong>
-          </li>
-          <li>
-            <em>Update</em> <strong>last edited date</strong> and <strong>time</strong> within the detail area in the footer <em>automatically</em>
-          </li>
-          <li>
-            <em>Add</em> <strong>birthday banner</strong> to show on December 6 every year as a small <strong>easter egg</strong>
-          </li>
-        </ul>
       </section>
       <hr>
     </main>
@@ -692,7 +692,7 @@
           <h6>Change your username:</h6>
           <button id="button">Change user</button>
         </div>
-        <div class="feature">
+        <div class="feature flex">
           <h6>Enhance your coding senses:</h6>
           <figure>
             <audio id="audio" controls loop preload="auto">
@@ -724,11 +724,11 @@
       <!-- info -->
       <details open>
         <summary class="center">Info</summary>
+        <p lang="ja">日本語の文章です。</p>
         <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
         <p>This page &gt; first page and 1 &lt; 2!</p>
         <p>Coders usually love coffee <span class="emoji heart">&#10084;</span> <span class="emoji">&#9749;</span> Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
         <p>The two words "<bdo dir="rtl">Hello World</bdo>" are "Hello World" spelled backwards.</p>
-        <p lang="ja">このページはご飯としていいです。</p>
         <p><small>Last edited <time datetime="2022-03-06T20:30">at at 8:30 p.m. on March 6, 2022</time>.</small></p>
       </details>
     </footer>
