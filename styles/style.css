@@ -117,7 +117,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom-right-radius: 5em;
   width: 90%; /* fallback width */
   width: 90vw;
-  max-width: 1920px;
+  max-width: 1440px;
   background: center repeat url("../images/background.svg"), rgba(255, 255, 255, 0.05); /* fallback background */
   background: center repeat url("../images/background.svg"), var(--surface-dark-grey); /* shorthand background property */
   -webkit-box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8),
@@ -402,6 +402,7 @@ a[href*="http"]::after { /* (special) pseudo-element selector */
   margin-left: 0.3em;
   width: 0.7em;
   height: 0.7em;
+  vertical-align: text-top;
   background-image: url("../images/external-red.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -787,7 +788,7 @@ body:not(.scrolled) header {
     position: fixed;
     width: calc(90% - 6px); /* .page-wrapper fallback width minus 6px */
     width: calc(90vw - 6px); /* minus 6px because of the left & right border of the .page-wrapper */
-    max-width: 1914px; /* .page-wrapper max-width minus 6px */
+    max-width: 1434px; /* .page-wrapper max-width minus 6px */
   }
 
   main {
@@ -1300,7 +1301,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .feature {
@@ -1314,7 +1315,7 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
       align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .feature h6 {
@@ -1404,7 +1405,7 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   text-align: center;
 }
 
@@ -1437,8 +1438,8 @@ details[open] summary::marker {
 
 p[lang="ja"] {
   float: right;
-  -webkit-padding-after: 0.3;
-          padding-block-end: 0.3rem;
+  -webkit-padding-after: 0.35em;
+          padding-block-end: 0.35em;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -1451,10 +1452,11 @@ p[lang="ja"] {
 
 details p:last-of-type {
   clear: right; /* clear right float from the japanese sentence */
+  margin-top: 1.35em;
 }
 
 details p:not(:first-of-type) {
-  padding-left: 0.3rem; /* to "equalize" the padding-block-end of p[lang="ja"] */
+  padding-left: 0.35em; /* to "equalize" the padding-block-end of p[lang="ja"] */
 }
 
 details p {
