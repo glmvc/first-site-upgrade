@@ -359,6 +359,10 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `html {font-size: 62.5%;}`
 
+- [x] **Font sizes** *adapted* to a fluid typography scale using `clamp` functions:
+
+  `font-size: clamp(8.4rem, 7.8rem + 1.875vw, 10.5rem);`
+
 - [x] Special pseudo-element for styling **selections** / **highlighting** *now in use*:
 
   `::selection`

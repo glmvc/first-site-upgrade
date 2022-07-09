@@ -5,7 +5,7 @@
 ### :seedling: also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
 
 - #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/) and see for yourself :eyes:
-- #### check the [changelog on github](changelog.md) or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/) to see what has changed / been improved compared to the [first-site](https://github.com/glmvc/first-site) :clipboard:
+- #### check the [changelog on github](changelog.md) or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/) to see what has changed / been improved compared to the [first-site](https://github.com/glmvc/first-site/) :clipboard:
 - #### do you notice anything that's wrong, not ideal or doesn't follow good practice? :face_with_spiral_eyes:
   - let me know in a message or create an issue
   - or fix it yourself and create a pull request afterwards
@@ -20,7 +20,7 @@
 
 ![pagespeed insights performance](assets/pagespeed-light.svg#gh-light-mode-only)
 
-> [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about) (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
+> [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about/) (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
 
 ---
 
@@ -30,11 +30,12 @@
 
 :joystick: this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
 
-- html / css style guide: https://google.github.io/styleguide/htmlcssguide.html
+- html / css style guide: https://google.github.io/styleguide/htmlcssguide.html/
 - frontend checklist: https://frontendchecklist.io/
 - design guidelines / inspiration: https://material.io/
 - normalize css: http://necolas.github.io/normalize.css/
-- google webfonts helper: https://google-webfonts-helper.herokuapp.com/fonts
+- google webfonts helper: https://google-webfonts-helper.herokuapp.com/fonts/
+- clamp calculator: https://royalfig.github.io/fluid-typography-calculator/
 - jquery library: https://jquery.com/
 - favicon generator: https://favicon.io/
 - svg background: https://bgjar.com/
@@ -51,6 +52,6 @@
 - html escape tool: https://codebeautify.org/html-escape-unescape/
 - markdown to html converter: https://codebeautify.org/markdown-to-html/
 - css autoprefixer: https://autoprefixer.github.io/
-- pagespeed insights svg api: https://github.com/ankurparihar/readme-pagespeed-insights
+- pagespeed insights svg api: https://github.com/ankurparihar/readme-pagespeed-insights/
 
-> created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer) from the [MDN Web Docs](https://developer.mozilla.org/) (previously Mozilla Developer Network and formerly Mozilla Developer Center)
+> created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer/) from the [MDN Web Docs](https://developer.mozilla.org/) (previously Mozilla Developer Network and formerly Mozilla Developer Center)
