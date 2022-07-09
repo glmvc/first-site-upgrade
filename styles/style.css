@@ -37,6 +37,9 @@
   --primary-green-button: #0bf377;
   --secondary-blue: #7cb7ed;
   --secondary-blue-darker: #4383bb;
+  --kbd-color: #333333;
+  --kbd-background: #eeeeee;
+  --kbd-border: #b4b4b4;
   /*-- website spacings --*/
   --website-margin: 20px;
   --website-padding: 3rem;
@@ -714,13 +717,16 @@ pre::-webkit-scrollbar-thumb {
 kbd {
   display: inline-block;
   border: 1px solid #b4b4b4;
+  border: 1px solid var(--kbd-border);
   border-radius: 0.3em;
   padding: 0.2em 0.4em;
   font-weight: 500;
   font-size: 0.85em;
   line-height: 1;
   color: #333333;
+  color: var(--kbd-color);
   background-color: #eeeeee;
+  background-color: var(--kbd-background);
   -webkit-box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7);
           box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7); /* inset for inner shadow */
   white-space: nowrap;
@@ -728,8 +734,56 @@ kbd {
 
 /*-- prismjs syntax highlighter library --*/
 
+.toolbar-item {
+  font-weight: 500;
+}
+
 .copy-to-clipboard-button {
   cursor: pointer;
+}
+
+div.code-toolbar > div.toolbar > div.toolbar-item > span,
+.code-toolbar > .toolbar > .toolbar-item > .copy-to-clipboard-button { /* higher selector specificity to overrule the styles from prism.css */
+  --copy-button-radius: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  border-radius: var(--copy-button-radius);
+  background: #121212;
+  background: var(--background-dark-grey);
+}
+
+div.code-toolbar > div.toolbar > div.toolbar-item > span,
+.copy-to-clipboard-button span {
+  display: inline-block;
+  border: 2px solid #121212;
+  border: 2px solid var(--background-dark-grey);
+  border-radius: 0.5em;
+  border-radius: var(--copy-button-radius);
+  padding: 0.05em 0.5em;
+  color: #121212;
+  color: var(--background-dark-grey);
+  background: #eeeeee;
+  background: var(--kbd-background);
+  -webkit-transform: translateY(-0.2em);
+      -ms-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.copy-to-clipboard-button:hover span {
+  -webkit-transform: translateY(-0.3em);
+      -ms-transform: translateY(-0.3em);
+          transform: translateY(-0.3em);
+}
+
+.copy-to-clipboard-button:active span {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 
@@ -1554,6 +1608,7 @@ details p {
   }
 
   nav ul {
+    overflow-y: auto;
     z-index: 7;
     position: fixed;
     inset: 0; /* shorthand for top, right, bottom and left - but support is insufficient at the moment, June 2022 (see supports at-rule below) */
@@ -1564,8 +1619,8 @@ details p {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    padding: 18rem 3rem 0;
-    padding: 18rem var(--website-padding) 0;
+    padding: 16rem 3rem 3rem;
+    padding: min(30vh, 16rem) var(--website-padding) var(--website-padding);
     text-align: center;
     background: center repeat url("../images/background.svg"), rgb(18, 18, 18);
     background: center repeat url("../images/background.svg"), var(--background-dark-grey);
@@ -1607,27 +1662,35 @@ details p {
   }
 
   .nav-open nav li:nth-child(1) a {
-    -webkit-transition-delay: 0.15s;
-         -o-transition-delay: 0.15s;
-            transition-delay: 0.15s;
+    -webkit-transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.15s;
+    transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease-in-out, transform 0.2s ease 0.15s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.15s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.15s, -webkit-transform 0.2s ease 0.15s;
   }
 
   .nav-open nav li:nth-child(2) a {
-    -webkit-transition-delay: 0.3s;
-         -o-transition-delay: 0.3s;
-            transition-delay: 0.3s;
+    -webkit-transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.3s;
+    transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.3s;
+    -o-transition: all 0.2s ease-in-out, transform 0.2s ease 0.3s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.3s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.3s, -webkit-transform 0.2s ease 0.3s;
   }
 
   .nav-open nav li:nth-child(3) a {
-    -webkit-transition-delay: 0.45s;
-         -o-transition-delay: 0.45s;
-            transition-delay: 0.45s;
+    -webkit-transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.45s;
+    transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.45s;
+    -o-transition: all 0.2s ease-in-out, transform 0.2s ease 0.45s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.45s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.45s, -webkit-transform 0.2s ease 0.45s;
   }
 
   .nav-open nav li:nth-child(4) a {
-    -webkit-transition-delay: 0.6s;
-         -o-transition-delay: 0.6s;
-            transition-delay: 0.6s;
+    -webkit-transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.6s;
+    transition: all 0.2s ease-in-out, -webkit-transform 0.2s ease 0.6s;
+    -o-transition: all 0.2s ease-in-out, transform 0.2s ease 0.6s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.6s;
+    transition: all 0.2s ease-in-out, transform 0.2s ease 0.6s, -webkit-transform 0.2s ease 0.6s;
   }
 
 }

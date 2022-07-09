@@ -46,7 +46,7 @@
 - image editor: https://www.photopea.com/
 - image compression tool: https://tinypng.com/
 - image map resizer library: https://github.com/davidjbradshaw/image-map-resizer/
-- button styling inspiration: https://cssbuttons.io/
+- button styling inspiration: https://uiverse.io/
 - prismjs syntax highlighter library: https://prismjs.com/
 - html escape tool: https://codebeautify.org/html-escape-unescape/
 - markdown to html converter: https://codebeautify.org/markdown-to-html/
