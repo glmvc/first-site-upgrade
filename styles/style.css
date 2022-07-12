@@ -1187,7 +1187,7 @@ div.heading:hover {
 /*---------------------------------------------------------------------*/
 /*-- hello world program --*/
 
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width: 991px) {
 
   section.hello-world-program { /* grid container */
     display: -ms-grid;
@@ -1396,9 +1396,14 @@ footer {
 #button {
   overflow: hidden;
   position: relative;
-  border: 2px solid #0bf377;
-  border: 2px solid var(--primary-green-button);
+  outline: 1px solid #0bf377;
+  outline: 1px solid var(--primary-green-button);
+  outline-offset: -2px;
+  border: 1px solid #0bf377;
+  border: 1px solid var(--primary-green-button);
   padding: 0.7em 2.7em;
+  width: 100%;
+  max-width: 20rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-size: clamp(12px, 1.1rem + 0.188vw, 1.5rem);
@@ -1408,11 +1413,13 @@ footer {
   text-transform: uppercase;
   color: #0bf377;
   color: var(--primary-green-button);
-  background: -o-linear-gradient(left, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, rgba(27, 253, 156, 0.1)), color-stop(40%, transparent),color-stop(60%, transparent) , to(rgba(27, 253, 156, 0.1)));
-  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
-  -webkit-box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
-          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  background: -o-linear-gradient(left, rgba(11, 243, 119, 0.1) 1%, transparent 40%, transparent 60%, rgba(11, 243, 119, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, rgba(11, 243, 119, 0.1)), color-stop(40%, transparent), color-stop(60%, transparent), to(rgba(11, 243, 119, 0.1)));
+  background: linear-gradient(to right, rgba(11, 243, 119, 0.1) 1%, transparent 40%, transparent 60%, rgba(11, 243, 119, 0.1) 100%);
+  -webkit-box-shadow: inset 0 0 1.2em rgba(27, 253, 156, 0.4),
+                            0 0 0.9em 0.3em rgba(27, 253, 156, 0.1);
+          box-shadow: inset 0 0 1.2em rgba(27, 253, 156, 0.4),
+                            0 0 0.9em 0.3em rgba(27, 253, 156, 0.1);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -1423,33 +1430,41 @@ footer {
           user-select: none; /* stop user from selecting text of button */
 }
 
+#button:focus,
 #button:hover {
-  color: #00ff91;
-  -webkit-box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
-          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  outline-offset: 0;
+  color: hsl(148, 91%, 60%);
+  -webkit-box-shadow: inset 0 0 1.2em rgba(11, 243, 119, 0.6),
+                            0 0 0.9em 0.3em rgba(11, 243, 119, 0.2);
+          box-shadow: inset 0 0 1.2em rgba(11, 243, 119, 0.6),
+                            0 0 0.9em 0.3em rgba(11, 243, 119, 0.2);
 }
 
 #button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -4em;
-  width: 4em;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 50%;
   height: 100%;
-  background: -o-linear-gradient(left, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, transparent), color-stop(40%, rgba(27, 253, 156, 0.1)),color-stop(60%, rgba(27, 253, 156, 0.1)) , to(transparent));
-  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, transparent), color-stop(40%, rgba(11, 243, 119, 0.1)), color-stop(60%, rgba(11, 243, 119, 0.1)), to(transparent));
+  background: -o-linear-gradient(left, transparent 1%, rgba(11, 243, 119, 0.1) 40%, rgba(11, 243, 119, 0.1) 60%, transparent 100%);
+  background: linear-gradient(to right, transparent 1%, rgba(11, 243, 119, 0.1) 40%, rgba(11, 243, 119, 0.1) 60%, transparent 100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
+#button:focus::before,
 #button:hover::before {
-  -webkit-transform: translateX(15em);
-      -ms-transform: translateX(15em);
-          transform: translateX(15em);
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
 }
 
 
@@ -1627,7 +1642,7 @@ details p {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     padding: 16rem 3rem 3rem;
-    padding: min(30vh, 16rem) var(--website-padding) var(--website-padding);
+    padding: min(30vh, 18rem) var(--website-padding) var(--website-padding);
     text-align: center;
     background: center repeat url("../images/background.svg"), rgb(18, 18, 18);
     background: center repeat url("../images/background.svg"), var(--background-dark-grey);
