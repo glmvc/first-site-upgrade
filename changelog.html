@@ -38,11 +38,9 @@
     ul {
       list-style-type: none;
     }
-    p {
-      line-height: 2;
-    }
-    pre, div.code-toolbar {
-      font-size: 1rem !important;
+    div.code-toolbar {
+      font-size: 10px;
+      line-height: 1.15;
     }
   </style>
   <script src="scripts/jquery-3.6.0.min.js"></script>
@@ -483,6 +481,10 @@
           </li>
           <li>
             <strong>Font size</strong> of the <code class="language-">html</code> element <em>set</em> to 62.5% (because it's equal to 10px in most browsers) to make it easier to calculate <code class="language-">rem</code> units:
+            <pre><code class="language-css">font-size: clamp(8.4rem, 7.8rem + 1.875vw, 10.5rem);</code></pre>
+          </li>
+          <li>
+            <strong>Font sizes</strong> <em>adapted</em> to a fluid typography scale using <code class="language-">clamp</code> functions:
             <pre><code class="language-css">html {font-size: 62.5%;}</code></pre>
           </li>
           <li>
