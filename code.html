@@ -2005,7 +2005,7 @@
                       user-select: none; /* stop user from selecting text of button */
             }
 
-            #button:focus,
+            #button:focus-visible,
             #button:hover {
               outline-offset: 0;
               color: hsl(148, 91%, 60%);
@@ -2035,7 +2035,7 @@
               transition: transform 0.3s linear, -webkit-transform 0.3s linear;
             }
 
-            #button:focus::before,
+            #button:focus-visible::before,
             #button:hover::before {
               -webkit-transform: translateX(200%);
                   -ms-transform: translateX(200%);
