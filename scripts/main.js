@@ -147,11 +147,5 @@ $(document).ready(function () {
   audio.volume = 0.5;
 
 
-  //---------------------------------------------------------------------
-  // particles
-
-  particlesJS.load('particles-js', 'particles.json');
-
-
 
 });
