@@ -150,7 +150,7 @@ $(document).ready(function () {
   //---------------------------------------------------------------------
   // particles
 
-  particlesJS.load('particles-js', 'scripts/particles.json');
+  particlesJS.load('particles-js', 'particles.json');
 
 
 
