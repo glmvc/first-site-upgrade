@@ -509,10 +509,6 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") *now in use* for the created source code (`code.html`) and changelog (`changelog.html`) documents
 
-- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/ "Image Map Resizer GitHub repository") *now in use* so that the image map works responsive:
-
-  `$('map').imageMapResize();`
-
 - [x] At a **given scrolling value** (defined in the `checkScroll` function) the class `scrolled` *is now set* on the `body` element:
 
   `if ($(window).scrollTop() > 23) {$('body').addClass('scrolled');}`
@@ -552,6 +548,10 @@ This changelog refers to the differences / changes between the [first site (prev
   `let userName = -1;`
 
   `while (userName == -1 || (userName != null && userName.length > maxLength)) { userName = window.prompt(...) }`
+
+- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/ "Image Map Resizer GitHub repository") *now in use* so that the image map works responsive:
+
+  `$('map').imageMapResize();`
 
 - [x] **Image map** and **figure caption** *now changing* accordingly on clicking the images:
 
