@@ -23,12 +23,6 @@
 $(document).ready(function () {
 
   //---------------------------------------------------------------------
-  // image map resizer (jQuery)
-
-  $('map').imageMapResize();
-
-
-  //---------------------------------------------------------------------
   // check scrolling (jQuery)
 
   let checkScroll = function () {
@@ -118,6 +112,12 @@ $(document).ready(function () {
     setUserName();
 
   });
+
+
+  //---------------------------------------------------------------------
+  // image map resizer (jQuery)
+
+  $('map').imageMapResize();
 
 
   //---------------------------------------------------------------------

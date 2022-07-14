@@ -632,10 +632,6 @@
             <a href="https://prismjs.com/" title="PrismJS homepage" target="_blank">PrismJS syntax highlighter library</a> <em>now in use</em> for the created source code (<code class="language-">code.html</code>) and changelog (<code class="language-">changelog.html</code>) documents
           </li>
           <li>
-            <a href="https://github.com/davidjbradshaw/image-map-resizer/" title="Image Map Resizer GitHub repository" target="_blank">Image Map Resizer library</a> <em>now in use</em> so that the image map works responsive:
-            <pre><code class="language-javascript">$(&apos;map&apos;).imageMapResize();</code></pre>
-          </li>
-          <li>
             At a <strong>given scrolling value</strong> (defined in the <code class="language-">checkScroll</code> function) the class <code class="language-">scrolled</code> <em>is now set</em> on the <code class="language-">body</code> element:
             <pre><code class="language-javascript">if ($(window).scrollTop() > 23) {$(&apos;body&apos;).addClass(&apos;scrolled&apos;);}</code></pre>
             <pre><code class="language-javascript">else {$(&apos;body&apos;).removeClass(&apos;scrolled&apos;);}</code></pre>
@@ -666,6 +662,10 @@
             <pre><code class="language-javascript">let maxLength = 50;</code></pre>
             <pre><code class="language-javascript">let userName = -1;</code></pre>
             <pre><code class="language-javascript">while (userName == -1 || (userName != null &amp;&amp; userName.length &gt; maxLength)) { userName = window.prompt(...) }</code></pre>
+          </li>
+          <li>
+            <a href="https://github.com/davidjbradshaw/image-map-resizer/" title="Image Map Resizer GitHub repository" target="_blank">Image Map Resizer library</a> <em>now in use</em> so that the image map works responsive:
+            <pre><code class="language-javascript">$(&apos;map&apos;).imageMapResize();</code></pre>
           </li>
           <li>
             <strong>Image map</strong> and <strong>figure caption</strong> <em>now changing</em> accordingly on clicking the images:
