@@ -147,8 +147,8 @@ body::-webkit-scrollbar-thumb {
 .website-padding {
   padding-right: 3rem; /* fallback padding */
   padding-right: var(--website-padding);
-  padding-left: 3rem;
-  padding-left: var(--website-padding);
+  padding-left: 15rem;
+  padding-left: calc(var(--website-padding) * 5);
 }
 
 .visually-hidden:not(:focus):not(:active) { /* :not pseudo-class (also known as the negation pseudo-class) */
@@ -1577,7 +1577,7 @@ details p {
 /*---------------------------------------------------------------------*/
 /*-- large width (> 1000px) --*/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 75em) {
 
   html {
     font-size: 59.375%;
@@ -1589,7 +1589,7 @@ details p {
 /*---------------------------------------------------------------------*/
 /*-- medium width (smaller than 1000px to mobile) --*/
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 62em) {
 
   html {
     font-size: 56.25%;
@@ -1601,18 +1601,15 @@ details p {
 /*---------------------------------------------------------------------*/
 /*-- small width (mobile) --*/
 
-@media only screen and (min-width: 771px) {
-
-  .website-padding {
-    padding-left: calc(var(--website-padding) * 5);
-  }
-
-}
-
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 48em) {
 
   html {
     font-size: 53.125%;
+  }
+
+  .website-padding {
+    padding-left: 3rem;
+    padding-left: var(--website-padding);
   }
 
   aside.flex {
@@ -1718,7 +1715,7 @@ details p {
 }
 
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 36em) {
 
   html {
     font-size: 50%;
@@ -1727,7 +1724,7 @@ details p {
 }
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 20em) {
 
   html {
     font-size: 46.875%;
