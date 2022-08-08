@@ -722,8 +722,8 @@
             .website-padding {
               padding-right: 3rem; /* fallback padding */
               padding-right: var(--website-padding);
-              padding-left: 3rem;
-              padding-left: var(--website-padding);
+              padding-left: 15rem;
+              padding-left: calc(var(--website-padding) * 5);
             }
 
             .visually-hidden:not(:focus):not(:active) { /* :not pseudo-class (also known as the negation pseudo-class) */
@@ -2152,7 +2152,7 @@
             /*---------------------------------------------------------------------*/
             /*-- large width (&gt; 1000px) --*/
 
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 75em) {
 
               html {
                 font-size: 59.375%;
@@ -2164,7 +2164,7 @@
             /*---------------------------------------------------------------------*/
             /*-- medium width (smaller than 1000px to mobile) --*/
 
-            @media only screen and (max-width: 990px) {
+            @media only screen and (max-width: 62em) {
 
               html {
                 font-size: 56.25%;
@@ -2176,18 +2176,15 @@
             /*---------------------------------------------------------------------*/
             /*-- small width (mobile) --*/
 
-            @media only screen and (min-width: 771px) {
-
-              .website-padding {
-                padding-left: calc(var(--website-padding) * 5);
-              }
-
-            }
-
-            @media only screen and (max-width: 770px) {
+            @media only screen and (max-width: 48em) {
 
               html {
                 font-size: 53.125%;
+              }
+
+              .website-padding {
+                padding-left: 3rem;
+                padding-left: var(--website-padding);
               }
 
               aside.flex {
@@ -2293,7 +2290,7 @@
             }
 
 
-            @media only screen and (max-width: 580px) {
+            @media only screen and (max-width: 36em) {
 
               html {
                 font-size: 50%;
@@ -2302,7 +2299,7 @@
             }
 
 
-            @media only screen and (max-width: 320px) {
+            @media only screen and (max-width: 20em) {
 
               html {
                 font-size: 46.875%;
@@ -2326,18 +2323,11 @@
                 display: none !important;
               }
 
-              body {
-                margin: 0;
-              }
-
-              .page-wrapper {
-                border: none;
-                border-radius: unset;
-                border-bottom-right-radius: unset;
-                width: unset;
-                max-width: unset;
-                -webkit-box-shadow: none;
-                        box-shadow: none;
+              body,
+              .page-wrapper,
+              h2 span,
+              table {
+                all: unset;
               }
 
               .website-padding {
@@ -2345,20 +2335,42 @@
                 padding-left: var(--website-padding);
               }
 
-              main,
-              h2 span,
-              table {
-                all: unset;
-              }
-
-              table {
-                page-break-before: always;
-              }
-
               body,
-              mark,
-              table {
-                color: black;
+              h2,
+              mark {
+                color: #121212 !important;
+                color: var(--background-dark-grey) !important;
+              }
+
+              h2 {
+                text-shadow: none;
+              }
+
+              h2 span {
+                font-weight: 400;
+              }
+
+              mark {
+                font-weight: 700;
+              }
+
+              th,
+              td {
+                padding: 0.2em;
+              }
+
+              table caption {
+                text-align: left;
+              }
+
+              .hello-world-program,
+              .web-dev + h4,
+              #planets-table,
+              .further-info,
+              footer {
+                -webkit-column-break-before: page;
+                   -moz-column-break-before: page;
+                               break-before: page;
               }
 
             }

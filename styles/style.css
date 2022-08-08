@@ -1793,7 +1793,9 @@ details p {
   #planets-table,
   .further-info,
   footer {
-    break-before: page;
+    -webkit-column-break-before: page;
+       -moz-column-break-before: page;
+                   break-before: page;
   }
 
 }
