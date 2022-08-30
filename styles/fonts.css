@@ -1,11 +1,11 @@
-/*---------------------------------------------------------------------*/
-/*-- fonts --*/
-/*---------------------------------------------------------------------*/
+/*=====================================================================*/
+/*== fonts ==*/
+/*=====================================================================*/
 
-/*---------------------------------------------------------------------*/
-/*-- source code pro --*/
+/*=====================================================================*/
+/*== source code pro ==*/
 
-/*-- source-code-pro-300 - latin --*/
+/*== source-code-pro-300 - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -21,7 +21,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-regular - latin --*/
+/*== source-code-pro-regular - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -37,7 +37,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-500 - latin --*/
+/*== source-code-pro-500 - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -53,7 +53,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-700 - latin --*/
+/*== source-code-pro-700 - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -69,7 +69,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-300italic - latin --*/
+/*== source-code-pro-300italic - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -85,7 +85,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-italic - latin --*/
+/*== source-code-pro-italic - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -101,7 +101,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-500italic - latin --*/
+/*== source-code-pro-500italic - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -117,7 +117,7 @@
   font-display: swap;
 }
 
-/*-- source-code-pro-700italic - latin --*/
+/*== source-code-pro-700italic - latin ==*/
 
 @font-face {
   font-family: "Source Code Pro";
@@ -134,8 +134,8 @@
 }
 
 
-/*---------------------------------------------------------------------*/
-/*-- orbitron (variable font) --*/
+/*=====================================================================*/
+/*== orbitron (variable font) ==*/
 
 @font-face {
   font-family: "Orbitron";
