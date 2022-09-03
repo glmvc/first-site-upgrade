@@ -97,23 +97,6 @@ body {
   margin: var(--website-margin) auto var(--website-margin);
 }
 
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.05);
-  background-color: var(--surface-dark-grey);
-}
-
-body::-webkit-scrollbar-thumb {
-  border: 0 solid #0fb55e;
-  border: 0 solid var(--primary-green);
-  border-radius: 0;
-  background-color: #069247;
-  background-color: var(--primary-green-darker);
-}
-
 .page-wrapper {
   /* class selector */
   position: relative;
@@ -183,6 +166,26 @@ body::-webkit-scrollbar-thumb {
 
 .emoji.heart {
   color: red;
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+  width: 8px; /* vertical scrollbar */
+  height: 6px; /* horizontal scrollbar */
+}
+
+.styled-scrollbars::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--surface-dark-grey);
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb {
+  background-color: #069247;
+  background-color: var(--primary-green-darker);
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb:hover {
+  background-color: #0fb55e;
+  background-color: var(--primary-green);
 }
 
 /*=====================================================================*/
@@ -680,23 +683,6 @@ pre {
   border: 2px solid #121212;
   border: 2px solid var(--background-dark-grey);
   border-radius: 0.5em;
-}
-
-pre::-webkit-scrollbar {
-  height: 6px;
-}
-
-pre::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.07);
-  background-color: var(--surface-dark-grey);
-}
-
-pre::-webkit-scrollbar-thumb {
-  border: 0 solid #0fb55e;
-  border: 0 solid var(--primary-green);
-  border-radius: 0;
-  background-color: #069247;
-  background-color: var(--primary-green-darker);
 }
 
 kbd {
@@ -1231,23 +1217,6 @@ div.heading:hover {
 
 .table-wrapper {
   overflow-x: auto;
-}
-
-.table-wrapper::-webkit-scrollbar {
-  height: 8px;
-}
-
-.table-wrapper::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.07);
-  background-color: var(--surface-dark-grey);
-}
-
-.table-wrapper::-webkit-scrollbar-thumb {
-  border: 0 solid #0fb55e;
-  border: 0 solid var(--primary-green);
-  border-radius: 0;
-  background-color: #069247;
-  background-color: var(--primary-green-darker);
 }
 
 table {

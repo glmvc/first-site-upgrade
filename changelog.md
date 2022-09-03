@@ -372,14 +372,6 @@ This changelog refers to the differences / changes between the [first site (prev
 
   `overflow-x: hidden;`
 
-- [x] **Scrollbar** of the `body`, `pre` and `.table-wrapper` elements _styled_ using WebKit extensions:
-
-  `body::-webkit-scrollbar {...}`
-
-  `body::-webkit-scrollbar-track {...}`
-
-  `body::-webkit-scrollbar-thumb {...}`
-
 - [x] **Backgrounds** _added_ (background shorthand and longhand properties)
 
 - [x] **Borders** _added_ (border shorthand and longhand properties)
@@ -395,6 +387,16 @@ This changelog refers to the differences / changes between the [first site (prev
 - [x] **Utility classes** and **rulesets** _created_ for repeating CSS tasks like horizontal centering of elements for example:
 
   `.center {margin-right: auto; margin-left: auto;}`
+
+- [x] **Scrollbars** (both vertical and horizontal) _styled_ using WebKit extensions:
+
+  `.styled-scrollbars::-webkit-scrollbar {...}`
+
+  `.styled-scrollbars::-webkit-scrollbar-track {...}`
+
+  `.styled-scrollbars::-webkit-scrollbar-thumb {...}`
+
+  `.styled-scrollbars::-webkit-scrollbar-thumb:hover {...}`
 
 - [x] **Transitions** _now in use_:
 

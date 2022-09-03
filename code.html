@@ -41,7 +41,7 @@
     <script src="scripts/imageMapResizer.min.js"></script>
     <script src="scripts/main.js" defer></script>
   </head>
-  <body class="center">
+  <body class="styled-scrollbars">
     <div class="page-wrapper center">
       <!--=================================================================-->
       <!-- header -->
@@ -153,7 +153,7 @@
         <section aria-label="html source code">
           <h4><span class="emoji">&lt;/&gt;</span> HTML Code</h4>
           <h5>index.html</h5>
-          <pre>
+          <pre class="styled-scrollbars">
           <code class="language-html">
             &lt;!-- I am a HTML comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. --&gt;
 
@@ -227,7 +227,7 @@
                 &lt;script src=&quot;scripts/imageMapResizer.min.js&quot;&gt;&lt;/script&gt;
                 &lt;script src=&quot;scripts/main.js&quot; defer&gt;&lt;/script&gt;
               &lt;/head&gt;
-              &lt;body&gt;
+              &lt;body class=&quot;styled-scrollbars&quot;&gt;
                 &lt;div class=&quot;page-wrapper center&quot;&gt;
                   &lt;!--=================================================================--&gt;
                   &lt;!-- header --&gt;
@@ -450,7 +450,7 @@
                     &lt;section id=&quot;planets-table&quot; aria-label=&quot;solar system planets table&quot;&gt;
                       &lt;h3&gt;Planets&lt;/h3&gt;
                       &lt;p&gt;To honor the other planets in our solar system as well, not just our own world.&lt;/p&gt;
-                      &lt;div class=&quot;table-wrapper&quot;&gt;
+                      &lt;div class=&quot;table-wrapper styled-scrollbars&quot;&gt;
                         &lt;table&gt;
                           &lt;caption&gt;
                             Data about the planets of our solar system. Planetary facts taken from
@@ -770,7 +770,7 @@
         <section aria-label="css source code">
           <h4><span class="emoji">{ }</span> CSS Code</h4>
           <h5>style.css</h5>
-          <pre>
+          <pre class="styled-scrollbars">
           <code class="language-css">
             /* I am a CSS comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
 
@@ -871,23 +871,6 @@
               margin: var(--website-margin) auto var(--website-margin);
             }
 
-            body::-webkit-scrollbar {
-              width: 8px;
-            }
-
-            body::-webkit-scrollbar-track {
-              background-color: rgba(255, 255, 255, 0.05);
-              background-color: var(--surface-dark-grey);
-            }
-
-            body::-webkit-scrollbar-thumb {
-              border: 0 solid #0fb55e;
-              border: 0 solid var(--primary-green);
-              border-radius: 0;
-              background-color: #069247;
-              background-color: var(--primary-green-darker);
-            }
-
             .page-wrapper {
               /* class selector */
               position: relative;
@@ -957,6 +940,26 @@
 
             .emoji.heart {
               color: red;
+            }
+
+            .styled-scrollbars::-webkit-scrollbar {
+              width: 8px; /* vertical scrollbar */
+              height: 6px; /* horizontal scrollbar */
+            }
+
+            .styled-scrollbars::-webkit-scrollbar-track {
+              background-color: rgba(255, 255, 255, 0.05);
+              background-color: var(--surface-dark-grey);
+            }
+
+            .styled-scrollbars::-webkit-scrollbar-thumb {
+              background-color: #069247;
+              background-color: var(--primary-green-darker);
+            }
+
+            .styled-scrollbars::-webkit-scrollbar-thumb:hover {
+              background-color: #0fb55e;
+              background-color: var(--primary-green);
             }
 
             /*=====================================================================*/
@@ -1454,23 +1457,6 @@
               border: 2px solid #121212;
               border: 2px solid var(--background-dark-grey);
               border-radius: 0.5em;
-            }
-
-            pre::-webkit-scrollbar {
-              height: 6px;
-            }
-
-            pre::-webkit-scrollbar-track {
-              background-color: rgba(255, 255, 255, 0.07);
-              background-color: var(--surface-dark-grey);
-            }
-
-            pre::-webkit-scrollbar-thumb {
-              border: 0 solid #0fb55e;
-              border: 0 solid var(--primary-green);
-              border-radius: 0;
-              background-color: #069247;
-              background-color: var(--primary-green-darker);
             }
 
             kbd {
@@ -2005,23 +1991,6 @@
 
             .table-wrapper {
               overflow-x: auto;
-            }
-
-            .table-wrapper::-webkit-scrollbar {
-              height: 8px;
-            }
-
-            .table-wrapper::-webkit-scrollbar-track {
-              background-color: rgba(255, 255, 255, 0.07);
-              background-color: var(--surface-dark-grey);
-            }
-
-            .table-wrapper::-webkit-scrollbar-thumb {
-              border: 0 solid #0fb55e;
-              border: 0 solid var(--primary-green);
-              border-radius: 0;
-              background-color: #069247;
-              background-color: var(--primary-green-darker);
             }
 
             table {
@@ -2601,7 +2570,7 @@
           </code>
         </pre>
           <h5>fonts.css</h5>
-          <pre>
+          <pre class="styled-scrollbars">
           <code class="language-css">
             /*=====================================================================*/
             /*== fonts ==*/
@@ -2757,7 +2726,7 @@
         <section aria-label="javascript source code">
           <h4><span class="emoji">});</span> JavaScript Code</h4>
           <h5>main.js</h5>
-          <pre>
+          <pre class="styled-scrollbars">
           <code class="language-javascript">
             /* I am a JavaScript comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
 
@@ -2908,7 +2877,12 @@
         <!-- terminal code block -->
         <section aria-label="terminal source code">
           <h4><span class="emoji">$</span> Terminal</h4>
-          <pre class="command-line" data-user="user" data-host="MacBook-Air" data-output="2-10, 12-13">
+          <pre
+            class="command-line styled-scrollbars"
+            data-user="user"
+            data-host="MacBook-Air"
+            data-output="2-10, 12-13"
+          >
           <code class="language-terminal">
             <kbd>ping glmvc.github.io</kbd>
             <samp>
