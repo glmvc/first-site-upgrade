@@ -8,425 +8,599 @@
 
 <!-- ... or of course on a single line. -->
 
-
-
 <!--=================================================================-->
 <!--=================================================================-->
 <!-- "actual" document starts below -->
 <!--=================================================================-->
 <!--=================================================================-->
 
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-<head>
-  <!--=================================================================-->
-  <!-- meta data -->
-  <meta charset="utf-8">
-  <!-- new meta data -->
-  <meta name="author" content="glmvc">
-  <meta name="description" content="The upgraded version of my first site!">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- so that responsiveness works as intended on mobile devices -->
-  <meta name="theme-color" content="#0fb55e">
-  <!-- new meta data (open graph data & twitter card) for facebook and twitter page share -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade">
-  <meta property="og:title" content="My Upgraded First Site">
-  <meta property="og:description" content="The upgraded version of my first site!">
-  <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
-  <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade">
-  <meta name="twitter:title" content="My Upgraded First Site">
-  <meta name="twitter:description" content="The upgraded version of my first site!">
-  <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">
-  <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon">
-  <meta name="twitter:site" content="@glmvc">
-  <meta name="twitter:creator" content="@glmvc">
-  <!--=================================================================-->
-  <!-- title -->
-  <title>My Upgraded First Site</title>
-  <!--=================================================================-->
-  <!-- linking -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/style.css"> <!-- mainly external stylesheet in use for styling -->
-  <!-- multiple favicon types for multiple device / browser support -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
-  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="site.webmanifest">
-  <!--=================================================================-->
-  <!-- internal stylesheet (just for demonstration) -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <!--=================================================================-->
-  <!-- new scripts & script loading method -->
-  <script src="scripts/jquery-3.6.0.min.js"></script>
-  <script src="scripts/imageMapResizer.min.js"></script>
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
-  <div class="page-wrapper center">
+  <head>
     <!--=================================================================-->
-    <!-- header -->
+    <!-- meta data -->
+    <meta charset="utf-8" />
+    <!-- new meta data -->
+    <meta name="author" content="glmvc" />
+    <meta name="description" content="The upgraded version of my first site!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- so that responsiveness works as intended on mobile devices -->
+    <meta name="theme-color" content="#0fb55e" />
+    <!-- new meta data (open graph data & twitter card) for facebook and twitter page share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade" />
+    <meta property="og:title" content="My Upgraded First Site" />
+    <meta property="og:description" content="The upgraded version of my first site!" />
+    <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
+    <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade" />
+    <meta name="twitter:title" content="My Upgraded First Site" />
+    <meta name="twitter:description" content="The upgraded version of my first site!" />
+    <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
+    <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon" />
+    <meta name="twitter:site" content="@glmvc" />
+    <meta name="twitter:creator" content="@glmvc" />
     <!--=================================================================-->
-    <header class="flex">
-      <!--=================================================================-->
-      <!-- new SVG logo -->
-      <a class="logo" href="index.html">
-        <svg width="276" height="255" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z" fill="whitesmoke"/>
-          <path d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11" stroke="#0fb55e" stroke-width="22"/>
-          <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7cb7ed" stroke-width="22"/>
-          <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22"/>
-        </svg>
-        <!-- new typewriter effect -->
-        <div class="typewriter flex">
-          <div class="text" id="typewriter-text"></div>
-        </div>
-      </a>
-      <!--=================================================================-->
-      <!-- new navigation -->
-      <nav>
-        <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
-          <span class="visually-hidden">Menu</span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul id="primary-nav" class="flex" aria-label="Primary">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="code.html">Source Code</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="first-site/index.html">Previous Version</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- title -->
+    <title>My Upgraded First Site</title>
     <!--=================================================================-->
-    <!-- main -->
+    <!-- linking -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- mainly external stylesheet in use for styling -->
+    <!-- multiple favicon types for multiple device / browser support -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any" />
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="site.webmanifest" />
     <!--=================================================================-->
-    <main class="website-padding">
-      <!--=================================================================-->
-      <!-- new noscript warning -->
-      <noscript>
-        <div class="noscript">
-          Please <b>turn on JavaScript</b> in your (browser/system) <i>settings</i> to ensure that this <u>website runs properly</u>.
-        </div>
-      </noscript>
-      <!--=================================================================-->
-      <!-- new sidebar -->
-      <aside class="flex">
-        <p>Visit my</p>
-        <ul aria-label="Social profile links">
-          <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025; GitHub</a></li>
-          <li><a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038; Twitter</a></li>
-        </ul>
-      </aside>
-      <!--=================================================================-->
-      <!-- actual content divided into sections -->
-      <!-- greeting -->
-      <section class="greeting" aria-label="personalized welcome message">
-        <div class="heading"><h1>hello world!</h1></div>
-        <h2 style="color: whitesmoke;">Nice to meet you,</h2> <!-- just to demonstrate inline styling -->
-        <figure>
-          <map name="hello-world">
-            <area alt="Table about planets of our solarsystem" title="Planet Earth" href="#planets-table" shape="circle" coords="200,150,78">
-            <area alt="NASA's solarsystem website" title="Earth's Moon" href="https://solarsystem.nasa.gov/moons/earths-moon/overview/" target="_blank" shape="circle" coords="332,39,15">
-          </map>
-          <img class="center" width="400" height="300" src="images/hello-world.png" alt="A cartoon view of the earth saying hello and the moon" title="I feel a bit wonky when you do that O_o" usemap="#hello-world">
-          <figcaption>The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)</figcaption>
-        </figure>
-      </section>
-      <hr>
-      <!-- hello world program -->
-      <section class="hello-world-program" aria-labelledby="hello-world-title">
-        <h3 id="hello-world-title">"Hello, World!" program</h3>
-        <p>According to the <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program" title='Wikipedia entry about the "Hello, World!" program' target="_blank"><cite>Wikipedia article on the "Hello, World!" program</cite></a>.</p>
-        <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
-          A "Hello, World!" program generally is <mark>a computer program</mark> that outputs or displays the message "Hello, World!".<br>
-          Such a program is very simple in most programming languages, and is often used <mark>to illustrate the basic syntax</mark> of a programming language. It is often the <mark>first program</mark> written by people learning to code.<br>
-          It can also be used as a <mark>sanity test</mark> to make sure that computer software intended to compile or run source code is correctly installed, and that the operator understands how to use it.
-        </blockquote>
-        <p>Well, let's just say that this is my first "program" so I can get more familiar with web development and see if everything is working properly and as intended.</p>
-        <figure class="center">
-          <video width="400" controls muted playsinline autoplay loop preload="auto">
-            <source src="videos/hello-world.mp4" type="video/mp4">
-            <source src="videos/hello-world.webm" type="video/webm">
-            <p>Your browser doesn't support HTML 5 video. Here is a <a href="videos/hello-world.mp4">link to the video</a> instead.</p>
-          </video>
-          <figcaption>A "Hello world!" terminal output (video downloaded from <a href="https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/" title="Pixabay video source" target="_blank">Pixabay</a>)</figcaption>
-        </figure>
-      </section>
-      <hr>
-      <!-- web dev -->
-      <section aria-labelledby="web-dev-title">
-        <h3 id="web-dev-title">Web development</h3>
-        <div class="web-dev">
-          <p>The following description is a <mark><em>very</em> simple example</mark> and is especially good for beginners to get to know the <mark>three most important components</mark> of front-end web development. Note that web development is a much larger field. So, imagine <mark>building a house</mark>:</p>
-          <dl>
-            <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
-            <dd>The basic <mark>structure</mark> of the house. So, constructing the foundation walls, perhaps a basement and installing doors, windows and the roof.</dd>
-            <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
-            <dd>The <mark>look</mark> of the house. So, painting the walls in nice colors, turning the roof red and painting the windows and doors with a light wood finish.</dd>
-            <dt><abbr title="JavaScript">JS</abbr></dt>
-            <dd>The <mark>functionality</mark> of the house. So, installing a doorbell, laying electricity and water pipes and installing all the appliances such as telephones, TVs or the kitchen stove.</dd>
-          </dl>
-        </div>
-        <h4>HTML is <em>not</em> a programming language</h4>
-        <p><q cite="https://en.wikipedia.org/wiki/HTML"><strong><abbr title="Hypertext Markup Language">HTML</abbr></strong> is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as</q></p>
-        <ul>
-          <li>a stylesheet language like <strong><abbr title="Cascading Style Sheets">CSS</abbr></strong>
-            <ul>
-              <li>also <em>not</em> a programming language</li>
-              <li>but <em>indispensable</em> for web development</li>
-            </ul>
-          </li>
-          <li>and scripting languages such as <strong><abbr title="JavaScript">JS</abbr></strong>.
-            <ul>
-              <li>a programming language</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <hr>
-      <!-- planets table -->
-      <section id="planets-table" aria-label="solar system planets table">
-        <h3>Planets</h3>
-        <p>To honor the other planets in our solar system as well, not just our own world.</p>
-        <div class="table-wrapper">
-          <table>
-            <caption>Data about the planets of our solar system. Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/" title="NASA planetary factsheet" target="_blank">Nasa's Planetary Fact Sheet - Metric</a>.</caption>
-            <colgroup>
-              <col span="2">
-              <col style="border-left: 2px solid black; border-right: 2px solid black">
-              <col span="9" style="border-left: 2px solid black; border-right: 2px solid black">
-            </colgroup>
-            <thead>
-              <tr>
-                <th colspan="2"></th>
-                <th scope="col">Name</th>
-                <th scope="col">Mass (10<sup>24</sup>kg)</th>
-                <th scope="col">Diameter (km)</th>
-                <th scope="col">Density (kg/m<sup>3</sup>)</th>
-                <th scope="col">Gravity (m/s<sup>2</sup>)</th>
-                <th scope="col">Length of day (hours)</th>
-                <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
-                <th scope="col">Mean temperature (°C)</th>
-                <th scope="col">Number of moons</th>
-                <th scope="col">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
-                <th scope="row">Mercury</th>
-                <td>0.330</td>
-                <td>4,879</td>
-                <td>5427</td>
-                <td>3.7</td>
-                <td>4222.6</td>
-                <td>57.9</td>
-                <td>167</td>
-                <td>0</td>
-                <td>The shrinking planet closest to the Sun</td>
-              </tr>
-              <tr>
-                <th scope="row">Venus</th>
-                <td>4.87</td>
-                <td>12,104</td>
-                <td>5243</td>
-                <td>8.9</td>
-                <td>2802.0</td>
-                <td>108.2</td>
-                <td>464</td>
-                <td>0</td>
-                <td>The most hellish and hottest planet</td>
-              </tr>
-              <tr>
-                <th scope="row">Earth</th>
-                <td>5.97 </td>
-                <td>12,756</td>
-                <td>5514</td>
-                <td>9.8</td>
-                <td>24.0</td>
-                <td>149.6</td>
-                <td>15</td>
-                <td>1</td>
-                <td>Our world</td>
-              </tr>
-              <tr>
-                <th scope="row">Mars</th>
-                <td>0.642</td>
-                <td>6,792</td>
-                <td>3933</td>
-                <td>3.7</td>
-                <td>24.7</td>
-                <td>227.9</td>
-                <td>-65</td>
-                <td>2</td>
-                <td>The red planet aka Elon's planet</td>
-              </tr>
-              <tr>
-                <th rowspan="4" scope="rowgroup">Jovian planets</th>
-                <th rowspan="2" scope="rowgroup">Gas giants</th>
-                <th scope="row">Jupiter</th>
-                <td>1898</td>
-                <td>142,984</td>
-                <td>1326</td>
-                <td>23.1</td>
-                <td>9.9</td>
-                <td>778.6</td>
-                <td>-110</td>
-                <td>67</td>
-                <td>The largest planet</td>
-              </tr>
-              <tr>
-                <th scope="row">Saturn</th>
-                <td>568</td>
-                <td>120,536</td>
-                <td>687</td>
-                <td>9.0</td>
-                <td>10.7</td>
-                <td>1433.5</td>
-                <td>-140</td>
-                <td>62</td>
-                <td>The planet with the "rings"</td>
-              </tr>
-              <tr>
-                <th rowspan="2" scope="rowgroup">Ice giants</th>
-                <th scope="row">Uranus</th>
-                <td>86.8 </td>
-                <td>51,118</td>
-                <td>1271</td>
-                <td>8.7</td>
-                <td>17.2</td>
-                <td>2872.5</td>
-                <td>-195</td>
-                <td>27</td>
-                <td>The planet that is pronounced funny.</td>
-              </tr>
-              <tr>
-                <th scope="row">Neptun</th>
-                <td>102</td>
-                <td>49,528 </td>
-                <td>1638</td>
-                <td>11.0</td>
-                <td>16.1</td>
-                <td>4495.1</td>
-                <td>-200</td>
-                <td>14</td>
-                <td>The planet very far out</td>
-              </tr>
-              <tr>
-                <th colspan="2" scope="rowgroup">Dwarf planets*</th>
-                <th scope="row"><s>Pluto</s></th>
-                <td>0.0146</td>
-                <td>2,370</td>
-                <td>2095</td>
-                <td>0.7</td>
-                <td>153.3</td>
-                <td>5906.4</td>
-                <td>-225</td>
-                <td>5</td>
-                <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/" title="Article about Pluto and why he may actually be a planet" target="_blank">remains controversial</a>.</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="12">Please <em>do not</em> ask why the sun is not listed!<br>That would hurt its feelings and also mine...</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
-      <hr>
-      <!-- further info -->
-      <section class="further-info" aria-labelledby="sources-title">
-        <h3 id="sources-title">Further information</h3>
-        <h4>Sources</h4>
-        <ol>
-          <li>Created along with the great learning resource <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer" title="MDN&apos;s front-end web developer learning pathway" target="_blank">&quot;front-end web developer learning pathway&quot;</a> from the <a href="https://developer.mozilla.org/en-US/" title="MDN homepage" target="_blank">MDN Web Docs</a> (previously Mozilla Developer Network &amp; formerly Mozilla Developer Center).</li>
-          <li>Definitions: <a href="https://www.wikipedia.org/" title="Wikipedia homepage" target="_blank">Wikipedia</a></li>
-          <li>Favicons: <a href="https://twemoji.twitter.com/" title="Twitter emojis homepage" target="_blank">Twemoji</a></li>
-          <li>SVG Background: <a href="https://bgjar.com/" title="BGJar homepage" target="_blank">BGJar</a></li>
-          <li>SVG icons: <a href="https://fontawesome.com/" title="Font Awesome homepage" target="_blank">Font Awesome</a></li>
-          <li>Typewriter effect: <a href="https://www.30secondsofcode.org/" title="30 seconds of code homepage" target="_blank">30 seconds of code</a></li>
-          <li>Image: <a href="https://openclipart.org/" title="Openclipart homepage" target="_blank">Openclipart</a></li>
-          <li>Video and Audio: <a href="https://pixabay.com/" title="Pixabay homepage" target="_blank">Pixabay</a></li>
-          <li>Planet data: <a href="https://www.nasa.gov/" title="NASA homepage" target="_blank">NASA</a></li>
-          <li>Button design: <a href="https://uiverse.io/" title="uiverse.io homepage" target="_blank">uiverse.io</a></li>
-          <li>Map: <a href="https://www.google.com/maps/about/" title="Google Maps homepage" target="_blank">Google Maps</a></li>
-        </ol>
-        <h5>GitHub repository</h5>
-        <ol start="12">
-          <li>Visit the <a href="https://github.com/glmvc/first-site-upgrade" title="Github repository of this website" target="_blank">GitHub repo of this website project</a></li>
-        </ol>
-      </section>
-      <hr>
-    </main>
+    <!-- internal stylesheet (just for demonstration) -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     <!--=================================================================-->
-    <!-- footer -->
-    <!--=================================================================-->
-    <footer class="website-padding">
+    <!-- new scripts & script loading method -->
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/imageMapResizer.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page-wrapper center">
       <!--=================================================================-->
-      <!-- additional page features -->
-      <div class="features-wrapper flex">
-        <div class="feature flex">
-          <h6>Change your username:</h6>
-          <button id="button">Change user</button>
-        </div>
-        <div class="feature flex">
-          <h6>Enhance your coding senses:</h6>
+      <!-- header -->
+      <!--=================================================================-->
+      <header class="flex">
+        <!--=================================================================-->
+        <!-- new SVG logo -->
+        <a class="logo" href="index.html">
+          <svg width="276" height="255" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M232.864 -1.1558e-05L231.957 4.67294L218.65 2.76287L232.864 -1.1558e-05ZM60.853 55.8474L48.1978 58.3073L44.6381 39.9938L44.638 39.9938L44 36.7115L64.497 32.7273L72.3389 31.203L76.2146 38.1884L135.736 145.468L149.607 73.4108L171.348 76.8542L152.546 174.532L129.218 179.067L60.853 55.8474ZM168.643 215.272L174.864 183.241L196.606 186.685L188.825 226.751L187.41 234.035L180.126 235.451L125.467 246.076L117.653 247.595L113.767 240.647L67.5914 158.079L54.1626 88.9932L129.083 222.961L168.643 215.272Z"
+              fill="whitesmoke"
+            />
+            <path
+              d="M163.423 60.1563L170.789 23.272L218.957 13.9091L188.696 170.11"
+              stroke="#0fb55e"
+              stroke-width="22"
+            />
+            <path d="M11 143.531V243.063H56.9375V220.094" stroke="#7cb7ed" stroke-width="22" />
+            <path d="M11 128.219V44H56.9375V204.781" stroke="whitesmoke" stroke-width="22" />
+          </svg>
+          <!-- new typewriter effect -->
+          <div class="typewriter flex">
+            <div class="text" id="typewriter-text"></div>
+          </div>
+        </a>
+        <!--=================================================================-->
+        <!-- new navigation -->
+        <nav>
+          <button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul id="primary-nav" class="flex" aria-label="Primary">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="code.html">Source Code</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="first-site/index.html">Previous Version</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--=================================================================-->
+      <!-- main -->
+      <!--=================================================================-->
+      <main class="website-padding">
+        <!--=================================================================-->
+        <!-- new noscript warning -->
+        <noscript>
+          <div class="noscript">
+            Please <b>turn on JavaScript</b> in your (browser/system) <i>settings</i> to ensure that this
+            <u>website runs properly</u>.
+          </div>
+        </noscript>
+        <!--=================================================================-->
+        <!-- new sidebar -->
+        <aside class="flex">
+          <p>Visit my</p>
+          <ul aria-label="Social profile links">
+            <li><a href="https://github.com/glmvc" title="My Github profile" target="_blank">&#128025; GitHub</a></li>
+            <li>
+              <a href="https://twitter.com/glmvc" title="My Twitter profile" target="_blank">&#128038; Twitter</a>
+            </li>
+          </ul>
+        </aside>
+        <!--=================================================================-->
+        <!-- actual content divided into sections -->
+        <!-- greeting -->
+        <section class="greeting" aria-label="personalized welcome message">
+          <div class="heading"><h1>hello world!</h1></div>
+          <h2 style="color: whitesmoke">Nice to meet you,</h2>
+          <!-- just to demonstrate inline styling -->
           <figure>
-            <audio id="audio" controls loop preload="auto">
-              <source src="audios/cyberpunk.mp3" type="audio/mp3">
-              <source src="audios/cyberpunk.ogg" type="audio/ogg">
-              <p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>
-            </audio>
-            <figcaption class="no-print">A cyberpunk soundtrack (audio downloaded from <a href="https://pixabay.com/music/electronic-cyberpunk-2099-10701/" title="Pixabay audio source" target="_blank">Pixabay</a>)</figcaption>
+            <map name="hello-world">
+              <area
+                alt="Table about planets of our solarsystem"
+                title="Planet Earth"
+                href="#planets-table"
+                shape="circle"
+                coords="200,150,78"
+              />
+              <area
+                alt="NASA's solarsystem website"
+                title="Earth's Moon"
+                href="https://solarsystem.nasa.gov/moons/earths-moon/overview/"
+                target="_blank"
+                shape="circle"
+                coords="332,39,15"
+              />
+            </map>
+            <img
+              class="center"
+              width="400"
+              height="300"
+              src="images/hello-world.png"
+              alt="A cartoon view of the earth saying hello and the moon"
+              title="I feel a bit wonky when you do that O_o"
+              usemap="#hello-world"
+            />
+            <figcaption>
+              The earth saying hello and the moon (image downloaded from
+              <a
+                href="https://openclipart.org/detail/190952/hello-world"
+                title="Open Clipart image source"
+                target="_blank"
+                >Open Clipart</a
+              >)
+            </figcaption>
           </figure>
-        </div>
-      </div>
-      <hr>
-      <!--=================================================================-->
-      <!-- contact details -->
-      <address class="flex">
-        <div>
+        </section>
+        <hr />
+        <!-- hello world program -->
+        <section class="hello-world-program" aria-labelledby="hello-world-title">
+          <h3 id="hello-world-title">"Hello, World!" program</h3>
           <p>
-            secret street 1<br>
-            secret city<br>
-            secret country
+            According to the
+            <a
+              href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"
+              title='Wikipedia entry about the "Hello, World!" program'
+              target="_blank"
+              ><cite>Wikipedia article on the "Hello, World!" program</cite></a
+            >.
           </p>
-          <p><a href="tel:+1234567890">123-456-7890</a></p>
-          <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
-        </div>
-        <iframe title="Google Maps Location" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat" width="400" height="300" style="border: 0;" loading="lazy"></iframe>
-      </address>
-      <hr>
+          <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
+            A "Hello, World!" program generally is <mark>a computer program</mark> that outputs or displays the message
+            "Hello, World!".<br />
+            Such a program is very simple in most programming languages, and is often used
+            <mark>to illustrate the basic syntax</mark> of a programming language. It is often the
+            <mark>first program</mark> written by people learning to code.<br />
+            It can also be used as a <mark>sanity test</mark> to make sure that computer software intended to compile or
+            run source code is correctly installed, and that the operator understands how to use it.
+          </blockquote>
+          <p>
+            Well, let's just say that this is my first "program" so I can get more familiar with web development and see
+            if everything is working properly and as intended.
+          </p>
+          <figure class="center">
+            <video width="400" controls muted playsinline autoplay loop preload="auto">
+              <source src="videos/hello-world.mp4" type="video/mp4" />
+              <source src="videos/hello-world.webm" type="video/webm" />
+              <p>
+                Your browser doesn't support HTML 5 video. Here is a
+                <a href="videos/hello-world.mp4">link to the video</a> instead.
+              </p>
+            </video>
+            <figcaption>
+              A "Hello world!" terminal output (video downloaded from
+              <a
+                href="https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/"
+                title="Pixabay video source"
+                target="_blank"
+                >Pixabay</a
+              >)
+            </figcaption>
+          </figure>
+        </section>
+        <hr />
+        <!-- web dev -->
+        <section aria-labelledby="web-dev-title">
+          <h3 id="web-dev-title">Web development</h3>
+          <div class="web-dev">
+            <p>
+              The following description is a <mark><em>very</em> simple example</mark> and is especially good for
+              beginners to get to know the <mark>three most important components</mark> of front-end web development.
+              Note that web development is a much larger field. So, imagine <mark>building a house</mark>:
+            </p>
+            <dl>
+              <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
+              <dd>
+                The basic <mark>structure</mark> of the house. So, constructing the foundation walls, perhaps a basement
+                and installing doors, windows and the roof.
+              </dd>
+              <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
+              <dd>
+                The <mark>look</mark> of the house. So, painting the walls in nice colors, turning the roof red and
+                painting the windows and doors with a light wood finish.
+              </dd>
+              <dt><abbr title="JavaScript">JS</abbr></dt>
+              <dd>
+                The <mark>functionality</mark> of the house. So, installing a doorbell, laying electricity and water
+                pipes and installing all the appliances such as telephones, TVs or the kitchen stove.
+              </dd>
+            </dl>
+          </div>
+          <h4>HTML is <em>not</em> a programming language</h4>
+          <p>
+            <q cite="https://en.wikipedia.org/wiki/HTML"
+              ><strong><abbr title="Hypertext Markup Language">HTML</abbr></strong> is the standard markup language for
+              documents designed to be displayed in a web browser. It can be assisted by technologies such as</q
+            >
+          </p>
+          <ul>
+            <li>
+              a stylesheet language like <strong><abbr title="Cascading Style Sheets">CSS</abbr></strong>
+              <ul>
+                <li>also <em>not</em> a programming language</li>
+                <li>but <em>indispensable</em> for web development</li>
+              </ul>
+            </li>
+            <li>
+              and scripting languages such as <strong><abbr title="JavaScript">JS</abbr></strong
+              >.
+              <ul>
+                <li>a programming language</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <!-- planets table -->
+        <section id="planets-table" aria-label="solar system planets table">
+          <h3>Planets</h3>
+          <p>To honor the other planets in our solar system as well, not just our own world.</p>
+          <div class="table-wrapper">
+            <table>
+              <caption>
+                Data about the planets of our solar system. Planetary facts taken from
+                <a
+                  href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+                  title="NASA planetary factsheet"
+                  target="_blank"
+                  >Nasa's Planetary Fact Sheet - Metric</a
+                >.
+              </caption>
+              <colgroup>
+                <col span="2" />
+                <col style="border-left: 2px solid black; border-right: 2px solid black" />
+                <col span="9" style="border-left: 2px solid black; border-right: 2px solid black" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="2"></th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Mass (10<sup>24</sup>kg)</th>
+                  <th scope="col">Diameter (km)</th>
+                  <th scope="col">Density (kg/m<sup>3</sup>)</th>
+                  <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+                  <th scope="col">Length of day (hours)</th>
+                  <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+                  <th scope="col">Mean temperature (°C)</th>
+                  <th scope="col">Number of moons</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
+                  <th scope="row">Mercury</th>
+                  <td>0.330</td>
+                  <td>4,879</td>
+                  <td>5427</td>
+                  <td>3.7</td>
+                  <td>4222.6</td>
+                  <td>57.9</td>
+                  <td>167</td>
+                  <td>0</td>
+                  <td>The shrinking planet closest to the Sun</td>
+                </tr>
+                <tr>
+                  <th scope="row">Venus</th>
+                  <td>4.87</td>
+                  <td>12,104</td>
+                  <td>5243</td>
+                  <td>8.9</td>
+                  <td>2802.0</td>
+                  <td>108.2</td>
+                  <td>464</td>
+                  <td>0</td>
+                  <td>The most hellish and hottest planet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Earth</th>
+                  <td>5.97</td>
+                  <td>12,756</td>
+                  <td>5514</td>
+                  <td>9.8</td>
+                  <td>24.0</td>
+                  <td>149.6</td>
+                  <td>15</td>
+                  <td>1</td>
+                  <td>Our world</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mars</th>
+                  <td>0.642</td>
+                  <td>6,792</td>
+                  <td>3933</td>
+                  <td>3.7</td>
+                  <td>24.7</td>
+                  <td>227.9</td>
+                  <td>-65</td>
+                  <td>2</td>
+                  <td>The red planet aka Elon's planet</td>
+                </tr>
+                <tr>
+                  <th rowspan="4" scope="rowgroup">Jovian planets</th>
+                  <th rowspan="2" scope="rowgroup">Gas giants</th>
+                  <th scope="row">Jupiter</th>
+                  <td>1898</td>
+                  <td>142,984</td>
+                  <td>1326</td>
+                  <td>23.1</td>
+                  <td>9.9</td>
+                  <td>778.6</td>
+                  <td>-110</td>
+                  <td>67</td>
+                  <td>The largest planet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturn</th>
+                  <td>568</td>
+                  <td>120,536</td>
+                  <td>687</td>
+                  <td>9.0</td>
+                  <td>10.7</td>
+                  <td>1433.5</td>
+                  <td>-140</td>
+                  <td>62</td>
+                  <td>The planet with the "rings"</td>
+                </tr>
+                <tr>
+                  <th rowspan="2" scope="rowgroup">Ice giants</th>
+                  <th scope="row">Uranus</th>
+                  <td>86.8</td>
+                  <td>51,118</td>
+                  <td>1271</td>
+                  <td>8.7</td>
+                  <td>17.2</td>
+                  <td>2872.5</td>
+                  <td>-195</td>
+                  <td>27</td>
+                  <td>The planet that is pronounced funny.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Neptun</th>
+                  <td>102</td>
+                  <td>49,528</td>
+                  <td>1638</td>
+                  <td>11.0</td>
+                  <td>16.1</td>
+                  <td>4495.1</td>
+                  <td>-200</td>
+                  <td>14</td>
+                  <td>The planet very far out</td>
+                </tr>
+                <tr>
+                  <th colspan="2" scope="rowgroup">Dwarf planets*</th>
+                  <th scope="row"><s>Pluto</s></th>
+                  <td>0.0146</td>
+                  <td>2,370</td>
+                  <td>2095</td>
+                  <td>0.7</td>
+                  <td>153.3</td>
+                  <td>5906.4</td>
+                  <td>-225</td>
+                  <td>5</td>
+                  <td>
+                    Declassified as a planet in 2006, but this
+                    <a
+                      href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+                      title="Article about Pluto and why he may actually be a planet"
+                      target="_blank"
+                      >remains controversial</a
+                    >.
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="12">
+                    Please <em>do not</em> ask why the sun is not listed!<br />That would hurt its feelings and also
+                    mine...
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+        <hr />
+        <!-- further info -->
+        <section class="further-info" aria-labelledby="sources-title">
+          <h3 id="sources-title">Further information</h3>
+          <h4>Sources</h4>
+          <ol>
+            <li>
+              Created along with the great learning resource
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer"
+                title="MDN's front-end web developer learning pathway"
+                target="_blank"
+                >&quot;front-end web developer learning pathway&quot;</a
+              >
+              from the
+              <a href="https://developer.mozilla.org/en-US/" title="MDN homepage" target="_blank">MDN Web Docs</a>
+              (previously Mozilla Developer Network &amp; formerly Mozilla Developer Center).
+            </li>
+            <li>
+              Definitions: <a href="https://www.wikipedia.org/" title="Wikipedia homepage" target="_blank">Wikipedia</a>
+            </li>
+            <li>
+              Favicons:
+              <a href="https://twemoji.twitter.com/" title="Twitter emojis homepage" target="_blank">Twemoji</a>
+            </li>
+            <li>SVG Background: <a href="https://bgjar.com/" title="BGJar homepage" target="_blank">BGJar</a></li>
+            <li>
+              SVG icons:
+              <a href="https://fontawesome.com/" title="Font Awesome homepage" target="_blank">Font Awesome</a>
+            </li>
+            <li>
+              Typewriter effect:
+              <a href="https://www.30secondsofcode.org/" title="30 seconds of code homepage" target="_blank"
+                >30 seconds of code</a
+              >
+            </li>
+            <li>
+              Image: <a href="https://openclipart.org/" title="Openclipart homepage" target="_blank">Openclipart</a>
+            </li>
+            <li>
+              Video and Audio: <a href="https://pixabay.com/" title="Pixabay homepage" target="_blank">Pixabay</a>
+            </li>
+            <li>Planet data: <a href="https://www.nasa.gov/" title="NASA homepage" target="_blank">NASA</a></li>
+            <li>
+              Button design: <a href="https://uiverse.io/" title="uiverse.io homepage" target="_blank">uiverse.io</a>
+            </li>
+            <li>
+              Map:
+              <a href="https://www.google.com/maps/about/" title="Google Maps homepage" target="_blank">Google Maps</a>
+            </li>
+          </ol>
+          <h5>GitHub repository</h5>
+          <ol start="12">
+            <li>
+              Visit the
+              <a
+                href="https://github.com/glmvc/first-site-upgrade"
+                title="Github repository of this website"
+                target="_blank"
+                >GitHub repo of this website project</a
+              >
+            </li>
+          </ol>
+        </section>
+        <hr />
+      </main>
       <!--=================================================================-->
-      <!-- info -->
-      <details open>
-        <summary class="center">Info</summary>
-        <p lang="ja">日本語の文章です。</p>
-        <p>The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.</p>
-        <p>This page &gt; first page and 1 &lt; 2!</p>
-        <p>Coders usually love coffee <span class="emoji heart">&#10084;</span> <span class="emoji">&#9749;</span> Brew yourself some coffee with the chemical formula of caffeine: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-        <p>The two words "<bdo dir="rtl">Hello World</bdo>" are "Hello World" spelled backwards.</p>
-        <p><small>Last edited <time datetime="2022-03-06T20:30">at at 8:30 p.m. on March 6, 2022</time>.</small></p>
-      </details>
-    </footer>
-  </div>
-</body>
+      <!-- footer -->
+      <!--=================================================================-->
+      <footer class="website-padding">
+        <!--=================================================================-->
+        <!-- additional page features -->
+        <div class="features-wrapper flex">
+          <div class="feature flex">
+            <h6>Change your username:</h6>
+            <button id="button">Change user</button>
+          </div>
+          <div class="feature flex">
+            <h6>Enhance your coding senses:</h6>
+            <figure>
+              <audio id="audio" controls loop preload="auto">
+                <source src="audios/cyberpunk.mp3" type="audio/mp3" />
+                <source src="audios/cyberpunk.ogg" type="audio/ogg" />
+                <p>
+                  Your browser doesn't support HTML 5 audio. Here is a
+                  <a href="audios/cyberpunk.mp3">link to the audio</a> instead.
+                </p>
+              </audio>
+              <figcaption class="no-print">
+                A cyberpunk soundtrack (audio downloaded from
+                <a
+                  href="https://pixabay.com/music/electronic-cyberpunk-2099-10701/"
+                  title="Pixabay audio source"
+                  target="_blank"
+                  >Pixabay</a
+                >)
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <hr />
+        <!--=================================================================-->
+        <!-- contact details -->
+        <address class="flex">
+          <div>
+            <p>
+              secret street 1<br />
+              secret city<br />
+              secret country
+            </p>
+            <p><a href="tel:+1234567890">123-456-7890</a></p>
+            <p><a href="mailto:mail@example.com?subject=This%20is%20the%20subject">secret@example.com</a></p>
+          </div>
+          <iframe
+            title="Google Maps Location"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6903.909544698209!2d-116.84826126292995!3d37.629577243423505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sat!4v1642187630782!5m2!1sen!2sat"
+            width="400"
+            height="300"
+            style="border: 0"
+            loading="lazy"
+          ></iframe>
+        </address>
+        <hr />
+        <!--=================================================================-->
+        <!-- info -->
+        <details open>
+          <summary class="center">Info</summary>
+          <p lang="ja">日本語の文章です。</p>
+          <p>
+            The page's birthday is on the <time datetime="2021-12-06">6<sup>th</sup> of December 2021</time>.
+          </p>
+          <p>This page &gt; first page and 1 &lt; 2!</p>
+          <p>
+            Coders usually love coffee <span class="emoji heart">&#10084;</span> <span class="emoji">&#9749;</span> Brew
+            yourself some coffee with the chemical formula of caffeine:
+            C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+          </p>
+          <p>The two words "<bdo dir="rtl">Hello World</bdo>" are "Hello World" spelled backwards.</p>
+          <p>
+            <small>Last edited <time datetime="2022-03-06T20:30">at at 8:30 p.m. on March 6, 2022</time>.</small>
+          </p>
+        </details>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -2,10 +2,10 @@
   "name": "",
   "short_name": "",
   "icons": [
-    { "src": "404-android-chrome-192x192.png", "type":"image/png", "sizes":"192x192" },
-    { "src": "404-android-chrome-512x512.png", "type":"image/png", "sizes":"512x512" }
+    { "src": "404-android-chrome-192x192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "404-android-chrome-512x512.png", "type": "image/png", "sizes": "512x512" }
   ],
-  "theme_color":"#0fb55e",
-  "background_color":"#121212",
-  "display":"standalone"
+  "theme_color": "#0fb55e",
+  "background_color": "#121212",
+  "display": "standalone"
 }

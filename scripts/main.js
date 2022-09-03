@@ -8,8 +8,6 @@
 
 // ... or like this on a single line.
 
-
-
 //=====================================================================
 //=====================================================================
 // "actual" JS code (using jQuery) starts below
@@ -21,69 +19,58 @@
 //=====================================================================
 
 $(document).ready(function () {
-
   //=====================================================================
   // check scrolling (jQuery)
 
   let checkScroll = function () {
-
-    if ($(window).scrollTop() > 23) { // 20px margin-top of the body plus 3px border-top of the .page-wrapper
-      $('body').addClass('scrolled');
+    // 20px margin-top of the body plus 3px border-top of the .page-wrapper
+    if ($(window).scrollTop() > 23) {
+      $("body").addClass("scrolled");
     } else {
-      $('body').removeClass('scrolled');
+      $("body").removeClass("scrolled");
     }
-
   };
 
-  $(window).on('scroll', function () {
-
+  $(window).on("scroll", function () {
     checkScroll();
-
   });
-
 
   //=====================================================================
   // typewriter effect (jQuery)
 
-  const text = 'glmvc';
+  const text = "glmvc";
 
-  $('#typewriter-text').html(text);
-  $('#typewriter-text').css('--characters', text.length + 6);
-
+  $("#typewriter-text").html(text);
+  $("#typewriter-text").css("--characters", text.length + 6);
 
   //=====================================================================
   // navigation (jQuery)
 
-  $('#nav-icon').on('click', function () {
+  $("#nav-icon").on("click", function () {
+    $(this).toggleClass("open");
+    $("body").toggleClass("nav-open");
 
-    $(this).toggleClass('open');
-    $('body').toggleClass('nav-open');
-
-    let isExpanded = $(this).attr('aria-expanded');
-    if (isExpanded === 'false') {
-      $(this).attr('aria-expanded', 'true');
+    let isExpanded = $(this).attr("aria-expanded");
+    if (isExpanded === "false") {
+      $(this).attr("aria-expanded", "true");
     } else {
-      $(this).attr('aria-expanded', 'false');
+      $(this).attr("aria-expanded", "false");
     }
-
   });
-
 
   //=====================================================================
   // corrected main heading with click function / easter egg (jQuery)
 
-  $('h1').text('Hello, World!').on('click', function () {
-
-    alert('Ouch! Stop poking me!');
-
-  });
-
+  $("h1")
+    .text("Hello, World!")
+    .on("click", function () {
+      alert("Ouch! Stop poking me!");
+    });
 
   //=====================================================================
   // personalized welcome message (jQuery)
 
   function setUserName() {
-
     let maxLength = 50;
     let userName = -1;
 
@@ -94,58 +81,51 @@ $(document).ready(function () {
     if (!userName) {
       setUserName();
     } else {
-      localStorage.setItem('name', userName);
-      $('h2').html(`Nice to meet you, <span>${userName}</span>!`);
+      localStorage.setItem("name", userName);
+      $("h2").html(`Nice to meet you, <span>${userName}</span>!`);
     }
-
   }
 
-  if (!localStorage.getItem('name')) {
+  if (!localStorage.getItem("name")) {
     setUserName();
   } else {
-    let storedName = localStorage.getItem('name');
-    $('h2').html(`Nice to meet you, <span>${storedName}</span>!`);
+    let storedName = localStorage.getItem("name");
+    $("h2").html(`Nice to meet you, <span>${storedName}</span>!`);
   }
 
-  $('#button').on('click', function () {
-
+  $("#button").on("click", function () {
     setUserName();
-
   });
-
 
   //=====================================================================
   // image map resizer (jQuery)
 
-  $('map').imageMapResize();
-
+  $("map").imageMapResize();
 
   //=====================================================================
   // image and figure caption switcher (jQuery)
 
   let imageMap;
 
-  $('img').on('click', function () {
-
-    if ($('img').attr('src') === 'images/hello-world.png') {
-      imageMap = $('map').detach();
-      $('img').attr('src', 'images/js-code.png');
-      $('img + figcaption').html('A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)');
+  $("img").on("click", function () {
+    if ($("img").attr("src") === "images/hello-world.png") {
+      imageMap = $("map").detach();
+      $("img").attr("src", "images/js-code.png");
+      $("img + figcaption").html(
+        'A JavaScript code snippet that reveals a small "feature", but it is somehow blurred... (screenshot taken with <a href="https://carbon.now.sh/" title="Source Code Image Tool" target="_blank">Carbon App</a>)'
+      );
     } else {
-      $('img').before(imageMap);
-      $('img').attr('src', 'images/hello-world.png');
-      $('img + figcaption').html('The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)');
+      $("img").before(imageMap);
+      $("img").attr("src", "images/hello-world.png");
+      $("img + figcaption").html(
+        'The earth saying hello and the moon (image downloaded from <a href="https://openclipart.org/detail/190952/hello-world" title="Open Clipart image source" target="_blank">Open Clipart</a>)'
+      );
     }
-
   });
-
 
   //=====================================================================
   // audio volume
 
-  let audio = document.getElementById('audio');
+  let audio = document.getElementById("audio");
   audio.volume = 0.5;
-
-
-
 });

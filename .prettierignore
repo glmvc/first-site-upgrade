@@ -1,0 +1,14 @@
+# folders
+first-site
+audios
+videos
+fonts
+images/*
+!images/favicons
+images/favicons/*
+!images/favicons/*.webmanifest
+
+# files
+*.min.js
+*.min.css
+fonts.css

@@ -2,7 +2,7 @@
 
 ## :flying_saucer: ... and with this website project i learn and challenge myself on my journey as a web developer
 
-### :seedling: also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
+### :seedling: also this should be an _inspiration_ and _resource_ for anyone looking to get into or is just getting started with web development
 
 - #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/) and see for yourself :eyes:
 - #### check the [changelog on github](changelog.md) or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/) to see what has changed / been improved compared to the [first-site](https://github.com/glmvc/first-site/) :clipboard:
@@ -28,7 +28,7 @@
 
 :ferris_wheel: you don't need to go and reinvent the wheel
 
-:joystick: this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry*
+:joystick: this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this _fast-paced industry_
 
 - html / css style guide: https://google.github.io/styleguide/htmlcssguide.html/
 - frontend checklist: https://frontendchecklist.io/
