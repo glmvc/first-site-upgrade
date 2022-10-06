@@ -1,12 +1,13 @@
-# EditorConfig helps developers define and maintain consistent
-# coding styles between different editors and IDEs
+# EditorConfig helps maintain consistent coding styles
+# for multiple developers working on the same project across various editors and IDEs
+#
 # editorconfig.org
 
 # top-most EditorConfig file
 root = true
 
-
-### every file
+#
+# every file
 [*]
 
 # default charset
@@ -28,7 +29,18 @@ insert_final_newline = true
 # remove any whitespace characters preceding newline characters
 trim_trailing_whitespace = true
 
-
-### markdown
+#
+# markdown files
 [*.md]
 trim_trailing_whitespace = false
+
+#
+# ignore paths
+[/first-site/**]
+charset = unset
+indent_style = unset
+indent_size = unset
+max_line_length = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset

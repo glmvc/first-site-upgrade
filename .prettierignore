@@ -1,3 +1,8 @@
+# Use .prettierignore to ignore (i.e. not reformat)
+# certain files and folders completely
+#
+# prettier.io
+
 # folders
 first-site
 audios
