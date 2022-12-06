@@ -128,4 +128,66 @@ $(document).ready(function () {
 
   let audio = document.getElementById("audio");
   audio.volume = 0.5;
+
+  //=====================================================================
+  // birthday banner
+
+  let firstSiteVisit = false;
+  checkFirstSiteVisit();
+  function checkFirstSiteVisit() {
+    if (localStorage.getItem("visited")) {
+      return;
+    }
+    firstSiteVisit = true;
+    localStorage.setItem("visited", 1);
+  }
+
+  const birthday = "12-06";
+  const birthdayYear = "2021";
+
+  let date = new Date();
+  let day = String(date.getDate()).padStart(2, "0");
+  let month = String(date.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
+  let year = date.getFullYear();
+
+  let currentDate = `${month}-${day}`;
+  let pageAge = year - birthdayYear;
+
+  let birthdayBanner =
+    '<dialog class="center"><div class="dialog-inner">' +
+    '<p class="dialog-highlight">Birthyeah &#127873;</p>' +
+    "<p>Today the page turned " +
+    pageAge +
+    (pageAge > 1 ? " years" : " year") +
+    " old.</p>" +
+    '<button class="dialog-button close-dialog">Close Birthday Banner</button>' +
+    "</div></dialog>";
+
+  if (currentDate == birthday) {
+    $(".page-wrapper").prepend(birthdayBanner);
+    const dialog = document.querySelector("dialog");
+
+    $(".close-dialog").on("click", function () {
+      dialog.close();
+    });
+
+    let showDialog = function () {
+      if (!$("details .open-dialog").length) {
+        $("details > p:nth-of-type(2)")
+          .wrap('<button class="dialog-button open-dialog"></button>')
+          .prepend("&#127881;")
+          .append("&#129395;<br><u>It's birthday time</u>");
+        $(".open-dialog").on("click", function () {
+          dialog.showModal();
+        });
+      }
+    };
+
+    if (firstSiteVisit) {
+      dialog.showModal();
+      showDialog();
+    } else {
+      showDialog();
+    }
+  }
 });

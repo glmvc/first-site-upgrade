@@ -14,8 +14,6 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [ ] _Update_ **last edited date** and **time** within the detail area in the footer _automatically_
 
-- [ ] _Add_ **birthday banner** to show on December 6 every year as a small easter egg
-
 ---
 
 ## :gear: General
@@ -563,3 +561,5 @@ This changelog refers to the differences / changes between the [first site (prev
   `let audio = document.getElementById('audio');`
 
   `audio.volume = 0.5;`
+
+- [x] **Birthday banner** _added_ to show on December 6 every year as a small easter egg using date comparison and the `dialog` element
