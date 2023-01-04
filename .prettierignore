@@ -1,5 +1,5 @@
-# Use .prettierignore to ignore (i.e. not reformat)
-# certain files and folders completely
+# use .prettierignore to ignore (i.e. not reformat)
+# certain folders and files completely
 #
 # prettier.io
 
@@ -16,4 +16,5 @@ images/favicons/*
 # files
 *.min.js
 *.min.css
+*.md
 fonts.css

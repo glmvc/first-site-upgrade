@@ -1,5 +1,5 @@
-# a .gitignore file specifies intentionally untracked files that Git should ignore
-# files already tracked by Git are not affected
+# a .gitignore file specifies intentionally untracked files that git should ignore
+# files already tracked by git are not affected
 #
 # git-scm.com/docs/gitignore
 
