@@ -17,20 +17,32 @@
 
 ---
 
+#### :battery: pagespeed
+
+![pagespeed insights performance](assets/pagespeed-dark.svg#gh-dark-mode-only)
+
+![pagespeed insights performance](assets/pagespeed-light.svg#gh-light-mode-only)
+
+> [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about/ "about pagespeed insights") (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
+
+---
+
 #### :twisted_rightwards_arrows: current workflow
 
-##### prerequisite knowledge
+##### prerequisite knowledge :brain:
 
 - the principles of [open source](https://opensource.org/ "open source homepage") and code licensing
     - [open source etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette/ "open source etiquette article on mdn")
 - [git](https://git-scm.com/ "git homepage") and [github](https://github.com/ "github homepage")
-    - [get started with github](https://docs.github.com/en/get-started "github get started documentation")
+    - [get started with github](https://docs.github.com/en"/get-started "github get started documentation")
+    - [github git guides](https://github.com/git-guides/ "github git guides")
+    - [git cheat sheet](https://training.github.com/ "github git cheat sheets")
 - web technologies (at the moment mainly html, css and javascript)
     - [learn web development](https://developer.mozilla.org/en-US/docs/Learn/ "learn web development article on mdn")
 - integrated development environments (ides)
     - [visual studio code](https://code.visualstudio.com/ "visual studio code homepage") is strictly advised for this project at the moment
 
-##### setting up git and github
+##### setting up git and github :technologist:
 
 1. first you'll need to [download](https://git-scm.com/downloads/ "download git"), [install](https://github.com/git-guides/install-git/ "github install git guide") and **[set up](https://docs.github.com/en/get-started/quickstart/set-up-git/ "set up git on github docs")** git on your local working machine
     - you should set your [user.name](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git/ "setting your username in git on github docs") and [user.email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address/ "setting your commit email address on github docs")
@@ -39,7 +51,7 @@
     - [create and set up your github account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account/ "getting started with your github account on github docs")
 3. now you're all set to make *small* and *simple* changes to files of this project using the [github ui](https://docs.github.com/en/repositories/working-with-files/managing-files/ "working with files on github docs")
 
-##### get ready to work with files, git and github
+##### get ready to work on the project :vertical_traffic_light:
 
 for *more complex* changes and tasks you'll have to use [git](https://git-scm.com/doc/ "git documentation") or a client like [github desktop](https://docs.github.com/en/get-started/using-github/github-desktop/ "github desktop on github docs") or [github cli](https://docs.github.com/en/get-started/using-github/github-cli/ "github cli on github docs").
 
@@ -51,68 +63,127 @@ The following steps use **git on the command line**, but if you're already famil
 
     ```bash
     # navigate to a directory of your choice
-    $ cd ~/web-dev/repos
+    cd ~/web-dev/repos
 
     # clone your fork of the repository
-    $ git clone https://github.com/YOUR-USERNAME/YOUR-FORK.git
+    git clone https://github.com/YOUR-USERNAME/YOUR-FORK.git
 
     # your local clone will be created
     > Cloning into 'first-site-upgrade'...
-    > remote: Counting objects: 10, done.
-    > remote: Compressing objects: 100% (8/8), done.
-    > remote: Total 10 (delta 1), reused 10 (delta 1)
-    > Unpacking objects: 100% (10/10), done.
     ```
 
 3. [create a remote](https://docs.github.com/en/get-started/quickstart/fork-a-repo#configuring-git-to-sync-your-fork-with-the-upstream-repository "configuring git to sync your fork on github docs") to be able to keep your fork up-to-date (*create a "shortcut" to the original repository*)
 
     ```bash
     # make sure to start in your clone directory
-    $ cd ~/web-dev/repos/first-site-upgrade
+    cd ~/web-dev/repos/first-site-upgrade
 
     # add a remote repository called upstream for your fork
-    $ git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git
+    git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git
 
     # verify the new upstream remote you have specified
-    # (when a repository is cloned, git automatically adds a remote called origin that points to your fork / the "parent" repository)
-    $ git remote -v
+    git remote -v
+
     > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (fetch)
     > origin    https://github.com/YOUR-USERNAME/YOUR-FORK.git (push)
     > upstream  https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git (fetch)
     > upstream  https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git (push)
+
+    # when a repository is cloned, git automatically adds a remote called origin
+    # origin points to your fork (the "parent" repository)
+    # upstream points to the original repository of the project
     ```
 
-##### working with files, git and github
+4. open the project folder in your code editor (vs code for this project)
 
-1. [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork/ "syncing a fork on github docs") often to keep it up-to-date with the upstream (original) repository to avoid conflicts
+5. vs code will prompt you to install the recommended extensions for the project (if not, search for `@recommended` in the extensions market place and install them manually)
+
+##### working on the project :writing_hand:
+
+1. [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork/ "syncing a fork on github docs") often to keep it up-to-date with the upstream repository to avoid or resolve conflicts
 
     ```bash
     # make sure to start in your clone directory
     cd ~/web-dev/repos/first-site-upgrade
 
-    # checkout your fork's local default branch - for this project "main"
+    # checkout your local clone's default branch ("main" for this project)
     git checkout main
 
-    $ git fetch upstream
-    > remote: Counting objects: 75, done.
-    > remote: Compressing objects: 100% (53/53), done.
-    > remote: Total 62 (delta 27), reused 44 (delta 9)
-    > Unpacking objects: 100% (62/62), done.
-    > From https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY
-    >  * [new branch]      main     -> upstream/main
+    # fetch the branches and their respective commits from the upstream repository
+    git fetch upstream
+
+    # merge the changes from the upstream default branch (upstream/main) into your local default branch (origin/main)
+    # this brings your fork's default branch into sync with the upstream repository, without losing your local changes
+    git merge upstream/main
+
+    # syncing your fork only updates your local clone / copy of the repository
+    # to update your fork on github, you must push your changes (see next steps)
     ```
 
-##### checklist before releasing the work
+    you can update your current local working branch with [git pull](https://github.com/git-guides/git-pull/ "github git pull guide"), if you haven't made any local changes yet (*your local changes will be "overwritten"*)
 
----
+    ```bash
+    # make sure to start in your clone directory
+    cd ~/web-dev/repos/first-site-upgrade
 
-#### :battery: pagespeed
+    # checkout your local clone's default branch ("main" for this project)
+    git checkout main
 
-![pagespeed insights performance](assets/pagespeed-dark.svg#gh-dark-mode-only)
+    # update your local working branch with commits from the remote and update all remote tracking branches
+    git pull
+    ```
 
-![pagespeed insights performance](assets/pagespeed-light.svg#gh-light-mode-only)
+2. create a [branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell/ "git branches in a nutshell from the official git book") for your changes
 
-> [pagespeed insights](https://developers.google.com/speed/docs/insights/v5/about/ "about pagespeed insights") (psi) reports on the performance of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
+    ```bash
+    # make sure to start in your clone directory
+    cd ~/web-dev/repos/first-site-upgrade
+
+    # checkout your local clone's default branch ("main" for this project)
+    git checkout main
+
+    # create a new branch with a summarizing name of the changes
+    git checkout -b YOUR-UPGRADE
+
+    # the command above switches to the specified branch and updates the working directory
+    # (it's a "shortcut" for "git branch YOUR-UPGRADE" and "git checkout YOUR-UPGRADE")
+    ```
+
+3. make changes, improve, fix - simply code :)
+
+4. check the [checklist](#checklist-before-releasing-the-work-memo) below before moving on to the next step
+
+5. after finishing your changes, you'll have to [add](https://github.com/git-guides/git-add/ "github git add guide"), [commit](https://github.com/git-guides/git-commit/ "github git commit guide") and [push](https://github.com/git-guides/git-push/ "github git push guide") your changes
+
+    ```bash
+    # check that you're on the correct branch
+    git checkout YOUR-UPGRADE
+
+    # add all new or changed files in your working directory to the git staging area (for the commit)
+    git add .
+
+    # make a commit with a short message describing the changes
+    git commit -m "your upgrades fixing an issue"
+
+    # push the commit(s) to the remote branch of your fork
+    git push
+    # use "git push --set-upstream origin YOUR-UPGRADE" if you haven't pushed this branch before
+    # or use "git push origin YOUR-UPGRADE" each time
+    ```
+
+6. once your changes are pushed to a branch on your fork, you can propose them with a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request/ "creating a pull request on github docs") using the github ui - the title and description of the pull request should appropriately and precisely describe your changes
+
+7. the pull request will be reviewed and feedback will be provided
+    - it's a common part of the [process](https://docs.github.com/en/get-started/quickstart/github-flow/ "github flow on github docs") of making changes in open source projects that you may be asked questions or be asked to make changes
+    - resolve conflicts if your pull request has merge conflicts with the main branch
+    - group logical changes in each pull request so that it contains a related set of changes or just a single change
+
+8. as soon as everything is well discussed, correct and fine, the pull request is merged and closed (usually the branch is no longer needed and is deleted afterwards)
+
+###### checklist before releasing the changes :memo:
+
+- [ ] if necessary after your changes, update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape/ "codebeautify html escape / unescape tool")
+- [ ] after editing a `css` file, make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool")
 
 ---
 
