@@ -9,7 +9,6 @@
 - #### check the [changelog on github](changelog.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://github.com/glmvc/first-site/ "first site website") :clipboard:
 
 - #### do you notice anything that's wrong, not ideal or doesn't follow good practice? :face_with_spiral_eyes:
-
     - let me know in a message or create an issue
     - or fix it yourself and create a pull request afterwards
     - i try very hard to implement everything with perfection, but as we all know 4 eyes see more than 2 and one cannot know everything
@@ -31,10 +30,10 @@
 
 ##### prerequisite knowledge :brain:
 
-- the principles of [open source](https://opensource.org/ "open source homepage") and code licensing
+- the principles of [open source](https://opensource.org/ "open source initiative homepage") and code licensing
     - [open source etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette/ "open source etiquette article on mdn")
 - [git](https://git-scm.com/ "git homepage") and [github](https://github.com/ "github homepage")
-    - [get started with github](https://docs.github.com/en"/get-started "github get started documentation")
+    - [get started with github](https://docs.github.com/en"/get-started "get started github documentation")
     - [github git guides](https://github.com/git-guides/ "github git guides")
     - [git cheat sheet](https://training.github.com/ "github git cheat sheets")
 - web technologies (at the moment mainly html, css and javascript)
@@ -44,22 +43,22 @@
 
 ##### setting up git and github :technologist:
 
-1. first you'll need to [download](https://git-scm.com/downloads/ "download git"), [install](https://github.com/git-guides/install-git/ "github install git guide") and **[set up](https://docs.github.com/en/get-started/quickstart/set-up-git/ "set up git on github docs")** git on your local working machine
-    - you should set your [user.name](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git/ "setting your username in git on github docs") and [user.email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address/ "setting your commit email address on github docs")
-    - make sure to configure how your local system should [handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings/ "configuring git to handle line endings on github docs") - for this project set core.autocrlf to `input` on macOS / Linux and `true` on Windows
-2. after that, you'll need a [github account](https://github.com/join/ "join github") to contribute to this project (skip this step if you're already familiar with github)
-    - [create and set up your github account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account/ "getting started with your github account on github docs")
-3. now you're all set to make *small* and *simple* changes to files of this project using the [github ui](https://docs.github.com/en/repositories/working-with-files/managing-files/ "working with files on github docs")
+1. first you'll need to [download](https://git-scm.com/downloads/ "git downloads"), [install](https://github.com/git-guides/install-git/ "install git github guide") and **[set up](https://docs.github.com/en/get-started/quickstart/set-up-git/ "set up git github documentation")** git on your local working machine
+    - you should set your [user.name](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git/ "setting your username in git github documentation") and [user.email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address/ "setting your commit email address github documentation")
+    - make sure to configure how your local system should [handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings/ "configuring git to handle line endings github documentation") - for this project set core.autocrlf to `input` on macOS / Linux or `true` on Windows
+2. after that, a [github account](https://github.com/join/ "join github") is needed to contribute to this project (skip this step if you're already familiar with github)
+    - [create and set up your github account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account/ "getting started with your github account github documentation")
+3. now you're all set to make *small* and *simple* changes to files of this project using the [github ui](https://docs.github.com/en/repositories/working-with-files/managing-files/ "working with files github documentation")
 
 ##### get ready to work on the project :vertical_traffic_light:
 
-for *more complex* changes and tasks you'll have to use [git](https://git-scm.com/doc/ "git documentation") or a client like [github desktop](https://docs.github.com/en/get-started/using-github/github-desktop/ "github desktop on github docs") or [github cli](https://docs.github.com/en/get-started/using-github/github-cli/ "github cli on github docs").
+for *more complex* changes and tasks you'll have to use [git](https://git-scm.com/doc/ "git documentation") or a client like [github desktop](https://docs.github.com/en/get-started/using-github/github-desktop/ "github desktop github documentation") or [github cli](https://docs.github.com/en/get-started/using-github/github-cli/ "github cli github documentation")
 
-The following steps use **git on the command line**, but if you're already familiar with one of the clients mentioned above, feel free to use the one you prefer.
+the following steps use **git on the command line**, but if you're already familiar with one of the clients mentioned above, feel free to use the one you prefer
 
-1. [create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo/ "fork a repo on github docs") of the project repository (*"copy" the project on github*)
+1. [create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo/ "fork a repo github documentation") of the project repository (*"copy" the project on github*)
 
-2. [clone the forked repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository "cloning your forked repository on github docs") from the first step to your local working machine (*"download" the copied project from github*)
+2. [clone the forked repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository "cloning your forked repository github documentation") from the first step to your local machine (*"download" the copied project from github*)
 
     ```bash
     # navigate to a directory of your choice
@@ -72,13 +71,13 @@ The following steps use **git on the command line**, but if you're already famil
     > Cloning into 'first-site-upgrade'...
     ```
 
-3. [create a remote](https://docs.github.com/en/get-started/quickstart/fork-a-repo#configuring-git-to-sync-your-fork-with-the-upstream-repository "configuring git to sync your fork on github docs") to be able to keep your fork up-to-date (*create a "shortcut" to the original repository*)
+3. [create a remote](https://docs.github.com/en/get-started/quickstart/fork-a-repo#configuring-git-to-sync-your-fork-with-the-upstream-repository "configuring git to sync your fork github documentation") to be able to keep your fork up-to-date (*create a "shortcut" to the original repository*)
 
     ```bash
     # make sure to start in your clone directory
     cd ~/web-dev/repos/first-site-upgrade
 
-    # add a remote repository called upstream for your fork
+    # add a remote repository called upstream
     git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git
 
     # verify the new upstream remote you have specified
@@ -96,11 +95,11 @@ The following steps use **git on the command line**, but if you're already famil
 
 4. open the project folder in your code editor (vs code for this project)
 
-5. vs code will prompt you to install the recommended extensions for the project (if not, search for `@recommended` in the extensions market place and install them manually)
+5. vs code will prompt you to install the recommended extensions for the project (if not, search for `@recommended` in the extensions marketplace and install them manually)
 
 ##### working on the project :writing_hand:
 
-1. [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork/ "syncing a fork on github docs") often to keep it up-to-date with the upstream repository to avoid or resolve conflicts
+1. [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork/ "syncing a fork github documentation") often to keep it up-to-date with the upstream repository to avoid conflicts or be able to resolve them
 
     ```bash
     # make sure to start in your clone directory
@@ -120,7 +119,7 @@ The following steps use **git on the command line**, but if you're already famil
     # to update your fork on github, you must push your changes (see next steps)
     ```
 
-    you can update your current local working branch with [git pull](https://github.com/git-guides/git-pull/ "github git pull guide"), if you haven't made any local changes yet (*your local changes will be "overwritten"*)
+    you can update your current local working branch with [git pull](https://github.com/git-guides/git-pull/ "git pull github guide"), if you haven't made any local changes yet (*local changes will be "overwritten"*)
 
     ```bash
     # make sure to start in your clone directory
@@ -151,13 +150,13 @@ The following steps use **git on the command line**, but if you're already famil
 
 3. make changes, improve, fix - simply code :)
 
-4. check the [checklist](#checklist-before-releasing-the-work-memo) below before moving on to the next step
+4. check the [checklist](#checklist-before-releasing-the-changes-memo) below before moving on to the next step
 
-5. after finishing your changes, you'll have to [add](https://github.com/git-guides/git-add/ "github git add guide"), [commit](https://github.com/git-guides/git-commit/ "github git commit guide") and [push](https://github.com/git-guides/git-push/ "github git push guide") your changes
+5. after finishing your changes, you'll have to [add](https://github.com/git-guides/git-add/ "git add github guide"), [commit](https://github.com/git-guides/git-commit/ "git commit github guide") and [push](https://github.com/git-guides/git-push/ "git push github guide") your changes
 
     ```bash
     # check that you're on the correct branch
-    git checkout YOUR-UPGRADE
+    # if you're not, use "git checkout YOUR-UPGRADE"
 
     # add all new or changed files in your working directory to the git staging area (for the commit)
     git add .
@@ -171,19 +170,19 @@ The following steps use **git on the command line**, but if you're already famil
     # or use "git push origin YOUR-UPGRADE" each time
     ```
 
-6. once your changes are pushed to a branch on your fork, you can propose them with a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request/ "creating a pull request on github docs") using the github ui - the title and description of the pull request should appropriately and precisely describe your changes
+6. once your changes are pushed to a branch on your fork, you can propose them with a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request/ "creating a pull request github documentation") using the github ui - the title and description of the pull request should appropriately and precisely describe your changes
 
 7. the pull request will be reviewed and feedback will be provided
-    - it's a common part of the [process](https://docs.github.com/en/get-started/quickstart/github-flow/ "github flow on github docs") of making changes in open source projects that you may be asked questions or be asked to make changes
+    - it's a common part of the [process](https://docs.github.com/en/get-started/quickstart/github-flow/ "github flow github documentation") in open source projects that you may be asked questions or be asked to make changes
     - resolve conflicts if your pull request has merge conflicts with the main branch
     - group logical changes in each pull request so that it contains a related set of changes or just a single change
 
-8. as soon as everything is well discussed, correct and fine, the pull request is merged and closed (usually the branch is no longer needed and is deleted afterwards)
+8. finally, when everything is well discussed, correct and fine, the pull request will be merged (the branch will usually no longer be needed and will be deleted afterwards)
 
 ###### checklist before releasing the changes :memo:
 
-- [ ] if necessary after your changes, update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape/ "codebeautify html escape / unescape tool")
-- [ ] after editing a `css` file, make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool")
+- [ ] update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape/ "codebeautify html escape / unescape tool") if necessary after your changes
+- [ ] make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool") if changing / editing a `css` file
 
 ---
 
