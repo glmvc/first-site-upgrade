@@ -1,14 +1,14 @@
-# :crystal_ball: first-site-upgrade
+# 🔮 first-site-upgrade
 
-## :flying_saucer: ... and with this website project i learn and challenge myself on my journey as a web developer
+## 🛸 ... and with this website project i learn and challenge myself on my journey as a web developer
 
-### :seedling: also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
+### 🌱 also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
 
-- #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade website") and see for yourself :eyes:
+- #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade website") and see for yourself 👀
 
-- #### check the [changelog on github](changelog.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://glmvc.github.io/first-site/ "first site website") :clipboard:
+- #### check the [changelog on github](changelog.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://glmvc.github.io/first-site/ "first site website") 📋
 
-- #### do you notice anything that's wrong, not ideal or doesn't follow good practice? :face_with_spiral_eyes:
+- #### do you notice anything that's wrong, not ideal or doesn't follow good practice? 😵‍💫
     - let me know in a message or create an issue
     - or fix it yourself and create a pull request afterwards
     - i try very hard to implement everything with perfection, but as we all know 4 eyes see more than 2 and one cannot know everything
@@ -16,7 +16,7 @@
 
 ---
 
-#### :battery: pagespeed
+#### 🔋 pagespeed
 
 ![pagespeed insights performance](assets/pagespeed-dark.svg#gh-dark-mode-only)
 
@@ -26,9 +26,9 @@
 
 ---
 
-#### :twisted_rightwards_arrows: current workflow
+#### 🔀 current workflow
 
-##### prerequisite knowledge :brain:
+##### prerequisite knowledge 🚧
 
 - the principles of [open source](https://opensource.org/ "open source initiative homepage") and code licensing
     - [open source etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette "open source etiquette article on mdn")
@@ -41,7 +41,7 @@
 - integrated development environments (ides)
     - [visual studio code](https://code.visualstudio.com/ "visual studio code homepage") is strictly advised for this project at the moment
 
-##### setting up git and github :technologist:
+##### setting up git and github 🏗️
 
 1. first you'll need to [download](https://git-scm.com/downloads "git downloads"), [install](https://github.com/git-guides/install-git "install git github guide") and **[set up](https://docs.github.com/en/get-started/quickstart/set-up-git "set up git github documentation")** git on your local working machine
     - you should set your [user.name](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git "setting your username in git github documentation") and [user.email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address "setting your commit email address github documentation")
@@ -50,7 +50,7 @@
     - [create and set up your github account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account "getting started with your github account github documentation")
 3. now you're all set to make *small* and *simple* changes to files of this project using the [github ui](https://docs.github.com/en/repositories/working-with-files/managing-files "working with files github documentation")
 
-##### get ready to work on the project :vertical_traffic_light:
+##### get ready to work on the project 🚦
 
 for *more complex* changes and tasks you'll have to use [git](https://git-scm.com/doc "git documentation") or a client like [github desktop](https://docs.github.com/en/get-started/using-github/github-desktop "github desktop github documentation") or [github cli](https://docs.github.com/en/get-started/using-github/github-cli "github cli github documentation")
 
@@ -97,7 +97,7 @@ the following steps use **git on the command line**, but if you're already famil
 
 5. vs code will prompt you to install the recommended extensions for the project (if not, search for `@recommended` in the extensions marketplace and install them manually)
 
-##### working on the project :writing_hand:
+##### working on the project 👷‍♀️
 
 1. [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork "syncing a fork github documentation") often to keep it up-to-date with the upstream repository to avoid conflicts or be able to resolve them
 
@@ -179,18 +179,18 @@ the following steps use **git on the command line**, but if you're already famil
 
 8. finally, when everything is well discussed, correct and fine, the pull request will be merged (the branch will usually no longer be needed and will be deleted afterwards)
 
-###### checklist before releasing the changes :memo:
+###### checklist before releasing the changes 🦺
 
 - [ ] update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape "codebeautify html escape / unescape tool") if necessary after your changes
 - [ ] make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool") if changing / editing a `css` file
 
 ---
 
-#### :toolbox: used tools, libraries and inspiration for the project
+#### 🧰 used tools, libraries and inspiration for the project
 
-- you don't need to *go and reinvent the wheel* :ferris_wheel:
+- you don't need to *go and reinvent the wheel* 🎡
 
-- this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry* :joystick:
+- this is meant to be a **motivation** that you can and even should use other resources as well, since it's very hard to do everything yourself these days in this *fast-paced industry* 🕹️
 
     - [html / css style guide](https://google.github.io/styleguide/htmlcssguide.html "google html / css style guide")
     - [frontend checklist](https://frontendchecklist.io/ "the front-end checklist website")
