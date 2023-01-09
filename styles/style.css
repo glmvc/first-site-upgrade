@@ -1,19 +1,3 @@
-/* I am a CSS comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
-
-/*
-  It is possible
-  to write me across
-  multiple lines...
-*/
-
-/* ... or of course on a single line. */
-
-/*=====================================================================*/
-/*=====================================================================*/
-/*== "actual" stylesheet starts below ==*/
-/*=====================================================================*/
-/*=====================================================================*/
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -31,8 +15,8 @@
 ::backdrop {
   /*== website colors ==*/
   --background-dark-grey: #121212;
-  --surface-dark-grey: rgba(255, 255, 255, 0.05); /* works with just the rgb function too */
-  --onsurface-white: whitesmoke; /* color keyword (CSS identifier) */
+  --surface-dark-grey: rgba(255, 255, 255, 0.05);
+  --onsurface-white: whitesmoke;
   --primary-green: #0fb55e;
   --primary-green-darker: #069247;
   --primary-green-button: #0bf377;
@@ -51,23 +35,21 @@
 /*=====================================================================*/
 
 html {
-  /* type selector (also called element or tag selector) */
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; /* alternative box model */
-  font-family: "Source Code Pro", "Consolas", "Courier New", monospace; /* font-stack to guarantee the availability of the fonts across all systems */
+  box-sizing: border-box;
+  font-family: "Source Code Pro", "Consolas", "Courier New", monospace;
   font-style: normal;
-  font-weight: normal; /* 400 */
+  font-weight: normal;
   font-size: 62.5%; /* equal to 10px in most browsers: (62.5 / 100) * 16 = 10 */
-  color: whitesmoke; /* fallback color */
+  color: whitesmoke;
   color: var(--onsurface-white);
-  background-color: #121212; /* fallback background-color */
+  background-color: #121212;
   background-color: var(--background-dark-grey);
 }
 
 *,
 *::before,
 *::after {
-  /* to inherit the alternative box model to all elements */
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -81,7 +63,6 @@ html {
 }
 
 ::selection {
-  /* special pseudo-element */
   text-shadow: none;
   color: #0fb55e;
   color: var(--primary-green);
@@ -95,24 +76,23 @@ html {
 }
 
 body {
-  overflow-x: hidden; /* prevents unwanted horizontal scrolling (especially on mobile devices) */
-  margin: 20px auto 20px; /* fallback margin */
+  overflow-x: hidden;
+  margin: 20px auto 20px;
   margin: var(--website-margin) auto var(--website-margin);
 }
 
 .page-wrapper {
-  /* class selector */
   position: relative;
   border: 3px solid black;
   border-radius: 1em;
   border-bottom-right-radius: 5em;
-  width: 90%; /* fallback width */
+  width: 90%;
   width: 90vw;
   max-width: 1440px;
-  background: center repeat url("../images/background.svg"), rgba(255, 255, 255, 0.05); /* fallback background */
-  background: center repeat url("../images/background.svg"), var(--surface-dark-grey); /* shorthand background property */
+  background: center repeat url("../images/background.svg"), rgba(255, 255, 255, 0.05);
+  background: center repeat url("../images/background.svg"), var(--surface-dark-grey);
   -webkit-box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);
-  box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), /* right */ -5px 0 10px rgba(15, 181, 94, 0.8); /* left */
+  box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);
 }
 
 /*=====================================================================*/
@@ -126,18 +106,17 @@ body {
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /* inner display type = flex (outer display type = block) */
+  display: flex;
 }
 
 .website-padding {
-  padding-right: 3rem; /* fallback padding */
+  padding-right: 3rem;
   padding-right: var(--website-padding);
   padding-left: 15rem;
   padding-left: calc(var(--website-padding) * 5);
 }
 
 .visually-hidden:not(:focus):not(:active) {
-  /* :not pseudo-class (also known as the negation pseudo-class) */
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -152,8 +131,8 @@ body {
   border: 2px solid red;
   padding: 1em;
   max-width: 40ch;
-  font-weight: 500; /* medium */
-  font-size: 1.5rem; /* fallback font-size */
+  font-weight: 500;
+  font-size: 1.5rem;
   font-size: clamp(12px, 1.1rem + 0.188vw, 1.5rem);
   letter-spacing: 0.001em;
   text-align: center;
@@ -172,8 +151,8 @@ body {
 }
 
 .styled-scrollbars::-webkit-scrollbar {
-  width: 8px; /* vertical scrollbar */
-  height: 6px; /* horizontal scrollbar */
+  width: 8px;
+  height: 6px;
 }
 
 .styled-scrollbars::-webkit-scrollbar-track {
@@ -202,7 +181,6 @@ h3,
 h4,
 h5,
 h6 {
-  /* selector list across multiple lines */
   margin-bottom: 0.3em;
   font-weight: normal;
   color: #0fb55e;
@@ -210,8 +188,8 @@ h6 {
 }
 
 h1 {
-  display: inline; /* inline box (outer display type) */
-  font-weight: 300; /* light */
+  display: inline;
+  font-weight: 300;
   font-size: 8.4rem;
   font-size: clamp(8.4rem, 7.8rem + 1.875vw, 10.5rem);
   letter-spacing: -0.015em;
@@ -219,8 +197,8 @@ h1 {
     0.01em 0.02em 0.01em #212121, 0.03em 0.02em 0.01em #121212, 0.02em 0.03em 0.01em #212121,
     0.04em 0.03em 0.01em #121212, 0.03em 0.04em 0.01em #212121, 0.05em 0.04em 0.01em #121212,
     0.04em 0.05em 0.01em #212121, 0.06em 0.05em 0.01em #121212, 0.05em 0.06em 0.01em #212121,
-    0.07em 0.06em 0.01em #121212, 0.06em 0.07em 0.01em #212121, 0.08em 0.07em 0.01em #121212; /* multiple text shadows */
-  cursor: not-allowed; /* sets other type of cursor on hover */
+    0.07em 0.06em 0.01em #121212, 0.06em 0.07em 0.01em #212121, 0.08em 0.07em 0.01em #121212;
+  cursor: not-allowed;
 }
 
 h2 {
@@ -230,7 +208,7 @@ h2 {
   letter-spacing: -0.005em;
   line-height: 1.3;
   text-align: center;
-  text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), 0.06em 0.06em 0 #121212; /* fallback text shadows */
+  text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), 0.06em 0.06em 0 #121212;
   text-shadow: 0.03em 0.03em 0 var(--surface-dark-grey), 0.06em 0.06em 0 var(--background-dark-grey);
 }
 
@@ -290,7 +268,6 @@ figcaption {
 }
 
 img + figcaption {
-  /* adjacent sibling combinator */
   margin-top: 2em;
   text-align: center;
 }
@@ -320,7 +297,6 @@ details {
 }
 
 h3 ~ p {
-  /* general sibling combinator */
   margin: 1em 0;
   font-style: italic;
 }
@@ -332,7 +308,6 @@ dt {
 }
 
 section[aria-label="changelog"] strong {
-  /* attribute selector */
   font-weight: 500;
   color: inherit;
 }
@@ -372,7 +347,7 @@ a {
   text-underline-offset: 0.03em;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; /* transition for all properties */
+  transition: all 0.2s ease-in-out;
 }
 
 a:link {
@@ -395,7 +370,6 @@ a:focus {
 }
 
 a:hover {
-  /* (user-action or dynamic) pseudo-class selector */
   -webkit-text-decoration-color: transparent;
   text-decoration-color: transparent;
   color: #0fb55e;
@@ -403,12 +377,11 @@ a:hover {
 }
 
 a:active {
-  font-weight: 700; /* bold */
+  font-weight: 700;
 }
 
 a[href*="http"]::after {
-  /* (special) pseudo-element selector */
-  content: ""; /* empty string */
+  content: "";
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -422,7 +395,7 @@ a[href*="http"]::after {
   background-position: center;
   -webkit-transition: background-image 0.2s ease-in-out;
   -o-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out; /* transition just for the background-image property */
+  transition: background-image 0.2s ease-in-out;
 }
 
 a[href^="https"]::after {
@@ -462,11 +435,11 @@ section[aria-labelledby="web-dev-title"] > ul > li:first-child {
 
 section ul ul {
   margin-left: 4ch;
-  list-style-type: thumbs; /* from @counter-style  */
+  list-style-type: thumbs; /* from @counter-style */
 }
 
 section ul li:nth-child(2) ul > li {
-  list-style-type: circle; /* fallback list style type */
+  list-style-type: circle;
   list-style-type: "\1F44D ";
 }
 
@@ -483,7 +456,6 @@ section.further-info ol {
 }
 
 ol li {
-  /* descendant combinator */
   padding-bottom: 0.5em;
 }
 
@@ -498,7 +470,7 @@ aside ul {
 
 dt {
   margin-top: 1em;
-  font-weight: bold; /* 700 */
+  font-weight: bold;
 }
 
 dd {
@@ -549,7 +521,7 @@ hr {
 }
 
 img {
-  display: block; /* block box (outer display type) */
+  display: block;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   -o-transition: transform 0.2s;
@@ -702,7 +674,7 @@ kbd {
   background-color: #eeeeee;
   background-color: var(--kbd-background);
   -webkit-box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7);
-  box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7); /* inset for inner shadow */
+  box-shadow: inset 0 0.01em 0.1em rgba(0, 0, 0, 0.2), 0 0.2em 0 0 rgba(255, 255, 255, 0.7);
   white-space: nowrap;
 }
 
@@ -766,7 +738,6 @@ div.code-toolbar > div.toolbar > div.toolbar-item > span,
 /*=====================================================================*/
 
 header {
-  /* flex container */
   z-index: 6;
   position: -webkit-sticky;
   position: sticky;
@@ -820,8 +791,6 @@ body:not(.scrolled) header {
 }
 
 @supports not ((position: -webkit-sticky) or (position: sticky)) {
-  /* "if the browser doesn't support the 'position: sticky;' declaration" */
-
   header {
     position: absolute;
     width: 100%;
@@ -868,7 +837,6 @@ header svg {
 }
 
 .typewriter > .text {
-  /* child combinator */
   overflow: hidden;
   max-width: 0;
   white-space: nowrap;
@@ -946,10 +914,9 @@ nav a.active:hover {
 /*== nav icon ==*/
 
 #nav-icon {
-  /* id selector */
-  all: unset; /* resets all properties (in this case of the button element) */
+  all: unset;
   display: none;
-  z-index: 9; /* should always be on top of everything else */
+  z-index: 9;
   position: relative;
   margin: 10px;
   width: 30px;
@@ -1136,7 +1103,6 @@ aside li a[href*="http"]::after {
 /*== greeting ==*/
 
 div.heading {
-  /* "selecting all div elements with a class of heading" */
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   font-size: 8.4rem;
@@ -1160,7 +1126,6 @@ div.heading:hover {
 
 @media only screen and (min-width: 991px) {
   section.hello-world-program {
-    /* grid container */
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -1203,7 +1168,6 @@ div.heading:hover {
 /*== web dev ==*/
 
 .web-dev {
-  /* multicol container */
   -webkit-columns: 3 40ch;
   -moz-columns: 3 40ch;
   columns: 3 40ch;
@@ -1249,7 +1213,7 @@ thead {
 }
 
 thead th {
-  font-weight: 800; /* extra/ultra bold */
+  font-weight: 800;
 }
 
 tbody td {
@@ -1270,7 +1234,7 @@ td {
 }
 
 th {
-  font-weight: 600; /* semi bold */
+  font-weight: 600;
   background-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1394,7 +1358,7 @@ footer {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; /* stop user from selecting text of button */
+  user-select: none;
 }
 
 #button:focus-visible,
@@ -1510,7 +1474,7 @@ p[lang="ja"] {
 }
 
 details > p:last-of-type {
-  clear: right; /* clear right float from the japanese sentence */
+  clear: right;
   margin-top: 1.35em;
 }
 
@@ -1629,7 +1593,7 @@ dialog p,
   letter-spacing: -0.005em;
   line-height: 1.3;
   text-align: center;
-  text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), 0.06em 0.06em 0 #121212; /* fallback text shadows */
+  text-shadow: 0.03em 0.03em 0 rgba(255, 255, 255, 0.05), 0.06em 0.06em 0 #121212;
   text-shadow: 0.03em 0.03em 0 var(--surface-dark-grey), 0.06em 0.06em 0 var(--background-dark-grey);
 }
 
@@ -1714,7 +1678,7 @@ dialog p,
     overflow-y: auto;
     z-index: 7;
     position: fixed;
-    inset: 0; /* shorthand for top, right, bottom and left - but support is insufficient at the moment, June 2022 (see supports at-rule below) */
+    inset: 0; /* support is insufficient at the moment, June 2022 (see supports at-rule below) */
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);

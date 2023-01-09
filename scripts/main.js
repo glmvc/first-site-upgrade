@@ -1,19 +1,3 @@
-/* I am a JavaScript comment. Browsers ignore me as they render the code. Therefore I am not visible to users. Only if you look at the code, you can see me. Use me to explain important or complicated sections of code so that when you return to the code after a long time, you still know what you have coded. This is also very useful for other coders viewing your code. */
-
-/*
-  It is possible
-  to write me across
-  multiple lines...
-*/
-
-// ... or like this on a single line.
-
-//=====================================================================
-//=====================================================================
-// "actual" JS code (using jQuery) starts below
-//=====================================================================
-//=====================================================================
-
 //=====================================================================
 // DOM ready
 //=====================================================================
@@ -75,7 +59,7 @@ $(document).ready(function () {
     let userName = -1;
 
     while (userName == -1 || (userName != null && userName.length > maxLength)) {
-      userName = window.prompt(`Please enter your username. (maximum characters: ${maxLength})`); // template string
+      userName = window.prompt(`Please enter your username. (maximum characters: ${maxLength})`);
     }
 
     if (!userName) {
