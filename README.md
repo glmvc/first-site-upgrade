@@ -6,7 +6,7 @@
 
 - #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade website") and see for yourself 👀
 
-- #### check the [changelog on github](changelog.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://glmvc.github.io/first-site/ "first site website") 📋
+- #### check the [changelog on github](CHANGELOG.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://glmvc.github.io/first-site/ "first site website") 📋
 
 - #### do you notice anything that's wrong, not ideal or doesn't follow good practice? 😵‍💫
     - let me know in a message or create an issue

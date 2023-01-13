@@ -3,30 +3,18 @@
 #
 # editorconfig.org
 
-# top-most editorconfig file
+# this file is the top-most editorconfig file
 root = true
 
 #
-# every file
+# all files
 [*]
-
-# default charset
 charset = utf-8
-
-# 2 space indentation
 indent_style = space
 indent_size = 2
-
-# max line length
 max_line_length = 120
-
-# unix-style newlines
 end_of_line = lf
-
-# newline ending
 insert_final_newline = true
-
-# remove any whitespace characters preceding newline characters
 trim_trailing_whitespace = true
 
 #
