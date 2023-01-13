@@ -215,5 +215,6 @@ the following steps use **git on the command line**, but if you're already famil
     - [markdown to html converter](https://codebeautify.org/markdown-to-html "codebeautify markdown to html converter tool")
     - [css autoprefixer](https://autoprefixer.github.io/ "css autoprefixer online tool")
     - [pagespeed insights svg api](https://github.com/ankurparihar/readme-pagespeed-insights "pagespeed insights for readme github repository by ankurparihar")
+    - [gitignore files generator](https://gitignore.io/ "gitignore files generator website")
 
 > created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer "front-end web developer article on mdn") from the [MDN Web Docs](https://developer.mozilla.org/ "mdn web docs homepage") (previously Mozilla Developer Network and formerly Mozilla Developer Center)
