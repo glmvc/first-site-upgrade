@@ -1,7 +1,7 @@
 # use .prettierignore to ignore (i.e. not reformat)
 # certain folders and files completely
 #
-# prettier.io
+# prettier.io/docs/en/ignore.html
 
 # folders
 first-site

@@ -1,13 +1,6 @@
 {
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
   "editor.renderWhitespace": "trailing",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.useEditorConfig": true,
-  "prettier.printWidth": 120,
-  "editor.wordWrapColumn": 120,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.suggest.showStatusBar": true,
-  "files.insertFinalNewline": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useEditorConfig": true
 }
