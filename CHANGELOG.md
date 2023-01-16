@@ -12,21 +12,27 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [ ] **Dark- and Lightmode switcher**
 
-- [ ] _Update_ **last edited date** and **time** within the detail area in the footer _automatically_
+- [ ] *Update* **last edited date** and **time** within the detail area in the footer *automatically*
 
 ---
 
 ## ⚙️ General
 
-- [x] **Space indentation** _changed_ from four to two spaces (personal preference)
+- [x] Useful **tools** and **libraries** *now in use*
 
-- [x] A **newline** _added_ at the end of each file (best practice)
+- [x] **Code structure** *improved* with comments
 
-- [x] HTML, CSS and JavaScript **comments** _explained_ in more detail
+- [x] **Code formatting** and **styling** now primarily *handled* by [Visual Studio Code settings](https://code.visualstudio.com/ "Visual Studio Code homepage"), [EditorConfig](https://editorconfig.org/ "EditorConfig homepage") and [Prettier](https://prettier.io/ "Prettier homepage"):
 
-- [x] **Code structure** _improved_ with comments
+    - [x] **Space indentation** *changed* from four to two spaces
 
-- [x] Useful **tools** and **libraries** _now in use_
+    - [x] **Maximum line length** *set* to 120
+
+    - [x] **Line endings** for text files *normalized* and *specified* to unix-style "lf" (line feed)
+
+    - [x] A **newline** *added* at the end of each file
+
+    - [x] **Trailing whitespace** *trimmed*
 
 ---
 
@@ -34,15 +40,15 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ### &lt;head&gt;
 
-- [x] Document **language** _set_ to English (US):
+- [x] Document **language** *set* to English (US):
 
     `<html lang="en-US">`
 
-- [x] Document **text direction** _set_ to left-to-right:
+- [x] Document **text direction** *set* to left-to-right:
 
     `<html dir="ltr">`
 
-- [x] Additional **meta data** _added_ (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
+- [x] Additional **meta data** *added* (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
 
     `<meta name="author" content="glmvc">`
 
@@ -80,19 +86,19 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<meta name="twitter:creator" content="@glmvc">`
 
-- [x] Document **title** _changed_ to "My Upgraded First Site":
+- [x] Document **title** *changed* to "My Upgraded First Site":
 
     `<title>My Upgraded First Site</title>`
 
-- [x] **Linking** to the new [normalize.css](https://necolas.github.io/normalize.css/ "Normalize.css homepage") file _added_:
+- [x] **Linking** to the new [normalize.css](https://necolas.github.io/normalize.css/ "Normalize.css homepage") file *added*:
 
     `<link rel="stylesheet" href="styles/normalize.css">`
 
-- [x] **Linking** to [Google's online font service](https://fonts.google.com/) _removed_ and instead **new stylesheet** (`fonts.css`) _linked_:
+- [x] **Linking** to [Google's online font service](https://fonts.google.com/ "Google Fonts homepage") *removed* and instead **new stylesheet** (`fonts.css`) *linked*:
 
     `<link rel="stylesheet" href="styles/fonts.css">`
 
-- [x] **Favicons** for multiple device / browser support _added_:
+- [x] **Favicons** for multiple device / browser support *added*:
 
     `<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">`
 
@@ -104,11 +110,11 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<link rel="manifest" href="site.webmanifest">`
 
-- [x] **Internal stylesheet** _added_ (just for demonstration):
+- [x] **Internal stylesheet** *added* (just for demonstration):
 
     `<style>...</style>`
 
-- [x] New **scripts** ([jQuery](https://jquery.com/ "jQuery homepage") & [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer "Image Map Resizer GitHub repository") library) _added_ and **script loading strategy** _changed_ (now within the head + `defer` attribute for `main.js`):
+- [x] New **scripts** ([jQuery](https://jquery.com/ "jQuery homepage") & [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer "Image Map Resizer GitHub repository") library) *added* and **script loading strategy** *changed* (now within the head + `defer` attribute for `main.js`):
 
     `<script src="scripts/jquery-3.6.0.min.js"></script>`
 
@@ -116,7 +122,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<script src="scripts/main.js" defer></script>`
 
-- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") **CSS and JavaScript** files _linked_ in the created source code (`code.html`) and changelog (`changelog.html`) documents:
+- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") **CSS and JavaScript** files *linked* in the created source code (`code.html`) and changelog (`changelog.html`) documents:
 
     `<link rel="stylesheet" href="styles/prism.css">`
 
@@ -126,13 +132,13 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ### &lt;body&gt;
 
-- [x] **Content** (textual) _adjusted_ to the changes
+- [x] **Content** (textual) *adjusted* to the changes
 
-- [x] **Accessibility** (A11y) aspects _improved_ and _added_ where they were missing
+- [x] **Accessibility** (A11y) aspects *improved* and *added* where they were missing
 
-- [x] **Semantic elements** _used_ appropriately
+- [x] **Semantic elements** *used* appropriately
 
-- [x] **Semantic elements** for structuring content _now in use_:
+- [x] **Semantic elements** for structuring content *now in use*:
 
     `<header>...</header>` with `<nav>...</nav>` within
 
@@ -144,75 +150,75 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<footer>...</footer>`
 
-- [x] **Horizontal rules** _added_ to divide the sections:
+- [x] **Horizontal rules** *added* to divide the sections:
 
     `<hr>`
 
-- [x] **SVG logo** _added_ inline within the header (within a hyperlink to the homepage):
+- [x] **SVG logo** *added* inline within the header (within a hyperlink to the homepage):
 
     `<svg width="276" height="255" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>` with `<path .../>`'s within
 
-- [x] Two `div` **container** _added_ after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
+- [x] Two `div` **container** *added* after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
 
-- [x] **Navigation** with hyperlinks to the homepage and other HTML documents (`index.html`, `code.html`, `changelog.html` and previous `index.html`) _added_ within the header:
+- [x] **Navigation** with hyperlinks to the homepage and other HTML documents (`index.html`, `code.html`, `changelog.html` and previous `index.html`) *added* within the header:
 
     `<nav>...</nav>`
 
-- [x] A `button` element for the **mobile navigation** _added_ with ten `span` elements for the icon within:
+- [x] A `button` element for the **mobile navigation** *added* with ten `span` elements for the icon within:
 
     `<button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">`
 
-- [x] If JavaScript is disabled, a **warning message** will be _displayed now_:
+- [x] If JavaScript is disabled, a **warning message** will be *displayed now*:
 
     `<noscript>...</noscript>`
 
-- [x] **Outgoing hyperlinks** _adapted_ with the `target` attribute so that they open in a new tab instead of the current one:
+- [x] **Outgoing hyperlinks** *adapted* with the `target` attribute so that they open in a new tab instead of the current one:
 
     `target="_blank"` attribute
 
-- [x] A `title` attribute _added_ to hyperlinks and images to give them **advisory information** (hovering over them will also open a **descriptive tooltip**):
+- [x] A `title` attribute *added* to hyperlinks and images to give them **advisory information** (hovering over them will also open a **descriptive tooltip**):
 
     `title="description"` attribute
 
-- [x] **Sidebar** with hyperlinks to social media accounts _added_:
+- [x] **Sidebar** with hyperlinks to social media accounts *added*:
 
     `<aside>...</aside>`
 
-- [x] **Character references** for emojis _added_ within the sidebar:
+- [x] **Character references** for emojis *added* within the sidebar:
 
     `&#128025;` and `&#128038;`
 
-- [x] **Character entity references** _added_ instead of HTML syntax characters:
+- [x] **Character entity references** *added* instead of HTML syntax characters:
 
     `&amp;`, `&apos;`, `&quot;`, `&lt;` and `&gt;`
 
-- [x] The image _is now_ an **image map with hyperlink-areas**:
+- [x] The image *is now* an **image map with hyperlink-areas**:
 
     `<map name="hello-world">...</map>`
 
     `<area alt="alternative text" title="point map title" href="https..." target="_blank" shape="circle" coords="x,y,radius">`
 
-- [x] **Quotations** and **citation** _added_ within the main content:
+- [x] **Quotations** and **citation** *added* within the main content:
 
     `<blockquote>...</blockquote>` and `<q>...</q>` with `cite` attribute
 
     `<cite>...</cite>`
 
-- [x] **Important text content** _marked_:
+- [x] **Important text content** *marked*:
 
     `<mark>...</mark>`
 
-- [x] **Line breaks** _added_ to make paragraphs easier to read:
+- [x] **Line breaks** *added* to make paragraphs easier to read:
 
     `<br>`
 
-- [x] **Emphasis** and **importance** _added_ for certain words and text passages:
+- [x] **Emphasis** and **importance** *added* for certain words and text passages:
 
     `<em>...</em>`
 
     `<strong>...</strong>`
 
-- [x] **Video** _added_ within the main content (with a fallback):
+- [x] **Video** *added* within the main content (with a fallback):
 
     `<video width="400" controls muted playsinline autoplay loop preload="auto">...</video>`
 
@@ -222,23 +228,23 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<p>Your browser doesn't support HTML 5 video. Here is a <a href="videos/hello-world.mp4">link to the video</a> instead.</p>`
 
-- [x] **Description list** _added_ to introduce HTML, CSS and JS:
+- [x] **Description list** *added* to introduce HTML, CSS and JS:
 
     `<dl>...</dl>` with `<dt>...</dt>` and `<dd>...</dd>` within
 
-- [x] **Abbreviations** _added_ to abbreviate HTML, CSS and JS:
+- [x] **Abbreviations** *added* to abbreviate HTML, CSS and JS:
 
     `<abbr title="abbreviation title">...</abbr>`
 
-- [x] A **nested unordered list** _added_
+- [x] A **nested unordered list** *added*
 
-- [x] A **complex table** about planet data _added_:
+- [x] A **complex table** about planet data *added*:
 
     `<table>...</table>` with `<caption>...</caption>`, `<colgroup>...</colgroup>`, `<col>...</col>`, `<thead>...</thead>`, `<tbody>...</tbody>`, `<tr>...</tr>`, `<th>...</th>`, `<td>...</td>` and `<tfoot>...</tfoot>` within
 
-- [x] Further sources _added_ to an **ordered list**
+- [x] Further sources *added* to an **ordered list**
 
-- [x] A **soundtrack** _added_ within the footer (with a fallback):
+- [x] A **soundtrack** *added* within the footer (with a fallback):
 
     `<audio id="audio" controls loop preload="auto">...</audio>`
 
@@ -248,47 +254,47 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>`
 
-- [x] **Figure** and **figure caption** _added_ to the image map, video and audio:
+- [x] **Figure** and **figure caption** *added* to the image map, video and audio:
 
     `<figure>...</figure>`
 
     `<figcaption>...</figcaption>`
 
-- [x] Contact details (fake) _added_ as an **address** within the footer:
+- [x] Contact details (fake) *added* as an **address** within the footer:
 
     `<address>...</address>`
 
     `href="tel:..."` and `href="mailto:..."` attributes
 
-- [x] **Iframe** for a map ([Google Maps](https://www.google.com/maps/about/#!/ "Google Maps about page")) _added_ within the address in the footer:
+- [x] **Iframe** for a map ([Google Maps](https://www.google.com/maps/about/#!/ "Google Maps about page")) *added* within the address in the footer:
 
     `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border: 0;" loading="lazy"></iframe>`
 
-- [x] **Addditional website information** _added_ within a detail area with a summary text in the footer:
+- [x] **Addditional website information** *added* within a detail area with a summary text in the footer:
 
     `<details>...</details>` with `<summary>Info</summary>` within
 
-- [x] A **Japanese sentence** _added_ within the detail area in the footer and `language` attribute _set_ to Japanese:
+- [x] A **Japanese sentence** *added* within the detail area in the footer and `language` attribute *set* to Japanese:
 
     `lang="ja"` attribute
 
-- [x] **Superscript** _added_ for the numbers within the table and birthdate of the website within the detail area in the footer:
+- [x] **Superscript** *added* for the numbers within the table and birthdate of the website within the detail area in the footer:
 
     `<sup>...</sup>`
 
-- [x] **Subscript** _added_ for the chemical formula within the detail area in the footer:
+- [x] **Subscript** *added* for the chemical formula within the detail area in the footer:
 
     `<sub>...</sub>`
 
-- [x] **Date** and **time** _added_ for the birthdate and last update of the website within the detail area in the footer:
+- [x] **Date** and **time** *added* for the birthdate and last update of the website within the detail area in the footer:
 
     `<time datetime="YYYY-MM-ddThh:mm">...</time>`
 
-- [x] Last update text and date _added_ as a **small side comment** within the detail area in the footer:
+- [x] Last update text and date *added* as a **small side comment** within the detail area in the footer:
 
     `<small>...</small>`
 
-- [x] **Source codes** _escaped_ for HTML and _added_ as code blocks / snippets to the created source code (`code.html`) and changelog (`changelog.html`) documents using the [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage"):
+- [x] **Source codes** *escaped* for HTML and *added* as code blocks / snippets to the created source code (`code.html`) and changelog (`changelog.html`) documents using the [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage"):
 
     `<kbd>...</kbd>`
 
@@ -298,9 +304,9 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `<samp>...</samp`
 
-- [x] Changelog (`changelog.md`) _converted_ to **HTML code**, _adjusted_ and _added_ to the created changelog (`changelog.html`) document
+- [x] Changelog (`changelog.md`) *converted* to **HTML code**, *adjusted* and *added* to the created changelog (`changelog.html`) document
 
-- [x] **404 document** (`404.html`) _created_ and _adapted_
+- [x] **404 document** (`404.html`) *created* and *adapted*
 
 ### &lt;/body&gt;
 
@@ -308,85 +314,85 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ## &#123; &#125; CSS
 
-- [x] `@font-face` rulesets in the created external stylesheet (`fonts.css`) _now in use_ to _include_ and _load_ the **web fonts** that are used (eot, woff2, woff, ttf, svg and variable):
+- [x] `@font-face` rulesets in the created external stylesheet (`fonts.css`) *now in use* to *include* and *load* the **web fonts** that are used (eot, woff2, woff, ttf, svg and variable):
 
     `@font-face {...}`
 
-- [x] **External stylesheets**, **internal stylesheet** and **inline styling** _added_ (internal and inline styling just for demonstration)
+- [x] **External stylesheets**, **internal stylesheet** and **inline styling** *added* (internal and inline styling just for demonstration)
 
-- [x] Default **margin** & **padding** _set_ to 0 ("reset stylesheet") with the internal stylesheet using the universal selector (`*`):
+- [x] Default **margin** & **padding** *set* to 0 ("reset stylesheet") with the internal stylesheet using the universal selector (`*`):
 
     `* {margin: 0; padding: 0;}`
 
-- [x] **Type** (tag / element), **class** and **ID selectors** _now in use_
+- [x] **Type** (tag / element), **class** and **ID selectors** *now in use*
 
-- [x] **Selector lists** (bad practice as an example too) _now in use_
+- [x] **Selector lists** (bad practice as an example too) *now in use*
 
-- [x] **Descendant**, **child**, **adjacent** and **general sibling combinators** _now in use_:
+- [x] **Descendant**, **child**, **adjacent** and **general sibling combinators** *now in use*:
 
     ` `, `>`, `+` and `~`
 
-- [x] CSS **functions** _now in use_
+- [x] CSS **functions** *now in use*
 
-- [x] **Calc functions** _now in use_ to perform calculations:
+- [x] **Calc functions** *now in use* to perform calculations:
 
     `calc(...)`
 
-- [x] **Natural** (intrinsic) and **extrinsic** (given size) sizes of elements _now in use_
+- [x] **Natural** (intrinsic) and **extrinsic** (given size) sizes of elements *now in use*
 
-- [x] More **values** and **units** _now in use_ (absolute and relative lengths, percentages, numbers etc.)
+- [x] More **values** and **units** *now in use* (absolute and relative lengths, percentages, numbers etc.)
 
-- [x] Different **color values** _now in use_ (rgb / rgba, hexadecimal, color keywords etc.)
+- [x] Different **color values** *now in use* (rgb / rgba, hexadecimal, color keywords etc.)
 
-- [x] Global website **colors** and **spacings** _set_ with variables using the `:root` pseudo-class:
+- [x] Global website **colors** and **spacings** *set* with variables using the `:root` pseudo-class:
 
     `:root {...}`
 
-- [x] Standard box model (`content-box`) _changed_ to the **alternative box model** (`border-box`) for all elements in the document:
+- [x] Standard box model (`content-box`) *changed* to the **alternative box model** (`border-box`) for all elements in the document:
 
     `html {box-sizing: border-box;}`
 
     `*, *::before, *::after {box-sizing: inherit;}`
 
-- [x] **Font size** of the `html` element _set_ to 62.5% (because it's equal to 10px in most browsers) to make it easier to calculate `rem` units:
+- [x] **Font size** of the `html` element *set* to 62.5% (because it's equal to 10px in most browsers) to make it easier to calculate `rem` units:
 
     `html {font-size: 62.5%;}`
 
-- [x] **Font sizes** _adapted_ to a fluid typography scale using `clamp` functions:
+- [x] **Font sizes** *adapted* to a fluid typography scale using `clamp` functions:
 
     `font-size: clamp(8.4rem, 7.8rem + 1.875vw, 10.5rem);`
 
-- [x] Special pseudo-element for styling **selections** / **highlighting** _now in use_:
+- [x] Special pseudo-element for styling **selections** / **highlighting** *now in use*:
 
     `::selection`
 
-- [x] Special pseudo-element for styling **marker boxes** _now in use_:
+- [x] Special pseudo-element for styling **marker boxes** *now in use*:
 
     `::marker`
 
     `summary::marker`
 
-- [x] **Horizontal overflow** _set_ to hidden on the `body` element because of unwanted horizontal scrolling especially on mobile devices:
+- [x] **Horizontal overflow** *set* to hidden on the `body` element because of unwanted horizontal scrolling especially on mobile devices:
 
     `overflow-x: hidden;`
 
-- [x] **Backgrounds** _added_ (background shorthand and longhand properties)
+- [x] **Backgrounds** *added* (background shorthand and longhand properties)
 
-- [x] **Borders** _added_ (border shorthand and longhand properties)
+- [x] **Borders** *added* (border shorthand and longhand properties)
 
-- [x] **Fallback width** for the `.page-wrapper` container _added_ for browsers that do not support the `vw` unit:
+- [x] **Fallback width** for the `.page-wrapper` container *added* for browsers that do not support the `vw` unit:
 
     `width: 90%;`
 
-- [x] **Green shadow** _styled_ left and right of the `.page-wrapper` container:
+- [x] **Green shadow** *styled* left and right of the `.page-wrapper` container:
 
     `box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);`
 
-- [x] **Utility classes** and **rulesets** _created_ for repeating CSS tasks like horizontal centering of elements for example:
+- [x] **Utility classes** and **rulesets** *created* for repeating CSS tasks like horizontal centering of elements for example:
 
     `.center {margin-right: auto; margin-left: auto;}`
 
-- [x] **Scrollbars** (both vertical and horizontal) _styled_ using WebKit extensions:
+- [x] **Scrollbars** (both vertical and horizontal) *styled* using WebKit extensions:
 
     `.styled-scrollbars::-webkit-scrollbar {...}`
 
@@ -396,11 +402,11 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `.styled-scrollbars::-webkit-scrollbar-thumb:hover {...}`
 
-- [x] **Transitions** _now in use_:
+- [x] **Transitions** *now in use*:
 
     `transition: <property> <duration> <timing-function>;`
 
-- [x] **Mouse cursor type** _changed_ accordingly and as needed:
+- [x] **Mouse cursor type** *changed* accordingly and as needed:
 
     `cursor: not-allowed;`
 
@@ -410,21 +416,21 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `cursor: crosshair;`
 
-- [x] **Text content** _styled_ (headings, paragraphs, lists, captions, quotes etc.)
+- [x] **Text content** *styled* (headings, paragraphs, lists, captions, quotes etc.)
 
-- [x] **Hyperlinks** _styled_ with pseudo-class selectors:
+- [x] **Hyperlinks** *styled* with pseudo-class selectors:
 
     `a:link`, `a:visited`, `a:focus`, `a:hover` and `a:active`
 
-- [x] SVG icon _attached_ to **external hyperlinks** with an attribute selector and a special pseudo-element selector:
+- [x] SVG icon *attached* to **external hyperlinks** with an attribute selector and a special pseudo-element selector:
 
     `a[href*="http"]::after`
 
-- [x] **Visual** / **functional content** _styled_ (images, table, button etc.)
+- [x] **Visual** / **functional content** *styled* (images, table, button etc.)
 
-- [x] Website **layout** _styled_ (using flex, grid, multicol, positioning, floating etc.)
+- [x] Website **layout** *styled* (using flex, grid, multicol, positioning, floating etc.)
 
-- [x] **Animations** using `@keyframes` at-rules _now in use_ for the glitch, typewriter and blinking caret effect:
+- [x] **Animations** using `@keyframes` at-rules *now in use* for the glitch, typewriter and blinking caret effect:
 
     `animation: glitch 600ms infinite;`
 
@@ -432,49 +438,49 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `animation: blink 1s step-end infinite;`
 
-- [x] `@supports` at-rule _now in use_ to specify declarations that depend on a browser's **support for a specific CSS feature**:
+- [x] `@supports` at-rule *now in use* to specify declarations that depend on a browser's **support for a specific CSS feature**:
 
     `@supports not ((position: -webkit-sticky) or (position: sticky)) {..}`
 
     `@supports not (inset: 0) {...}`
 
-- [x] **Main heading wrapper** (`div.heading`) and **images** _will now rotate_ a bit on hover:
+- [x] **Main heading wrapper** (`div.heading`) and **images** *will now rotate* a bit on hover:
 
     `transform: rotate(-1deg);`
 
     `transform: rotate(0.005turn);`
 
-- [x] **Main heading** (`<h1>`) _set_ as inline box (outer display type) so that the click easter egg really only affects the text and not the full width / block:
+- [x] **Main heading** (`<h1>`) *set* as inline box (outer display type) so that the click easter egg really only affects the text and not the full width / block:
 
     `display: inline;`
 
-- [x] **Main heading** (`<h1>`) _wrapped_ in a `div` container with the class `.heading` to center it:
+- [x] **Main heading** (`<h1>`) *wrapped* in a `div` container with the class `.heading` to center it:
 
     `div.heading {text-align: center;}`
 
-- [x] **Subheading** (`<h2>`) **color** _set_ to `whitesmoke` with inline styling (just for demonstration):
+- [x] **Subheading** (`<h2>`) **color** *set* to `whitesmoke` with inline styling (just for demonstration):
 
     `style="color: whitesmoke;"`
 
-- [x] **Blur filter** _added_ to the JavaScript code image to hide the click easter egg:
+- [x] **Blur filter** *added* to the JavaScript code image to hide the click easter egg:
 
     `filter: blur(5px);`
 
-- [x] **Writing modes** (block & inline dimensions) _changed_ to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
+- [x] **Writing modes** (block & inline dimensions) *changed* to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
 
     `writing-mode: vertical-lr;`
 
     `writing-mode: vertical-rl;`
 
-- [x] **Borders of the table** _styled_ to collapse:
+- [x] **Borders of the table** *styled* to collapse:
 
     `table {border-collapse: collapse;}`
 
-- [x] **Caption of the table** _positioned_ to the bottom (visually):
+- [x] **Caption of the table** *positioned* to the bottom (visually):
 
     `table caption {caption-side: bottom;}`
 
-- [x] _Adjusted_ how **whitespace** and **word breaking** / **wrapping** are treated:
+- [x] *Adjusted* how **whitespace** and **word breaking** / **wrapping** are treated:
 
     `white-space: nowrap;`
 
@@ -482,37 +488,37 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `overflow-wrap: break-word;`
 
-- [x] The website _is now_ **full responsive** (using media queries, meta viewport, layout techniques etc.)
+- [x] The website *is now* **full responsive** (using media queries, meta viewport, layout techniques etc.)
 
-- [x] Website _styled_ to be **printable**:
+- [x] Website *styled* to be **printable**:
 
     `@media print {...}`
 
-- [x] Users who set the settings to **minimize the amount of non-essential motion** _are respected_ by turning off all animations, transitions and the like:
+- [x] Users who set the settings to **minimize the amount of non-essential motion** *are respected* by turning off all animations, transitions and the like:
 
     `@media (prefers-reduced-motion: reduce) {...}`
 
-- [x] **Vendor prefixes** _added_ with the [Autoprefixer CSS online tool](https://autoprefixer.github.io/ "Autoprefixer CSS online tool website") for optimal compatibility / browser support
+- [x] **Vendor prefixes** *added* with the [Autoprefixer CSS online tool](https://autoprefixer.github.io/ "Autoprefixer CSS online tool website") for optimal compatibility / browser support
 
 ---
 
 ## &#125; &#041; ; JavaScript
 
-- [x] [jQuery library](https://jquery.com/ "jQuery homepage") _now in use_ and most code in `main.js` rewritten using its syntax
+- [x] [jQuery library](https://jquery.com/ "jQuery homepage") *now in use* and most code in `main.js` rewritten using its syntax
 
-- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") _now in use_ for the created source code (`code.html`) and changelog (`changelog.html`) documents
+- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") *now in use* for the created source code (`code.html`) and changelog (`changelog.html`) documents
 
-- [x] At a **given scrolling value** (defined in the `checkScroll` function) the class `scrolled` _is now set_ on the `body` element:
+- [x] At a **given scrolling value** (defined in the `checkScroll` function) the class `scrolled` *is now set* on the `body` element:
 
     `if ($(window).scrollTop() > 23) {$('body').addClass('scrolled');}`
 
     `else {$('body').removeClass('scrolled');}`
 
-- [x] The `checkScroll` function is _called_ on the document `scroll` event:
+- [x] The `checkScroll` function is *called* on the document `scroll` event:
 
     `$(window).on('scroll', function () { checkScroll(); });`
 
-- [x] A **variable** and HTML and CSS **logic** for the text of the typewriter effect _declared_:
+- [x] A **variable** and HTML and CSS **logic** for the text of the typewriter effect *declared*:
 
     `const text = 'glmvc';`
 
@@ -520,13 +526,13 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `$('#typewriter-text').css('--characters', text.length + 6);`
 
-- [x] Clicking on the **navigation icon** (`button`) will _toggle_ the class `open` to it and the class `nav-open` to the `body` element:
+- [x] Clicking on the **navigation icon** (`button`) will *toggle* the class `open` to it and the class `nav-open` to the `body` element:
 
     `$(this).toggleClass('open');`
 
     `$('body').toggleClass('nav-open');`
 
-- [x] Clicking on the **navigation icon** (`button`) will also _change_ the `aria-expanded` attribute accordingly:
+- [x] Clicking on the **navigation icon** (`button`) will also *change* the `aria-expanded` attribute accordingly:
 
     `let isExpanded = $(this).attr('aria-expanded');`
 
@@ -534,7 +540,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `else {$(this).attr('aria-expanded', 'false');}`
 
-- [x] The **username input** for the **personalized welcome message** _is now limited_ to a certain number of characters:
+- [x] The **username input** for the **personalized welcome message** *is now limited* to a certain number of characters:
 
     `let maxLength = 50;`
 
@@ -542,11 +548,11 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `while (userName == -1 || (userName != null && userName.length > maxLength)) { userName = window.prompt(...) }`
 
-- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/ "Image Map Resizer GitHub repository") _now in use_ so that the image map works responsive:
+- [x] [Image Map Resizer library](https://github.com/davidjbradshaw/image-map-resizer/ "Image Map Resizer GitHub repository") *now in use* so that the image map works responsive:
 
     `$('map').imageMapResize();`
 
-- [x] **Image map** and **figure caption** _now changing_ accordingly on clicking the images:
+- [x] **Image map** and **figure caption** *now changing* accordingly on clicking the images:
 
     `let imageMap;` declares global variable
 
@@ -556,10 +562,10 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `$('img + figcaption').html('...');` inside the if and else conditional statements: for the correct figure caption
 
-- [x] **Audio volume** of the `audio` element _set_ to 50%:
+- [x] **Audio volume** of the `audio` element *set* to 50%:
 
     `let audio = document.getElementById('audio');`
 
     `audio.volume = 0.5;`
 
-- [x] **Birthday banner** _added_ to show on December 6 every year as a small easter egg using date comparison and the `dialog` element
+- [x] **Birthday banner** *added* to show on December 6 every year as a small easter egg using date comparison and the `dialog` element
