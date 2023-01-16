@@ -1,8 +1,8 @@
-# :clipboard: Changelog
+# 📋 Changelog
 
 This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "First site") and the upgraded version of it here.
 
-## &#128640; For The Future
+## 🚀 For The Future
 
 - [ ] **Scroll to top button**
 
@@ -16,7 +16,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ---
 
-## :gear: General
+## ⚙️ General
 
 - [x] **Space indentation** _changed_ from four to two spaces (personal preference)
 
