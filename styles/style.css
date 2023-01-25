@@ -1,13 +1,24 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 10 version
-*/
+/*=========================================================*\
+|* style.css
+|* this stylesheet uses the ??? methodology
+|*
+|* @table-of-contents
+|* ||global
+|*   §§custom properties (variables)
+|*   §§utility classes
+|* ||styling
+|*   §§text
+|*
+|*
+|* Prefixed by https://autoprefixer.github.io
+|* PostCSS: v8.4.14,
+|* Autoprefixer: v10.4.7
+|* Browsers: last 10 version
+\*========================================================*/
 
-/*=====================================================================*/
-/*== custom properties (variables) ==*/
-/*=====================================================================*/
+/*========================================================*\
+| custom properties (variables)
+\*========================================================*/
 
 :root,
 ::before,
@@ -30,9 +41,8 @@
   --website-padding: 3rem;
 }
 
-/*=====================================================================*/
-/*== general ==*/
-/*=====================================================================*/
+/*========================================================*\
+\* general */
 
 html {
   -webkit-box-sizing: border-box;
@@ -170,10 +180,11 @@ body {
   background-color: var(--primary-green);
 }
 
-/*=====================================================================*/
-/*== styling ==*/
+/*========================================================*\
+|* styling */
 
-/*== text ==*/
+/*
+|* text */
 
 h1,
 h2,
@@ -510,8 +521,11 @@ section[aria-label="changelog"] .future-list li::before {
   filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.7));
 }
 
-/*=====================================================================*/
-/*== visuals ==*/
+/*
+*
+*=========================================================
+* §§ visuals
+*/
 
 hr {
   margin: 40px 0;

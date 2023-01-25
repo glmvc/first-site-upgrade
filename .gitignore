@@ -1,12 +1,16 @@
-# a .gitignore file specifies intentionally untracked files that git should ignore
+#===========================================================
+# a .gitignore file specifies intentionally untracked files
+# that git should ignore
 # files already tracked by git are not affected
 #
 # git-scm.com/docs/gitignore
 #
-# created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,visualstudiocode,archives
-# edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,visualstudiocode,archives
+# created with gitignore.io
+#===========================================================
 
-### macos ###
+#===========================================================
+# macos
+
 # general
 .DS_Store
 .AppleDouble
@@ -38,7 +42,8 @@ Temporary Items
 *.icloud
 
 
-### linux ###
+#===========================================================
+# linux
 *~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
@@ -54,7 +59,9 @@ Temporary Items
 .nfs*
 
 
-### windows ###
+#===========================================================
+# windows
+
 # windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -80,10 +87,11 @@ $RECYCLE.BIN/
 # windows shortcuts
 *.lnk
 
+#===========================================================
+# archives
 
-### archives ###
-# it's better to unpack these files and commit the raw source because
-# git has its own built in compression methods
+# unpack these files and commit the raw source
+# because git has its own built in compression methods
 *.7z
 *.jar
 *.rar
@@ -115,8 +123,8 @@ $RECYCLE.BIN/
 *.msp
 *.txz
 
-
-### visual studio code ###
+#===========================================================
+# visual studio code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

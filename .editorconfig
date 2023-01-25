@@ -1,12 +1,16 @@
+#===========================================================
 # editorconfig helps maintain consistent coding styles
-# for multiple developers working on the same project across various editors and ides
+# for multiple developers working on the same project
+# across various editors and ides
 #
 # editorconfig.org
+#===========================================================
 
-# this file is the top-most editorconfig file
+#===========================================================
+# top-most editorconfig file
 root = true
 
-#
+#===========================================================
 # all files
 [*]
 charset = utf-8
@@ -17,13 +21,15 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-#
+
+#===========================================================
 # markdown files
 [*.md]
 indent_size = 4
 trim_trailing_whitespace = false
 
-#
+
+#===========================================================
 # ignore paths
 [/first-site/**]
 charset = unset
