@@ -1,10 +1,11 @@
-#===========================================================
+#==========================================================#
 # a .gitattributes file defines attributes per path
 # that should be used by git when performing git actions
 #
 # git-scm.com/docs/gitattributes
-#===========================================================
+#==========================================================#
 
-#===========================================================
-# auto detect text files and perform lf normalization
+#==========================================================#
+# automatic end-of-line conversion for all files
+
 * text=auto

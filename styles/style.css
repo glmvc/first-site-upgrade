@@ -1,30 +1,70 @@
-/*=========================================================*\
-|* style.css
-|* this stylesheet uses the ??? methodology
+/*========================================================*\
+|* @style.css
+|*  $author: glmvc
+|*  $license: mit
+|*  $methodology: [???]
 |*
 |* @table-of-contents
-|* ||global
-|*   §§custom properties (variables)
-|*   §§utility classes
-|* ||styling
-|*   §§text
+|*  || custom properties (variables)
+|*  || general
+|*    || utility classes
+|*    || styling
+|*      || text
+|*      || hyperlinks
+|*      || lists
+|*        * changelog
+|*    || visuals
+|*      || glitch effect
+|*    || code
+|*      || prismjs syntax highlighter library
+|*  || header
+|*    || logo
+|*      || typewriter effect
+|*    || nav
+|*      || active page hyperlink
+|*      || icon
+|*  || main
+|*    || sidebar
+|*    || greeting
+|*    || hello world program
+|*    || web dev
+|*    || planets table
+|*      || zebra striping
+|*  || footer
+|*    || additional page features
+|*      || button
+|*    || contact details
+|*    || info
+|*    || birthday banner
+|*  || further media queries (responsive & accessibility)
+|*    || large width
+|*    || medium width
+|*    || small width (mobile)
+|*      || mobile nav
+|*    || print
+|*    || reduced motion
 |*
+|* @fonts declared in fonts.css
 |*
-|* Prefixed by https://autoprefixer.github.io
-|* PostCSS: v8.4.14,
-|* Autoprefixer: v10.4.7
-|* Browsers: last 10 version
+|* @normalize.css v8.0.1
+|*
+|* @prismjs v1.27.0
+|*
+|* @prefixed by autoprefixer.github.io
+|*  $postcss: v8.4.14,
+|*  $autoprefixer: v10.4.7
+|*  $browsers: last 10 version
 \*========================================================*/
 
 /*========================================================*\
-| custom properties (variables)
+|| custom properties (variables)
 \*========================================================*/
 
 :root,
 ::before,
 ::after,
 ::backdrop {
-  /*== website colors ==*/
+  /* website colors */
   --background-dark-grey: #121212;
   --surface-dark-grey: rgba(255, 255, 255, 0.05);
   --onsurface-white: whitesmoke;
@@ -36,13 +76,15 @@
   --kbd-color: #333333;
   --kbd-background: #eeeeee;
   --kbd-border: #b4b4b4;
-  /*== website spacings ==*/
+
+  /* website spacings */
   --website-margin: 20px;
   --website-padding: 3rem;
 }
 
 /*========================================================*\
-\* general */
+|| general
+\*========================================================*/
 
 html {
   -webkit-box-sizing: border-box;
@@ -50,7 +92,7 @@ html {
   font-family: "Source Code Pro", "Consolas", "Courier New", monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 62.5%; /* equal to 10px in most browsers: (62.5 / 100) * 16 = 10 */
+  font-size: 62.5%; /* equal to 10px in most browsers (if browser font-size is set to 16px): (62.5 / 100) * 16 = 10 */
   color: whitesmoke;
   color: var(--onsurface-white);
   background-color: #121212;
@@ -105,8 +147,8 @@ body {
   box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);
 }
 
-/*=====================================================================*/
-/*== utility classes ==*/
+/*========================================================*\
+|| utility classes */
 
 .center {
   margin-right: auto;
@@ -181,10 +223,10 @@ body {
 }
 
 /*========================================================*\
-|* styling */
+|| styling */
 
 /*
-|* text */
+|| text */
 
 h1,
 h2,
@@ -349,7 +391,8 @@ details summary {
   cursor: pointer;
 }
 
-/*== hyperlinks ==*/
+/*
+|| hyperlinks */
 
 a {
   outline: none;
@@ -418,10 +461,11 @@ a[href^="https"]:hover::after {
   background-image: url("../images/external-green.svg");
 }
 
-/*== lists ==*/
+/*
+|| lists */
 
+/* support for this at-rule is insufficient at the moment, June 2022 */
 @counter-style thumbs {
-  /* support for this at-rule is insufficient at the moment, June 2022 */
   system: cyclic;
   symbols: "\1F44E""\1F44D";
   suffix: "";
@@ -521,11 +565,8 @@ section[aria-label="changelog"] .future-list li::before {
   filter: drop-shadow(0.1em 0.1em 0.05em rgba(0, 0, 0, 0.7));
 }
 
-/*
-*
-*=========================================================
-* §§ visuals
-*/
+/*========================================================*\
+|| visuals */
 
 hr {
   margin: 40px 0;
@@ -580,7 +621,8 @@ audio {
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.95));
 }
 
-/*== glitch effect ==*/
+/*
+|| glitch effect */
 
 h2 span {
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.6), -0.025em -0.03em 0 rgba(0, 255, 0, 0.6),
@@ -665,8 +707,8 @@ h2 span {
   }
 }
 
-/*=====================================================================*/
-/*== code ==*/
+/*========================================================*\
+|| code */
 
 pre {
   border: 2px solid #121212;
@@ -692,7 +734,8 @@ kbd {
   white-space: nowrap;
 }
 
-/*== prismjs syntax highlighter library ==*/
+/*
+|| prismjs syntax highlighter library */
 
 .toolbar-item {
   font-weight: 500;
@@ -702,9 +745,9 @@ kbd {
   cursor: pointer;
 }
 
+/* higher selector specificity to overrule the styles from prism.css */
 div.code-toolbar > div.toolbar > div.toolbar-item > span,
 .code-toolbar > .toolbar > .toolbar-item > .copy-to-clipboard-button {
-  /* higher selector specificity to overrule the styles from prism.css */
   --copy-button-radius: 0.5em;
   border: none;
   border-radius: 0.5em;
@@ -747,9 +790,9 @@ div.code-toolbar > div.toolbar > div.toolbar-item > span,
   transform: translateY(0);
 }
 
-/*=====================================================================*/
-/*== header ==*/
-/*=====================================================================*/
+/*========================================================*\
+|| header
+\*========================================================*/
 
 header {
   z-index: 6;
@@ -822,8 +865,8 @@ body:not(.scrolled) header {
   }
 }
 
-/*=====================================================================*/
-/*== logo ==*/
+/*========================================================*\
+|| logo */
 
 header a.logo {
   z-index: 8;
@@ -842,7 +885,8 @@ header svg {
   height: 10rem;
 }
 
-/*== typewriter effect ==*/
+/*
+|| typewriter effect */
 
 .typewriter {
   margin-left: 1.2rem;
@@ -902,8 +946,8 @@ header svg {
   }
 }
 
-/*=====================================================================*/
-/*== nav ==*/
+/*========================================================*\
+|| nav */
 
 nav a {
   display: inline-block;
@@ -913,7 +957,8 @@ nav a {
   letter-spacing: 0.0015em;
 }
 
-/*== active page hyperlink ==*/
+/*
+|| active page hyperlink */
 
 nav a.active {
   color: #069247;
@@ -925,7 +970,8 @@ nav a.active:hover {
   color: var(--primary-green);
 }
 
-/*== nav icon ==*/
+/*
+|| icon */
 
 #nav-icon {
   all: unset;
@@ -1044,12 +1090,12 @@ nav a.active:hover {
   left: 18px;
 }
 
-/*=====================================================================*/
-/*== main content ==*/
-/*=====================================================================*/
+/*========================================================*\
+|| main
+\*========================================================*/
 
-/*=====================================================================*/
-/*== sidebar ==*/
+/*========================================================*\
+|| sidebar */
 
 aside {
   position: absolute;
@@ -1091,6 +1137,9 @@ aside > p {
 }
 
 aside ul {
+  /* grid is used because of a bug in firefox - see following links:
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1310551
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1767091 */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -1113,8 +1162,8 @@ aside li a[href*="http"]::after {
   content: none;
 }
 
-/*=====================================================================*/
-/*== greeting ==*/
+/*========================================================*\
+|| greeting */
 
 div.heading {
   margin-top: 0.3em;
@@ -1135,8 +1184,8 @@ div.heading:hover {
   transform: rotate(-1deg);
 }
 
-/*=====================================================================*/
-/*== hello world program ==*/
+/*========================================================*\
+|| hello world program */
 
 @media only screen and (min-width: 991px) {
   section.hello-world-program {
@@ -1178,8 +1227,8 @@ div.heading:hover {
   }
 }
 
-/*=====================================================================*/
-/*== web dev ==*/
+/*========================================================*\
+|| web dev */
 
 .web-dev {
   -webkit-columns: 3 40ch;
@@ -1193,8 +1242,8 @@ div.heading:hover {
   column-rule: 4px dotted rgba(255, 255, 255, 0.07);
 }
 
-/*=====================================================================*/
-/*== planets table ==*/
+/*========================================================*\
+|| planets table */
 
 .table-wrapper {
   overflow-x: auto;
@@ -1263,7 +1312,8 @@ td {
   font-weight: 300;
 }
 
-/*== zebra striping ==*/
+/*
+|| zebra striping */
 
 tr:nth-child(even) td {
   background-color: rgba(255, 255, 255, 0.09);
@@ -1273,16 +1323,16 @@ tr:nth-child(odd) td {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/*=====================================================================*/
-/*== footer ==*/
-/*=====================================================================*/
+/*========================================================*\
+|| footer
+\*========================================================*/
 
 footer {
   padding-bottom: var(--website-padding);
 }
 
-/*=====================================================================*/
-/*== additional page features ==*/
+/*========================================================*\
+|| additional page features */
 
 .features-wrapper {
   -webkit-box-orient: vertical;
@@ -1318,7 +1368,8 @@ footer {
   transform: translateX(-50%);
 }
 
-/*== button ==*/
+/*
+|| button */
 
 #button {
   overflow: hidden;
@@ -1430,8 +1481,8 @@ footer {
   transform: translateX(200%);
 }
 
-/*=====================================================================*/
-/*== contact details ==*/
+/*========================================================*\
+|| contact details */
 
 address {
   -webkit-box-orient: horizontal;
@@ -1458,8 +1509,8 @@ address a {
   padding-bottom: 0.3em;
 }
 
-/*=====================================================================*/
-/*== info ==*/
+/*========================================================*\
+|| info */
 
 details summary {
   width: 6ch;
@@ -1537,8 +1588,8 @@ details p {
   }
 }
 
-/*=====================================================================*/
-/*== birthday banner ==*/
+/*========================================================*\
+|| birthday banner */
 
 dialog {
   top: 50%;
@@ -1639,12 +1690,12 @@ dialog p,
   margin-bottom: 1.35em; /* equal to margin-top of details > p:last-of-type */
 }
 
-/*=====================================================================*/
-/*== further media queries (responsive & accessibility) ==*/
-/*=====================================================================*/
+/*========================================================*\
+|| further media queries (responsive & accessibility)
+\*========================================================*/
 
-/*=====================================================================*/
-/*== large width (> 1000px) ==*/
+/*========================================================*\
+|| large width */
 
 @media only screen and (max-width: 75em) {
   html {
@@ -1652,8 +1703,8 @@ dialog p,
   }
 }
 
-/*=====================================================================*/
-/*== medium width (smaller than 1000px to mobile) ==*/
+/*========================================================*\
+|| medium width */
 
 @media only screen and (max-width: 62em) {
   html {
@@ -1661,8 +1712,8 @@ dialog p,
   }
 }
 
-/*=====================================================================*/
-/*== small width (mobile) ==*/
+/*========================================================*\
+|| small width (mobile) */
 
 @media only screen and (max-width: 48em) {
   html {
@@ -1682,7 +1733,8 @@ dialog p,
     display: block;
   }
 
-  /*== mobile nav ==*/
+  /*
+  || mobile nav */
 
   .nav-open {
     overflow: hidden;
@@ -1787,8 +1839,8 @@ dialog p,
   }
 }
 
-/*=====================================================================*/
-/*== print ==*/
+/*========================================================*\
+|| print */
 
 @media print {
   .no-print,
@@ -1852,8 +1904,8 @@ dialog p,
   }
 }
 
-/*=====================================================================*/
-/*== reduced motion ==*/
+/*========================================================*\
+|| reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1865,13 +1917,13 @@ dialog p,
     animation-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
     -webkit-transition-duration: 0s !important;
     -o-transition-duration: 0s !important;
     transition-duration: 0s !important;
     -webkit-transition-delay: 0s !important;
     -o-transition-delay: 0s !important;
     transition-delay: 0s !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
   }
 }

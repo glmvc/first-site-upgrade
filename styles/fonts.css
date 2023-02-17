@@ -1,11 +1,12 @@
-/*=====================================================================*/
-/*== fonts ==*/
-/*=====================================================================*/
+/*========================================================*\
+|| fonts
+\*========================================================*/
 
-/*=====================================================================*/
-/*== source code pro ==*/
+/*========================================================*\
+|| source code pro */
 
-/*== source-code-pro-300 - latin ==*/
+/*
+|| source-code-pro-300 - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -21,7 +22,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-300.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-regular - latin ==*/
+/*
+|| source-code-pro-regular - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -37,7 +39,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-regular.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-500 - latin ==*/
+/*
+|| source-code-pro-500 - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -53,7 +56,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-500.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-700 - latin ==*/
+/*
+|| source-code-pro-700 - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -69,7 +73,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-700.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-300italic - latin ==*/
+/*
+|| source-code-pro-300italic - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -85,7 +90,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-300italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-italic - latin ==*/
+/*
+|| source-code-pro-italic - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -101,7 +107,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-500italic - latin ==*/
+/*
+|| source-code-pro-500italic - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -117,7 +124,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-500italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*== source-code-pro-700italic - latin ==*/
+/*
+|| source-code-pro-700italic - latin */
 
 @font-face {
   font-family: "Source Code Pro";
@@ -133,8 +141,8 @@
        url("../fonts/source-code-pro-v20-latin/source-code-pro-v20-latin-700italic.svg#SourceCodePro") format("svg"); /* Legacy iOS */
 }
 
-/*=====================================================================*/
-/*== orbitron (variable font) ==*/
+/*========================================================*\
+|| orbitron (variable font) */
 
 @font-face {
   font-family: "Orbitron";

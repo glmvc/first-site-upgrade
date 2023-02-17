@@ -1,10 +1,34 @@
-//=====================================================================
-// DOM ready
-//=====================================================================
+/*========================================================*\
+|* @main.js
+|*  $author: glmvc
+|*  $license: mit
+|*
+|* @table-of-contents
+|*  || dom ready
+|*    || check scrolling
+|*    || typewriter effect
+|*    || nav
+|*    || corrected main heading with click function
+|*    || personalized welcome message
+|*    || image map resizer
+|*    || image and figure caption switcher
+|*    || audio volume
+|*    || birthday banner
+|*
+|* @jquery v3.6.0
+|*
+|* @prismjs v1.27.0
+|*
+|* @imagemapresizer v1.0.10
+\*========================================================*/
+
+/*========================================================*\
+|| dom ready
+\*========================================================*/
 
 $(document).ready(function () {
-  //=====================================================================
-  // check scrolling (jQuery)
+  /*========================================================*\
+  || check scrolling */
 
   let checkScroll = function () {
     // 20px margin-top of the body plus 3px border-top of the .page-wrapper
@@ -19,16 +43,16 @@ $(document).ready(function () {
     checkScroll();
   });
 
-  //=====================================================================
-  // typewriter effect (jQuery)
+  /*========================================================*\
+  || typewriter effect */
 
   const text = "glmvc";
 
   $("#typewriter-text").html(text);
   $("#typewriter-text").css("--characters", text.length + 6);
 
-  //=====================================================================
-  // navigation (jQuery)
+  /*========================================================*\
+  || nav */
 
   $("#nav-icon").on("click", function () {
     $(this).toggleClass("open");
@@ -42,8 +66,8 @@ $(document).ready(function () {
     }
   });
 
-  //=====================================================================
-  // corrected main heading with click function / easter egg (jQuery)
+  /*========================================================*\
+  || corrected main heading with click function */
 
   $("h1")
     .text("Hello, World!")
@@ -51,8 +75,8 @@ $(document).ready(function () {
       alert("Ouch! Stop poking me!");
     });
 
-  //=====================================================================
-  // personalized welcome message (jQuery)
+  /*========================================================*\
+  || personalized welcome message */
 
   function setUserName() {
     let maxLength = 50;
@@ -81,13 +105,13 @@ $(document).ready(function () {
     setUserName();
   });
 
-  //=====================================================================
-  // image map resizer (jQuery)
+  /*========================================================*\
+  || image map resizer */
 
   $("map").imageMapResize();
 
-  //=====================================================================
-  // image and figure caption switcher (jQuery)
+  /*========================================================*\
+  || image and figure caption switcher */
 
   let imageMap;
 
@@ -107,14 +131,14 @@ $(document).ready(function () {
     }
   });
 
-  //=====================================================================
-  // audio volume
+  /*========================================================*\
+  || audio volume */
 
   let audio = document.getElementById("audio");
   audio.volume = 0.5;
 
-  //=====================================================================
-  // birthday banner
+  /*========================================================*\
+  || birthday banner */
 
   let firstSiteVisit = false;
   checkFirstSiteVisit();

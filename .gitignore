@@ -1,14 +1,14 @@
-#===========================================================
-# a .gitignore file specifies intentionally untracked files
-# that git should ignore
+#==========================================================#
+# a .gitignore file specifies intentionally
+# untracked files that git should ignore
 # files already tracked by git are not affected
 #
 # git-scm.com/docs/gitignore
 #
 # created with gitignore.io
-#===========================================================
+#==========================================================#
 
-#===========================================================
+#==========================================================#
 # macos
 
 # general
@@ -16,7 +16,7 @@
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
+# icon must end with two \r
 Icon
 
 # thumbnails
@@ -41,25 +41,27 @@ Temporary Items
 # icloud generated files
 *.icloud
 
-
-#===========================================================
+#==========================================================#
 # linux
+
 *~
 
-# temporary files which can be created if a process still has a handle open of a deleted file
+# temporary files which can be created if a process still
+# has a handle open of a deleted file
 .fuse_hidden*
 
 # kde directory preferences
 .directory
 
-# linux trash folder which might appear on any partition or disk
+# linux trash folder which might appear on any
+# partition or disk
 .Trash-*
 
-# .nfs files are created when an open file is removed but is still being accessed
+# .nfs files are created when an open file is removed
+# but is still being accessed
 .nfs*
 
-
-#===========================================================
+#==========================================================#
 # windows
 
 # windows thumbnail cache files
@@ -87,7 +89,7 @@ $RECYCLE.BIN/
 # windows shortcuts
 *.lnk
 
-#===========================================================
+#==========================================================#
 # archives
 
 # unpack these files and commit the raw source
@@ -123,8 +125,9 @@ $RECYCLE.BIN/
 *.msp
 *.txz
 
-#===========================================================
+#==========================================================#
 # visual studio code
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
