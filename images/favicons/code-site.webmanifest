@@ -1,11 +1,22 @@
 {
   "name": "Source Code - My Upgraded First Site",
   "short_name": "Source Code",
+  "description": "Source code of the upgraded version of my first site!",
   "icons": [
-    { "src": "code-android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "code-android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "code-android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "code-android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "theme_color": "#0fb55e",
-  "background_color": "#121212",
+  "background_color": "#0fb55e",
   "display": "standalone"
 }
