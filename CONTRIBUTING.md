@@ -122,7 +122,7 @@ the following steps use **git on the command line**, but if you're already famil
 
 3. make changes, improve, fix - simply code :)
 
-4. check the [checklist](#checklist-before-releasing-the-changes-memo) below before moving on to the next step
+4. check the [checklist](#checklist-before-releasing-the-changes-) below before moving on to the next step
 
 5. after finishing your changes, you'll have to [add](https://github.com/git-guides/git-add "git add github guide"), [commit](https://github.com/git-guides/git-commit "git commit github guide") and [push](https://github.com/git-guides/git-push "git push github guide") your changes
 
@@ -151,7 +151,7 @@ the following steps use **git on the command line**, but if you're already famil
 
 8. finally, when everything is well discussed, correct and fine, the pull request will be merged (the branch will usually no longer be needed and will be deleted afterwards)
 
-### checklist before releasing the changes 🦺
+## checklist before releasing the changes 🦺
 
 - [ ] update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape "codebeautify html escape / unescape tool") if necessary after your changes
 - [ ] make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool") if changing / editing a `css` file

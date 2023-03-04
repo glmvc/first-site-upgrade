@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Changelog - My Upgraded First Site",
+  "short_name": "Changelog",
   "icons": [
-    { "src": "changelog-android-chrome-192x192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "changelog-android-chrome-512x512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "changelog-android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "changelog-android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
   ],
   "theme_color": "#0fb55e",
   "background_color": "#121212",

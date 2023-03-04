@@ -1,6 +1,6 @@
 # 📋 Changelog
 
-This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "first site") and the upgraded version of it here.
+This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "first site") and the [upgraded version of it here](https://github.com/glmvc/first-site-upgrade "first site upgrade").
 
 ## 🚀 For The Future
 

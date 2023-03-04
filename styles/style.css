@@ -2,11 +2,11 @@
 |* @style.css
 |*  $author: glmvc
 |*  $license: mit
-|*  $methodology: [???]
+|*  $methodology: see CONTRIBUTING.md
 |*
 |* @table-of-contents
 |*  || custom properties (variables)
-|*  || general
+|*  || global
 |*    || utility classes
 |*    || styling
 |*      || text
@@ -83,7 +83,7 @@
 }
 
 /*========================================================*\
-|| general
+|| global
 \*========================================================*/
 
 html {
@@ -178,7 +178,8 @@ body {
   white-space: nowrap;
 }
 
-.noscript {
+noscript {
+  display: block;
   margin: 4em auto 2em;
   border: 2px solid red;
   padding: 1em;
@@ -396,8 +397,8 @@ details summary {
 
 a {
   outline: none;
-  -webkit-text-decoration-color: currentColor;
-  text-decoration-color: currentColor;
+  -webkit-text-decoration-color: currentcolor;
+  text-decoration-color: currentcolor;
   text-underline-offset: 0.03em;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -599,11 +600,13 @@ img[src="images/js-code.png"] {
 img,
 video,
 iframe {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 audio {
+  display: block;
   width: 100%;
   max-width: 400px;
   height: 4rem;
@@ -619,6 +622,10 @@ iframe {
 audio {
   -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.95));
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.95));
+}
+
+iframe {
+  border: 0;
 }
 
 /*
@@ -716,7 +723,7 @@ pre {
   border-radius: 0.5em;
 }
 
-kbd {
+kbd > kbd {
   display: inline-block;
   border: 1px solid #b4b4b4;
   border: 1px solid var(--kbd-border);
@@ -1670,7 +1677,7 @@ dialog p,
   display: block;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   padding: 0.7em 2.7em;
   font-weight: 500;
   text-align: center;
@@ -1779,7 +1786,7 @@ dialog p,
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
-    pointer-events: all;
+    pointer-events: unset;
   }
 
   nav li a {
