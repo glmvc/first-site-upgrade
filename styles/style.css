@@ -77,6 +77,10 @@
   --kbd-background: #eeeeee;
   --kbd-border: #b4b4b4;
 
+  /* website fonts */
+  --font-main: "Source Code Variable", "Consolas", "Courier New", monospace;
+  --font-highlight: "Orbitron", "Helvetica", "Arial", sans-serif;
+
   /* website spacings */
   --website-margin: 20px;
   --website-padding: 3rem;
@@ -89,7 +93,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Source Code Pro", "Consolas", "Courier New", monospace;
+  font-family: var(--font-main);
   font-style: normal;
   font-weight: normal;
   font-size: 62.5%; /* equal to 10px in most browsers (if browser font-size is set to 16px): (62.5 / 100) * 16 = 10 */
@@ -243,7 +247,7 @@ h6 {
 
 h1 {
   display: inline;
-  font-weight: 300;
+  font-weight: 350;
   font-size: 8.4rem;
   font-size: clamp(8.4rem, 7.8rem + 1.875vw, 10.5rem);
   letter-spacing: -0.015em;
@@ -465,7 +469,7 @@ a[href^="https"]:hover::after {
 /*
 || lists */
 
-/* support for this at-rule is insufficient at the moment, June 2022 */
+/* support for this at-rule is insufficient at the moment - june 2022 */
 @counter-style thumbs {
   system: cyclic;
   symbols: "\1F44E""\1F44D";
@@ -1260,7 +1264,7 @@ table {
   border-collapse: collapse;
   border: 3px solid black;
   width: 100%;
-  font-family: "Orbitron", "Helvetica", "Arial", sans-serif;
+  font-family: var(--font-highlight);
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1283,7 +1287,7 @@ thead {
 }
 
 thead th {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 tbody td {
@@ -1304,19 +1308,15 @@ td {
 }
 
 th {
-  font-weight: 600;
+  font-weight: 700;
   background-color: rgba(255, 255, 255, 0.08);
 }
 
 th[scope="row"]::first-letter {
-  font-weight: 850;
+  font-weight: 900;
   font-size: 15px;
   color: #0fb55e;
   color: var(--primary-green);
-}
-
-td {
-  font-weight: 300;
 }
 
 /*
@@ -1751,7 +1751,7 @@ dialog p,
     overflow-y: auto;
     z-index: 7;
     position: fixed;
-    inset: 0; /* support is insufficient at the moment, June 2022 (see supports at-rule below) */
+    inset: 0; /* support is insufficient at the moment - june 2022 (see supports at-rule below) */
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
