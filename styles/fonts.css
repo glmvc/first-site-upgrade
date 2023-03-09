@@ -1,4 +1,18 @@
 /*========================================================*\
+|* @fonts.css
+|*  $author: glmvc
+|*  $license: mit
+|*  $style-guide and methodology: /CONTRIBUTING.md
+|*
+|* @table-of-contents
+|*  || fonts
+|*    || source code pro (variable)
+|*       github.com/adobe-fonts/source-code-pro
+|*    || orbitron (latin)
+|*       github.com/theleagueof/orbitron
+\*========================================================*/
+
+/*========================================================*\
 || fonts
 \*========================================================*/
 
@@ -14,9 +28,9 @@
   font-style: normal;
   font-weight: 200 900;
   font-display: swap;
-  src: url("../fonts/source-code-pro/SourceCodeVariable-Roman.ttf.woff2") format("woff2-variations"),
-    url("../fonts/source-code-pro/SourceCodeVariable-Roman.ttf.woff") format("woff-variations"),
-    url("../fonts/source-code-pro/SourceCodeVariable-Roman.ttf") format("truetype-variations");
+  src: url("../fonts/source-code-pro/sourcecodevariable-roman.ttf.woff2") format("woff2-variations"),
+    url("../fonts/source-code-pro/sourcecodevariable-roman.ttf.woff") format("woff-variations"),
+    url("../fonts/source-code-pro/sourcecodevariable-roman.ttf") format("truetype-variations");
   /* new future syntax for src, but no browser support yet - march 2023
   |* url("") format("") tech("variations")
   \*/
@@ -31,9 +45,9 @@
   font-style: italic;
   font-weight: 200 900;
   font-display: swap;
-  src: url("../fonts/source-code-pro/SourceCodeVariable-Italic.ttf.woff2") format("woff2-variations"),
-    url("../fonts/source-code-pro/SourceCodeVariable-Italic.ttf.woff") format("woff-variations"),
-    url("../fonts/source-code-pro/SourceCodeVariable-Italic.ttf") format("truetype-variations");
+  src: url("../fonts/source-code-pro/sourcecodevariable-italic.ttf.woff2") format("woff2-variations"),
+    url("../fonts/source-code-pro/sourcecodevariable-italic.ttf.woff") format("woff-variations"),
+    url("../fonts/source-code-pro/sourcecodevariable-italic.ttf") format("truetype-variations");
   /* new future syntax for src, but no browser support yet - march 2023
   |* url("") format("") tech("variations")
   \*/
@@ -43,14 +57,14 @@
 || orbitron (latin) */
 
 /*
-|| orbitron - light (regular) */
+|| orbitron - light (used as regular) */
 
 @font-face {
   font-family: "Orbitron";
   font-stretch: normal;
   font-style: normal;
   font-weight: 400; /* actually 300 (light), but in use for "normal" (regular) */
-  font-display: optional;
+  font-display: fallback;
   src: url("../fonts/orbitron/orbitron-light.eot") /* ie9 compat modes */;
   src: local("Orbitron Light"), local("Orbitron-Light") /* local font name and postscript name */,
     url("../fonts/orbitron/orbitron-light.eot?#iefix") format("embedded-opentype") /* ie6-ie8 */,
@@ -58,6 +72,28 @@
     url("../fonts/orbitron/orbitron-light.woff") format("woff") /* modern browsers */,
     url("../fonts/orbitron/orbitron-light.ttf") format("truetype") /* safari, android, ios */,
     url("../fonts/orbitron/orbitron-light.svg#Orbitron") format("svg") /* legacy ios */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+|| orbitron - medium */
+
+@font-face {
+  font-family: "Orbitron";
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+  src: url("../fonts/orbitron/orbitron-medium.eot") /* ie9 compat modes */;
+  src: local("Orbitron Medium"), local("Orbitron-Medium") /* local font name and postscript name */,
+    url("../fonts/orbitron/orbitron-medium.eot?#iefix") format("embedded-opentype") /* ie6-ie8 */,
+    url("../fonts/orbitron/orbitron-medium.woff2") format("woff2") /* super modern browsers */,
+    url("../fonts/orbitron/orbitron-medium.woff") format("woff") /* modern browsers */,
+    url("../fonts/orbitron/orbitron-medium.ttf") format("truetype") /* safari, android, ios */,
+    url("../fonts/orbitron/orbitron-medium.svg#Orbitron") format("svg") /* legacy ios */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /*
@@ -68,7 +104,7 @@
   font-stretch: normal;
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
+  font-display: fallback;
   src: url("../fonts/orbitron/orbitron-bold.eot") /* ie9 compat modes */;
   src: local("Orbitron Bold"), local("Orbitron-Bold") /* local font name and postscript name */,
     url("../fonts/orbitron/orbitron-bold.eot?#iefix") format("embedded-opentype") /* ie6-ie8 */,
@@ -76,6 +112,8 @@
     url("../fonts/orbitron/orbitron-bold.woff") format("woff") /* modern browsers */,
     url("../fonts/orbitron/orbitron-bold.ttf") format("truetype") /* safari, android, ios */,
     url("../fonts/orbitron/orbitron-bold.svg#Orbitron") format("svg") /* legacy ios */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /*
@@ -86,7 +124,7 @@
   font-stretch: normal;
   font-style: normal;
   font-weight: 900;
-  font-display: optional;
+  font-display: fallback;
   src: url("../fonts/orbitron/orbitron-black.eot") /* ie9 compat modes */;
   src: local("Orbitron Black"), local("Orbitron-Black") /* local font name and postscript name */,
     url("../fonts/orbitron/orbitron-black.eot?#iefix") format("embedded-opentype") /* ie6-ie8 */,
@@ -94,4 +132,6 @@
     url("../fonts/orbitron/orbitron-black.woff") format("woff") /* modern browsers */,
     url("../fonts/orbitron/orbitron-black.ttf") format("truetype") /* safari, android, ios */,
     url("../fonts/orbitron/orbitron-black.svg#Orbitron") format("svg") /* legacy ios */;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

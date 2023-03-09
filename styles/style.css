@@ -2,7 +2,7 @@
 |* @style.css
 |*  $author: glmvc
 |*  $license: mit
-|*  $methodology: see CONTRIBUTING.md
+|*  $style-guide and methodology: /CONTRIBUTING.md
 |*
 |* @table-of-contents
 |*  || custom properties (variables)
@@ -44,11 +44,14 @@
 |*    || print
 |*    || reduced motion
 |*
-|* @fonts declared in fonts.css
+|* @fonts
+|*  $fonts.css
 |*
-|* @normalize.css v8.0.1
+|* @normalizing
+|*  $normalize.css v8.0.1
 |*
-|* @prismjs v1.27.0
+|* @syntax highlighting (code)
+|*  $prismjs v1.27.0
 |*
 |* @prefixed by autoprefixer.github.io
 |*  $postcss: v8.4.14,
@@ -78,8 +81,8 @@
   --kbd-border: #b4b4b4;
 
   /* website fonts */
-  --font-main: "Source Code Variable", "Consolas", "Courier New", monospace;
-  --font-highlight: "Orbitron", "Helvetica", "Arial", sans-serif;
+  --font-main: "Source Code Variable", "Monaco", "Menlo", "Consolas", "Lucida Console", monospace;
+  --font-highlight: "Orbitron", "Futura", "Helvetica", "Arial", sans-serif;
 
   /* website spacings */
   --website-margin: 20px;
@@ -1277,6 +1280,7 @@ table {
 table caption {
   caption-side: bottom;
   margin: 1em 2em 2em 0;
+  font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.004em;
   text-align: right;
@@ -1296,6 +1300,7 @@ tbody td {
 
 tfoot {
   border-top: 2px solid black;
+  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.015em;
   text-transform: uppercase;

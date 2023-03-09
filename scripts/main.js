@@ -2,6 +2,7 @@
 |* @main.js
 |*  $author: glmvc
 |*  $license: mit
+|*  $style-guide and methodology: /CONTRIBUTING.md
 |*
 |* @table-of-contents
 |*  || dom ready
@@ -15,11 +16,10 @@
 |*    || audio volume
 |*    || birthday banner
 |*
-|* @jquery v3.6.0
-|*
-|* @prismjs v1.27.0
-|*
-|* @imagemapresizer v1.0.10
+|* @libraries
+|*  $jquery v3.6.0
+|*  $imagemapresizer v1.0.10
+|*  $prismjs v1.27.0
 \*========================================================*/
 
 /*========================================================*\
