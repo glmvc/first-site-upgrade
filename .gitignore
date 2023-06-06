@@ -1,11 +1,11 @@
 #==========================================================#
-# a .gitignore file specifies intentionally
-# untracked files that git should ignore
-# files already tracked by git are not affected
+# @.gitignore
+#  a .gitignore file specifies intentionally
+#  untracked files that git should ignore
+#  files already tracked by git are not affected
 #
-# git-scm.com/docs/gitignore
-#
-# created with gitignore.io
+# @git-scm.com/docs/gitignore
+# @created with gitignore.io
 #==========================================================#
 
 #==========================================================#

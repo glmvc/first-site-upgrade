@@ -1,15 +1,16 @@
 ---
 #==========================================================#
-# prettier ships with a handful of format options
-# that can be changed in this yaml configuration file
+# @.prettierrc.yaml
+#  prettier ships with a handful of format options
+#  that can be changed in this yaml configuration file
 #
-# prettier.io/docs/en/options.html
-# prettier.io/docs/en/configuration.html
-# yaml.org
+# @prettier.io/docs/en/options.html
+# @prettier.io/docs/en/configuration.html
+# @yaml.org
 #==========================================================#
 
 #==========================================================#
-# options set in /.editorconfig
+# options set in .editorconfig
 
 #useTabs: false
 #tabWidth: 2
@@ -17,7 +18,7 @@
 #endOfLine: lf
 
 #==========================================================#
-# options (default)
+# options (prettier default)
 
 semi: true
 singleQuote: false

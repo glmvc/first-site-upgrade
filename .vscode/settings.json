@@ -1,5 +1,5 @@
 {
-  "editor.renderWhitespace": "trailing",
+  "editor.renderWhitespace": "boundary",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.useEditorConfig": true

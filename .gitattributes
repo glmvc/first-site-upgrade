@@ -1,8 +1,9 @@
 #==========================================================#
-# a .gitattributes file defines attributes per path
-# that should be used by git when performing git actions
+# @.gitattributes
+#  a .gitattributes file defines attributes per path
+#  that should be used by git when performing git actions
 #
-# git-scm.com/docs/gitattributes
+# @git-scm.com/docs/gitattributes
 #==========================================================#
 
 #==========================================================#
