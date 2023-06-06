@@ -1,0 +1,64 @@
+/*========================================================*\
+|* @noscript.css
+|*  $author: glmvc
+|*  $license: mit
+|*  $code-style-guide: /CONTRIBUTING.md
+|*
+|* @table-of-contents
+|*  || noscript
+|*    || styling
+|*
+|* @extends
+|*  $style.css
+\*========================================================*/
+
+/*========================================================*\
+|| noscript
+\*========================================================*/
+
+noscript {
+  --noscript-color: var(--warning-color-main);
+  display: block;
+  margin: 2em auto;
+  border: 3px solid red;
+  border: var(--border-width-main) solid var(--noscript-color);
+  padding: 1em;
+  max-width: 40ch;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-size: var(--font-size-main);
+  letter-spacing: 0.001em;
+  text-align: center;
+  color: red;
+  color: var(--noscript-color);
+  filter: drop-shadow(var(--drop-shadow-main));
+}
+
+/*========================================================*\
+|| styling */
+
+html {
+  background-color: darkred;
+}
+
+body {
+  box-shadow: 5px 0 10px rgba(255, 0, 0, 0.8), -5px 0 10px rgba(255, 0, 0, 0.8);
+  box-shadow: 5px 0 calc(var(--body-spacing-main) * 0.5) rgba(255, 0, 0, 0.8),
+    -5px 0 calc(var(--body-spacing-main) * 0.5) rgba(255, 0, 0, 0.8);
+}
+
+.typewriter,
+h2 bdi,
+.features-wrapper .feature:first-child,
+iframe {
+  display: none !important;
+}
+
+h1 .heading-main {
+  text-transform: capitalize;
+}
+
+.greeting img,
+body[data-page="code"] section details summary {
+  cursor: not-allowed;
+}

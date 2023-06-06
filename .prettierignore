@@ -1,25 +1,30 @@
 #==========================================================#
-# use .prettierignore to ignore (i.e. not reformat)
-# certain folders and files completely
+# @.prettierignore
+#  use .prettierignore to ignore (i.e. not reformat)
+#  certain folders and files completely
 #
-# prettier.io/docs/en/ignore.html
+# @prettier.io/docs/en/ignore.html
 #==========================================================#
 
 #==========================================================#
 # folders
 
 first-site
+assets
 audios
 videos
 fonts
-images/*
-!images/favicons
-images/favicons/*
-!images/favicons/*.webmanifest
+images
+icons
+favicons/*
+!favicons/*.webmanifest
 
 #==========================================================#
 # files
 
-*.min.js
+# all minified
 *.min.css
+*.min.js
+
+# all markdown
 *.md

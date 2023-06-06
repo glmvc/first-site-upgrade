@@ -153,5 +153,4 @@ the following steps use **git on the command line**, but if you're already famil
 
 ## checklist before releasing the changes 🦺
 
-- [ ] update the source codes in `code.html` using this [html escape tool](https://codebeautify.org/html-escape-unescape "codebeautify html escape / unescape tool") if necessary after your changes
 - [ ] make sure to use the [css autoprefixer tool](https://autoprefixer.github.io/ "css autoprefixer online tool") if changing / editing a `css` file
