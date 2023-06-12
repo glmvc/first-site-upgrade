@@ -15,9 +15,9 @@
     |*  $style.css
     |*  $noscript.css
     |========================================================-->
-    <!-- || title -->
+    <!-- @title -->
     <title>Page Not Found (404) - My Upgraded First Site</title>
-    <!-- || meta data -->
+    <!-- @meta-data -->
     <meta name="description" content="Page Not Found - 404 error!" />
     <meta name="keywords" content="first, site, upgrade, upgraded, version, glmvc, 404, http, status, error, code" />
     <meta name="author" content="glmvc" />
@@ -52,10 +52,18 @@
     <meta property="og:audio" content="https://glmvc.github.io/first-site-upgrade/audios/cyberpunk.mp3" />
     <meta property="og:audio:type" content="audio/mpeg" />
     <meta property="og:audio:alt" content="A cyberpunk soundtrack" />
-    <!-- || linking -->
+    <!-- @css -->
+    <!-- internal stylesheet (for demo purposes only) -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- @linking -->
     <link rel="icon" href="favicons/404-favicon-32x32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="favicons/404-favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="icon" href="favicons/404-favicon.ico" sizes="any" />
@@ -63,48 +71,47 @@
     <link rel="apple-touch-icon" href="favicons/404-apple-touch-icon.png" sizes="180x180" />
     <link rel="mask-icon" href="favicons/404-safari-pinned-tab.svg" color="#0fb55e" />
     <link rel="manifest" href="favicons/404-site.webmanifest" />
-    <!-- || internal stylesheet (for demo purposes only) -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <!-- || scripts -->
+    <!-- @scripts -->
     <noscript><link rel="stylesheet" href="styles/noscript.css" /></noscript>
   </head>
-  <body class="js-preload" data-page="404">
-    <!-- || page -->
+  <body data-page="404">
+    <!--=====================================================-->
+    <!-- || page -->
+    <!--=====================================================-->
     <div class="page-wrapper centered">
-      <!-- || skip links -->
+      <!--=====================================================-->
+      <!-- || skip links (a11y) -->
       <div class="skip-links box-shadow">
         Skip to <a class="skip-link" href="#content-main">main content</a> or
         <a class="skip-link" href="#footer-main">main footer</a>.
       </div>
+      <!--=====================================================-->
       <!-- || main -->
       <main id="content-main" class="wrapper">
-        <!-- noscript warning -->
+        <!-- || noscript -->
         <noscript>
           Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
           website runs properly.
         </noscript>
-        <!-- info -->
+        <!-- || 404 -->
         <h1>404</h1>
         <h2 style="color: whitesmoke; color: var(--on-surface-color-main)">Page Not Found</h2>
         <a class="button centered" href="index.html">Return to Homepage</a>
         <iframe
           name="404-song"
-          class="box-shadow"
+          class="centered box-shadow"
           width="560"
           height="315"
           src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
       </main>
     </div>
+    <!--=====================================================-->
     <!-- || body script -->
+    <!--=====================================================-->
     <script>
       console.info("Hello, World!");
     </script>

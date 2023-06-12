@@ -2,15 +2,15 @@
 
 ## 🛸 ... and with this website project i learn and challenge myself on my journey as a web developer
 
-### 🌱 also this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
+### 🌱 also, this should be an *inspiration* and *resource* for anyone looking to get into or is just getting started with web development
 
 - #### visit the [first site upgrade website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade website") and see for yourself 👀
 
 - #### check the [changelog on github](CHANGELOG.md "first site upgrade changelog on github") or on the [changelog page on the website](https://glmvc.github.io/first-site-upgrade/ "first site upgrade changelog") to see what has changed / been improved compared to the [first-site](https://glmvc.github.io/first-site/ "first site website") 📋
 
-- #### do you notice anything that's incorrect, not ideal or doesn't follow good practice? 😵‍💫
+- #### do you notice anything that's incorrect, not ideal, or doesn't follow good practice? 😵‍💫
     - let me know in a message or create an issue
-    - or fix it yourself and create a pull request afterwards
+    - or fix it yourself and create a pull request afterward
     - i try very hard to implement everything with perfection, but as we all know 4 eyes see more than 2 and one cannot know everything
     - i'm always open for further suggestions / ideas
 
@@ -70,5 +70,7 @@ feel free to [contribute to this project](CONTRIBUTING.md "") opening issues and
     - [pagespeed insights svg api](https://github.com/ankurparihar/readme-pagespeed-insights "pagespeed insights for readme github repository")
     - [gitignore files generator](https://gitignore.io/ "gitignore files generator website")
     - [frontend checklist](https://frontendchecklist.io/ "the front-end checklist website")
+
+---
 
 > created along with the great and beginner-friendly learning resource ["front-end web developer learning pathway"](https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer "front-end web developer article on mdn") from the [MDN Web Docs](https://developer.mozilla.org/ "mdn web docs homepage") (previously Mozilla Developer Network and formerly Mozilla Developer Center)
