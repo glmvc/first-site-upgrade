@@ -17,15 +17,15 @@
     |*  $style.css
     |*  $noscript.css
     |*
-    |* @javascript
+    |* @scripts
     |*  $jquery v3.6.4
     |*  $prismjs v1.29.0
     |*  $imagemapresizer v1.0.10
     |*  $main.js
     |========================================================-->
-    <!-- || title -->
+    <!-- @title -->
     <title>Changelog - My Upgraded First Site</title>
-    <!-- || meta data -->
+    <!-- @meta-data -->
     <meta name="description" content="Changelog of the upgraded version of my first site!" />
     <meta name="keywords" content="first, site, upgrade, upgraded, version, glmvc, change, changes, changelog, log" />
     <meta name="author" content="glmvc" />
@@ -60,12 +60,20 @@
     <meta property="og:audio" content="https://glmvc.github.io/first-site-upgrade/audios/cyberpunk.mp3" />
     <meta property="og:audio:type" content="audio/mpeg" />
     <meta property="og:audio:alt" content="A cyberpunk soundtrack" />
-    <!-- || linking -->
+    <!-- @css -->
+    <!-- internal stylesheet (for demo purposes only) -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/prism.min.css" />
     <link rel="stylesheet" href="styles/prism-theme.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- @linking -->
     <link rel="icon" href="favicons/changelog-favicon-32x32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="favicons/changelog-favicon-16x16.png" sizes="16x16" type="image/png" />
     <link rel="icon" href="favicons/changelog-favicon.ico" sizes="any" />
@@ -73,14 +81,7 @@
     <link rel="apple-touch-icon" href="favicons/changelog-apple-touch-icon.png" sizes="180x180" />
     <link rel="mask-icon" href="favicons/changelog-safari-pinned-tab.svg" color="#0fb55e" />
     <link rel="manifest" href="favicons/changelog-site.webmanifest" />
-    <!-- || internal stylesheet (for demo purposes only) -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <!-- || scripts -->
+    <!-- @scripts -->
     <script src="scripts/jquery-3.6.4.min.js" defer></script>
     <script src="scripts/prism.min.js" defer></script>
     <script src="scripts/imageMapResizer.min.js" defer></script>
@@ -88,16 +89,20 @@
     <noscript><link rel="stylesheet" href="styles/noscript.css" /></noscript>
   </head>
   <body class="js-preload" data-page="changelog">
-    <!-- || page -->
+    <!--=====================================================-->
+    <!-- || page -->
+    <!--=====================================================-->
     <div class="page-wrapper centered">
-      <!-- || skip links -->
+      <!--=====================================================-->
+      <!-- || skip links (a11y) -->
       <div class="skip-links box-shadow">
         Skip to <a class="skip-link" href="#content-main">main content</a> or
         <a class="skip-link" href="#footer-main">main footer</a>.
       </div>
+      <!--=====================================================-->
       <!-- || header -->
       <header class="box-shadow">
-        <!-- logo (svg) -->
+        <!-- || logo (svg) -->
         <a class="logo" href="index.html" aria-label="Home">
           <span class="visually-hidden">ivan glmvc</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="244" height="265" fill="none" viewBox="0 0 244 265">
@@ -172,12 +177,12 @@
               clip-rule="evenodd"
             />
           </svg>
-          <!-- typewriter effect -->
-          <span class="typewriter">
+          <!-- || typewriter effect -->
+          <span class="typewriter" aria-hidden="true">
             <span class="js-typewriter-text"></span>
           </span>
         </a>
-        <!-- navigation -->
+        <!-- || navigation (nav) -->
         <nav aria-label="Main">
           <button type="button" id="nav-toggler" aria-controls="nav-main" aria-expanded="false">
             <span class="visually-hidden">Open main navigation</span>
@@ -199,26 +204,29 @@
           </ul>
         </nav>
       </header>
+      <!--=====================================================-->
       <!-- || main -->
       <main id="content-main" class="wrapper">
-        <!-- noscript warning -->
+        <!-- || noscript -->
         <noscript>
           Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
           website runs properly.
         </noscript>
-        <!-- sidebar -->
+        <!-- || sidebar (aside) -->
         <aside class="drop-shadow">
           <p>Visit my</p>
           <ul aria-label="Social Media profiles">
             <li>
-              <a href="https://github.com/glmvc" title="glmvc GitHub profile" target="_blank">&#128025; GitHub</a>
+              <a href="https://github.com/glmvc" title="glmvc GitHub profile" target="_blank">&#128025;&nbsp;GitHub</a>
             </li>
             <li>
-              <a href="https://twitter.com/glmvc" title="glmvc Twitter profile" target="_blank">&#128038; Twitter</a>
+              <a href="https://twitter.com/glmvc" title="glmvc Twitter profile" target="_blank"
+                >&#128038;&nbsp;Twitter</a
+              >
             </li>
           </ul>
         </aside>
-        <!-- greeting -->
+        <!-- || greeting -->
         <section class="section-greeting" aria-label="Personalized welcome message">
           <h1><span class="heading-main">hello world!</span></h1>
           <!-- inline styling (for demo purposes only) -->
@@ -227,7 +235,7 @@
           </h2>
         </section>
         <hr />
-        <!-- changelog -->
+        <!-- || changelog -->
         <section aria-label="changelog">
           <h3><span class="emoji">&#128203;</span> Changelog</h3>
           <p>
@@ -904,9 +912,10 @@
         </section>
         <hr />
       </main>
+      <!--=====================================================-->
       <!-- || footer -->
       <footer id="footer-main" class="wrapper">
-        <!-- features -->
+        <!-- || site features -->
         <h4>Features</h4>
         <h5>user interaction</h5>
         <div class="features-wrapper">
@@ -942,7 +951,7 @@
           </div>
         </div>
         <hr />
-        <!-- contact details -->
+        <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
             <p>
@@ -970,7 +979,7 @@
           ></iframe>
         </address>
         <hr />
-        <!-- info -->
+        <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>
           <div class="details-inner">
@@ -1001,42 +1010,47 @@
               <ruby>またね<rp>(</rp><rt>ma-ta-ne</rt><rp>)</rp></ruby>
             </p>
             <p>
-              <small>Last edited at <time datetime="2023-06-06T23:00">23:00 on June 6, 2023</time>.</small>
+              <small>Last edited at <time datetime="2023-06-12T23:00">23:00 on June 12, 2023</time>.</small>
             </p>
           </div>
         </details>
       </footer>
-      <!-- || birthday banner -->
+      <!--=====================================================-->
+      <!-- || birthday banner (dialog) -->
       <dialog id="birthday-banner" inert>
-        <header>
-          <h2><span class="emoji">&#127874;</span>Bitday</h2>
-          <button
-            type="button"
-            class="dialog-close-icon js-close-dialog drop-shadow"
-            aria-label="Close dialog"
-          ></button>
-        </header>
-        <section>
-          <hgroup>
-            <h3>Today, the site turned <span class="js-site-age"></span> old!</h3>
-            <p>And it's been that long since the very first bit of it was written.</p>
-          </hgroup>
-          <p>The site is very happy to see you on this special day of the year.</p>
-          <p>Cheers to all of you here today!<span class="emoji">&#127870;</span></p>
-        </section>
-        <footer>
-          <menu>
-            <li>
-              <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
-            </li>
-            <li>
-              <button type="button" class="dialog-button js-celebrate-birthday box-shadow">Celebrate the site</button>
-            </li>
-          </menu>
-        </footer>
+        <div class="dialog-inner">
+          <header>
+            <h2><span class="emoji">&#127874;</span>Bitday</h2>
+            <button
+              type="button"
+              class="dialog-close-icon js-close-dialog drop-shadow"
+              aria-label="Close dialog"
+            ></button>
+          </header>
+          <section>
+            <hgroup>
+              <h3>Today, the site turned <span class="js-site-age"></span> old!</h3>
+              <p>And it's been that long since the very first bit of it was written.</p>
+            </hgroup>
+            <p>The site is very happy to see you on this special day of the year.</p>
+            <p>Cheers to all of you here today!<span class="emoji">&#127870;</span></p>
+          </section>
+          <footer>
+            <menu>
+              <li>
+                <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
+              </li>
+              <li>
+                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">Celebrate the site</button>
+              </li>
+            </menu>
+          </footer>
+        </div>
       </dialog>
     </div>
+    <!--=====================================================-->
     <!-- || body script -->
+    <!--=====================================================-->
     <script>
       console.info("Hello, World!");
     </script>

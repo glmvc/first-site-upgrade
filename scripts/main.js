@@ -6,19 +6,23 @@
 |*
 |* @table-of-contents
 |*  || utility
+|*    || jQuery check
+|*    || debounce
+|*    || resize animation stopper
 |*    || preload class
-|*    || animation resize stopper
 |*    || element heights
-|*    || nav-toggler
-|*    || aside position (mobile)
 |*  || main
-|*    || external links (icon & a11y)
+|*    || breakpoints
+|*    || external hyperlinks (icon & a11y)
+|*    || sticky header
 |*    || typewriter effect
+|*    || nav-toggler
 |*    || corrected main heading with click function
 |*    || personalized welcome message
 |*    || image map resizer
 |*    || image switcher
 |*    || audio volume
+|*    || aside position (mobile)
 |*  || birthday banner (dialog)
 |*    || first site visit check
 |*    || dates
@@ -32,74 +36,88 @@
 |*  $jquery v3.6.4
 |*  $prismjs v1.29.0
 |*  $imagemapresizer v1.0.10
+|*
+|* @breakpoints
+|*  $min-width: 62em (992px) - large (desktops)
+|*  $min-width: 48em (768px) - medium (tablets)
+|*  $max-width: 47.99em (767.98px) - small (mobile)
+|*  $max-width: 19.99em (319.98px) - tiny (special)
 \*========================================================*/
 
 /*========================================================*\
 || utility
 \*========================================================*/
 
+/*========================================================*\
+|| jQuery check */
+
+if (typeof jQuery === "undefined") {
+  console.error("jQuery library not found.");
+}
+
+/*========================================================*\
+|| debounce */
+
+function debounce(callback, delay = 100) {
+  let timeout;
+  return (...args) => {
+    window.clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      callback.apply(null, args);
+    }, delay);
+  };
+}
+
 (function ($) {
   $(document).ready(function () {
     /*========================================================*\
-    || preload class */
+    || resize animation stopper */
 
-    $(window).on("load", function () {
-      $("body").removeClass("js-preload");
+    const addAnimationStopperClass = debounce(() => {
+      $("body").addClass("js-resize-animation-stopper");
     });
 
-    /*========================================================*\
-    || animation resize stopper */
+    const removeAnimationStopperClass = debounce(() => {
+      $("body").removeClass("js-resize-animation-stopper");
+    });
+
+    let resizeTimer;
+    let isResizing = false;
 
     $(window).on("resize", function () {
-      let resizeTimer;
-      $("body").addClass("js-resize-animation-stopper");
-      clearTimeout(resizeTimer);
+      if (!isResizing) {
+        addAnimationStopperClass();
+        isResizing = true;
+      }
+
+      window.clearTimeout(resizeTimer);
+
       resizeTimer = setTimeout(() => {
-        $("body").removeClass("js-resize-animation-stopper");
+        removeAnimationStopperClass();
+        isResizing = false;
       }, 200);
     });
+  });
 
-    /*========================================================*\
-    || element heights */
+  /*========================================================*\
+  || preload class */
 
-    function getElementHeight(elementSelector, cssPropertyName) {
-      const element = $(elementSelector);
-      let height = element.outerHeight();
-      $(":root").css(`--${cssPropertyName}`, `${height}px`);
-    }
+  $(window).on("load", function () {
+    $("body").removeClass("js-preload");
+  });
 
-    $(window).on("load resize", function () {
-      getElementHeight(".page-wrapper > header", "js-header-height");
-      getElementHeight("main > aside", "js-aside-height");
-    });
+  /*========================================================*\
+  || element heights */
 
-    /*========================================================*\
-    || nav-toggler */
+  function getElementHeight(elementSelector, cssPropertyName) {
+    const element = $(elementSelector);
+    let height = element.outerHeight();
+    $(":root").css(`--${cssPropertyName}`, `${height}px`);
+  }
 
-    $("#nav-toggler").on("click", function () {
-      $("body").toggleClass("js-nav-open");
-      $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "false" ? "true" : "false");
-    });
-
-    /*========================================================*\
-    || aside position (mobile) */
-
-    function asidePosition() {
-      const aside = $("aside");
-      let windowHeight = $(window).height();
-      let documentHeight = $(document).height();
-      let scrollTop = $(window).scrollTop();
-      let treshold = parseFloat($("body").css("margin-bottom"));
-      if (scrollTop + windowHeight >= documentHeight - treshold) {
-        aside.css("margin-bottom", "var(--page-spacing-main)");
-      } else {
-        aside.css("margin-bottom", "0");
-      }
-    }
-
-    $(window).on("load scroll resize", function () {
-      asidePosition();
-    });
+  $(window).on("load resize", function () {
+    getElementHeight(".page-wrapper > header", "js-header-height");
+    getElementHeight("main > aside", "js-aside-height");
   });
 })(jQuery);
 
@@ -108,9 +126,14 @@
 \*========================================================*/
 
 (function ($) {
+  /*========================================================*\
+  || breakpoints */
+
+  const breakpointSmall = window.matchMedia("(max-width: 47.99em)");
+
   $(document).ready(function () {
     /*========================================================*\
-    || external links (icon & a11y) */
+    || external hyperlinks (icon & a11y) */
 
     const externalLinkIcon =
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
@@ -127,6 +150,16 @@
     });
 
     /*========================================================*\
+    || sticky header */
+
+    const stickyHeader = $(".page-wrapper > header");
+    $(window).on("scroll", function () {
+      let scrollTop = $(window).scrollTop();
+      let headerOffsetTop = stickyHeader.offset().top;
+      $("body").toggleClass("js-sticky-header", scrollTop >= headerOffsetTop);
+    });
+
+    /*========================================================*\
     || typewriter effect */
 
     const typewriter = $(".js-typewriter-text");
@@ -134,6 +167,14 @@
 
     typewriter.html(typewriterText);
     typewriter.css("--typewriter-characters", typewriterText.length);
+
+    /*========================================================*\
+    || nav-toggler */
+
+    $("#nav-toggler").on("click", function () {
+      $("body").toggleClass("js-nav-open");
+      $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "false" ? "true" : "false");
+    });
 
     /*========================================================*\
     || corrected main heading with click function */
@@ -159,15 +200,16 @@
         setUserName();
       } else {
         localStorage.setItem("name", userName);
-        $("h2 bdi").html(`${userName}`).attr("data-name", `${userName}`);
+        $("h2 bdi").text(`${userName}`).attr("data-name", `${userName}`);
       }
+      $("html, body").scrollTop(0);
     }
 
     if (!localStorage.getItem("name")) {
       setUserName();
     } else {
       let storedName = localStorage.getItem("name");
-      $("h2 bdi").html(`${storedName}`).attr("data-name", `${storedName}`);
+      $("h2 bdi").text(`${storedName}`).attr("data-name", `${storedName}`);
     }
 
     $("button#change-username").on("click", function () {
@@ -180,7 +222,7 @@
     if (typeof $().imageMapResize === "function") {
       $("map").imageMapResize();
     } else {
-      console.error("Image Map Resizer library not found.");
+      console.warn("Image Map Resizer library not found.");
       $("map").remove();
       $(".section-greeting img").removeAttr("usemap");
     }
@@ -244,6 +286,28 @@
       audio.volume = 0.5;
     }
   });
+
+  /*========================================================*\
+  || aside position (mobile) */
+
+  const asidePosition = debounce(() => {
+    const aside = $("aside");
+    let windowHeight = window.innerHeight; /* note mobile browsers with dynamic (address) bars */
+    let documentHeight = $(document).height();
+    let scrollTop = $(window).scrollTop();
+    let buffer = parseFloat($(".page-wrapper > footer").css("padding-bottom"));
+    if (breakpointSmall.matches) {
+      if (scrollTop + windowHeight >= documentHeight - buffer) {
+        aside.css("margin-bottom", "var(--wrapper-spacing-main)"); // property value equal to the value of buffer
+      } else {
+        aside.css("margin-bottom", "");
+      }
+    }
+  });
+
+  $(window).on("load scroll resize", function () {
+    asidePosition();
+  });
 })(jQuery);
 
 /*========================================================*\
@@ -273,7 +337,7 @@
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    // const birthDate = "06-06"; // testing
+    //const birthDate = "06-12"; // testing
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
@@ -319,36 +383,34 @@
       /*
       || open dialog */
 
-      if (firstSiteVisit) {
+      function openDialog() {
         dialog.removeAttribute("inert");
         dialog.showModal();
       }
 
-      $(".js-open-dialog").on("click", function () {
-        dialog.removeAttribute("inert");
-        dialog.showModal();
-      });
+      if (firstSiteVisit) {
+        openDialog();
+      }
+
+      $(".js-open-dialog").on("click", openDialog);
 
       /*
       || close dialog */
 
-      $(".js-close-dialog").on("click", function () {
+      function closeDialog() {
         dialog.close();
         dialog.setAttribute("inert", "");
-      });
+      }
 
-      const dialogClose = async ({ target: dialog }) => {
-        dialog.setAttribute("inert", "");
-      };
-
-      const lightDismiss = ({ target: dialog }) => {
+      function lightDismiss({ target: dialog }) {
         if (dialog.nodeName === "DIALOG") {
-          dialog.close();
+          closeDialog();
         }
-      };
+      }
 
       dialog.addEventListener("click", lightDismiss);
-      dialog.addEventListener("close", dialogClose);
+      dialog.addEventListener("close", closeDialog);
+      $(".js-close-dialog").on("click", closeDialog);
     } else {
       localStorage.removeItem("visited");
     }
