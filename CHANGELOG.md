@@ -1,48 +1,41 @@
-# 📋 Changelog
+# <span class="emoji">📋</span> Changelog
 
 This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "first site") and the [upgraded version of it here](https://github.com/glmvc/first-site-upgrade "first site upgrade").
 
-## 🚀 For The Future
+---
+
+## <span class="emoji">🚀</span> For The Future
 
 - [ ] **Scroll to top button**
-
-- [ ] **Meter/progress bars**
-
+- [ ] **Meter / progress bars**
 - [ ] **Complex (contact) form**
-
 - [ ] **Dark- and Lightmode switcher**
-
 - [ ] *Update* **last edited date** and **time** within the detail area in the footer *automatically*
 
 ---
 
-## ⚙️ General
+## <span class="emoji">⚙️</span> General
 
 - [x] Useful **tools** and **libraries** *now in use*
-
 - [x] **Code structure** *improved* with comments
-
 - [x] **Code formatting** and **styling** now primarily *handled* by [Visual Studio Code settings](https://code.visualstudio.com/ "Visual Studio Code homepage"), [EditorConfig](https://editorconfig.org/ "EditorConfig homepage") and [Prettier](https://prettier.io/ "Prettier homepage"):
-
     - [x] **Space indentation** *changed* from four to two spaces
-
     - [x] **Maximum line length** *set* to 120
-
     - [x] **Line endings** for text files *normalized* and *specified* to unix-style "lf" (line feed)
-
     - [x] A **newline** *added* at the end of each file
-
     - [x] **Trailing whitespace** *trimmed*
 
 ---
 
-## &lt; / &gt; HTML
+## <span class="emoji">&lt;/&gt;</span> HTML
 
 ### &lt;head&gt;
 
 - [x] Document **language** *set* to English (US):
 
-    `<html lang="en-US">`
+    ```html
+    <html lang="en-US">
+    ```
 
 - [x] Document **text direction** *set* to left-to-right:
 
@@ -50,9 +43,13 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] Additional **meta data** *added* (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
 
-    `<meta name="author" content="glmvc">`
+    ```
+    <meta name="author" content="glmvc">
+    ```
 
-    `<meta name="description" content="The upgraded version of my first site!">`
+    ```
+    <meta name="description" content="The upgraded version of my first site!">
+    ```
 
     `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 
@@ -312,11 +309,13 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ---
 
-## &#123; &#125; CSS
+## <span class="emoji">&#123;&#125;</span> CSS
 
 - [x] `@font-face` rulesets in the created external stylesheet (`fonts.css`) *now in use* to *include* and *load* the **web fonts** that are used (eot, woff2, woff, ttf, svg and variable):
 
-    `@font-face {...}`
+    ```css
+    @font-face {...}
+    ```
 
 - [x] **External stylesheets**, **internal stylesheet** and **inline styling** *added* (internal and inline styling just for demonstration)
 
@@ -502,7 +501,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ---
 
-## &#125; &#041; ; JavaScript
+## <span class="emoji">&#125;&#041;&#59;</span> JavaScript
 
 - [x] [jQuery library](https://jquery.com/ "jQuery homepage") *now in use* and most code in `main.js` rewritten using its syntax
 
@@ -510,7 +509,9 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] At a **given scrolling value** (defined in the `checkScroll` function) the class `scrolled` *is now set* on the `body` element:
 
-    `if ($(window).scrollTop() > 23) {$('body').addClass('scrolled');}`
+    ```js
+    if ($(window).scrollTop() > 23) {$('body').addClass('scrolled');}
+    ```
 
     `else {$('body').removeClass('scrolled');}`
 
