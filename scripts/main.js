@@ -22,6 +22,8 @@
 |*    || image map resizer
 |*    || image switcher
 |*    || audio volume
+|*    || changelog (markdown)
+|*      || replace tag
 |*    || aside position (mobile)
 |*  || birthday banner (dialog)
 |*    || first site visit check
@@ -35,6 +37,7 @@
 |* @libraries
 |*  $jquery v3.6.4
 |*  $prismjs v1.29.0
+|*  $marked v5.1.0
 |*  $imagemapresizer v1.0.10
 |*
 |* @breakpoints
@@ -284,6 +287,67 @@ function debounce(callback, delay = 100) {
     const audio = document.getElementById("audio");
     if (audio) {
       audio.volume = 0.5;
+    }
+
+    /*========================================================*\
+    || changelog (markdown) */
+
+    const changelogContent = $("#content-changelog");
+    const changelogMarkdownFile = "CHANGELOG.md";
+
+    if (changelogContent.length) {
+      if (typeof marked !== "undefined") {
+        async function fetchAndParseMarkdown() {
+          try {
+            const response = await fetch(changelogMarkdownFile);
+            if (!response.ok) {
+              throw new Error(`Error ${response.status} while fetching file: ${response.statusText}`);
+            }
+            const data = await response.text();
+            const htmlFromMarkdown = marked.parse(data, { mangle: false, headerIds: false });
+            return htmlFromMarkdown;
+          } catch (error) {
+            throw new Error(`Error fetching or parsing markdown file: ${error.message}`);
+          }
+        }
+
+        async function initChangelog() {
+          try {
+            const htmlChangelogContent = await fetchAndParseMarkdown();
+            changelogContent.html(htmlChangelogContent);
+            replaceTag(changelogContent, "h3", "h5");
+            replaceTag(changelogContent, "h2", "h4");
+            replaceTag(changelogContent, "h1", "h3");
+            changelogContent.find("pre > code").addClass("language-none");
+            Prism.highlightAll();
+          } catch (error) {
+            changelogContent
+              .html(
+                `<pre class='language-' data-src-status='failed'><code class='language-'>✖ ${error.message}</code></pre>`
+              )
+              .addClass("js-changelog-error");
+            console.error(error);
+          }
+        }
+
+        initChangelog();
+      } else {
+        changelogContent
+          .html(
+            "<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: Markdown parser not found</code></pre>"
+          )
+          .addClass("js-changelog-error");
+        console.warn("Marked markdown parser not found.");
+      }
+    }
+
+    /*
+    || replace tag */
+
+    function replaceTag($parentElement, originalTag, replacementTag) {
+      $parentElement.find(originalTag).replaceWith(function () {
+        return $("<" + replacementTag + ">").append($(this).contents());
+      });
     }
   });
 

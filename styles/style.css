@@ -23,7 +23,6 @@
 |*        * details
 |*      || hyperlinks
 |*      || lists
-|*        * changelog
 |*    || visuals
 |*      || glitch effect
 |*    || code
@@ -44,6 +43,7 @@
 |*    || hello world program
 |*    || web dev
 |*    || planets (table)
+|*    || changelog (markdown)
 |*  || footer
 |*    || site features
 |*      || button
@@ -674,11 +674,6 @@ dt {
   color: var(--primary-color);
 }
 
-section[aria-label="changelog"] strong {
-  font-weight: 600;
-  color: inherit;
-}
-
 figcaption {
   margin-top: 1em;
   -webkit-margin-before: 1em;
@@ -871,7 +866,7 @@ ul {
   list-style-type: square;
 }
 
-section:not([aria-label="changelog"]) ul {
+section ul {
   padding-left: 2ch;
   -webkit-padding-start: 2ch;
   padding-inline-start: 2ch;
@@ -946,46 +941,6 @@ dd {
   -webkit-margin-before: 0.5em;
   margin-block-start: 0.5em;
   text-indent: 1ch;
-}
-/* changelog */
-
-body[data-page="changelog"] ul {
-  list-style: none;
-}
-
-section[aria-label="changelog"] li {
-  position: relative;
-  padding-left: 3ch;
-  -webkit-padding-start: 3ch;
-  padding-inline-start: 3ch;
-}
-
-section[aria-label="changelog"] li::before {
-  content: "";
-  position: absolute;
-  top: 0.2em;
-  inset-block-start: 0.2em;
-  left: 0;
-  inset-inline-start: 0;
-  width: 1em;
-  height: 1em;
-  background-image: url("../icons/check-square.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-section[aria-label="changelog"] .future-list li::before {
-  content: "\1F52E";
-  top: 0;
-  inset-block-start: 0;
-  width: unset;
-  height: unset;
-  background: unset;
-  -webkit-filter: drop-shadow(0.03em 0.03em 0.06em rgba(0, 0, 0, 0.9));
-  filter: drop-shadow(0.03em 0.03em 0.06em rgba(0, 0, 0, 0.9));
-  -webkit-filter: var(--shadow-emoji);
-  filter: var(--shadow-emoji);
 }
 
 /*========================================================*\
@@ -2205,6 +2160,69 @@ th[scope="row"]::first-letter {
 tbody tr:nth-child(odd) td {
   background-color: hsl(0, 0%, 12%);
   background-color: var(--surface-color-main);
+}
+
+/*========================================================*\
+|| changelog (markdown) */
+
+section[aria-label="changelog"]:not(.js-changelog-error) {
+  min-height: 100vh; /* prevents layout shift (cls) */
+}
+
+section[aria-label="changelog"] h3,
+section[aria-label="changelog"] h4 {
+  word-spacing: -0.3em;
+}
+
+section[aria-label="changelog"] h4,
+section[aria-label="changelog"] h5 {
+  margin-bottom: 0.6em;
+  -webkit-margin-after: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+section[aria-label="changelog"] strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+section[aria-label="changelog"] ul {
+  padding-left: 0;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+section[aria-label="changelog"] li {
+  position: relative;
+  padding-left: 3ch;
+  -webkit-padding-start: 3ch;
+  padding-inline-start: 3ch;
+}
+
+section[aria-label="changelog"] input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0.15em;
+  inset-block-start: 0.15em;
+  left: 0;
+  inset-inline-start: 0;
+  width: 1em;
+  height: 1em;
+  background-image: url("../icons/square.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0.03em 0.03em 0.06em rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(0.03em 0.03em 0.06em rgba(0, 0, 0, 0.9));
+  -webkit-filter: var(--shadow-emoji);
+  filter: var(--shadow-emoji);
+}
+
+section[aria-label="changelog"] input[type="checkbox"]:checked {
+  background-image: url("../icons/check-square.svg");
 }
 
 /*========================================================*\
