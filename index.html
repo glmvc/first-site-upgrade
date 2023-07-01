@@ -191,10 +191,17 @@
             <span></span>
           </button>
           <ul id="nav-main">
-            <li><a class="nav-item-home active" href="index.html" aria-current="page">Home</a></li>
-            <li><a class="nav-item-code" href="code.html">Source Code</a></li>
-            <li><a class="nav-item-changelog" href="changelog.html">Changelog</a></li>
-            <li><a class="nav-item-first-site" href="first-site/index.html">First Site</a></li>
+            <li><a class="nav-item-home active" href="index.html" title="Homepage" aria-current="page">Home</a></li>
+            <li><a class="nav-item-code" href="code.html" title="Source Code">Code</a></li>
+            <li><a class="nav-item-changelog" href="changelog.html" title="Changelog List">Changelog</a></li>
+            <li>
+              <a
+                class="nav-item-first-site"
+                href="first-site/index.html"
+                title="First-Site Version (different structure and layout)"
+                >First-Site</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -202,12 +209,12 @@
       <!-- || main -->
       <main id="content-main" class="wrapper">
         <!-- || noscript -->
-        <noscript>
+        <noscript class="drop-shadow">
           Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
           website runs properly.
         </noscript>
         <!-- || sidebar (aside) -->
-        <aside class="drop-shadow">
+        <aside class="box-shadow drop-shadow">
           <p>Visit my</p>
           <ul aria-label="Social Media profiles">
             <li>
@@ -267,7 +274,7 @@
             </figcaption>
           </figure>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || hello world program -->
         <article class="hello-world-program" aria-labelledby="hello-world-program-title">
           <h3 id="hello-world-program-title">"Hello, World!" program</h3>
@@ -283,13 +290,13 @@
             >.
           </p>
           <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
-            A "Hello, World!" program is generally <mark>a computer program</mark> that outputs or displays the message
-            "Hello, World!".<br />
+            A <strong>"Hello, World!" program</strong> is generally <mark>a computer program</mark> that
+            <em>outputs</em> or <em>displays</em> the message <samp>"Hello, World!"</samp>.<br />
             Such a program is very simple in most programming languages, and is often used
             <mark>to illustrate the basic syntax</mark> of a programming language. It is often the
             <mark>first program</mark> written by people learning to code.<br />
             It can also be used as a <mark>sanity test</mark> to ensure that computer software intended to compile or
-            run source code is correctly installed, and that the operator understands how to use it.
+            run source code is correctly installed, and that the operator <mark>understands how to use it</mark>.
           </blockquote>
           <p>
             Well, let's just say that this is my first "program" so I can get more familiar with web development and see
@@ -313,7 +320,7 @@
               <track kind="descriptions" src="videos/hello-world.vtt" srclang="en-US" label="English (US)" />
               <p>
                 Sorry, your browser doesn't support HTML 5 video. But don't worry, here's a
-                <a href="videos/hello-world.mp4" title="'Hello world' terminal output MP4 video file" target="_blank"
+                <a href="videos/hello-world.mp4" title="'Hello world!' terminal output MP4 video file" target="_blank"
                   >link to the MP4 video file</a
                 >
                 instead. You can download it and watch it with your favorite video or media player!
@@ -330,15 +337,15 @@
             </figcaption>
           </figure>
         </article>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || web dev -->
         <section aria-labelledby="web-dev-title">
           <h3 id="web-dev-title" class="hyphenation">Web development</h3>
           <div class="web-dev-wrapper">
             <p>
               The following description is a <mark><em>very</em> simple example</mark> I came up with for beginners to
-              get to know the <mark>three most important components</mark> of front-end web development. Note that web
-              development is a much larger field.<br />
+              get to know the <mark>three most important components</mark> of
+              <strong>front-end web development</strong>. Note that web development is a much larger field.<br />
               Think about <mark>building a house</mark>:
             </p>
             <dl>
@@ -392,13 +399,13 @@
             </li>
           </ul>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || planets (table) -->
         <section id="table-planets" aria-label="Planets of the solar system">
           <h3>Planets</h3>
           <p>To honor the other planets in our solar system as well, not just our own world.</p>
-          <div class="table-wrapper">
-            <table class="box-shadow">
+          <div class="table-wrapper drop-shadow">
+            <table>
               <caption>
                 Data about the planets of our solar system. Planetary facts taken from
                 <a
@@ -410,7 +417,7 @@
               </caption>
               <colgroup>
                 <col span="2" />
-                <col span="1" style="border-right: 3px solid black; border-right: var(--border-main)" />
+                <col span="1" />
                 <col span="9" />
               </colgroup>
               <thead>
@@ -440,7 +447,7 @@
                   <td>57.9</td>
                   <td>167</td>
                   <td>0</td>
-                  <td>The shrinking planet closest to the Sun</td>
+                  <td>The shrinking planet closest to the sun</td>
                 </tr>
                 <tr>
                   <th scope="row">Venus</th>
@@ -464,7 +471,7 @@
                   <td>149.6</td>
                   <td>15</td>
                   <td>1</td>
-                  <td>Our World</td>
+                  <td>Mother, cradle of known life, our home</td>
                 </tr>
                 <tr>
                   <th scope="row">Mars</th>
@@ -476,7 +483,7 @@
                   <td>227.9</td>
                   <td>-65</td>
                   <td>2</td>
-                  <td>The red planet aka Elon's planet</td>
+                  <td>The red planet, aka Elon's planet</td>
                 </tr>
                 <tr>
                   <th rowspan="4" scope="rowgroup">Jovian planets</th>
@@ -490,7 +497,7 @@
                   <td>778.6</td>
                   <td>-110</td>
                   <td>67</td>
-                  <td>The largest planet</td>
+                  <td>The largest planet with raging storms</td>
                 </tr>
                 <tr>
                   <th scope="row">Saturn</th>
@@ -527,7 +534,7 @@
                   <td>4495.1</td>
                   <td>-200</td>
                   <td>14</td>
-                  <td>The planet very far out</td>
+                  <td>The icy planet very far out</td>
                 </tr>
                 <tr>
                   <th colspan="2" scope="rowgroup">Dwarf planets*</th>
@@ -562,7 +569,7 @@
             </table>
           </div>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || misc -->
         <section class="section-misc" aria-labelledby="misc-title">
           <h3 id="misc-title">Misc.</h3>
@@ -586,7 +593,7 @@
             </li>
             <li>
               Favicons:
-              <a href="https://twemoji.twitter.com/" title="Twitter emojis homepage" target="_blank">Twemoji</a>
+              <a href="https://twemoji.twitter.com/" title="Twemoji homepage" target="_blank">Twemoji</a>
             </li>
             <li>
               SVG background:
@@ -638,7 +645,7 @@
             </li>
           </ol>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
       </main>
       <!--=====================================================-->
       <!-- || footer -->
@@ -654,7 +661,7 @@
           <div class="feature">
             <h6>Enhance your coding senses:</h6>
             <figure>
-              <audio id="audio" class="drop-shadow" controls loop preload="auto">
+              <audio id="audio" class="box-shadow" controls loop preload="auto">
                 <source src="audios/cyberpunk.ogg" type="audio/ogg" />
                 <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
                 <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
@@ -678,7 +685,7 @@
             </figure>
           </div>
         </div>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
@@ -688,13 +695,11 @@
               secret city<br />
               secret country
             </p>
-            <p><a href="tel:+1234567890">123-456-7890</a></p>
-            <p>
-              <a
-                href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
-                >secret@example.com</a
-              >
-            </p>
+            <a href="tel:+1234567890">123-456-7890</a>
+            <a
+              href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
+              >secret@example.com</a
+            >
           </div>
           <iframe
             name="contact-map"
@@ -706,7 +711,7 @@
             loading="lazy"
           ></iframe>
         </address>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>
@@ -738,7 +743,7 @@
               <ruby>またね<rp>(</rp><rt>ma-ta-ne</rt><rp>)</rp></ruby>
             </p>
             <p>
-              <small>Last edited at <time datetime="2023-06-12T23:00">23:00 on June 12, 2023</time>.</small>
+              <small>Last edited at <time datetime="2023-07-01T22:10">22:10 on July 1, 2023</time>.</small>
             </p>
           </div>
         </details>
@@ -748,7 +753,7 @@
       <dialog id="birthday-banner" inert>
         <div class="dialog-inner">
           <header>
-            <h2><span class="emoji">&#127874;</span>Bitday</h2>
+            <h2><span class="emoji">&#127874;</span> Bitday</h2>
             <button
               type="button"
               class="dialog-close-icon js-close-dialog drop-shadow"
@@ -757,11 +762,13 @@
           </header>
           <section>
             <hgroup>
-              <h3>Today, the site turned <span class="js-site-age"></span> old!</h3>
+              <h3>Hooray! Today, the site turned <span class="js-site-age"></span> old!</h3>
               <p>And it's been that long since the very first bit of it was written.</p>
             </hgroup>
-            <p>The site is very happy to see you on this special day of the year.</p>
-            <p>Cheers to all of you here today!<span class="emoji">&#127870;</span></p>
+            <p>
+              Cyber-cheers to all of you here today as the site blows out the digital candles on its birthday cake!
+              <span class="emoji">&#127870;</span>
+            </p>
           </section>
           <footer>
             <menu>
@@ -769,7 +776,9 @@
                 <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
               </li>
               <li>
-                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">Celebrate the site</button>
+                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
+                  Join the celebration <span class="emoji">&#129705;</span>
+                </button>
               </li>
             </menu>
           </footer>
