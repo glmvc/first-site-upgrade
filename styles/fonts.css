@@ -31,7 +31,7 @@
   src: url("../fonts/source-code-pro/source-code-variable-roman.ttf.woff2") format("woff2-variations"),
     url("../fonts/source-code-pro/source-code-variable-roman.ttf.woff") format("woff-variations"),
     url("../fonts/source-code-pro/source-code-variable-roman.ttf") format("truetype-variations");
-  /* new future syntax for src property, but no browser support yet - june 2023
+  /* new future syntax for src property, but no browser support yet - july 2023
   |* url("") format("") tech("variations") */
 }
 
@@ -47,7 +47,7 @@
   src: url("../fonts/source-code-pro/source-code-variable-italic.ttf.woff2") format("woff2-variations"),
     url("../fonts/source-code-pro/source-code-variable-italic.ttf.woff") format("woff-variations"),
     url("../fonts/source-code-pro/source-code-variable-italic.ttf") format("truetype-variations");
-  /* new future syntax for src property, but no browser support yet - june 2023
+  /* new future syntax for src property, but no browser support yet - july 2023
   |* url("") format("") tech("variations") */
 }
 

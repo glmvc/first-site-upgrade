@@ -20,7 +20,6 @@
     |* @scripts
     |*  $jquery v3.6.4
     |*  $prismjs v1.29.0
-    |*  $imagemapresizer v1.0.10
     |*  $main.js
     |========================================================-->
     <!-- @title -->
@@ -84,7 +83,6 @@
     <!-- @scripts -->
     <script src="scripts/jquery-3.6.4.min.js" defer></script>
     <script src="scripts/prism.min.js" defer></script>
-    <script src="scripts/imageMapResizer.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <noscript><link rel="stylesheet" href="styles/noscript.css" /></noscript>
   </head>
@@ -197,10 +195,17 @@
             <span></span>
           </button>
           <ul id="nav-main">
-            <li><a class="nav-item-home" href="index.html">Home</a></li>
-            <li><a class="nav-item-code active" href="code.html" aria-current="page">Source Code</a></li>
-            <li><a class="nav-item-changelog" href="changelog.html">Changelog</a></li>
-            <li><a class="nav-item-first-site" href="first-site/index.html">First Site</a></li>
+            <li><a class="nav-item-home" href="index.html" title="Homepage">Home</a></li>
+            <li><a class="nav-item-code active" href="code.html" title="Source Code" aria-current="page">Code</a></li>
+            <li><a class="nav-item-changelog" href="changelog.html" title="Changelog List">Changelog</a></li>
+            <li>
+              <a
+                class="nav-item-first-site"
+                href="first-site/index.html"
+                title="First-Site Version (different structure and layout)"
+                >First-Site</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -208,12 +213,12 @@
       <!-- || main -->
       <main id="content-main" class="wrapper line-numbers">
         <!-- || noscript -->
-        <noscript>
+        <noscript class="drop-shadow">
           Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
           website runs properly.
         </noscript>
         <!-- || sidebar (aside) -->
-        <aside class="drop-shadow">
+        <aside class="box-shadow drop-shadow">
           <p>Visit my</p>
           <ul aria-label="Social Media profiles">
             <li>
@@ -234,80 +239,148 @@
             Nice to meet you, <bdi class="hyphenation" data-name></bdi>
           </h2>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || code info -->
         <section aria-label="Source Code Information">
           <h3><span class="emoji">&#128126;</span> Source Code Info</h3>
           <p>
-            This page displays the source code as code blocks / snippets of the HTML file of the homepage (index.html)
-            and the CSS and JavaScript files of the entire website.
+            This site displays the
+            <a
+              href="https://github.com/glmvc/first-site-upgrade"
+              title="first-site-upgrade GitHub repository"
+              target="_blank"
+              >source code</a
+            >
+            of the project's <em>main</em> files as code blocks/snippets. External tools such as JavaScript libraries
+            are <em>not</em> included. The
+            <a href="https://github.com/glmvc/first-site" title="first-site GitHub repository" target="_blank"
+              >source code of the first-site</a
+            >
+            is also <em>not</em> listed, but can be found in its repository.
           </p>
-          <p>Feel free to copy the codes. You can either:</p>
+          <p>
+            Always check the
+            <a
+              href="https://github.com/glmvc/first-site-upgrade/blob/main/LICENSE.md"
+              title="first-site-upgrade repository license"
+              target="_blank"
+              >license of the project</a
+            >
+            before copying any code. To copy, you can either:
+          </p>
           <ul>
             <li>
-              simply copy the whole code of the wanted block into your clipboard using the
-              <strong>"Copy" buttons</strong> in the top right corner of each code block,
+              <em>simply</em> copy the entire code of the desired block to your clipboard using the
+              <strong>"Copy" button</strong> in the upper right corner of each code block,
             </li>
             <li>
-              or you manually select the desired lines with your input device (usually mouse) and press
-              <kbd><kbd>&#8984; (Command/Cmd)</kbd> + <kbd>C</kbd></kbd> on Mac or
-              <kbd><kbd>Ctrl (Control)</kbd> + <kbd>C</kbd></kbd> on Windows / Linux.
+              or you can <em>manually</em> select the desired lines/parts/words with your input device (usually a mouse)
+              and press <kbd><kbd>&#8984; (Command/Cmd)</kbd> + <kbd>C</kbd></kbd> on Mac or
+              <kbd><kbd>Ctrl (Control)</kbd> + <kbd>C</kbd></kbd> on Windows/Linux.
             </li>
             <li>
-              To paste what you copied to your desired location, on Mac press
-              <kbd><kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd></kbd> and
-              <kbd><kbd>Ctrl (Control)</kbd> + <kbd>V</kbd></kbd> on Windows / Linux.
+              To paste what you copied to the desired location, press
+              <kbd><kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd></kbd> on Mac or
+              <kbd><kbd>Ctrl (Control)</kbd> + <kbd>V</kbd></kbd> on Windows/Linux.
             </li>
           </ul>
         </section>
-        <hr />
-        <!-- || html code block -->
+        <hr class="drop-shadow" />
+        <!-- || html code -->
         <section aria-label="HTML Source Code">
           <h4><span class="emoji">&lt;&#47;&gt;</span> HTML Code</h4>
+          <!-- || index.html -->
           <details>
             <summary><h5>index.html</h5></summary>
             <div class="details-inner">
-              <noscript>
+              <noscript class="drop-shadow">
                 Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
                 display the source code.
               </noscript>
               <pre data-src="index.html"></pre>
             </div>
           </details>
+          <!-- || code.html -->
+          <details>
+            <summary><h5>code.html</h5></summary>
+            <div class="details-inner">
+              <noscript class="drop-shadow">
+                Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
+                display the source code.
+              </noscript>
+              <pre data-src="code.html"></pre>
+            </div>
+          </details>
+          <!-- || changelog.html -->
+          <details>
+            <summary><h5>changelog.html</h5></summary>
+            <div class="details-inner">
+              <noscript class="drop-shadow">
+                Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
+                display the source code.
+              </noscript>
+              <pre data-src="changelog.html"></pre>
+            </div>
+          </details>
+          <!-- || 404.html -->
+          <details>
+            <summary><h5>404.html</h5></summary>
+            <div class="details-inner">
+              <noscript class="drop-shadow">
+                Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
+                display the source code.
+              </noscript>
+              <pre data-src="404.html"></pre>
+            </div>
+          </details>
         </section>
-        <hr />
-        <!-- || css code blocks -->
+        <hr class="drop-shadow" />
+        <!-- || css code -->
         <section aria-label="CSS Source Code">
-          <h4><span class="emoji">&#123;&nbsp;&#125;</span> CSS Code</h4>
+          <h4><span class="emoji">&#123;&#125;</span> CSS Code</h4>
+          <!-- || style.css -->
           <details>
             <summary><h5>style.css</h5></summary>
             <div class="details-inner">
-              <noscript>
+              <noscript class="drop-shadow">
                 Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
                 display the source code.
               </noscript>
               <pre data-src="styles/style.css"></pre>
             </div>
           </details>
+          <!-- || fonts.css -->
           <details>
             <summary><h5>fonts.css</h5></summary>
             <div class="details-inner">
-              <noscript>
+              <noscript class="drop-shadow">
                 Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
                 display the source code.
               </noscript>
               <pre data-src="styles/fonts.css"></pre>
             </div>
           </details>
+          <!-- || noscript.css -->
+          <details>
+            <summary><h5>noscript.css</h5></summary>
+            <div class="details-inner">
+              <noscript class="drop-shadow">
+                Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
+                display the source code.
+              </noscript>
+              <pre data-src="styles/noscript.css"></pre>
+            </div>
+          </details>
         </section>
-        <hr />
-        <!-- || js code block -->
+        <hr class="drop-shadow" />
+        <!-- || js code -->
         <section aria-label="JavaScript Source Code">
           <h4><span class="emoji">&#125;&#41;;</span> JavaScript Code</h4>
+          <!-- || main.js -->
           <details>
             <summary><h5>main.js</h5></summary>
             <div class="details-inner">
-              <noscript>
+              <noscript class="drop-shadow">
                 Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
                 display the source code.
               </noscript>
@@ -315,14 +388,14 @@
               <p>
                 Note that the "first site visit check", which sets the <var>firstSiteVisit</var>
                 <strong>variable</strong> (let) to either true or false, is currently located within the birthday banner
-                functionality. If this check is needed for one or more functionalities/features in the future, it should
-                be moved to the "utility" section of the file.
+                functionality. If this check is needed for more functionalities/features in the future, it
+                <em>should</em> be moved to the "utility" section of the file.
               </p>
             </div>
           </details>
         </section>
-        <hr />
-        <!-- || terminal code block -->
+        <hr class="drop-shadow" />
+        <!-- || terminal code -->
         <section aria-label="Terminal Source Code">
           <h4><span class="emoji">&#36;</span> Terminal</h4>
           <pre
@@ -341,14 +414,13 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
 </samp>
 <samp><kbd>whois 185.199.108.153</kbd>
 ...</samp></code></pre>
-          <p>
-            <small
-              >Quick Tip: To cancel pinging in the macOS terminal, press
-              <kbd><kbd>&#8963; (Control/Ctrl)</kbd> + <kbd>C</kbd></kbd> and the process will be stopped.</small
-            >
-          </p>
+          <small
+            >Quick Tip: To cancel pinging in the macOS terminal, press
+            <kbd><kbd>&#8963; (Control/Ctrl)</kbd> + <kbd>C</kbd></kbd
+            >, and the process will be stopped.</small
+          >
         </section>
-        <hr />
+        <hr class="drop-shadow" />
       </main>
       <!--=====================================================-->
       <!-- || footer -->
@@ -364,7 +436,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
           <div class="feature">
             <h6>Enhance your coding senses:</h6>
             <figure>
-              <audio id="audio" class="drop-shadow" controls loop preload="auto">
+              <audio id="audio" class="box-shadow" controls loop preload="auto">
                 <source src="audios/cyberpunk.ogg" type="audio/ogg" />
                 <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
                 <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
@@ -388,7 +460,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
             </figure>
           </div>
         </div>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
@@ -398,13 +470,11 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
               secret city<br />
               secret country
             </p>
-            <p><a href="tel:+1234567890">123-456-7890</a></p>
-            <p>
-              <a
-                href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
-                >secret@example.com</a
-              >
-            </p>
+            <a href="tel:+1234567890">123-456-7890</a>
+            <a
+              href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
+              >secret@example.com</a
+            >
           </div>
           <iframe
             name="contact-map"
@@ -416,7 +486,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
             loading="lazy"
           ></iframe>
         </address>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>
@@ -448,7 +518,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
               <ruby>またね<rp>(</rp><rt>ma-ta-ne</rt><rp>)</rp></ruby>
             </p>
             <p>
-              <small>Last edited at <time datetime="2023-06-12T23:00">23:00 on June 12, 2023</time>.</small>
+              <small>Last edited at <time datetime="2023-07-01T22:10">22:10 on July 1, 2023</time>.</small>
             </p>
           </div>
         </details>
@@ -458,7 +528,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
       <dialog id="birthday-banner" inert>
         <div class="dialog-inner">
           <header>
-            <h2><span class="emoji">&#127874;</span>Bitday</h2>
+            <h2><span class="emoji">&#127874;</span> Bitday</h2>
             <button
               type="button"
               class="dialog-close-icon js-close-dialog drop-shadow"
@@ -467,11 +537,13 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
           </header>
           <section>
             <hgroup>
-              <h3>Today, the site turned <span class="js-site-age"></span> old!</h3>
+              <h3>Hooray! Today, the site turned <span class="js-site-age"></span> old!</h3>
               <p>And it's been that long since the very first bit of it was written.</p>
             </hgroup>
-            <p>The site is very happy to see you on this special day of the year.</p>
-            <p>Cheers to all of you here today!<span class="emoji">&#127870;</span></p>
+            <p>
+              Cyber-cheers to all of you here today as the site blows out the digital candles on its birthday cake!
+              <span class="emoji">&#127870;</span>
+            </p>
           </section>
           <footer>
             <menu>
@@ -479,7 +551,9 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
                 <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
               </li>
               <li>
-                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">Celebrate the site</button>
+                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
+                  Join the celebration <span class="emoji">&#129705;</span>
+                </button>
               </li>
             </menu>
           </footer>

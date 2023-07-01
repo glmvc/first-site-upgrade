@@ -14,16 +14,17 @@
 |*  || main
 |*    || breakpoints
 |*    || external hyperlinks (icon & a11y)
-|*    || sticky header
 |*    || typewriter effect
 |*    || nav-toggler
-|*    || corrected main heading with click function
+|*    || corrected main heading with click alert
 |*    || personalized welcome message
 |*    || image map resizer
 |*    || image switcher
 |*    || audio volume
+|*    || code
 |*    || changelog (markdown)
 |*      || replace tag
+|*    || sticky header
 |*    || aside position (mobile)
 |*  || birthday banner (dialog)
 |*    || first site visit check
@@ -36,9 +37,9 @@
 |*
 |* @libraries
 |*  $jquery v3.6.4
+|*  $imagemapresizer v1.0.10
 |*  $prismjs v1.29.0
 |*  $marked v5.1.0
-|*  $imagemapresizer v1.0.10
 |*
 |* @breakpoints
 |*  $min-width: 62em (992px) - large (desktops)
@@ -55,7 +56,7 @@
 || jQuery check */
 
 if (typeof jQuery === "undefined") {
-  console.error("jQuery library not found.");
+  console.error("jQuery library not found");
 }
 
 /*========================================================*\
@@ -98,7 +99,7 @@ function debounce(callback, delay = 100) {
       resizeTimer = setTimeout(() => {
         removeAnimationStopperClass();
         isResizing = false;
-      }, 200);
+      }, 100);
     });
   });
 
@@ -140,8 +141,8 @@ function debounce(callback, delay = 100) {
 
     const externalLinkIcon =
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
-    const externalLinkContent = `<span class="visually-hidden">, external link (opens in a new tab)</span>${externalLinkIcon}`;
-    const externalLinkContentNotSecure = `<span class="visually-hidden">, external link (connection not secure, opens in a new tab)</span>${externalLinkIcon}`;
+    const externalLinkContent = `<span class="visually-hidden">; external link (opens in a new tab)</span>${externalLinkIcon}`;
+    const externalLinkContentNotSecure = `<span class="visually-hidden">; external link (connection not secure, opens in a new tab)</span>${externalLinkIcon}`;
 
     $('a[target="_blank"]').each(function () {
       const externalLink = $(this);
@@ -153,22 +154,12 @@ function debounce(callback, delay = 100) {
     });
 
     /*========================================================*\
-    || sticky header */
-
-    const stickyHeader = $(".page-wrapper > header");
-    $(window).on("scroll", function () {
-      let scrollTop = $(window).scrollTop();
-      let headerOffsetTop = stickyHeader.offset().top;
-      $("body").toggleClass("js-sticky-header", scrollTop >= headerOffsetTop);
-    });
-
-    /*========================================================*\
     || typewriter effect */
 
     const typewriter = $(".js-typewriter-text");
     const typewriterText = "glmvc";
 
-    typewriter.html(typewriterText);
+    typewriter.text(typewriterText);
     typewriter.css("--typewriter-characters", typewriterText.length);
 
     /*========================================================*\
@@ -180,7 +171,7 @@ function debounce(callback, delay = 100) {
     });
 
     /*========================================================*\
-    || corrected main heading with click function */
+    || corrected main heading with click alert */
 
     $("h1 .heading-main")
       .text("Hello, World!")
@@ -222,12 +213,14 @@ function debounce(callback, delay = 100) {
     /*========================================================*\
     || image map resizer */
 
-    if (typeof $().imageMapResize === "function") {
-      $("map").imageMapResize();
-    } else {
-      console.warn("Image Map Resizer library not found.");
-      $("map").remove();
-      $(".section-greeting img").removeAttr("usemap");
+    if ($("map").length) {
+      if (typeof imageMapResize !== "undefined") {
+        $("map").imageMapResize();
+      } else {
+        $("map").remove();
+        $(".section-greeting img").removeAttr("usemap");
+        console.warn("Image Map Resizer library not found");
+      }
     }
 
     /*========================================================*\
@@ -247,7 +240,7 @@ function debounce(callback, delay = 100) {
     const newFigcaption =
       'A JavaScript code snippet that reveals a small feature, but it is somehow blurred... (screenshot taken with <a href="https://codeimg.io/" title="Source Code Image Tool" target="_blank">Codeimg.io</a>)';
 
-    const switchImage = function () {
+    function switchImage() {
       if (image.attr("src") === "images/hello-world.png") {
         imageMap.detach();
         image
@@ -268,7 +261,7 @@ function debounce(callback, delay = 100) {
         });
         imageFigcaption.html(originalFigcaption);
       }
-    };
+    }
 
     image.on("click", function () {
       switchImage();
@@ -287,6 +280,24 @@ function debounce(callback, delay = 100) {
     const audio = document.getElementById("audio");
     if (audio) {
       audio.volume = 0.5;
+    }
+
+    /*========================================================*\
+    || code */
+
+    function highlightCode() {
+      Prism.highlightAll();
+      $(".code-toolbar").addClass("box-shadow");
+    }
+
+    if (typeof Prism !== "undefined") {
+      highlightCode();
+    } else if ($("pre[data-src]").length) {
+      $("pre[data-src]")
+        .addClass("language-")
+        .attr("data-src-status", "failed")
+        .html("<code class='language-'>✖ Error: PrismJS syntax highlighter not found</code>");
+      console.error("PrismJS library not found");
     }
 
     /*========================================================*\
@@ -314,16 +325,20 @@ function debounce(callback, delay = 100) {
         async function initChangelog() {
           try {
             const htmlChangelogContent = await fetchAndParseMarkdown();
-            changelogContent.html(htmlChangelogContent);
+            changelogContent.append(htmlChangelogContent);
             replaceTag(changelogContent, "h3", "h5");
             replaceTag(changelogContent, "h2", "h4");
             replaceTag(changelogContent, "h1", "h3");
             changelogContent.find("pre > code").addClass("language-none");
-            Prism.highlightAll();
+            if (typeof Prism !== "undefined") {
+              highlightCode();
+            } else {
+              console.warn("PrismJS library not found");
+            }
           } catch (error) {
             changelogContent
               .html(
-                `<pre class='language-' data-src-status='failed'><code class='language-'>✖ ${error.message}</code></pre>`
+                `<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: ${error.message}</code></pre>`
               )
               .addClass("js-changelog-error");
             console.error(error);
@@ -334,10 +349,10 @@ function debounce(callback, delay = 100) {
       } else {
         changelogContent
           .html(
-            "<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: Markdown parser not found</code></pre>"
+            "<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: Marked markdown parser not found</code></pre>"
           )
           .addClass("js-changelog-error");
-        console.warn("Marked markdown parser not found.");
+        console.error("Marked library not found");
       }
     }
 
@@ -349,6 +364,20 @@ function debounce(callback, delay = 100) {
         return $("<" + replacementTag + ">").append($(this).contents());
       });
     }
+  });
+
+  /*========================================================*\
+  || sticky header */
+
+  function stickyHeader() {
+    const stickyHeader = $(".page-wrapper > header");
+    let scrollTop = $(window).scrollTop();
+    let headerOffsetTop = stickyHeader.offset().top;
+    $("body").toggleClass("js-sticky-header", scrollTop >= headerOffsetTop);
+  }
+
+  $(window).on("load scroll", function () {
+    stickyHeader();
   });
 
   /*========================================================*\
@@ -383,15 +412,16 @@ function debounce(callback, delay = 100) {
     /*========================================================*\
     || first site visit check */
 
-    let firstSiteVisit = false;
     function checkFirstSiteVisit() {
-      if (localStorage.getItem("visited")) {
-        return;
+      const visited = localStorage.getItem("visited");
+      if (!visited) {
+        localStorage.setItem("visited", "true");
+        return true;
       }
-      firstSiteVisit = true;
-      localStorage.setItem("visited", 1);
+      return false;
     }
-    checkFirstSiteVisit();
+
+    let firstSiteVisit = checkFirstSiteVisit();
 
     /*========================================================*\
     || dates */
@@ -401,7 +431,7 @@ function debounce(callback, delay = 100) {
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    //const birthDate = "06-12"; // testing
+    // const birthDate = "07-01"; // testing
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
@@ -420,12 +450,12 @@ function debounce(callback, delay = 100) {
       /*
       || site age */
 
-      dialog.querySelector(".js-site-age").innerHTML = siteAge + (siteAge > 1 ? " years" : " year");
+      dialog.querySelector(".js-site-age").innerText = siteAge + (siteAge > 1 ? " years" : " year");
 
       /*
       || dialog button */
 
-      let createDialogButton = function () {
+      const createDialogButton = function () {
         if (!$(".js-open-dialog").length) {
           $("footer .details-inner > p:nth-of-type(2)")
             .prepend("<span class='emoji'>&#127881;</span>")
@@ -435,7 +465,7 @@ function debounce(callback, delay = 100) {
             .replaceWith(function () {
               return $("<button/>", {
                 type: "button",
-                class: "dialog-button js-open-dialog centered",
+                class: "dialog-button js-open-dialog centered box-shadow",
                 html: $(this).html(),
               });
             });

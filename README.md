@@ -56,7 +56,7 @@ feel free to [contribute to this project](CONTRIBUTING.md "") opening issues and
     - [background gradient generator](https://cssgradient.io/ "css gradient homepage")
     - [typewriter effect inspiration](https://www.30secondsofcode.org/css/s/typewriter-effect "30 seconds of code typewriter effect tutorial")
     - [nav icon inspiration](https://codepen.io/ahmadbassamemran/pen/VQwPGr "hamburger icons animations on codepen")
-    - [glitch effect tutorial](https://www.youtube.com/watch?v=7Xyg8Ja7dyY "animated glitch text effect on youtube")
+    - [glitch effect](https://codepen.io/mattgrosswork/pen/VwprebG "animated glitch text effect on codepen")
     - [source code image tool](https://carbon.now.sh/ "Carbon app")
     - [image editor](https://www.photopea.com/ "photopea advanced image editor")
     - [image compression tool](https://tinypng.com/ "tinypng homepage")

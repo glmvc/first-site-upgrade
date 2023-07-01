@@ -21,7 +21,6 @@
     |*  $jquery v3.6.4
     |*  $marked v5.1.0
     |*  $prismjs v1.29.0
-    |*  $imagemapresizer v1.0.10
     |*  $main.js
     |========================================================-->
     <!-- @title -->
@@ -86,7 +85,6 @@
     <script src="scripts/jquery-3.6.4.min.js" defer></script>
     <script src="scripts/marked.min.js" defer></script>
     <script src="scripts/prism.min.js" defer></script>
-    <script src="scripts/imageMapResizer.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <noscript><link rel="stylesheet" href="styles/noscript.css" /></noscript>
   </head>
@@ -199,10 +197,21 @@
             <span></span>
           </button>
           <ul id="nav-main">
-            <li><a class="nav-item-home" href="index.html">Home</a></li>
-            <li><a class="nav-item-code" href="code.html">Source Code</a></li>
-            <li><a class="nav-item-changelog active" href="changelog.html" aria-current="page">Changelog</a></li>
-            <li><a class="nav-item-first-site" href="first-site/index.html">First Site</a></li>
+            <li><a class="nav-item-home" href="index.html" title="Homepage">Home</a></li>
+            <li><a class="nav-item-code" href="code.html" title="Source Code">Code</a></li>
+            <li>
+              <a class="nav-item-changelog active" href="changelog.html" title="Changelog List" aria-current="page"
+                >Changelog</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-item-first-site"
+                href="first-site/index.html"
+                title="First-Site Version (different structure and layout)"
+                >First-Site</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -210,12 +219,12 @@
       <!-- || main -->
       <main id="content-main" class="wrapper">
         <!-- || noscript -->
-        <noscript>
+        <noscript class="drop-shadow">
           Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
           website runs properly.
         </noscript>
         <!-- || sidebar (aside) -->
-        <aside class="drop-shadow">
+        <aside class="box-shadow drop-shadow">
           <p>Visit my</p>
           <ul aria-label="Social Media profiles">
             <li>
@@ -236,10 +245,15 @@
             Nice to meet you, <bdi class="hyphenation" data-name></bdi>
           </h2>
         </section>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || changelog -->
-        <section id="content-changelog" aria-label="changelog"></section>
-        <hr />
+        <section id="content-changelog" aria-label="changelog">
+          <noscript class="drop-shadow">
+            Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to load and
+            display the changelog.
+          </noscript>
+        </section>
+        <hr class="drop-shadow" />
       </main>
       <!--=====================================================-->
       <!-- || footer -->
@@ -255,7 +269,7 @@
           <div class="feature">
             <h6>Enhance your coding senses:</h6>
             <figure>
-              <audio id="audio" class="drop-shadow" controls loop preload="auto">
+              <audio id="audio" class="box-shadow" controls loop preload="auto">
                 <source src="audios/cyberpunk.ogg" type="audio/ogg" />
                 <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
                 <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
@@ -279,7 +293,7 @@
             </figure>
           </div>
         </div>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
@@ -289,13 +303,11 @@
               secret city<br />
               secret country
             </p>
-            <p><a href="tel:+1234567890">123-456-7890</a></p>
-            <p>
-              <a
-                href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
-                >secret@example.com</a
-              >
-            </p>
+            <a href="tel:+1234567890">123-456-7890</a>
+            <a
+              href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
+              >secret@example.com</a
+            >
           </div>
           <iframe
             name="contact-map"
@@ -307,7 +319,7 @@
             loading="lazy"
           ></iframe>
         </address>
-        <hr />
+        <hr class="drop-shadow" />
         <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>
@@ -339,7 +351,7 @@
               <ruby>またね<rp>(</rp><rt>ma-ta-ne</rt><rp>)</rp></ruby>
             </p>
             <p>
-              <small>Last edited at <time datetime="2023-06-12T23:00">23:00 on June 12, 2023</time>.</small>
+              <small>Last edited at <time datetime="2023-07-01T22:10">22:10 on July 1, 2023</time>.</small>
             </p>
           </div>
         </details>
@@ -349,7 +361,7 @@
       <dialog id="birthday-banner" inert>
         <div class="dialog-inner">
           <header>
-            <h2><span class="emoji">&#127874;</span>Bitday</h2>
+            <h2><span class="emoji">&#127874;</span> Bitday</h2>
             <button
               type="button"
               class="dialog-close-icon js-close-dialog drop-shadow"
@@ -358,11 +370,13 @@
           </header>
           <section>
             <hgroup>
-              <h3>Today, the site turned <span class="js-site-age"></span> old!</h3>
+              <h3>Hooray! Today, the site turned <span class="js-site-age"></span> old!</h3>
               <p>And it's been that long since the very first bit of it was written.</p>
             </hgroup>
-            <p>The site is very happy to see you on this special day of the year.</p>
-            <p>Cheers to all of you here today!<span class="emoji">&#127870;</span></p>
+            <p>
+              Cyber-cheers to all of you here today as the site blows out the digital candles on its birthday cake!
+              <span class="emoji">&#127870;</span>
+            </p>
           </section>
           <footer>
             <menu>
@@ -370,7 +384,9 @@
                 <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
               </li>
               <li>
-                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">Celebrate the site</button>
+                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
+                  Join the celebration <span class="emoji">&#129705;</span>
+                </button>
               </li>
             </menu>
           </footer>
