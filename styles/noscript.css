@@ -45,7 +45,7 @@ body {
 .page-wrapper {
   box-shadow: 5px 0 10px rgba(255, 0, 0, 0.8), -5px 0 10px rgba(255, 0, 0, 0.8);
   box-shadow: calc(var(--page-spacing-main) * 0.25) 0 calc(var(--page-spacing-main) * 0.5) rgba(255, 0, 0, 0.8),
-    calc(var(--page-spacing-main) * -0.25) 0 calc(var(--page-spacing-main) * 0.5) rgba(255, 0, 0, 0.8);
+    calc(var(--page-spacing-main) * (-0.25)) 0 calc(var(--page-spacing-main) * 0.5) rgba(255, 0, 0, 0.8);
 }
 
 .typewriter,
