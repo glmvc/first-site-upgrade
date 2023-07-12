@@ -311,7 +311,7 @@
 \*========================================================*/
 
 html {
-  box-sizing: border-box; /* box-sizing "reset" (see next ruleset below) */
+  box-sizing: border-box; /* box-sizing "reset" (see next rule below) */
   font-size: 62.5%;
   /* equal to 10px if browser font-size is set to 16px (default in most browsers)
   |* (62.5 / 100) * 16 = 10 */
@@ -384,7 +384,7 @@ body {
   box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);
   box-shadow: calc(var(--page-spacing-main) * 0.25) 0 calc(var(--page-spacing-main) * 0.5)
       rgba(var(--primary-color-rgb), 0.8),
-    calc(var(--page-spacing-main) * -0.25) 0 calc(var(--page-spacing-main) * 0.5) rgba(var(--primary-color-rgb), 0.8);
+    calc(var(--page-spacing-main) * (-0.25)) 0 calc(var(--page-spacing-main) * 0.5) rgba(var(--primary-color-rgb), 0.8);
 }
 
 ::-moz-selection {
@@ -997,7 +997,7 @@ img {
 }
 
 img:hover,
-img:focus {
+img:focus-visible {
   -webkit-transform: rotate(0.005turn);
   transform: rotate(0.005turn);
 }
@@ -1073,7 +1073,8 @@ h2 bdi {
   isolation: isolate;
   display: inline-flex;
   line-height: 1.333;
-  text-shadow: 0.01em 0.01em 0.1em currentcolor;
+  text-shadow: 0.01em 0.01em 0.1em #c2dff8;
+  text-shadow: 0.01em 0.01em 0.1em var(--secondary-color-100);
   overflow-wrap: anywhere !important;
   -webkit-animation-name: glitch-clip;
   animation-name: glitch-clip;
@@ -1588,8 +1589,8 @@ div.code-toolbar > .toolbar > .toolbar-item > button:active > span {
   position: fixed;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-  transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -150%);
+  transform: translate(-50%, -150%);
   border: 3px dashed #0fb55e;
   border: var(--border-highlight);
   border-radius: 20px;
@@ -1626,12 +1627,12 @@ header {
   z-index: 9;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -1px;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* translate3d forms a new containing block - for the fixed positioned (mobile) nav ul
   |* also enables hardware acceleration (gpu)
-  |* for better and smoother performance (see comment before the next ruleset below) */
+  |* for better and smoother performance (see comment before next rule below) */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1662,6 +1663,7 @@ header::before {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: var(--background-blur-main);
   backdrop-filter: var(--background-blur-main);
+  pointer-events: none;
 }
 
 @supports not (inset: 0) {
@@ -1885,17 +1887,14 @@ nav a.active:focus {
   }
 
   nav li {
-    -webkit-transform: scaleY(0) translate3d(0, 0, 0);
-    transform: scaleY(0) translate3d(0, 0, 0);
-    /* translate3d enables hardware acceleration (gpu)
-    |* for better and smoother animation performance */
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    will-change: transform; /* prevents weird moving/shifting on scale (see next rule below) */
   }
 
   #nav-toggler[aria-expanded="true"] + ul li {
-    -webkit-transform: scaleY(1) translate3d(0, 0, 0);
-    transform: scaleY(1) translate3d(0, 0, 0);
-    /* translate3d enables hardware acceleration (gpu)
-    |* for better and smoother animation performance */
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
     transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
     transition: transform 0.2s ease, -webkit-transform 0.2s ease;
@@ -2015,8 +2014,8 @@ nav a.nav-item-first-site::before {
   height: var(--nav-toggler-point-size);
   background-color: whitesmoke;
   background-color: var(--on-surface-color-main);
-  transition: 300ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  transition: 300ms var(--nav-toggler-transition-timing-function);
+  transition: 300ms cubic-bezier(0.8, 0.5, 0.2, 1.4), background 0.2s ease-in-out;
+  transition: 300ms var(--nav-toggler-transition-timing-function), background var(--transition-main);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* translate3d enables hardware acceleration (gpu)
@@ -2025,10 +2024,8 @@ nav a.nav-item-first-site::before {
 
 #nav-toggler:hover span:not(.visually-hidden),
 #nav-toggler:focus-visible span:not(.visually-hidden) {
-  -webkit-transform: scale(1.2) translate3d(0, 0, 0);
-  transform: scale(1.2) translate3d(0, 0, 0);
-  /* translate3d enables hardware acceleration (gpu)
-  |* for better and smoother animation performance */
+  background-color: #9dcbf3;
+  background-color: var(--secondary-color-200);
 }
 
 #nav-toggler span:nth-child(2),
@@ -2162,7 +2159,7 @@ aside a[href*="http"][target="_blank"] svg {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     margin-left: -2.1rem;
-    margin-left: calc(var(--wrapper-spacing-main) * -1);
+    margin-left: calc(var(--wrapper-spacing-main) * (-1));
     width: 10rem;
     width: var(--aside-width);
   }
@@ -2199,8 +2196,17 @@ aside a[href*="http"][target="_blank"] svg {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: var(--background-blur-main);
     backdrop-filter: var(--background-blur-main);
-    transition: bottom 0.2s ease-in-out, margin 0.2s ease-in-out;
-    transition: bottom var(--transition-main), margin var(--transition-main);
+    transition: bottom 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: bottom 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: bottom 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: bottom var(--transition-main), -webkit-transform var(--transition-main);
+    transition: bottom var(--transition-main), transform var(--transition-main);
+    transition: bottom var(--transition-main), transform var(--transition-main),
+      -webkit-transform var(--transition-main);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* translate3d enables hardware acceleration (gpu)
+    |* for better and smoother animation performance */
   }
 
   /* user-agent defined environment variables for safe areas (e.g. iphone notch) */
@@ -2209,6 +2215,15 @@ aside a[href*="http"][target="_blank"] svg {
       bottom: calc(2.1rem + env(safe-area-inset-bottom, 20px));
       bottom: calc(var(--page-spacing-main) + env(safe-area-inset-bottom, 20px));
     }
+  }
+
+  aside.js-bottom-reached {
+    -webkit-transform: translate3d(0, -2.1rem, 0);
+    transform: translate3d(0, -2.1rem, 0);
+    -webkit-transform: translate3d(0, calc(var(--wrapper-spacing-main) * (-1)), 0);
+    transform: translate3d(0, calc(var(--wrapper-spacing-main) * (-1)), 0);
+    /* translate3d enables hardware acceleration (gpu)
+    |* for better and smoother animation performance */
   }
 
   aside ul {
@@ -2399,6 +2414,7 @@ th[scope="row"]::first-letter {
 }
 
 td a,
+td a:link,
 td a:visited {
   color: inherit;
   white-space: nowrap;
@@ -2545,7 +2561,7 @@ footer {
   outline: 1px solid #6dcc8f;
   outline: var(--border-button);
   outline-offset: -2px;
-  outline-offset: calc(var(--border-width-button) * -2);
+  outline-offset: calc(var(--border-width-button) * (-2));
   border: 1px solid #6dcc8f;
   border: var(--border-button);
   border-radius: 0.625em;
@@ -2802,7 +2818,7 @@ dialog {
   box-shadow: 5px 0 10px rgba(15, 181, 94, 0.8), -5px 0 10px rgba(15, 181, 94, 0.8);
   box-shadow: calc(var(--page-spacing-main) * 0.25) 0 calc(var(--page-spacing-main) * 0.5)
       rgba(var(--primary-color-rgb), 0.8),
-    calc(var(--page-spacing-main) * -0.25) 0 calc(var(--page-spacing-main) * 0.5) rgba(var(--primary-color-rgb), 0.8);
+    calc(var(--page-spacing-main) * (-0.25)) 0 calc(var(--page-spacing-main) * 0.5) rgba(var(--primary-color-rgb), 0.8);
   transition: opacity 0.2s ease-in-out;
   transition: opacity var(--transition-main);
   -webkit-animation: scale-down 0.2s forwards;
@@ -2974,6 +2990,7 @@ dialog header h2 {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform var(--transition-main);
   transition: transform var(--transition-main);
+  will-change: transform; /* prevents weird moving/shifting on scale (see next rule below) */
 }
 
 .dialog-close-icon:hover,
@@ -3142,14 +3159,14 @@ dialog footer menu {
   a[href*="http"][target="_blank"] svg,
   footer > h4,
   footer > h5,
-  footer > hr {
+  footer > hr,
+  dialog {
     display: none !important;
   }
 
   body,
   .page-wrapper,
-  h2 bdi,
-  table {
+  h2 bdi {
     all: unset;
     font-family: monospace;
   }
@@ -3159,8 +3176,12 @@ dialog footer menu {
     padding-left: var(--wrapper-spacing-main);
   }
 
-  .emoji,
-  hr {
+  .box-shadow {
+    box-shadow: none !important;
+  }
+
+  .drop-shadow,
+  .emoji {
     -webkit-filter: none !important;
     filter: none !important;
   }
@@ -3168,10 +3189,13 @@ dialog footer menu {
   body,
   h2,
   mark,
-  pre[class*="language-"],
-  code[class*="language-"] {
+  table {
     color: #121212 !important;
     color: var(--background-color-main) !important;
+  }
+
+  mark {
+    background-color: unset !important;
   }
 
   h1,
@@ -3185,11 +3209,15 @@ dialog footer menu {
 
   h2 bdi,
   mark {
-    font-weight: bold;
+    font-weight: bold !important;
+  }
+
+  .table-wrapper {
+    overflow: unset !important;
   }
 
   table {
-    border-collapse: collapse;
+    page-break-inside: avoid;
   }
 
   .hello-world-program,
@@ -3200,7 +3228,7 @@ dialog footer menu {
     -webkit-column-break-before: page;
     -moz-column-break-before: page;
     break-before: page;
-    margin-top: 30pt;
+    margin-top: 30pt !important;
   }
 }
 

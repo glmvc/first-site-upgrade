@@ -73,10 +73,10 @@ function debounce(callback, delay = 100) {
 }
 
 (function ($) {
-  $(document).ready(function () {
-    /*========================================================*\
-    || resize animation stopper */
+  /*========================================================*\
+  || resize animation stopper */
 
+  $(document).ready(function () {
     const addAnimationStopperClass = debounce(() => {
       $("body").addClass("js-resize-animation-stopper");
     });
@@ -115,8 +115,8 @@ function debounce(callback, delay = 100) {
 
   function getElementHeight(elementSelector, cssPropertyName) {
     const element = $(elementSelector);
-    let height = element.outerHeight();
-    $(":root").css(`--${cssPropertyName}`, `${height}px`);
+    let elementHeight = element.outerHeight();
+    $(":root").css(`--${cssPropertyName}`, `${elementHeight}px`);
   }
 
   $(window).on("load resize", function () {
@@ -384,16 +384,16 @@ function debounce(callback, delay = 100) {
   || aside position (mobile) */
 
   const asidePosition = debounce(() => {
-    const aside = $("aside");
-    let windowHeight = window.innerHeight; /* note mobile browsers with dynamic (address) bars */
+    const aside = $("main > aside");
+    let windowHeight = window.innerHeight; // note mobile browsers with dynamic (address) bars
     let documentHeight = $(document).height();
     let scrollTop = $(window).scrollTop();
     let buffer = parseFloat($(".page-wrapper > footer").css("padding-bottom"));
     if (breakpointSmall.matches) {
       if (scrollTop + windowHeight >= documentHeight - buffer) {
-        aside.css("margin-bottom", "var(--wrapper-spacing-main)"); // property value equal to the value of buffer
+        aside.addClass("js-bottom-reached");
       } else {
-        aside.css("margin-bottom", "");
+        aside.removeClass("js-bottom-reached");
       }
     }
   });
@@ -408,21 +408,21 @@ function debounce(callback, delay = 100) {
 \*========================================================*/
 
 (function ($) {
-  $(document).ready(function () {
-    /*========================================================*\
-    || first site visit check */
+  /*========================================================*\
+  || first site visit check */
 
-    function checkFirstSiteVisit() {
-      const visited = localStorage.getItem("visited");
-      if (!visited) {
-        localStorage.setItem("visited", "true");
-        return true;
-      }
-      return false;
+  function checkFirstSiteVisit() {
+    const visited = localStorage.getItem("visited");
+    if (!visited) {
+      localStorage.setItem("visited", "true");
+      return true;
     }
+    return false;
+  }
 
-    let firstSiteVisit = checkFirstSiteVisit();
+  let firstSiteVisit = checkFirstSiteVisit();
 
+  $(document).ready(function () {
     /*========================================================*\
     || dates */
 
@@ -431,7 +431,7 @@ function debounce(callback, delay = 100) {
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    // const birthDate = "07-01"; // testing
+    // const birthDate = "07-12"; /* testing */
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
