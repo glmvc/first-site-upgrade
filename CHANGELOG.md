@@ -1,311 +1,928 @@
 # <span class="emoji">📋</span> Changelog
 
-This changelog refers to the differences / changes between the [first site (previous version)](https://github.com/glmvc/first-site "first site") and the [upgraded version of it here](https://github.com/glmvc/first-site-upgrade "first site upgrade").
+This changelog *lists* the **changes** *compared* to the [first-site project](https://github.com/glmvc/first-site "first-site GitHub repository"), *including* **general changes** such as file structure and overall code style, as well as **modifications**, **adjustments**, **improvements**, **fixes**, **additions**, **removals**, and **upgrades** related to **files** and **code**.
+
+In fact, there is *much more* to it than what can be seen and experienced between the [first-site](https://glmvc.github.io/first-site-upgrade/first-site/index.html "first-site version (different structure and layout)") and the [upgraded version of it here](https://glmvc.github.io/first-site-upgrade/index.html "first-site-upgrade homepage").
+
+Best of all, there's *plenty more* to come! Take a look at the **"Future Features"** list right below.
 
 ---
 
-## <span class="emoji">🚀</span> For The Future
+## <span class="emoji">🚀</span> Future Features
 
-- [ ] **Scroll to top button**
-- [ ] **Meter / progress bars**
-- [ ] **Complex (contact) form**
-- [ ] **Dark- and Lightmode switcher**
-- [ ] *Update* **last edited date** and **time** within the detail area in the footer *automatically*
+- [ ] **Scroll-to-Top button <span class="emoji">🔝</span>**
+- [ ] **Dark and Light Mode switcher <span class="emoji">🔦</span>**
+- [ ] **Web form site <span class="emoji">🖋️</span>**
+- [ ] **Automatic "Last upgraded" date and time** <span class="emoji">⏱️</span>
 
 ---
 
 ## <span class="emoji">⚙️</span> General
 
-- [x] Useful **tools** and **libraries** *now in use*
-- [x] **Code structure** *improved* with comments
-- [x] **Code formatting** and **styling** now primarily *handled* by [Visual Studio Code settings](https://code.visualstudio.com/ "Visual Studio Code homepage"), [EditorConfig](https://editorconfig.org/ "EditorConfig homepage") and [Prettier](https://prettier.io/ "Prettier homepage"):
-    - [x] **Space indentation** *changed* from four to two spaces
-    - [x] **Maximum line length** *set* to 120
-    - [x] **Line endings** for text files *normalized* and *specified* to unix-style "lf" (line feed)
-    - [x] A **newline** *added* at the end of each file
+- [x] Use of **best practices** and *useful* **tools**, **libraries**, and **inspirations** - see the **[project's resources](https://github.com/glmvc/first-site-upgrade/blob/main/README.md#-resources "first-site-upgrade resources") <span class="emoji">📔</span>**
+- [x] *Specially designed* and *consistent* **naming** and **structure** of folders, files, and code itself, i.e., for the entire project - see the **[project's style guide](https://github.com/glmvc/first-site-upgrade/blob/main/CONTRIBUTING.md#-style-guide "first-site-upgrade style guide") <span class="emoji">🎩</span>**
+- [x] *Improved* **code information** and **structure** through *specially designed*, *consistent*, and *easily searchable* **comments <span class="emoji">📝</span>**
+- [x] *Adapted* and *consistent* **code style** and **formatting** *handled* by **[Visual Studio Code settings](https://code.visualstudio.com/ "Visual Studio Code homepage") (`/.vscode/settings.json`)**, **[EditorConfig](https://editorconfig.org/ "EditorConfig homepage") (`/.editorconfig`)** and **[Prettier](https://prettier.io/ "Prettier homepage") (`/.prettierrc.yaml` and `/.prettierignore`) <span class="emoji">🪄</span>**
+    - [x] **Default charset** *defined* as **`utf-8`**
+    - [x] **Space indentation** *changed* from four to **two spaces**
+    - [x] **Maximum line length** *set* to a modern standard of **120 characters**
+    - [x] **Line endings** *normalized* and *specified* to unix-style **`lf`** (line feed)
+    - [x] A **newline** *added* to the **end of each file**
     - [x] **Trailing whitespace** *trimmed*
+- [x] *Recommended* **[Visual Studio Code extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_recommended-extensions "Visual Studio Code documentation article about the Extension Marketplace")** for working on the project - see **`/.vscode/extensions.json` <span class="emoji">📣</span>**
 
 ---
 
 ## <span class="emoji">&lt;/&gt;</span> HTML
 
-### &lt;head&gt;
+- [x] **Semantic elements** and **attributes** *used* appropriately
 
-- [x] Document **language** *set* to English (US):
+- [x] **Text content** and **paragraphs** *adjusted* to the changes and *expanded* as needed
+
+- [x] **Documents** *created* and *adapted* as needed for **additional sites** and **features**
+    - [x] **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site") (`/code.html`)**
+    - [x] **[Changelog](https://glmvc.github.io/first-site-upgrade/changelog.html "first-site-upgrade Changelog site") (`/changelog.html`)**
+    - [x] **[Site Not Found (404)](https://glmvc.github.io/first-site-upgrade/404.html "first-site-upgrade Site Not Found (404) site") (`/404.html`)**
+
+### &lt;!DOCTYPE html&gt;
+
+- [x] Document **language** *set* to **[English (US region)](https://r12a.github.io/app-subtags/?check=en-US "Language subtag lookup app")**:
 
     ```html
     <html lang="en-US">
     ```
 
-- [x] Document **text direction** *set* to left-to-right:
+- [x] Document **text directionality** *set* to **left-to-right**:
 
-    `<html dir="ltr">`
-
-- [x] Additional **meta data** *added* (author, description, viewport, theme-color, Facebook Open Graph Data and Twitter Card):
-
-    ```
-    <meta name="author" content="glmvc">
+    ```html
+    <html dir="ltr">
     ```
 
+### &lt;head&gt;
+
+- [x] Document **charset** (character encoding) *ensured to be located* within the **first 1024 bytes of the document**:
+
+    ```html
+    <meta charset="utf-8" />
+    <!-- locate charset within the first 1024 document bytes -->
     ```
-    <meta name="description" content="The upgraded version of my first site!">
+
+- [x] Document **title** *changed* to **"My Upgraded First Site"**:
+
+    ```html
+    <!-- @title -->
+    <title>My Upgraded First Site</title>
     ```
 
-    `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+- [x] Additional **website metadata** (description, keywords, author, viewport, theme color, [Windows Tiles](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/hh772707(v=vs.85) "Microsoft Pinned Sites documentation"), [Twitter Card](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards "About Twitter Cards"), and [Open Graph](https://ogp.me/ "The Open Graph protocol")) *added*:
 
-    `<meta name="theme-color" content="#0fb55e">`
+    ```html
+    <!-- @metadata -->
+    <meta name="description" content="The upgraded version of my first site!" />
+    <meta name="keywords" content="first, site, upgrade, upgraded, version, glmvc, hello, world" />
+    <meta name="author" content="glmvc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0fb55e" />
+    <meta name="msapplication-TileColor" content="#00a300" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta name="twitter:title" content="My Upgraded First Site" />
+    <meta name="twitter:description" content="The upgraded version of my first site!" />
+    <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
+    <meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon" />
+    <meta name="twitter:site" content="@glmvc" />
+    <meta name="twitter:creator" content="@glmvc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta property="og:title" content="My Upgraded First Site" />
+    <meta property="og:description" content="The upgraded version of my first site!" />
+    <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:video" content="https://glmvc.github.io/first-site-upgrade/videos/hello-world.mp4" />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:alt" content="A 'Hello world!' terminal output" />
+    <meta property="og:video:width" content="640" />
+    <meta property="og:video:height" content="360" />
+    <meta property="og:audio" content="https://glmvc.github.io/first-site-upgrade/audios/cyberpunk.mp3" />
+    <meta property="og:audio:type" content="audio/mpeg" />
+    <meta property="og:audio:alt" content="A cyberpunk soundtrack" />
+    ```
 
-    `<meta property="og:type" content="website">`
+- [x] **Internal stylesheet** *added* (for demo purposes only):
 
-    `<meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/">`
+    ```html
+    <!-- @css -->
+    <!-- internal stylesheet (for demo purposes only) -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    ```
 
-    `<meta property="og:title" content="My Upgraded First Site">`
+- [x] **Link** to [Google's online font service](https://fonts.google.com/ "Google Fonts homepage") *replaced* with the **fonts stylesheet** that *includes* the **self-hosted fonts** *downloaded* using the **[google-webfonts-helper](https://gwfh.mranftl.com/fonts "google-webfonts-helper tool")**:
 
-    `<meta property="og:description" content="The upgraded version of my first site!">`
+    ```html
+    <link rel="stylesheet" href="styles/fonts.css" />
+    ```
 
-    `<meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">`
+- [x] **Link** to the **[normalize stylesheet](https://necolas.github.io/normalize.css/ "Normalize.css homepage")** *added* to *"make browsers render all elements more consistently and in line with modern standards"*:
 
-    `<meta property="og:image:alt" content="A cartoon view of the earth saying hello and the moon">`
+    ```html
+    <link rel="stylesheet" href="styles/normalize.css" />
+    ```
 
-    `<meta name="twitter:card" content="summary_large_image">`
+- [x] **Link** to the **main stylesheet** *ensured* to be **placed last** in terms of "regular" stylesheets:
 
-    `<meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/">`
+    ```html
+    <link rel="stylesheet" href="styles/style.css" />
+    ```
 
-    `<meta name="twitter:title" content="My Upgraded First Site">`
+- [x] **Links** for the **favicons** (generated by the [RealFaviconGenerator](https://realfavicongenerator.net/ "RealFaviconGenerator homepage") for multiple browsers and devices using emojis from [Twemoji](https://twemoji.twitter.com/ "Twemoji homepage") and masked with the [Maskable.app](https://maskable.app/editor "Maskable.app Editor")) *added*:
 
-    `<meta name="twitter:description" content="The upgraded version of my first site!">`
+    ```html
+    <!-- @linking -->
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0fb55e" />
+    <link rel="manifest" href="site.webmanifest" />
+    ```
 
-    `<meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png">`
+- [x] **Scripts** for the **[jQuery](https://jquery.com/ "jQuery homepage")** and **[Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer "Image Map Resizer GitHub repository")** libraries *added*, and **script loading strategy** *changed* (within the `<head>` plus `defer` attribute):
 
-    `<meta name="twitter:image:alt" content="A cartoon view of the earth saying hello and the moon">`
+    ```html
+    <!-- @scripts -->
+    <script src="scripts/jquery-3.6.4.min.js" defer></script>
+    <script src="scripts/imageMapResizer.min.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    ```
 
-    `<meta name="twitter:site" content="@glmvc">`
+- [x] **Link** to the **noscript stylesheet** *added* within `<noscript>` to *provide* **"visual warnings"** when **scripting is disabled** in the browser:
 
-    `<meta name="twitter:creator" content="@glmvc">`
+    ```html
+    <noscript><link rel="stylesheet" href="styles/noscript.css" /></noscript>
+    ```
 
-- [x] Document **title** *changed* to "My Upgraded First Site":
+- [x] **Stylesheets** and **script** for the **[Prism syntax highlighter library](https://prismjs.com/ "Prism homepage")** and its [VS Code Dark+ theme](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-vsc-dark-plus.css "VS Code Dark+ theme CSS file on GitHub") *added* and *linked* in the **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site") (`/code.html`)** and **[Changelog](https://glmvc.github.io/first-site-upgrade/changelog.html "first-site-upgrade Changelog site") (`/changelog.html`)** documents:
 
-    `<title>My Upgraded First Site</title>`
+    ```html
+    <link rel="stylesheet" href="styles/prism.min.css" />
+    <link rel="stylesheet" href="styles/prism-theme.min.css" />
+    ```
 
-- [x] **Linking** to the new [normalize.css](https://necolas.github.io/normalize.css/ "Normalize.css homepage") file *added*:
+    ```html
+    <script src="scripts/prism.min.js" defer></script>
+    ```
 
-    `<link rel="stylesheet" href="styles/normalize.css">`
+- [x] **Script** for the **[Marked markdown compiler](https://marked.js.org/ "Marked homepage")** *added* in the **[Changelog](https://glmvc.github.io/first-site-upgrade/changelog.html "first-site-upgrade Changelog site") (`/changelog.html`)** document:
 
-- [x] **Linking** to [Google's online font service](https://fonts.google.com/ "Google Fonts homepage") *removed* and instead **new stylesheet** (`fonts.css`) *linked*:
-
-    `<link rel="stylesheet" href="styles/fonts.css">`
-
-- [x] **Favicons** for multiple device / browser support *added*:
-
-    `<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">`
-
-    `<link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">`
-
-    `<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">`
-
-    `<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">`
-
-    `<link rel="manifest" href="site.webmanifest">`
-
-- [x] **Internal stylesheet** *added* (just for demonstration):
-
-    `<style>...</style>`
-
-- [x] New **scripts** ([jQuery](https://jquery.com/ "jQuery homepage") & [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer "Image Map Resizer GitHub repository") library) *added* and **script loading strategy** *changed* (now within the head + `defer` attribute for `main.js`):
-
-    `<script src="scripts/jquery-3.6.0.min.js"></script>`
-
-    `<script src="scripts/imageMapResizer.min.js"></script>`
-
-    `<script src="scripts/main.js" defer></script>`
-
-- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") **CSS and JavaScript** files *linked* in the created source code (`code.html`) and changelog (`changelog.html`) documents:
-
-    `<link rel="stylesheet" href="styles/prism.css">`
-
-    `<script src="scripts/prism.js"></script>`
-
-### &lt;/head&gt;
+    ```html
+    <script src="scripts/marked.min.js" defer></script>
+    ```
 
 ### &lt;body&gt;
 
-- [x] **Content** (textual) *adjusted* to the changes
-
-- [x] **Accessibility** (A11y) aspects *improved* and *added* where they were missing
-
-- [x] **Semantic elements** *used* appropriately
-
-- [x] **Semantic elements** for structuring content *now in use*:
-
-    `<header>...</header>` with `<nav>...</nav>` within
-
-    `<main>...</main>` with `<aside>...</aside>` and multiple `<section>...</section>`'s within
-
-    `<div>...</div>`
-
-    `<span>...<span>`
-
-    `<footer>...</footer>`
-
-- [x] **Horizontal rules** *added* to divide the sections:
-
-    `<hr>`
-
-- [x] **SVG logo** *added* inline within the header (within a hyperlink to the homepage):
-
-    `<svg width="276" height="255" viewBox="0 0 276 255" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>` with `<path .../>`'s within
-
-- [x] Two `div` **container** *added* after the SVG logo for text with a typewriter effect (using CSS and JavaScript)
-
-- [x] **Navigation** with hyperlinks to the homepage and other HTML documents (`index.html`, `code.html`, `changelog.html` and previous `index.html`) *added* within the header:
-
-    `<nav>...</nav>`
-
-- [x] A `button` element for the **mobile navigation** *added* with ten `span` elements for the icon within:
-
-    `<button id="nav-icon" aria-controls="primary-nav" aria-expanded="false">`
-
-- [x] If JavaScript is disabled, a **warning message** will be *displayed now*:
-
-    `<noscript>...</noscript>`
-
-- [x] **Outgoing hyperlinks** *adapted* with the `target` attribute so that they open in a new tab instead of the current one:
-
-    `target="_blank"` attribute
-
-- [x] A `title` attribute *added* to hyperlinks and images to give them **advisory information** (hovering over them will also open a **descriptive tooltip**):
-
-    `title="description"` attribute
-
-- [x] **Sidebar** with hyperlinks to social media accounts *added*:
-
-    `<aside>...</aside>`
-
-- [x] **Character references** for emojis *added* within the sidebar:
-
-    `&#128025;` and `&#128038;`
-
-- [x] **Character entity references** *added* instead of HTML syntax characters:
-
-    `&amp;`, `&apos;`, `&quot;`, `&lt;` and `&gt;`
-
-- [x] The image *is now* an **image map with hyperlink-areas**:
-
-    `<map name="hello-world">...</map>`
-
-    `<area alt="alternative text" title="point map title" href="https..." target="_blank" shape="circle" coords="x,y,radius">`
-
-- [x] **Quotations** and **citation** *added* within the main content:
-
-    `<blockquote>...</blockquote>` and `<q>...</q>` with `cite` attribute
-
-    `<cite>...</cite>`
-
-- [x] **Important text content** *marked*:
-
-    `<mark>...</mark>`
-
-- [x] **Line breaks** *added* to make paragraphs easier to read:
-
-    `<br>`
-
-- [x] **Emphasis** and **importance** *added* for certain words and text passages:
-
-    `<em>...</em>`
-
-    `<strong>...</strong>`
-
-- [x] **Video** *added* within the main content (with a fallback):
-
-    `<video width="400" controls muted playsinline autoplay loop preload="auto">...</video>`
-
-    `<source src="videos/hello-world.mp4" type="video/mp4">`
-
-    `<source src="videos/hello-world.webm" type="video/webm">`
-
-    `<p>Your browser doesn't support HTML 5 video. Here is a <a href="videos/hello-world.mp4">link to the video</a> instead.</p>`
-
-- [x] **Description list** *added* to introduce HTML, CSS and JS:
-
-    `<dl>...</dl>` with `<dt>...</dt>` and `<dd>...</dd>` within
-
-- [x] **Abbreviations** *added* to abbreviate HTML, CSS and JS:
-
-    `<abbr title="abbreviation title">...</abbr>`
-
-- [x] A **nested unordered list** *added*
-
-- [x] A **complex table** about planet data *added*:
-
-    `<table>...</table>` with `<caption>...</caption>`, `<colgroup>...</colgroup>`, `<col>...</col>`, `<thead>...</thead>`, `<tbody>...</tbody>`, `<tr>...</tr>`, `<th>...</th>`, `<td>...</td>` and `<tfoot>...</tfoot>` within
-
-- [x] Further sources *added* to an **ordered list**
-
-- [x] A **soundtrack** *added* within the footer (with a fallback):
-
-    `<audio id="audio" controls loop preload="auto">...</audio>`
-
-    `<source src="audios/cyberpunk.mp3" type="audio/mp3">`
-
-    `<source src="audios/cyberpunk.ogg" type="audio/ogg">`
-
-    `<p>Your browser doesn't support HTML 5 audio. Here is a <a href="audios/cyberpunk.mp3">link to the audio</a> instead.</p>`
-
-- [x] **Figure** and **figure caption** *added* to the image map, video and audio:
-
-    `<figure>...</figure>`
-
-    `<figcaption>...</figcaption>`
-
-- [x] Contact details (fake) *added* as an **address** within the footer:
-
-    `<address>...</address>`
-
-    `href="tel:..."` and `href="mailto:..."` attributes
-
-- [x] **Iframe** for a map ([Google Maps](https://www.google.com/maps/about/#!/ "Google Maps about page")) *added* within the address in the footer:
-
-    `<iframe title="Google Maps Location" src="https:..." width="400" height="300" style="border: 0;" loading="lazy"></iframe>`
-
-- [x] **Addditional website information** *added* within a detail area with a summary text in the footer:
-
-    `<details>...</details>` with `<summary>Info</summary>` within
-
-- [x] A **Japanese sentence** *added* within the detail area in the footer and `language` attribute *set* to Japanese:
-
-    `lang="ja"` attribute
-
-- [x] **Superscript** *added* for the numbers within the table and birthdate of the website within the detail area in the footer:
-
-    `<sup>...</sup>`
-
-- [x] **Subscript** *added* for the chemical formula within the detail area in the footer:
-
-    `<sub>...</sub>`
-
-- [x] **Date** and **time** *added* for the birthdate and last update of the website within the detail area in the footer:
-
-    `<time datetime="YYYY-MM-ddThh:mm">...</time>`
-
-- [x] Last update text and date *added* as a **small side comment** within the detail area in the footer:
-
-    `<small>...</small>`
-
-- [x] **Source codes** *escaped* for HTML and *added* as code blocks / snippets to the created source code (`code.html`) and changelog (`changelog.html`) documents using the [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage"):
-
-    `<kbd>...</kbd>`
-
-    `<pre>...</pre>` with `<code class="language-...">...</code>` within
-
-    `<var>...</var>`
-
-    `<samp>...</samp`
-
-- [x] Changelog (`changelog.md`) *converted* to **HTML code**, *adjusted* and *added* to the created changelog (`changelog.html`) document
-
-- [x] **404 document** (`404.html`) *created* and *adapted*
-
-### &lt;/body&gt;
+- [x] **Custom `data-*` attribute** *added* to the `<body>` for **identification of individual pages** (visual content in the documents):
+
+    ```html
+    <body data-page="home">
+    ```
+
+- [x] **Semantically named `id`** (unique per document) and **`class` attribute values** *added* for **identification of elements**:
+
+    ```html
+    <h3 id="web-dev-title" class="hyphenation">Web development</h3>
+    ```
+
+- [x] **Generic container** *added* as a direct child of the `<body>` for **layout styling purposes** of the **visual page content**:
+
+    ```html
+    <!--=====================================================-->
+    <!-- || page -->
+    <!--=====================================================-->
+    <div class="page-wrapper centered">
+      ...
+    </div>
+    ...
+    ```
+
+- [x] **Semantic elements** *historically employed* for **styling purposes** but *now holding* **semantic value** *used* with **informational** and **semantic `class` names**:
+
+    ```html
+    <b class="user-instruction">enable JavaScript</b>
+    ```
+
+    ```html
+    <i class="latin-expression" lang="la">et cetera</i>
+    ```
+
+    ```html
+    <u class="incorrect-spelling">helo wrodl</u>
+    ```
+
+- [x] **Semantic elements** for **sectioning content** *used*:
+
+    ```html
+    <!--=====================================================-->
+    <!-- || header -->
+    <header>
+      ...
+      <!-- || navigation (nav) -->
+      <nav>
+        ...
+      </nav>
+    </header>
+    <!--=====================================================-->
+    <!-- || main -->
+    <main>
+      ...
+      <!-- || sidebar (aside) -->
+      <aside>
+        ...
+      </aside>
+      ...
+      <!-- || [section name] -->
+      <section>
+        ...
+      </section>
+      ...
+      <!-- || [article name] -->
+      <article>
+        ...
+      </article>
+    </main>
+    <!--=====================================================-->
+    <!-- || footer -->
+    <footer>
+      ...
+      <!-- || contact details (address) -->
+      <address>
+        ...
+      </address>
+    </footer>
+    ...
+    ```
+
+- [x] **Horizontal rules** *added* to *divide* **sections**:
+
+    ```html
+    <hr class="drop-shadow" />
+    ```
+
+- [x] **Accessibility (A11y)** aspects *added* and *improved*, such as **skip links** and the use of **ARIA**:
+
+    ```html
+    <!--=====================================================-->
+    <!-- || skip links (a11y) -->
+    <div class="skip-links box-shadow">
+      Skip to <a class="skip-link" href="#content-main">main content</a> or
+      <a class="skip-link" href="#footer-main">main footer</a>.
+    </div>
+    ```
+
+    ```html
+    <button type="button" id="nav-toggler" aria-controls="nav-main" aria-expanded="false">
+      ...
+    </button>
+    ```
+
+- [x] **Logo** *added* as an **inline SVG** within the `<header>` and an **anchor linking to the homepage**:
+
+    ```html
+    <!-- || logo (svg) -->
+    <a class="logo" href="index.html" aria-label="Home" aria-current="page">
+      <span class="visually-hidden">ivan glmvc</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="244" height="265" fill="none" viewBox="0 0 244 265">
+        <path
+          fill="whitesmoke"
+          fill-rule="evenodd"
+          d="M53.8992 98.4712c5.7288-3.3137 13.0542-1.3472 16.3617 4.3928l71.8651 124.707c3.308 5.74 1.345 13.079-4.384 16.393-5.728 3.313-13.054 1.347-16.361-4.393L49.5151 114.864c-3.3075-5.74-1.3447-13.079 4.3841-16.3928ZM204.726 165.339c6.515 1.151 10.864 7.375 9.716 13.901l-7.973 45.302c-1.149 6.526-7.361 10.884-13.876 9.733-6.514-1.15-10.864-7.374-9.715-13.901l7.972-45.301c1.149-6.527 7.361-10.885 13.876-9.734Z"
+          clip-rule="evenodd"
+        />
+        ...
+      </svg>
+      ...
+    </a>
+    ```
+
+- [x] Two **generic inline containers** *added* after the inline SVG logo for text with a **[typewriter effect](https://www.30secondsofcode.org/css/s/typewriter-effect/ "30 seconds of code Typewriter effect article")**:
+
+    ```html
+    <!-- || typewriter effect -->
+    <span class="typewriter" aria-hidden="true">
+      <span class="js-typewriter-text"></span>
+    </span>
+    ```
+
+- [x] **Navigation** *added* within the `<header>` with a **button** for the **[mobile navigation toggler](https://codepen.io/ahmadbassamemran/pen/VQwPGr "Hamburger Icons Animations on CodePen")** and **anchors** within an **unordered list** *linking* to the **individual documents**:
+
+    ```html
+    <!-- || navigation (nav) -->
+    <nav aria-label="Main">
+      <button type="button" id="nav-toggler" aria-controls="nav-main" aria-expanded="false">
+        <span class="visually-hidden">Open main navigation</span>
+        <span></span>
+        ...
+      </button>
+      <ul id="nav-main">
+        <li><a class="nav-item-home active" href="index.html" title="Homepage" aria-current="page">Home</a></li>
+        <li><a class="nav-item-code" href="code.html" title="Source Code">Code</a></li>
+        <li><a class="nav-item-changelog" href="changelog.html" title="Changelog List">Changelog</a></li>
+        <li>
+          <a
+            class="nav-item-first-site"
+            href="first-site/index.html"
+            title="first-site version (different structure and layout)"
+            >First-Site</a
+          >
+        </li>
+      </ul>
+    </nav>
+    ```
+
+- [x] **Button type** *set* for **buttons** that are *not associated* with forms or controls to *achieve* **no default behavior on activation**:
+
+    ```html
+    <button type="button">...</button>
+    ```
+
+- [x] **Warnings** *displayed* when **scripting is disabled** in the browser:
+
+    ```html
+    <!-- || noscript -->
+    <noscript class="drop-shadow">
+      Please <b class="user-instruction">enable JavaScript</b> in your (system/browser) settings to ensure that this
+      website runs properly.
+    </noscript>
+    ```
+
+- [x] **Sidebar** *added* for **hyperlinks** to **social media profiles**:
+
+    ```html
+    <!-- || sidebar (aside) -->
+    <aside class="box-shadow drop-shadow">
+      ...
+    </aside>
+    ```
+
+- [x] **Advisory information** *added* to certain elements (*hovering* over some of them will *display* a **tooltip** in some browsers):
+
+    ```html
+    <a href="https://github.com/glmvc" title="glmvc GitHub profile">...</a>
+    ```
+
+    ```html
+    <abbr title="Hypertext Markup Language">HTML</abbr>
+    ```
+
+- [x] **Outgoing hyperlinks** *adapted* to **open in a new tab** instead of the current one:
+
+    ```html
+    <a href="https://github.com/glmvc" target="_blank">...</a>
+    ```
+
+- [x] **Character references** *used* for **special characters** like **emojis** and **non-breaking spaces**:
+
+    ```html
+    <a href="https://github.com/glmvc" title="glmvc GitHub profile" target="_blank">&#128025;&nbsp;GitHub</a>
+    ```
+
+- [x] **Character entity references** *used* to **escape HTML syntax characters**:
+
+    ```html
+    &amp;
+    &quot;
+    &lt;
+    &gt;
+    ```
+
+- [x] **Heading elements** *used* correctly by *not skipping* **heading levels**, *maintaining* a **logical document outline**, and *ensuring* the use of a **single main heading per document**:
+
+    ```html
+    <h1>...</h1>
+      <h2>...</h2>
+        <h3>...</h3>
+        <h3>...</h3>
+          <h4>...</h4>
+        <h3>...</h3>
+        <h3>...</h3>
+          <h4>...</h4>
+            <h5>...</h5>
+          <h4>...</h4>
+            <h5>...</h5>
+              <h6>...</h6>
+              <h6>...</h6>
+      <h2>...</h2>
+        <h3>...</h3>
+    ```
+
+- [x] **Main heading** *adjusted* by *adding* a **generic inline container** within for more control over **text styling**:
+
+    ```html
+    <h1><span class="heading-main">hello world!</span></h1>
+    ```
+
+- [x] **Inline styling** *added* to the **subheading** (for demo purposes only) and **possible bidirectional text** from the inserted username input *isolated* from the **preceding text**:
+
+    ```html
+    <!-- inline styling (for demo purposes only) -->
+    <h2 style="color: whitesmoke; color: var(--on-surface-color-main)">
+      Nice to meet you, <bdi class="hyphenation" data-name></bdi>
+    </h2>
+    ```
+
+- [x] **Figures** and their **captions** *added* for the **switchable image**, **video**, and **audio**:
+
+    ```html
+    <figure>
+      ...
+      <figcaption>
+        ...
+      </figcaption>
+    </figure>
+    ```
+
+- [x] **[Switchable image](https://openclipart.org/detail/190952/hello-world "Open Clipart image source")** *embedded* within its `<section>`, *assigned* **intrinsic dimensions**, *provided* with **multiple resolutions** using **pixel density descriptors**, *supplemented* with **advisory information** about being switchable, *linked* to an **image map** with **hyperlink areas** of specified shape and coordinates, and *made* **focusable**:
+
+    ```html
+    <figure>
+      <map name="hello-world">
+        <area
+          alt="Planet Earth"
+          href="#table-planets"
+          title="Table about the planets in our solar system, including our home, the Earth"
+          shape="circle"
+          coords="200,150,78"
+        />
+        <area
+          alt="Earth's Moon"
+          href="https://solarsystem.nasa.gov/moons/earths-moon/overview/"
+          title="NASA's solar system site about Earth's Moon"
+          target="_blank"
+          shape="circle"
+          coords="332,39,15"
+        />
+      </map>
+      <img
+        class="centered box-shadow"
+        width="400"
+        height="300"
+        srcset="images/hello-world.png, images/hello-world-2x.png 2x, images/hello-world-4x.png 4x"
+        src="images/hello-world.png"
+        alt="A cartoon view of the earth saying hello and the moon"
+        title="Switch image by clicking or pressing the enter key"
+        usemap="#hello-world"
+        tabindex="0"
+      />
+      <figcaption>
+        The earth saying hello and the moon (image downloaded from
+        <a
+          href="https://openclipart.org/detail/190952/hello-world"
+          title="Open Clipart image source"
+          target="_blank"
+          >Open Clipart</a
+        >)
+      </figcaption>
+    </figure>
+    ```
+
+- [x] **[Video](https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/ "Pixabay video source")** *embedded* within the `<article>`, *assigned* **intrinsic dimensions**, *supplemented* with a **poster** and **controls**, *played* in a **loop** and **automatically**, *provided* in **multiple formats** (**`WebM`** and **`MP4`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the video file**:
+
+    ```html
+    <figure class="centered">
+      <video
+        class="centered box-shadow"
+        width="400"
+        height="225"
+        poster="images/hello-world-video-poster.png"
+        controls
+        loop
+        muted
+        playsinline
+        autoplay
+      >
+        <source src="videos/hello-world.webm" type="video/webm" />
+        <source src="videos/hello-world.mp4" type="video/mp4" />
+        <track kind="descriptions" src="videos/hello-world.vtt" srclang="en-US" label="English (US)" />
+        <p>
+          Sorry, your browser doesn't support HTML 5 video. But don't worry, here's a
+          <a href="videos/hello-world.mp4" title="'Hello world!' terminal output MP4 video file" target="_blank"
+            >link to the MP4 video file</a
+          >
+          instead. You can download it and watch it with your favorite video or media player!
+        </p>
+      </video>
+      <figcaption>
+        A 'Hello world!' terminal output (video downloaded from
+        <a
+          href="https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/"
+          title="Pixabay video source"
+          target="_blank"
+          >Pixabay</a
+        >)
+      </figcaption>
+    </figure>
+    ```
+
+- [x] **[Audio](https://pixabay.com/music/electronic-cyberpunk-2099-10701/ "Pixabay audio source")** *embedded* within the `<footer>`, *supplemented* with **controls**, *played* in a **loop**, *indicated* to the browser that the **whole file can be downloaded**, *provided* in **multiple formats** (**`Ogg`** and **`MP3`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the audio file**:
+
+    ```html
+    <figure>
+      <audio id="audio" class="box-shadow" controls loop preload="auto">
+        <source src="audios/cyberpunk.ogg" type="audio/ogg" />
+        <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
+        <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
+        <p>
+          Sorry, your browser doesn't support HTML 5 audio. But don't worry, here's a
+          <a href="audios/cyberpunk.mp3" title="Cyberpunk soundtrack MP3 audio file" target="_blank"
+            >link to the MP3 audio file</a
+          >
+          instead. You can download it and listen to it with your favorite audio or media player!
+        </p>
+      </audio>
+      <figcaption>
+        A cyberpunk soundtrack (audio downloaded from
+        <a
+          href="https://pixabay.com/music/electronic-cyberpunk-2099-10701/"
+          title="Pixabay audio source"
+          target="_blank"
+          >Pixabay</a
+        >)
+      </figcaption>
+    </figure>
+    ```
+
+- [x] **Citation** and **quotations** *added* and *linked* accordingly:
+
+    ```html
+    <p>
+      According to the
+      <cite
+        ><a
+          href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"
+          title="'Hello, World!' program - Wikipedia entry"
+          target="_blank"
+          >Wikipedia article on the "Hello, World!" program</a
+        ></cite
+      >.
+    </p>
+    ```
+
+    ```html
+    <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
+      ...
+    </blockquote>
+    ```
+
+    ```html
+    <p>
+      <q cite="https://en.wikipedia.org/wiki/HTML"
+        ><abbr title="Hypertext Markup Language"><strong>HTML</strong></abbr> is the standard markup language for
+        documents designed to be displayed in a web browser.</q
+      >
+    ...
+    ```
+
+- [x] **Importance** and **emphasis** *added* to certain **words** and **parts of text**:
+
+    ```html
+    <strong>...</strong>
+    ```
+
+    ```html
+    <em>...</em>
+    ```
+
+- [x] **Relevant** and **interesting text content** *marked* and *highlighted*:
+
+    ```html
+    <mark>...</mark>
+    ```
+
+- [x] **Line breaks** (carriage returns) *used* to **structure text** for **visual separation** and **improved readability**:
+
+    ```html
+    ...
+    ...<br />
+    ...
+    ```
+
+- [x] **Description list** *added* within its `<section>` to *describe* **terms** with corresponding **descriptions** and **definitions**:
+
+    ```html
+    <dl>
+      <dt>
+        <dfn>...</dfn>
+      </dt>
+      <dd>
+        ...
+      </dd>
+      ...
+    </dl>
+    ```
+
+- [x] **Unordered list** *nested* to *create* **hierarchical list content** within its `<section>`:
+
+    ```html
+    <ul>
+      <li>
+        ...
+        <ul>
+          <li>...</li>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>
+        ...
+      </li>
+    </ul>
+    ```
+
+- [x] **Further sources** *added* to the **ordered list**, which is *split* into **two parts** within its `<section>`:
+
+    ```html
+    <ol>
+      <li>...</li>
+      <li>...</li>
+      ...
+    </ol>
+    ...
+    <ol start="12">
+      <li>...</li>
+    </ol>
+    ```
+
+- [x] **Abbreviations** *added* for **acronyms** and to *abbreviate* **terms**:
+
+    ```html
+    <abbr title="Hypertext Markup Language">HTML</abbr>
+    ```
+
+- [x] **Comprehensive table** *added* within its `<section>` that *contains* **data** about the **planets of our solar system** and *includes* a **caption**, **headers**, **column** and **row groups**, and a **footer note**:
+
+    ```html
+    <div class="table-wrapper drop-shadow">
+      <table>
+        <caption>...</caption>
+        <colgroup>
+          <col span="2" />
+          <col span="1" />
+          <col span="9" />
+        </colgroup>
+        <thead>
+          <tr>
+            <td colspan="2"></td>
+            <th scope="col">...</th>
+            <th scope="col">...</th>
+            ...
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th colspan="2" rowspan="4" scope="rowgroup">...</th>
+            <th scope="row">...</th>
+            <td>...</td>
+            ...
+          </tr>
+          <tr>
+            <th scope="row">...</th>
+            <td>...</td>
+            ...
+          </tr>
+          ...
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="12">...</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    ```
+
+- [x] **User input** from **text entry devices** such as **keyboards** *added* in the **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site")** document for **shortcuts** and **terminal commands**:
+
+    ```html
+    <kbd><kbd>&#8984; (Command/Cmd)</kbd> + <kbd>V</kbd></kbd> on Mac or
+    <kbd><kbd>Ctrl (Control)</kbd> + <kbd>V</kbd></kbd> on Windows/Linux.
+    ```
+
+    ```html
+    <samp><kbd>whois 185.199.108.153</kbd>
+    ...</samp>
+    ```
+
+- [x] **Sample output** from the **terminal** *added* in the **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site") (`/code.html`)** document to *demonstrate* **shell interactions**:
+
+    ```html
+    <samp>...</samp>
+    ```
+
+- [x] **Source code** *implemented* as **code blocks/snippets** in the **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site") (`/code.html`)** and **[Changelog](https://glmvc.github.io/first-site-upgrade/changelog.html "first-site-upgrade Changelog site") (`/changelog.html`)** documents by *fetching* and *highlighting* the **source files** and **code** using the **[Prism syntax highlighter library](https://prismjs.com/ "Prism homepage")**:
+
+    ```html
+    <pre data-src="index.html"></pre>
+    ```
+
+    ```html
+    <pre><code class="language-...">...</code></pre>
+    ```
+
+- [x] **JavaScript variable** for the **"first site visit check"** *introduced* and *explained* in the **[Source Code](https://glmvc.github.io/first-site-upgrade/code.html "first-site-upgrade Source Code site") (`/code.html`)** document:
+
+    ```html
+    <var>firstSiteVisit</var>
+    ```
+
+- [x] **User interaction features** like the **"Change user" button** *added* within the `<footer>`:
+
+    ```html
+    <!-- || site features -->
+    <h4>Features</h4>
+    <h5>user interaction</h5>
+    <div class="features-wrapper">
+      <div class="feature">
+        <h6>Change your username:</h6>
+        <button type="button" id="change-username" class="button">Change user</button>
+      </div>
+      ...
+    </div>
+    ```
+
+- [x] **Contact details (fake)** *added* within the `<footer>` as an **address** with **special anchors** for a **telephone number** and **email**:
+
+    ```html
+    <!-- || contact details (address) -->
+    <address>
+      <div class="contact-details">
+        <p>
+          secret company contact:<br />
+          secret street 1<br />
+          secret city<br />
+          secret country
+        </p>
+        <a href="tel:+1234567890">123-456-7890</a>
+        <a
+          href="mailto:secret@example.com?cc=office@example.com,info@example.com&bcc=mail@example.com&subject=***%20Secret%20Subject%20***&body=***%20Secret%20Message%20***"
+          >secret@example.com</a
+        >
+      </div>
+      ...
+    </address>
+    ```
+
+- [x] **Contact map** showing a location *embedded* within the `<address>` as an **iframe** from **[OpenStreetMap](https://www.openstreetmap.org/about "OpenStreetMap about page")**:
+
+    ```html
+    <iframe
+      name="contact-map"
+      class="box-shadow"
+      width="400"
+      height="300"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-116.8620014190674%2C37.62317153081475%2C-116.83492183685304%2C37.63501637743219&amp;layer=mapnik"
+      title="Secret location on OpenStreetMap"
+      loading="lazy"
+    ></iframe>
+    ```
+
+- [x] **Additional content** and **information about the site** *added* within the `<footer>` in a **details area** with a **summary caption**:
+
+    ```html
+    <!-- || info (details) -->
+    <details open>
+      <summary class="centered">Info</summary>
+      ...
+    </details>
+    ```
+
+- [x] **Japanese phrase** with the language *set* to **Japanese** *added* within the `<details>`:
+
+    ```html
+    <p lang="ja">愛を込めて作成されました。</p>
+    ```
+
+- [x] **Date** and **time** *added* for the **birthday** and **last upgrade** within the `<details>` in a **machine-readable format**:
+
+    ```html
+    <time id="birthday" datetime="YYYY-MM-dd">...</time>
+    ```
+
+    ```html
+    <time id="js-last-upgraded" datetime="YYYY-MM-ddThh:mm">...</time>
+    ```
+
+- [x] **Superscript** *added* for **exponents** within the `<table>` and **ordinal numbers** within the `<details>`:
+
+    ```html
+    <th scope="col">Density (kg/m<sup>3</sup>)</th>
+    ```
+
+    ```html
+    6<sup>th</sup> of December 2021
+    ```
+
+- [x] **Subscript** *added* for the **chemical formula** within the `<details>`:
+
+    ```html
+    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+    ```
+
+- [x] **Data value** *used* to *provide* the **content** of the **chemical formula** in a **machine-readable translation**:
+
+    ```html
+    <data value="caffeine">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></data>
+    ```
+
+- [x] **Text directionality** *overridden* to **right-to-left** to *display* the **backward spelling** of two words within the `<details>`:
+
+    ```html
+    <bdo dir="rtl">Hello World</bdo>
+    ```
+
+- [x] **Deleted** and **inserted text** *used* to *correct* **misspellings** of two words within the `<details>`:
+
+    ```html
+    <del>helo wrodl</del> <ins>Hello World</ins>
+    ```
+
+- [x] **Line break opportunities** *used* to *introduce* **word break positions within text** for a **long example URL** within the `<details>`:
+
+    ```html
+    http://a<wbr />.super<wbr />.secret<wbr />.example<wbr />.info/located<wbr />/very<wbr />/deep<wbr />/within<wbr />/an<wbr />/extremely<wbr />/nested<wbr />/folder<wbr />/structure
+    ```
+
+- [x] **Side comments** *added* as **small print** for the **tagline** and **"Last upgraded" information** within the `<details>`:
+
+    ```html
+    <small>...</small>
+    ```
+
+- [x] **Mathematical symbol** for **infinity** *added* as part of the **tagline** using **`MathML`** and the corresponding **character reference name**:
+
+    ```html
+    <math><mi>&infin;</mi></math>
+    ```
+
+- [x] **Ruby annotation** *added* as part of the **tagline** to *display* **Romaji transliteration** for the **Japanese Kanji characters**:
+
+    ```html
+    <ruby>またね<rp>(</rp><rt>ma-ta-ne</rt><rp>)</rp></ruby>
+    ```
+
+- [x] **Dialog** *added* as an **Easter egg** that *appears* on the **birthday** of the **site**:
+
+    ```html
+    <!--=====================================================-->
+    <!-- || birthday banner (dialog) -->
+    <dialog id="birthday-banner" inert>
+      ...
+    </dialog>
+    ```
+
+- [x] **Heading with related content** *grouped* within the `<dialog>`:
+
+    ```html
+    <hgroup>
+      <h3>Hooray! Today, the site turned <span class="js-site-age"></span> old!</h3>
+      <p>And it's been that long since the very first bit of it was written.</p>
+    </hgroup>
+    ```
+
+- [x] **Menu** *used* as an **unordered list** for **interactive buttons** within the `<dialog>`:
+
+    ```html
+    <menu>
+      <li>
+        <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
+      </li>
+      <li>
+        <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
+          Join the celebration <span class="emoji">&#129705;</span>
+        </button>
+      </li>
+    </menu>
+    ```
+
+- [x] **Script** *added* as the **last element** right before closing the `<body>` to *output* an **informational message** to the **console**:
+
+    ```html
+    <!--=====================================================-->
+    <!-- || body script -->
+    <!--=====================================================-->
+    <script>
+      console.info("Hello, World!");
+    </script>
+    ```
 
 ---
 
@@ -319,7 +936,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
 - [x] **External stylesheets**, **internal stylesheet** and **inline styling** *added* (internal and inline styling just for demonstration)
 
-- [x] Default **margin** & **padding** *set* to 0 ("reset stylesheet") with the internal stylesheet using the universal selector (`*`):
+- [x] Default **margin** and **padding** *set* to 0 ("reset stylesheet") with the internal stylesheet using the universal selector (`*`):
 
     `* {margin: 0; padding: 0;}`
 
@@ -465,7 +1082,7 @@ This changelog refers to the differences / changes between the [first site (prev
 
     `filter: blur(5px);`
 
-- [x] **Writing modes** (block & inline dimensions) *changed* to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
+- [x] **Writing modes** (block and inline dimensions) *changed* to vertical left-to-right for the sidebar and vertical right-to-left for the Japanese sentence:
 
     `writing-mode: vertical-lr;`
 
@@ -501,11 +1118,11 @@ This changelog refers to the differences / changes between the [first site (prev
 
 ---
 
-## <span class="emoji">&#125;&#041;&#59;</span> JavaScript
+## <span class="emoji">&#125;&#041;&#59;</span> JS
 
 - [x] [jQuery library](https://jquery.com/ "jQuery homepage") *now in use* and most code in `main.js` rewritten using its syntax
 
-- [x] [PrismJS syntax highlighter library](https://prismjs.com/ "PrismJS homepage") *now in use* for the created source code (`code.html`) and changelog (`changelog.html`) documents
+- [x] [Prism syntax highlighter library](https://prismjs.com/ "Prism homepage") *now in use* for the created source code (`code.html`) and changelog (`changelog.html`) documents
 
 - [x] At a **given scrolling value** (defined in the `checkScroll` function) the class `scrolled` *is now set* on the `body` element:
 

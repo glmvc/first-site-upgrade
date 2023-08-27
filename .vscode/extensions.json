@@ -1,4 +1,3 @@
 {
-  "recommendations": ["editorconfig.editorconfig", "esbenp.prettier-vscode", "ms-vscode.live-server"],
-  "unwantedRecommendations": []
+  "recommendations": ["editorconfig.editorconfig", "esbenp.prettier-vscode", "ms-vscode.live-server"]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "Page Not Found (404) - My Upgraded First Site",
+  "name": "Site Not Found (404) - My Upgraded First Site",
   "short_name": "404",
-  "description": "Page Not Found - 404 error!",
+  "description": "Site Not Found - 404 error!",
   "icons": [
     {
       "src": "favicons/404-android-chrome-192x192.png",
