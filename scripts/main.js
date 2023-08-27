@@ -144,14 +144,18 @@ function debounce(callback, delay = 100) {
     const externalLinkContent = `<span class="visually-hidden">; external link (opens in a new tab)</span>${externalLinkIcon}`;
     const externalLinkContentNotSecure = `<span class="visually-hidden">; external link (connection not secure, opens in a new tab)</span>${externalLinkIcon}`;
 
-    $('a[target="_blank"]').each(function () {
-      const externalLink = $(this);
-      if (externalLink.is('[href^="https:"]')) {
-        externalLink.append(externalLinkContent);
-      } else if (externalLink.is('[href^="http:"]')) {
-        externalLink.append(externalLinkContentNotSecure);
-      }
-    });
+    function modifyExternalLinks() {
+      $('a[target="_blank"]').each(function () {
+        const externalLink = $(this);
+        if (externalLink.is('[href^="https:"]')) {
+          externalLink.append(externalLinkContent);
+        } else if (externalLink.is('[href^="http:"]')) {
+          externalLink.append(externalLinkContentNotSecure);
+        }
+      });
+    }
+
+    modifyExternalLinks();
 
     /*========================================================*\
     || typewriter effect */
@@ -236,7 +240,7 @@ function debounce(callback, delay = 100) {
     const originalFigcaption = image.closest("figure").find("figcaption").html();
     const newImageSrcset = "images/js-code.png, images/js-code-2x.png 2x, images/js-code-4x.png 4x";
     const newImageSrc = "images/js-code.png";
-    const newImageAltText = "A blurred code snippet that reveals a small easter egg";
+    const newImageAltText = "A blurred code snippet that reveals a small Easter egg";
     const newFigcaption =
       'A JavaScript code snippet that reveals a small feature, but it is somehow blurred... (screenshot taken with <a href="https://codeimg.io/" title="Source Code Image Tool" target="_blank">Codeimg.io</a>)';
 
@@ -296,8 +300,8 @@ function debounce(callback, delay = 100) {
       $("pre[data-src]")
         .addClass("language-")
         .attr("data-src-status", "failed")
-        .html("<code class='language-'>✖ Error: PrismJS syntax highlighter not found</code>");
-      console.error("PrismJS library not found");
+        .html('<code class="language-">✖ Error: Prism syntax highlighter not found</code>');
+      console.error("Prism library not found");
     }
 
     /*========================================================*\
@@ -326,19 +330,22 @@ function debounce(callback, delay = 100) {
           try {
             const htmlChangelogContent = await fetchAndParseMarkdown();
             changelogContent.append(htmlChangelogContent);
+            replaceTag(changelogContent, "h4", "h6");
             replaceTag(changelogContent, "h3", "h5");
             replaceTag(changelogContent, "h2", "h4");
             replaceTag(changelogContent, "h1", "h3");
             changelogContent.find("pre > code").addClass("language-none");
+            changelogContent.find("a").attr("target", "_blank");
+            modifyExternalLinks();
             if (typeof Prism !== "undefined") {
               highlightCode();
             } else {
-              console.warn("PrismJS library not found");
+              console.warn("Prism library not found");
             }
           } catch (error) {
             changelogContent
               .html(
-                `<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: ${error.message}</code></pre>`
+                `<pre class="language-" data-src-status="failed"><code class="language-">✖ Error: ${error.message}</code></pre>`
               )
               .addClass("js-changelog-error");
             console.error(error);
@@ -349,10 +356,10 @@ function debounce(callback, delay = 100) {
       } else {
         changelogContent
           .html(
-            "<pre class='language-' data-src-status='failed'><code class='language-'>✖ Error: Marked markdown parser not found</code></pre>"
+            '<pre class="language-" data-src-status="failed"><code class="language-">✖ Error: Marked markdown compiler not found</code></pre>'
           )
           .addClass("js-changelog-error");
-        console.error("Marked library not found");
+        console.error("Marked compiler not found");
       }
     }
 
@@ -458,9 +465,9 @@ function debounce(callback, delay = 100) {
       const createDialogButton = function () {
         if (!$(".js-open-dialog").length) {
           $("footer .details-inner > p:nth-of-type(2)")
-            .prepend("<span class='emoji'>&#127881;</span>")
+            .prepend('<span class="emoji">&#127881;</span>')
             .append(
-              "<span class='emoji'>&#129395;</span><br><span class='emoji'>&#127880;</span> It's birthday time <span class='emoji'>&#127873;</span>"
+              `<span class="emoji">&#129395;</span><br><span class="emoji">&#127880;</span> It's birthday time <span class="emoji">&#127873;</span>`
             )
             .replaceWith(function () {
               return $("<button/>", {
