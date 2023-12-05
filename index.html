@@ -743,7 +743,7 @@
             <p>
               <small
                 >Last upgraded at
-                <time id="js-last-upgraded" datetime="2023-07-01T22:10">22:10 on July 1, 2023</time>.</small
+                <time id="js-last-upgraded" datetime="2023-12-05T22:30">22:30 on December 5, 2023</time>.</small
               >
             </p>
           </div>
@@ -752,12 +752,15 @@
       <!--=====================================================-->
       <!-- || birthday banner (dialog) -->
       <dialog id="birthday-banner" inert>
+        <canvas id="banner-confetti" width="762" height="518" aria-describedby="banner-confetti-description">
+          <span id="banner-confetti-description">Confetti shower to celebrate the Bitday</span>
+        </canvas>
         <div class="dialog-inner">
           <header>
-            <h2><span class="emoji">&#127874;</span> Bitday</h2>
+            <h2><span class="emoji">&#127881;</span> Bitday</h2>
             <button
               type="button"
-              class="dialog-close-icon js-close-dialog drop-shadow"
+              class="js-close-dialog dialog-close-icon drop-shadow"
               aria-label="Close dialog"
             ></button>
           </header>
@@ -768,17 +771,21 @@
             </hgroup>
             <p>
               Cyber-cheers to all of you here today as the site blows out the digital candles on its birthday cake!
-              <span class="emoji">&#127870;</span>
+              <span class="emoji">&#127874;</span>&nbsp;<span class="emoji">&#127870;</span>
             </p>
           </section>
           <footer>
             <menu>
               <li>
-                <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
+                <button type="button" class="js-close-dialog dialog-button box-shadow" autofocus>Close dialog</button>
               </li>
               <li>
-                <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
-                  Join the celebration <span class="emoji">&#129705;</span>
+                <button
+                  type="button"
+                  class="js-celebrate-birthday dialog-button box-shadow"
+                  aria-describedby="banner-confetti-description"
+                >
+                  Celebrate with us <span class="emoji">&#129395;</span>
                 </button>
               </li>
             </menu>

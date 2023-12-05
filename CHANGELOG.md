@@ -889,6 +889,14 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
     </dialog>
     ```
 
+- [x] **Canvas** with a **displayed size** and **fallback text** *added* within the `<dialog>` for **confetti animations** using the **[Canvas Confetti library](https://www.kirilv.com/canvas-confetti/ "Canvas Confetti demo homepage")**:
+
+    ```html
+    <canvas id="banner-confetti" width="762" height="518" aria-describedby="banner-confetti-description">
+      <span id="banner-confetti-description">Confetti shower to celebrate the Bitday</span>
+    </canvas>
+    ```
+
 - [x] **Heading with related content** *grouped* within the `<dialog>`:
 
     ```html
@@ -903,11 +911,15 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
     ```html
     <menu>
       <li>
-        <button type="button" class="dialog-button js-close-dialog box-shadow" autofocus>Close dialog</button>
+        <button type="button" class="js-close-dialog dialog-button box-shadow" autofocus>Close dialog</button>
       </li>
       <li>
-        <button type="button" class="dialog-button js-celebrate-birthday box-shadow">
-          Join the celebration <span class="emoji">&#129705;</span>
+        <button
+          type="button"
+          class="js-celebrate-birthday dialog-button box-shadow"
+          aria-describedby="banner-confetti-description"
+        >
+          Celebrate with us <span class="emoji">&#129395;</span>
         </button>
       </li>
     </menu>
