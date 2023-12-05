@@ -34,6 +34,7 @@
 |*      || dialog button
 |*      || open dialog
 |*      || close dialog
+|*      || confetti
 |*
 |* @libraries
 |*  $jquery v3.6.4
@@ -438,7 +439,7 @@ function debounce(callback, delay = 100) {
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    // const birthDate = "07-12"; /* testing */
+    // const birthDate = "12-05"; /* testing */
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
@@ -465,9 +466,8 @@ function debounce(callback, delay = 100) {
       const createDialogButton = function () {
         if (!$(".js-open-dialog").length) {
           $("footer .details-inner > p:nth-of-type(2)")
-            .prepend('<span class="emoji">&#127881;</span>')
             .append(
-              `<span class="emoji">&#129395;</span><br><span class="emoji">&#127880;</span> It's birthday time <span class="emoji">&#127873;</span>`
+              `<br><span class="emoji">&#127880;</span>&nbsp;It's birthday time!&nbsp;<span class="emoji">&#127873;</span>`
             )
             .replaceWith(function () {
               return $("<button/>", {
@@ -512,6 +512,127 @@ function debounce(callback, delay = 100) {
       dialog.addEventListener("click", lightDismiss);
       dialog.addEventListener("close", closeDialog);
       $(".js-close-dialog").on("click", closeDialog);
+
+      /*
+      || confetti */
+
+      const confettiScript = "scripts/js-confetti.min.js";
+      const confettiCanvas = $("#banner-confetti");
+      const celebrateButton = $(".js-celebrate-birthday");
+
+      const confettiDefaultSettings = {
+        startVelocity: 45,
+        decay: 0.9,
+        gravity: 0.9,
+        drift: 0,
+        flat: false,
+        ticks: 200,
+        origin: { x: 0.5, y: 1 },
+        colors: ["#47c077", "#4ac142", "#00a5a1", "#45a4ea", "#8b48cd", "#f33f89"],
+        /* color 400 primary, analogous, analogous, triadic, triadic, complementary */
+        shapes: ["circle", "circle", "square"],
+        scalar: 0.9,
+        zIndex: 99 /* equal to z-index of #banner-confetti in /styles/style.css */,
+        disableForReducedMotion: true,
+      };
+
+      function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      const confettiEmojis = ["🥳", "🎉", "🎊", "🎈", "🎂", "🎁", "🍾", "🥂", "🍻"];
+      const confettiEmojiScalar = 2.3;
+
+      function getRandomConfettiEmojis(minCount, maxCount) {
+        const count = getRandomIntInclusive(minCount, maxCount);
+        const randomConfettiEmojis = [];
+        for (let i = 0; i < count; i++) {
+          const randomIndex = getRandomIntInclusive(0, confettiEmojis.length - 1);
+          randomConfettiEmojis.push(confettiEmojis[randomIndex]);
+        }
+        return randomConfettiEmojis;
+      }
+
+      let fireworkConfettiInterval;
+      function fireworkConfetti() {
+        clearInterval(fireworkConfettiInterval);
+
+        const confettiFireworkSettings = {
+          ...confettiDefaultSettings,
+          spread: 360,
+          startVelocity: 30,
+          ticks: 60,
+        };
+        const fireworkDuration = 1000 * 21; /* 21 seconds */
+        let fireworkEnd = Date.now() + fireworkDuration;
+
+        fireworkConfettiInterval = setInterval(function () {
+          let fireworkTimeLeft = fireworkEnd - Date.now();
+
+          if (fireworkTimeLeft <= 0) {
+            return clearInterval(fireworkConfettiInterval);
+          }
+
+          let particleCount = 60 * (fireworkTimeLeft / fireworkDuration);
+          confetti({
+            ...confettiFireworkSettings,
+            particleCount,
+            origin: {
+              x: getRandomArbitrary(0.1, 0.3),
+              y: Math.random() - 0.2 /* start slightly higher than "random", as particles fall down */,
+            },
+          });
+          confetti({
+            ...confettiFireworkSettings,
+            particleCount,
+            origin: {
+              x: getRandomArbitrary(0.6, 0.9),
+              y: Math.random() - 0.2 /* start slightly higher than "random", as particles fall down */,
+            },
+          });
+        }, 230);
+      }
+
+      $.getScript(confettiScript)
+        .done(function (script, textStatus) {
+          let bannerConfetti = confetti.create(confettiCanvas[0], {
+            resize: true,
+          });
+
+          celebrateButton.on("click", function () {
+            const selectedConfettiEmojis = getRandomConfettiEmojis(1, 4);
+
+            bannerConfetti({
+              ...confettiDefaultSettings,
+              particleCount: getRandomIntInclusive(60, 120),
+              angle: getRandomIntInclusive(70, 110),
+              spread: getRandomIntInclusive(60, 80),
+            });
+
+            bannerConfetti({
+              ...confettiDefaultSettings,
+              particleCount: getRandomIntInclusive(10, 30),
+              angle: getRandomIntInclusive(80, 100),
+              shapes: selectedConfettiEmojis.map((confettiEmoji) =>
+                confetti.shapeFromText({ text: confettiEmoji, scalar: confettiEmojiScalar })
+              ),
+              scalar: confettiEmojiScalar,
+            });
+
+            fireworkConfetti();
+          });
+        })
+        .fail(function (jqxhr, settings, exception) {
+          confettiCanvas.hide();
+          celebrateButton.hide();
+          console.error(`Error requesting Canvas Confetti library: ${exception}`);
+        });
     } else {
       localStorage.removeItem("visited");
     }

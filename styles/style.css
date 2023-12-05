@@ -184,7 +184,6 @@
   --shadow-offset-base: 5px;
   --shadow-color-main: 0, 0%, 0%; /* hsl: hue, saturation, lightness */
   --shadow-emoji: drop-shadow(0.03em 0.03em 0.06em rgba(0, 0, 0, 0.9));
-  --shadow-emoji-shine: drop-shadow(0 0 0.3em rgba(255, 255, 255, 0.9));
 }
 
 /*========================================================*\
@@ -2814,7 +2813,9 @@ dialog {
   overflow: hidden;
   position: fixed;
   inset: 0;
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  align-content: start;
   margin: auto;
   border: 3px solid black;
   border: var(--border-main);
@@ -2823,7 +2824,8 @@ dialog {
   width: 90%;
   width: var(--page-width);
   max-width: 80ch;
-  max-height: 80vh;
+  max-height: 90vh;
+  max-height: 90svh;
   text-align: center;
   color: whitesmoke;
   color: var(--on-surface-color-main);
@@ -2843,6 +2845,13 @@ dialog {
   transform: translate3d(0, 0, 0);
   /* translate3d enables hardware acceleration (gpu)
   |* for better and smoother animation performance */
+}
+
+/* support for the has() pseudo-class is insufficient at the moment - december 2023 */
+@supports selector(:has(.selector)) {
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 @supports not (inset: 0) {
@@ -2940,11 +2949,23 @@ dialog::backdrop {
   max-height: inherit;
 }
 
+#banner-confetti {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 /*========================================================*\
 || dialog header */
 
 dialog header {
-  position: static;
+  z-index: initial;
+  position: relative;
+  top: unset;
   border-bottom: 3px solid black;
   border-bottom: var(--border-main);
   padding: 1.1rem;
@@ -2954,17 +2975,19 @@ dialog header {
 }
 
 dialog header::before {
-  position: static;
-  border-radius: unset;
-  width: 44px;
-  width: var(--dialog-close-icon-size);
-  -webkit-backdrop-filter: unset;
-  backdrop-filter: unset;
+  content: none;
 }
 
 dialog header h2 {
-  flex-shrink: 0;
-  margin: 0;
+  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
+  padding-right: 44px;
+  padding-right: var(--dialog-close-icon-size);
+  padding-left: 44px;
+  padding-left: var(--dialog-close-icon-size);
+  padding-inline: 44px;
+  padding-inline: var(--dialog-close-icon-size);
   font-weight: 600;
   font-size: 2.734rem;
   font-size: var(--font-size-xl);
@@ -2977,17 +3000,25 @@ dialog header h2 {
 }
 
 @media only screen and (max-width: 19.99em) {
-  dialog header::before {
-    content: none;
-  }
-
   dialog header h2 {
-    flex-shrink: 1;
+    margin-left: 0;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    padding-left: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
   }
 }
 
 .dialog-close-icon {
   --shadow-level: 1;
+  position: absolute;
+  top: 50%;
+  right: 1.1rem;
+  right: var(--box-spacing-main);
+  /* equal to padding of dialog header */
+  -webkit-transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) scale(1);
   display: block;
   border: 0;
   border-radius: 10px;
@@ -3004,13 +3035,14 @@ dialog header h2 {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform var(--transition-main);
   transition: transform var(--transition-main);
+  transition: transform var(--transition-main), -webkit-transform var(--transition-main);
   will-change: transform; /* prevents weird moving/shifting on scale (see next rule below) */
 }
 
 .dialog-close-icon:hover,
 .dialog-close-icon:focus-visible {
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+  -webkit-transform: translateY(-50%) scale(1.03);
+  transform: translateY(-50%) scale(1.03);
 }
 
 /*========================================================*\
@@ -3035,7 +3067,7 @@ dialog section::-webkit-scrollbar-track {
   border-radius: 0;
 }
 
-dialog section h3 {
+dialog hgroup h3 {
   margin: 0;
   font-weight: 500;
   font-size: 2.188rem;
@@ -3045,6 +3077,10 @@ dialog section h3 {
   text-shadow: 0.04em 0.04em 0.02em #121212;
   text-shadow: 0.04em 0.04em 0.02em var(--background-color-main);
   color: inherit;
+}
+
+dialog hgroup p {
+  font-style: normal;
 }
 
 dialog section p {
@@ -3119,11 +3155,6 @@ dialog footer menu {
 .dialog-button:focus-visible {
   background: #66a7e9;
   background: var(--secondary-color-400);
-}
-
-.dialog-button.js-celebrate-birthday .emoji {
-  filter: drop-shadow(0 0 0.3em rgba(255, 255, 255, 0.9));
-  filter: var(--shadow-emoji-shine);
 }
 
 /*========================================================*\
