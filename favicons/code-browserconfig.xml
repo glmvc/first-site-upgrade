@@ -2,10 +2,10 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="/favicons/code-mstile-70x70.png" />
-      <square150x150logo src="/favicons/code-mstile-150x150.png" />
-      <square310x310logo src="/favicons/code-mstile-310x310.png" />
-      <wide310x150logo src="/favicons/code-mstile-310x150.png" />
+      <square70x70logo src="https://glmvc.github.io/first-site-upgrade/favicons/code-mstile-70x70.png" />
+      <square150x150logo src="https://glmvc.github.io/first-site-upgrade/favicons/code-mstile-150x150.png" />
+      <square310x310logo src="https://glmvc.github.io/first-site-upgrade/favicons/code-mstile-310x310.png" />
+      <wide310x150logo src="https://glmvc.github.io/first-site-upgrade/favicons/code-mstile-310x150.png" />
       <TileColor>#603cba</TileColor>
     </tile>
   </msapplication>

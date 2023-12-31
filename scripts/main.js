@@ -13,9 +13,8 @@
 |*    || element heights
 |*  || main
 |*    || breakpoints
-|*    || external hyperlinks (icon & a11y)
 |*    || typewriter effect
-|*    || nav-toggler
+|*    || nav toggle button
 |*    || corrected main heading with click alert
 |*    || personalized welcome message
 |*    || image map resizer
@@ -25,13 +24,16 @@
 |*    || changelog (markdown)
 |*      || replace tag
 |*    || sticky header
-|*    || aside position (mobile)
+|*    || aside position (responsive)
+|*    || table (responsive)
+|*    || details animation (waapi)
 |*  || birthday banner (dialog)
 |*    || first site visit check
 |*    || dates
 |*    || birthday
 |*      || site age
 |*      || dialog button
+|*      || observe dialog
 |*      || open dialog
 |*      || close dialog
 |*      || confetti
@@ -138,27 +140,6 @@ function debounce(callback, delay = 100) {
 
   $(document).ready(function () {
     /*========================================================*\
-    || external hyperlinks (icon & a11y) */
-
-    const externalLinkIcon =
-      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
-    const externalLinkContent = `<span class="visually-hidden">; external link (opens in a new tab)</span>${externalLinkIcon}`;
-    const externalLinkContentNotSecure = `<span class="visually-hidden">; external link (connection not secure, opens in a new tab)</span>${externalLinkIcon}`;
-
-    function modifyExternalLinks() {
-      $('a[target="_blank"]').each(function () {
-        const externalLink = $(this);
-        if (externalLink.is('[href^="https:"]')) {
-          externalLink.append(externalLinkContent);
-        } else if (externalLink.is('[href^="http:"]')) {
-          externalLink.append(externalLinkContentNotSecure);
-        }
-      });
-    }
-
-    modifyExternalLinks();
-
-    /*========================================================*\
     || typewriter effect */
 
     const typewriter = $(".js-typewriter-text");
@@ -168,9 +149,9 @@ function debounce(callback, delay = 100) {
     typewriter.css("--typewriter-characters", typewriterText.length);
 
     /*========================================================*\
-    || nav-toggler */
+    || nav toggle button */
 
-    $("#nav-toggler").on("click", function () {
+    $("#js-nav-toggle-button").on("click", function () {
       $("body").toggleClass("js-nav-open");
       $(this).attr("aria-expanded", $(this).attr("aria-expanded") === "false" ? "true" : "false");
     });
@@ -211,7 +192,7 @@ function debounce(callback, delay = 100) {
       $("h2 bdi").text(`${storedName}`).attr("data-name", `${storedName}`);
     }
 
-    $("button#change-username").on("click", function () {
+    $("button#js-change-username").on("click", function () {
       setUserName();
     });
 
@@ -243,7 +224,7 @@ function debounce(callback, delay = 100) {
     const newImageSrc = "images/js-code.png";
     const newImageAltText = "A blurred code snippet that reveals a small Easter egg";
     const newFigcaption =
-      'A JavaScript code snippet that reveals a small feature, but it is somehow blurred... (screenshot taken with <a href="https://codeimg.io/" title="Source Code Image Tool" target="_blank">Codeimg.io</a>)';
+      'A JavaScript code snippet that reveals a small feature, but it is somehow blurred... (image created with <a href="https://carbon.now.sh/" title="Carbon Source Code Image Tool" target="_blank" rel="external noopener noreferrer">Carbon</a>)';
 
     function switchImage() {
       if (image.attr("src") === "images/hello-world.png") {
@@ -272,9 +253,8 @@ function debounce(callback, delay = 100) {
       switchImage();
     });
 
-    image.on("keydown", function (e) {
-      // enter key (code 13)
-      if (e.which === 13) {
+    image.on("keydown", function (event) {
+      if (event.key === "Enter") {
         switchImage();
       }
     });
@@ -336,8 +316,21 @@ function debounce(callback, delay = 100) {
             replaceTag(changelogContent, "h2", "h4");
             replaceTag(changelogContent, "h1", "h3");
             changelogContent.find("pre > code").addClass("language-none");
-            changelogContent.find("a").attr("target", "_blank");
-            modifyExternalLinks();
+            changelogContent.find("a").each(function () {
+              const anchor = $(this);
+              const anchorHref = anchor.attr("href");
+              if (anchorHref && anchorHref.startsWith("http")) {
+                if (anchorHref.startsWith("https://glmvc.github.io/first-site-upgrade/")) {
+                  const newAnchorHref = anchorHref.replace("https://glmvc.github.io/first-site-upgrade/", "");
+                  anchor.attr("href", newAnchorHref);
+                } else {
+                  anchor.attr({
+                    target: "_blank",
+                    rel: "external noopener noreferrer",
+                  });
+                }
+              }
+            });
             if (typeof Prism !== "undefined") {
               highlightCode();
             } else {
@@ -389,11 +382,11 @@ function debounce(callback, delay = 100) {
   });
 
   /*========================================================*\
-  || aside position (mobile) */
+  || aside position (responsive) */
 
   const asidePosition = debounce(() => {
     const aside = $("main > aside");
-    let windowHeight = window.innerHeight; // note mobile browsers with dynamic (address) bars
+    let windowHeight = window.innerHeight; // note (mobile) browsers with dynamic (address) bars
     let documentHeight = $(document).height();
     let scrollTop = $(window).scrollTop();
     let buffer = parseFloat($(".page-wrapper > footer").css("padding-bottom"));
@@ -408,6 +401,159 @@ function debounce(callback, delay = 100) {
 
   $(window).on("load scroll resize", function () {
     asidePosition();
+  });
+
+  /*========================================================*\
+  || table (responsive) */
+
+  const responsiveTable = debounce(() => {
+    $(".table-scroll").each(function () {
+      const tableScroll = $(this);
+      const tableWrapper = tableScroll.parent(".table-wrapper");
+      const table = tableScroll.children("table");
+
+      if (table) {
+        const tableScrollWidth = tableScroll[0].scrollWidth;
+        const tableClientWidth = tableScroll[0].clientWidth;
+
+        if (tableScrollWidth > tableClientWidth) {
+          tableWrapper.addClass("js-table-responsive");
+        } else if (tableScrollWidth <= tableClientWidth) {
+          tableWrapper.removeClass("js-table-responsive");
+        }
+      }
+    });
+  });
+
+  $(window).on("load resize", function () {
+    responsiveTable();
+  });
+
+  $(".table-scroll").on("scroll", function () {
+    const tableScroll = $(this);
+    const tableWrapper = tableScroll.parent(".table-wrapper");
+
+    if (tableWrapper.hasClass("js-table-responsive")) {
+      const scrollLeft = tableScroll.scrollLeft();
+      const maxScroll = tableScroll[0].scrollWidth - tableScroll[0].clientWidth;
+      const scrollThreshold = 10;
+
+      if (scrollLeft >= scrollThreshold) {
+        tableWrapper.addClass("js-scroll-start");
+      } else if (scrollLeft < scrollThreshold) {
+        tableWrapper.removeClass("js-scroll-start");
+      }
+
+      if (scrollLeft + scrollThreshold >= maxScroll) {
+        tableWrapper.addClass("js-scroll-end");
+      } else if (scrollLeft + scrollThreshold < maxScroll) {
+        tableWrapper.removeClass("js-scroll-end");
+      }
+    }
+  });
+
+  /*========================================================*\
+  || details animation (waapi) */
+
+  class Accordion {
+    constructor(element) {
+      this.element = element;
+      this.summary = element.querySelector("summary");
+      this.content = element.querySelector(".details-inner");
+      this.animation = null;
+      this.isClosing = false;
+      this.isExpanding = false;
+      this.animationDuration = 400; // milliseconds equal to --transition-duration-longer in /styles/style.css
+      this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      this.summary.addEventListener("click", (event) => this.onClick(event));
+    }
+
+    onClick(event) {
+      if (this.prefersReducedMotion) {
+        return;
+      }
+
+      event.preventDefault();
+
+      this.element.style.overflow = "hidden";
+
+      if (this.isClosing || !this.element.open) {
+        this.open();
+      } else if (this.isExpanding || this.element.open) {
+        this.shrink();
+      }
+    }
+
+    shrink() {
+      this.isClosing = true;
+
+      const startHeight = `${this.element.offsetHeight}px`;
+      const endHeight = `${this.summary.offsetHeight}px`;
+
+      if (this.animation) {
+        this.animation.cancel();
+      }
+
+      this.animation = this.element.animate(
+        {
+          height: [startHeight, endHeight],
+        },
+        {
+          duration: this.animationDuration,
+          easing: "ease-out",
+        }
+      );
+
+      this.animation.onfinish = () => this.onAnimationFinish(false);
+      this.animation.oncancel = () => (this.isClosing = false);
+    }
+
+    open() {
+      this.element.style.height = `${this.element.offsetHeight}px`;
+      this.element.open = true;
+
+      window.requestAnimationFrame(() => this.expand());
+    }
+
+    expand() {
+      this.isExpanding = true;
+
+      const startHeight = `${this.element.offsetHeight}px`;
+      const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+
+      if (this.animation) {
+        this.animation.cancel();
+      }
+
+      this.animation = this.element.animate(
+        {
+          height: [startHeight, endHeight],
+        },
+        {
+          duration: this.animationDuration,
+          easing: "ease-out",
+        }
+      );
+
+      this.animation.onfinish = () => this.onAnimationFinish(true);
+      this.animation.oncancel = () => (this.isExpanding = false);
+    }
+
+    onAnimationFinish(open) {
+      this.element.open = open;
+      this.animation = null;
+      this.isClosing = false;
+      this.isExpanding = false;
+
+      this.element.style.height = this.element.style.overflow = "";
+    }
+  }
+
+  $(document).ready(function () {
+    document.querySelectorAll("details").forEach((el) => {
+      new Accordion(el);
+    });
   });
 })(jQuery);
 
@@ -439,7 +585,7 @@ function debounce(callback, delay = 100) {
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    // const birthDate = "12-05"; /* testing */
+    // const birthDate = "12-31"; /* testing */
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
@@ -465,27 +611,57 @@ function debounce(callback, delay = 100) {
 
       const createDialogButton = function () {
         if (!$(".js-open-dialog").length) {
-          $("footer .details-inner > p:nth-of-type(2)")
+          const footerDetails = $("footer .details-inner");
+          const paragraph = footerDetails.children("p:nth-of-type(2)");
+
+          paragraph
             .append(
               `<br><span class="emoji">&#127880;</span>&nbsp;It's birthday time!&nbsp;<span class="emoji">&#127873;</span>`
             )
-            .replaceWith(function () {
-              return $("<button/>", {
+            .prependTo(footerDetails)
+            .replaceWith(
+              $("<button/>", {
                 type: "button",
-                class: "dialog-button js-open-dialog centered box-shadow",
-                html: $(this).html(),
-              });
-            });
+                class: "js-open-dialog dialog-button centered box-shadow",
+                "aria-haspopup": "dialog",
+                html: paragraph.html(),
+              })
+            );
         }
       };
 
       createDialogButton();
 
       /*
+      || observe dialog */
+
+      const dialogObserver = new MutationObserver((mutations, observer) => {
+        mutations.forEach(async (mutation) => {
+          if (mutation.attributeName === "open") {
+            const dialog = mutation.target;
+            const isOpen = dialog.hasAttribute("open");
+
+            if (isOpen) {
+              dialog.removeAttribute("inert");
+              const focusTarget = dialog.querySelector("[autofocus]");
+              focusTarget ? focusTarget.focus() : dialog.querySelector("button").focus();
+              $(document).trigger("dialogOpened");
+            } else {
+              dialog.setAttribute("inert", "");
+              $(document).trigger("dialogClosed");
+            }
+          }
+        });
+      });
+
+      dialogObserver.observe(dialog, {
+        attributes: true,
+      });
+
+      /*
       || open dialog */
 
       function openDialog() {
-        dialog.removeAttribute("inert");
         dialog.showModal();
       }
 
@@ -500,16 +676,15 @@ function debounce(callback, delay = 100) {
 
       function closeDialog() {
         dialog.close();
-        dialog.setAttribute("inert", "");
       }
 
-      function lightDismiss({ target: dialog }) {
+      function lightDismissDialog({ target: dialog }) {
         if (dialog.nodeName === "DIALOG") {
           closeDialog();
         }
       }
 
-      dialog.addEventListener("click", lightDismiss);
+      dialog.addEventListener("click", lightDismissDialog);
       dialog.addEventListener("close", closeDialog);
       $(".js-close-dialog").on("click", closeDialog);
 
@@ -529,10 +704,10 @@ function debounce(callback, delay = 100) {
         ticks: 200,
         origin: { x: 0.5, y: 1 },
         colors: ["#47c077", "#4ac142", "#00a5a1", "#45a4ea", "#8b48cd", "#f33f89"],
-        /* color 400 primary, analogous, analogous, triadic, triadic, complementary */
+        // color 400 primary, analogous, analogous, triadic, triadic, complementary
         shapes: ["circle", "circle", "square"],
         scalar: 0.9,
-        zIndex: 99 /* equal to z-index of #banner-confetti in /styles/style.css */,
+        zIndex: 99, // equal to z-index of #banner-confetti in /styles/style.css
         disableForReducedMotion: true,
       };
 
@@ -585,7 +760,7 @@ function debounce(callback, delay = 100) {
             particleCount,
             origin: {
               x: getRandomArbitrary(0.1, 0.3),
-              y: Math.random() - 0.2 /* start slightly higher than "random", as particles fall down */,
+              y: Math.random() - 0.2, // start slightly higher than "random", as particles fall down
             },
           });
           confetti({
@@ -593,7 +768,7 @@ function debounce(callback, delay = 100) {
             particleCount,
             origin: {
               x: getRandomArbitrary(0.6, 0.9),
-              y: Math.random() - 0.2 /* start slightly higher than "random", as particles fall down */,
+              y: Math.random() - 0.2, // start slightly higher than "random", as particles fall down
             },
           });
         }, 230);
@@ -626,6 +801,11 @@ function debounce(callback, delay = 100) {
             });
 
             fireworkConfetti();
+            $(document)
+              .off("dialogClosed")
+              .on("dialogClosed", function () {
+                fireworkConfetti();
+              });
           });
         })
         .fail(function (jqxhr, settings, exception) {

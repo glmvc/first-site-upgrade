@@ -31,10 +31,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0fb55e" />
     <meta name="msapplication-TileColor" content="#603cba" />
-    <meta name="msapplication-TileImage" content="favicons/code-mstile-144x144.png" />
-    <meta name="msapplication-config" content="favicons/code-browserconfig.xml" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://glmvc.github.io/first-site-upgrade/favicons/code-mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-config"
+      content="https://glmvc.github.io/first-site-upgrade/favicons/code-browserconfig.xml"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/code.html" />
     <meta name="twitter:title" content="Source Code - My Upgraded First Site" />
     <meta name="twitter:description" content="Source code of the upgraded version of my first site!" />
     <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
@@ -43,7 +49,7 @@
     <meta name="twitter:creator" content="@glmvc" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/code.html" />
     <meta property="og:title" content="Source Code - My Upgraded First Site" />
     <meta property="og:description" content="Source code of the upgraded version of my first site!" />
     <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
@@ -103,7 +109,16 @@
         <!-- || logo (svg) -->
         <a class="logo" href="index.html" aria-label="Home">
           <span class="visually-hidden">ivan glmvc</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="244" height="265" fill="none" viewBox="0 0 244 265">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="244"
+            height="265"
+            fill="none"
+            viewBox="0 0 244 265"
+            role="img"
+            aria-labelledby="svg-logo-title"
+          >
+            <title id="svg-logo-title">Logo with the letters "i" and "v" for the name "ivan"</title>
             <path
               fill="whitesmoke"
               fill-rule="evenodd"
@@ -182,7 +197,13 @@
         </a>
         <!-- || navigation (nav) -->
         <nav aria-label="Main">
-          <button type="button" id="nav-toggler" aria-controls="nav-main" aria-expanded="false">
+          <button
+            type="button"
+            id="js-nav-toggle-button"
+            class="nav-toggle-button"
+            aria-controls="nav-main"
+            aria-expanded="false"
+          >
             <span class="visually-hidden">Open main navigation</span>
             <span></span>
             <span></span>
@@ -203,6 +224,7 @@
                 class="nav-item-first-site"
                 href="first-site/index.html"
                 title="first-site version (different structure and layout)"
+                rel="alternate"
                 >First-Site</a
               >
             </li>
@@ -222,10 +244,20 @@
           <p>Visit my</p>
           <ul aria-label="Social media profiles">
             <li>
-              <a href="https://github.com/glmvc" title="glmvc GitHub profile" target="_blank">&#128025;&nbsp;GitHub</a>
+              <a
+                href="https://github.com/glmvc"
+                title="glmvc GitHub profile"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >&#128025;&nbsp;GitHub</a
+              >
             </li>
             <li>
-              <a href="https://twitter.com/glmvc" title="glmvc Twitter profile" target="_blank"
+              <a
+                href="https://twitter.com/glmvc"
+                title="glmvc Twitter profile"
+                target="_blank"
+                rel="external noopener noreferrer"
                 >&#128038;&nbsp;Twitter</a
               >
             </li>
@@ -239,7 +271,6 @@
             Nice to meet you, <bdi class="hyphenation" data-name></bdi>
           </h2>
         </section>
-        <hr class="drop-shadow" />
         <!-- || code info -->
         <section aria-label="Source Code Information">
           <h3><span class="emoji">&#128126;</span> Source Code Info</h3>
@@ -249,11 +280,16 @@
               href="https://github.com/glmvc/first-site-upgrade"
               title="first-site-upgrade GitHub repository"
               target="_blank"
+              rel="external noopener noreferrer"
               >source code</a
             >
             of the project's <em>main</em> files as code blocks/snippets. External tools, such as JavaScript libraries,
             are <em>not</em> included. The
-            <a href="https://github.com/glmvc/first-site" title="first-site GitHub repository" target="_blank"
+            <a
+              href="https://github.com/glmvc/first-site"
+              title="first-site GitHub repository"
+              target="_blank"
+              rel="external noopener noreferrer"
               >source code of the first-site</a
             >
             is also <em>not</em> listed, but can be found in its repository.
@@ -264,6 +300,7 @@
               href="https://github.com/glmvc/first-site-upgrade/blob/main/LICENSE.md"
               title="first-site-upgrade repository license"
               target="_blank"
+              rel="license external noopener noreferrer"
               >license of the project</a
             >
             before copying any code. To copy, you can either:
@@ -285,7 +322,6 @@
             </li>
           </ul>
         </section>
-        <hr class="drop-shadow" />
         <!-- || html code -->
         <section aria-label="HTML Source Code">
           <h4><span class="emoji">&lt;&#47;&gt;</span> HTML Code</h4>
@@ -334,7 +370,6 @@
             </div>
           </details>
         </section>
-        <hr class="drop-shadow" />
         <!-- || css code -->
         <section aria-label="CSS Source Code">
           <h4><span class="emoji">&#123;&#125;</span> CSS Code</h4>
@@ -372,7 +407,6 @@
             </div>
           </details>
         </section>
-        <hr class="drop-shadow" />
         <!-- || js code -->
         <section aria-label="JavaScript Source Code">
           <h4><span class="emoji">&#125;&#41;;</span> JS Code</h4>
@@ -394,7 +428,6 @@
             </div>
           </details>
         </section>
-        <hr class="drop-shadow" />
         <!-- || terminal code -->
         <section aria-label="Terminal Source Code">
           <h4><span class="emoji">&#36;</span> Terminal</h4>
@@ -419,7 +452,6 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
             >, and the process will stop.</small
           >
         </section>
-        <hr class="drop-shadow" />
       </main>
       <!--=====================================================-->
       <!-- || footer -->
@@ -430,7 +462,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
         <div class="features-wrapper">
           <div class="feature">
             <h6>Change your username:</h6>
-            <button type="button" id="change-username" class="button">Change user</button>
+            <button type="button" id="js-change-username" class="button">Change user</button>
           </div>
           <div class="feature">
             <h6>Enhance your coding senses:</h6>
@@ -453,13 +485,14 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
                   href="https://pixabay.com/music/electronic-cyberpunk-2099-10701/"
                   title="Pixabay audio source"
                   target="_blank"
+                  rel="external noopener noreferrer"
                   >Pixabay</a
                 >)
               </figcaption>
             </figure>
           </div>
         </div>
-        <hr class="drop-shadow" />
+        <hr />
         <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
@@ -485,7 +518,7 @@ PING glmvc.github.io (185.199.108.153): 56 data bytes
             loading="lazy"
           ></iframe>
         </address>
-        <hr class="drop-shadow" />
+        <hr />
         <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>

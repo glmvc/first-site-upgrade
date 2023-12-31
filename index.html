@@ -32,7 +32,7 @@
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-config" content="browserconfig.xml" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta name="twitter:url" content="https://glmvc.github.io/first-site-upgrade/index.html" />
     <meta name="twitter:title" content="My Upgraded First Site" />
     <meta name="twitter:description" content="The upgraded version of my first site!" />
     <meta name="twitter:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
@@ -41,7 +41,7 @@
     <meta name="twitter:creator" content="@glmvc" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/" />
+    <meta property="og:url" content="https://glmvc.github.io/first-site-upgrade/index.html" />
     <meta property="og:title" content="My Upgraded First Site" />
     <meta property="og:description" content="The upgraded version of my first site!" />
     <meta property="og:image" content="https://glmvc.github.io/first-site-upgrade/images/hello-world.png" />
@@ -99,7 +99,16 @@
         <!-- || logo (svg) -->
         <a class="logo" href="index.html" aria-label="Home" aria-current="page">
           <span class="visually-hidden">ivan glmvc</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="244" height="265" fill="none" viewBox="0 0 244 265">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="244"
+            height="265"
+            fill="none"
+            viewBox="0 0 244 265"
+            role="img"
+            aria-labelledby="svg-logo-title"
+          >
+            <title id="svg-logo-title">Logo with the letters "i" and "v" for the name "ivan"</title>
             <path
               fill="whitesmoke"
               fill-rule="evenodd"
@@ -178,7 +187,13 @@
         </a>
         <!-- || navigation (nav) -->
         <nav aria-label="Main">
-          <button type="button" id="nav-toggler" aria-controls="nav-main" aria-expanded="false">
+          <button
+            type="button"
+            id="js-nav-toggle-button"
+            class="nav-toggle-button"
+            aria-controls="nav-main"
+            aria-expanded="false"
+          >
             <span class="visually-hidden">Open main navigation</span>
             <span></span>
             <span></span>
@@ -199,6 +214,7 @@
                 class="nav-item-first-site"
                 href="first-site/index.html"
                 title="first-site version (different structure and layout)"
+                rel="alternate"
                 >First-Site</a
               >
             </li>
@@ -218,10 +234,20 @@
           <p>Visit my</p>
           <ul aria-label="Social media profiles">
             <li>
-              <a href="https://github.com/glmvc" title="glmvc GitHub profile" target="_blank">&#128025;&nbsp;GitHub</a>
+              <a
+                href="https://github.com/glmvc"
+                title="glmvc GitHub profile"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >&#128025;&nbsp;GitHub</a
+              >
             </li>
             <li>
-              <a href="https://twitter.com/glmvc" title="glmvc Twitter profile" target="_blank"
+              <a
+                href="https://twitter.com/glmvc"
+                title="glmvc Twitter profile"
+                target="_blank"
+                rel="external noopener noreferrer"
                 >&#128038;&nbsp;Twitter</a
               >
             </li>
@@ -248,6 +274,7 @@
                 href="https://solarsystem.nasa.gov/moons/earths-moon/overview/"
                 title="NASA's solar system site about Earth's Moon"
                 target="_blank"
+                rel="external noopener noreferrer"
                 shape="circle"
                 coords="332,39,15"
               />
@@ -269,12 +296,12 @@
                 href="https://openclipart.org/detail/190952/hello-world"
                 title="Open Clipart image source"
                 target="_blank"
+                rel="external noopener noreferrer"
                 >Open Clipart</a
               >)
             </figcaption>
           </figure>
         </section>
-        <hr class="drop-shadow" />
         <!-- || hello world program -->
         <article class="hello-world-program" aria-labelledby="hello-world-program-title">
           <h3 id="hello-world-program-title">"Hello, World!" program</h3>
@@ -285,18 +312,21 @@
                 href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"
                 title="'Hello, World!' program - Wikipedia entry"
                 target="_blank"
+                rel="external noopener noreferrer"
                 >Wikipedia article on the "Hello, World!" program</a
               ></cite
             >.
           </p>
           <blockquote cite="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
-            A <strong>"Hello, World!" program</strong> is generally <mark>a computer program</mark> that
-            <em>outputs</em> or <em>displays</em> the message <mark>"Hello, World!"</mark>.<br />
-            Such a program is very simple in most programming languages, and is often used
-            <mark>to illustrate the basic syntax</mark> of a programming language. It is often the
-            <mark>first program</mark> written by people learning to code.<br />
-            It can also be used as a <mark>sanity test</mark> to ensure that computer software intended to compile or
-            run source code is correctly installed, and that the operator <mark>understands how to use it</mark>.
+            A <strong>"Hello, World!" program</strong> is generally a <mark>simple computer program</mark> which
+            <em>outputs</em> (or <em>displays</em>) to the screen (often the console) a <mark>message</mark> similar to
+            <mark>"Hello, World!"</mark> while <em>ignoring</em> any user input.<br />
+            A <mark>small piece of code</mark> in most general-purpose programming languages, this program is used to
+            <em>illustrate</em> a language's <mark>basic syntax</mark>.<br />
+            A "Hello, World!" program is <mark>often the first written</mark> by a student of a new programming
+            language, but such a program can also be used as a <mark>sanity check</mark> to ensure that the computer
+            software <em>intended to compile</em> or run source code is <em>correctly installed</em>, and that its
+            <mark>operator understands how to use it</mark>.
           </blockquote>
           <p>
             Well, let's just say that this is my first "program", so I can get more familiar with web development and
@@ -331,18 +361,18 @@
                 href="https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/"
                 title="Pixabay video source"
                 target="_blank"
+                rel="external noopener noreferrer"
                 >Pixabay</a
               >)
             </figcaption>
           </figure>
         </article>
-        <hr class="drop-shadow" />
         <!-- || web dev -->
         <section aria-labelledby="web-dev-title">
           <h3 id="web-dev-title" class="hyphenation">Web development</h3>
           <div class="web-dev-wrapper">
             <p>
-              The following description is a <mark><em>very</em> simple example</mark> I came up with for beginners to
+              The following description is a <em>very</em> <mark>simple example</mark> I came up with for beginners to
               get to know the <mark>three most important components</mark> of
               <strong>front-end web development</strong>. Note that web development is a much larger field.<br />
               Think about <mark>building a house</mark>:
@@ -398,177 +428,217 @@
             </li>
           </ul>
         </section>
-        <hr class="drop-shadow" />
         <!-- || planets (table) -->
         <section id="table-planets" aria-label="Planets of the solar system">
           <h3>Planets</h3>
           <p>To honor the other planets in our solar system as well, not just our own world.</p>
           <div class="table-wrapper drop-shadow">
-            <table>
-              <caption>
-                Data about the planets of our solar system. Planetary facts taken from
-                <a
-                  href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-                  title="NASA: Planetary Fact Sheet - Metric"
-                  target="_blank"
-                  >NASA's Planetary Fact Sheet</a
-                >.
-              </caption>
-              <colgroup>
-                <col span="2" />
-                <col span="1" />
-                <col span="9" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <td colspan="2"></td>
-                  <th scope="col">Name</th>
-                  <th scope="col">Mass (10<sup>24</sup>kg)</th>
-                  <th scope="col">Diameter (km)</th>
-                  <th scope="col">Density (kg/m<sup>3</sup>)</th>
-                  <th scope="col">Gravity (m/s<sup>2</sup>)</th>
-                  <th scope="col">Length of day (hours)</th>
-                  <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
-                  <th scope="col">Mean temperature (°C)</th>
-                  <th scope="col">Number of moons</th>
-                  <th scope="col">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
-                  <th scope="row">Mercury</th>
-                  <td>0.330</td>
-                  <td>4,879</td>
-                  <td>5427</td>
-                  <td>3.7</td>
-                  <td>4222.6</td>
-                  <td>57.9</td>
-                  <td>167</td>
-                  <td>0</td>
-                  <td>The shrinking planet closest to the sun</td>
-                </tr>
-                <tr>
-                  <th scope="row">Venus</th>
-                  <td>4.87</td>
-                  <td>12,104</td>
-                  <td>5243</td>
-                  <td>8.9</td>
-                  <td>2802.0</td>
-                  <td>108.2</td>
-                  <td>464</td>
-                  <td>0</td>
-                  <td>The hottest and most hellish planet</td>
-                </tr>
-                <tr>
-                  <th scope="row">Earth</th>
-                  <td>5.97</td>
-                  <td>12,756</td>
-                  <td>5514</td>
-                  <td>9.8</td>
-                  <td>24.0</td>
-                  <td>149.6</td>
-                  <td>15</td>
-                  <td>1</td>
-                  <td>Mother, cradle of known life, our home</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mars</th>
-                  <td>0.642</td>
-                  <td>6,792</td>
-                  <td>3933</td>
-                  <td>3.7</td>
-                  <td>24.7</td>
-                  <td>227.9</td>
-                  <td>-65</td>
-                  <td>2</td>
-                  <td>The red planet, aka Elon's planet</td>
-                </tr>
-                <tr>
-                  <th rowspan="4" scope="rowgroup">Jovian planets</th>
-                  <th rowspan="2" scope="rowgroup">Gas giants</th>
-                  <th scope="row">Jupiter</th>
-                  <td>1898</td>
-                  <td>142,984</td>
-                  <td>1326</td>
-                  <td>23.1</td>
-                  <td>9.9</td>
-                  <td>778.6</td>
-                  <td>-110</td>
-                  <td>67</td>
-                  <td>The largest planet with raging storms</td>
-                </tr>
-                <tr>
-                  <th scope="row">Saturn</th>
-                  <td>568</td>
-                  <td>120,536</td>
-                  <td>687</td>
-                  <td>9.0</td>
-                  <td>10.7</td>
-                  <td>1433.5</td>
-                  <td>-140</td>
-                  <td>62</td>
-                  <td>The planet with the "rings"</td>
-                </tr>
-                <tr>
-                  <th rowspan="2" scope="rowgroup">Ice giants</th>
-                  <th scope="row">Uranus</th>
-                  <td>86.8</td>
-                  <td>51,118</td>
-                  <td>1271</td>
-                  <td>8.7</td>
-                  <td>17.2</td>
-                  <td>2872.5</td>
-                  <td>-195</td>
-                  <td>27</td>
-                  <td>The planet pronounced funny</td>
-                </tr>
-                <tr>
-                  <th scope="row">Neptun</th>
-                  <td>102</td>
-                  <td>49,528</td>
-                  <td>1638</td>
-                  <td>11.0</td>
-                  <td>16.1</td>
-                  <td>4495.1</td>
-                  <td>-200</td>
-                  <td>14</td>
-                  <td>The icy planet very far out</td>
-                </tr>
-                <tr>
-                  <th colspan="2" scope="rowgroup">Dwarf planets*</th>
-                  <th scope="row"><s>Pluto</s></th>
-                  <td>0.0146</td>
-                  <td>2,370</td>
-                  <td>2095</td>
-                  <td>0.7</td>
-                  <td>153.3</td>
-                  <td>5906.4</td>
-                  <td>-225</td>
-                  <td>5</td>
-                  <td>
-                    *Declassified as a planet in 2006, but this
-                    <a
-                      href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
-                      title="An article about why Pluto might actually be a planet"
-                      target="_blank"
-                      >remains controversial</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colspan="12">
-                    Please <em>do not</em> ask why the sun is not listed!<br />
-                    That would hurt its feelings...
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+            <div class="table-scroll">
+              <table>
+                <caption>
+                  Data about the planets of our solar system. Planetary facts taken from
+                  <a
+                    href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+                    title="NASA: Planetary Fact Sheet - Metric"
+                    target="_blank"
+                    rel="external noopener noreferrer"
+                    >NASA's Planetary Fact Sheet</a
+                  >.
+                </caption>
+                <colgroup>
+                  <col span="2" />
+                  <col span="1" />
+                  <col span="9" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th id="planet-group" colspan="2" scope="col">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="160"
+                        height="160"
+                        viewBox="0 0 160 160"
+                        role="img"
+                        aria-labelledby="svg-planet-title"
+                      >
+                        <title id="svg-planet-title">Planet with a rotating orbit</title>
+                        <circle cx="80" cy="80" r="50" />
+                        <g transform=" matrix(0.866, -0.5, 0.25, 0.433, 80, 80)">
+                          <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="whitesmoke">
+                            <animateTransform
+                              attributeName="transform"
+                              type="rotate"
+                              from="360 0 0"
+                              to="0 0 0"
+                              dur="1.5s"
+                              repeatCount="indefinite"
+                            />
+                          </path>
+                        </g>
+                        <path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
+                      </svg>
+                      Group
+                    </th>
+                    <th id="planet-name" scope="col">Name</th>
+                    <th id="planet-mass" scope="col">Mass (10<sup>24</sup>kg)</th>
+                    <th id="planet-diameter" scope="col">Diameter (km)</th>
+                    <th id="planet-density" scope="col">Density (kg/m<sup>3</sup>)</th>
+                    <th id="planet-gravity" scope="col">Gravity (m/s<sup>2</sup>)</th>
+                    <th id="planet-daylength" scope="col" abbr="Daylength">Length of day (hours)</th>
+                    <th id="planet-distance" scope="col" abbr="Distance">Distance from Sun (10<sup>6</sup>km)</th>
+                    <th id="planet-temperature" scope="col" abbr="Temperature">Mean temperature (°C)</th>
+                    <th id="planet-moons" scope="col" abbr="Moons">Number of moons</th>
+                    <th id="planet-notes" scope="col">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th id="planet-terrestrial" colspan="2" rowspan="4" scope="rowgroup" headers="planet-group">
+                      Terrestrial planets
+                    </th>
+                    <th id="planet-mercury" scope="row" headers="planet-terrestrial planet-name">Mercury</th>
+                    <td headers="planet-mercury planet-terrestrial planet-mass">0.330</td>
+                    <td headers="planet-mercury planet-terrestrial planet-diameter">4,879</td>
+                    <td headers="planet-mercury planet-terrestrial planet-density">5427</td>
+                    <td headers="planet-mercury planet-terrestrial planet-gravity">3.7</td>
+                    <td headers="planet-mercury planet-terrestrial planet-daylength">4222.6</td>
+                    <td headers="planet-mercury planet-terrestrial planet-distance">57.9</td>
+                    <td headers="planet-mercury planet-terrestrial planet-temperature">167</td>
+                    <td headers="planet-mercury planet-terrestrial planet-moons">0</td>
+                    <td headers="planet-mercury planet-terrestrial planet-notes">
+                      The shrinking planet closest to the sun
+                    </td>
+                  </tr>
+                  <tr>
+                    <th id="planet-venus" scope="row" headers="planet-terrestrial planet-name">Venus</th>
+                    <td headers="planet-venus planet-terrestrial planet-mass">4.87</td>
+                    <td headers="planet-venus planet-terrestrial planet-diameter">12,104</td>
+                    <td headers="planet-venus planet-terrestrial planet-density">5243</td>
+                    <td headers="planet-venus planet-terrestrial planet-gravity">8.9</td>
+                    <td headers="planet-venus planet-terrestrial planet-daylength">2802.0</td>
+                    <td headers="planet-venus planet-terrestrial planet-distance">108.2</td>
+                    <td headers="planet-venus planet-terrestrial planet-temperature">464</td>
+                    <td headers="planet-venus planet-terrestrial planet-moons">0</td>
+                    <td headers="planet-venus planet-terrestrial planet-notes">The hottest and most hellish planet</td>
+                  </tr>
+                  <tr>
+                    <th id="planet-earth" scope="row" headers="planet-terrestrial planet-name">Earth</th>
+                    <td headers="planet-earth planet-terrestrial planet-mass">5.97</td>
+                    <td headers="planet-earth planet-terrestrial planet-diameter">12,756</td>
+                    <td headers="planet-earth planet-terrestrial planet-density">5514</td>
+                    <td headers="planet-earth planet-terrestrial planet-gravity">9.8</td>
+                    <td headers="planet-earth planet-terrestrial planet-daylength">24.0</td>
+                    <td headers="planet-earth planet-terrestrial planet-distance">149.6</td>
+                    <td headers="planet-earth planet-terrestrial planet-temperature">15</td>
+                    <td headers="planet-earth planet-terrestrial planet-moons">1</td>
+                    <td headers="planet-earth planet-terrestrial planet-notes">
+                      Mother, cradle of known life, our home
+                    </td>
+                  </tr>
+                  <tr>
+                    <th id="planet-mars" scope="row" headers="planet-terrestrial planet-name">Mars</th>
+                    <td headers="planet-mars planet-terrestrial planet-mass">0.642</td>
+                    <td headers="planet-mars planet-terrestrial planet-diameter">6,792</td>
+                    <td headers="planet-mars planet-terrestrial planet-density">3933</td>
+                    <td headers="planet-mars planet-terrestrial planet-gravity">3.7</td>
+                    <td headers="planet-mars planet-terrestrial planet-daylength">24.7</td>
+                    <td headers="planet-mars planet-terrestrial planet-distance">227.9</td>
+                    <td headers="planet-mars planet-terrestrial planet-temperature">-65</td>
+                    <td headers="planet-mars planet-terrestrial planet-moons">2</td>
+                    <td headers="planet-mars planet-terrestrial planet-notes">The red planet, aka Elon's planet</td>
+                  </tr>
+                  <tr>
+                    <th id="planet-jovian" rowspan="4" scope="rowgroup" headers="planet-group">Jovian planets</th>
+                    <th id="planet-gas" rowspan="2" scope="rowgroup" headers="planet-jovian planet-group">
+                      Gas giants
+                    </th>
+                    <th id="planet-jupiter" scope="row" headers="planet-gas planet-jovian planet-name">Jupiter</th>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-mass">1898</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-diameter">142,984</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-density">1326</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-gravity">23.1</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-daylength">9.9</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-distance">778.6</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-temperature">-110</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-moons">67</td>
+                    <td headers="planet-jupiter planet-gas planet-jovian planet-notes">
+                      The largest planet with raging storms
+                    </td>
+                  </tr>
+                  <tr>
+                    <th id="planet-saturn" scope="row" headers="planet-gas planet-jovian planet-name">Saturn</th>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-mass">568</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-diameter">120,536</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-density">687</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-gravity">9.0</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-daylength">10.7</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-distance">1433.5</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-temperature">-140</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-moons">62</td>
+                    <td headers="planet-saturn planet-gas planet-jovian planet-notes">The planet with the "rings"</td>
+                  </tr>
+                  <tr>
+                    <th id="planet-ice" rowspan="2" scope="rowgroup" headers="planet-jovian planet-group">
+                      Ice giants
+                    </th>
+                    <th id="planet-uranus" scope="row" headers="planet-ice planet-jovian planet-name">Uranus</th>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-mass">86.8</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-diameter">51,118</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-density">1271</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-gravity">8.7</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-daylength">17.2</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-distance">2872.5</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-temperature">-195</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-moons">27</td>
+                    <td headers="planet-uranus planet-ice planet-jovian planet-notes">The planet pronounced funny</td>
+                  </tr>
+                  <tr>
+                    <th id="planet-neptun" scope="row" headers="planet-ice planet-jovian planet-name">Neptun</th>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-mass">102</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-diameter">49,528</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-density">1638</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-gravity">11.0</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-daylength">16.1</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-distance">4495.1</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-temperature">-200</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-moons">14</td>
+                    <td headers="planet-neptun planet-ice planet-jovian planet-notes">The icy planet very far out</td>
+                  </tr>
+                  <tr>
+                    <th id="planet-dwarf" colspan="2" scope="rowgroup" headers="planet-group">Dwarf planets*</th>
+                    <th id="planet-pluto" scope="row" headers="planet-dwarf planet-name"><s>Pluto</s></th>
+                    <td headers="planet-pluto planet-dwarf planet-mass">0.0146</td>
+                    <td headers="planet-pluto planet-dwarf planet-diameter">2,370</td>
+                    <td headers="planet-pluto planet-dwarf planet-density">2095</td>
+                    <td headers="planet-pluto planet-dwarf planet-gravity">0.7</td>
+                    <td headers="planet-pluto planet-dwarf planet-daylength">153.3</td>
+                    <td headers="planet-pluto planet-dwarf planet-distance">5906.4</td>
+                    <td headers="planet-pluto planet-dwarf planet-temperature">-225</td>
+                    <td headers="planet-pluto planet-dwarf planet-moons">5</td>
+                    <td headers="planet-pluto planet-dwarf planet-notes">
+                      *Declassified as a planet in 2006, but this
+                      <a
+                        href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+                        title="An article about why Pluto might actually be a planet"
+                        target="_blank"
+                        rel="external noopener noreferrer"
+                        >remains controversial</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="12">
+                      Please <em>do not</em> ask why the sun is not listed!<br />
+                      That would hurt its feelings...
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </div>
         </section>
-        <hr class="drop-shadow" />
         <!-- || misc -->
         <section class="section-misc" aria-labelledby="misc-title">
           <h3 id="misc-title">Misc.</h3>
@@ -580,70 +650,115 @@
                 href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer"
                 title="Front-end web developer article on MDN"
                 target="_blank"
+                rel="external noopener noreferrer"
                 >&quot;front-end web developer learning pathway&quot;</a
               >
               from the
-              <a href="https://developer.mozilla.org/" title="MDN Web Docs homepage" target="_blank">MDN Web Docs</a>
+              <a
+                href="https://developer.mozilla.org/"
+                title="MDN Web Docs website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >MDN Web Docs</a
+              >
             </li>
             <li>
               Definitions:
-              <a href="https://www.wikipedia.org/" title="Wikipedia homepage" target="_blank">Wikipedia</a>
+              <a
+                href="https://www.wikipedia.org/"
+                title="Wikipedia website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >Wikipedia</a
+              >
             </li>
             <li>
               Favicons:
-              <a href="https://twemoji.twitter.com/" title="Twemoji homepage" target="_blank">Twemoji</a>
-            </li>
-            <li>
-              SVG background:
-              <a href="https://bgjar.com/" title="BGJar homepage" target="_blank">BGJar</a>
+              <a
+                href="https://twemoji.twitter.com/"
+                title="Twemoji website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >Twemoji</a
+              >
             </li>
             <li>
               SVG icons:
-              <a href="https://feathericons.com/" title="Feather homepage" target="_blank">Feather</a>
+              <a
+                href="https://feathericons.com/"
+                title="Feather website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >Feather</a
+              >
             </li>
             <li>
               Typewriter effect:
-              <a href="https://www.30secondsofcode.org/" title="30 seconds of code homepage" target="_blank"
+              <a
+                href="https://www.30secondsofcode.org/"
+                title="30 seconds of code website"
+                target="_blank"
+                rel="external noopener noreferrer"
                 >30 seconds of code</a
               >
             </li>
             <li>
               Image:
-              <a href="https://openclipart.org/" title="Open Clipart homepage" target="_blank">Open Clipart</a>
+              <a
+                href="https://openclipart.org/"
+                title="Open Clipart website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >Open Clipart</a
+              >
             </li>
             <li>
               Video and Audio:
-              <a href="https://pixabay.com/" title="Pixabay homepage" target="_blank">Pixabay</a>
+              <a href="https://pixabay.com/" title="Pixabay website" target="_blank" rel="external noopener noreferrer"
+                >Pixabay</a
+              >
             </li>
             <li>
               Planetary data:
-              <a href="https://www.nasa.gov/" title="NASA homepage" target="_blank">NASA</a>
+              <a href="https://www.nasa.gov/" title="NASA website" target="_blank" rel="external noopener noreferrer"
+                >NASA</a
+              >
             </li>
             <li>
               Button design:
-              <a href="https://uiverse.io/" title="Uiverse.io homepage" target="_blank">Uiverse.io</a>
+              <a
+                href="https://uiverse.io/"
+                title="Uiverse.io website"
+                target="_blank"
+                rel="external noopener noreferrer"
+                >Uiverse.io</a
+              >
             </li>
             <li>
               Contact map:
-              <a href="https://www.openstreetmap.org/about" title="OpenStreetMap about page" target="_blank"
+              <a
+                href="https://www.openstreetmap.org/about"
+                title="OpenStreetMap about page"
+                target="_blank"
+                rel="external noopener noreferrer"
                 >OpenStreetMap</a
               >
             </li>
           </ol>
           <h5>Repository</h5>
-          <ol start="12">
+          <ol start="11">
             <li>
               Visit the
               <a
                 href="https://github.com/glmvc/first-site-upgrade"
                 title="first-site-upgrade GitHub repository"
                 target="_blank"
+                rel="external noopener noreferrer"
                 >GitHub repository of this website project</a
               >
             </li>
           </ol>
         </section>
-        <hr class="drop-shadow" />
       </main>
       <!--=====================================================-->
       <!-- || footer -->
@@ -654,7 +769,7 @@
         <div class="features-wrapper">
           <div class="feature">
             <h6>Change your username:</h6>
-            <button type="button" id="change-username" class="button">Change user</button>
+            <button type="button" id="js-change-username" class="button">Change user</button>
           </div>
           <div class="feature">
             <h6>Enhance your coding senses:</h6>
@@ -677,13 +792,14 @@
                   href="https://pixabay.com/music/electronic-cyberpunk-2099-10701/"
                   title="Pixabay audio source"
                   target="_blank"
+                  rel="external noopener noreferrer"
                   >Pixabay</a
                 >)
               </figcaption>
             </figure>
           </div>
         </div>
-        <hr class="drop-shadow" />
+        <hr />
         <!-- || contact details (address) -->
         <address>
           <div class="contact-details">
@@ -709,7 +825,7 @@
             loading="lazy"
           ></iframe>
         </address>
-        <hr class="drop-shadow" />
+        <hr />
         <!-- || info (details) -->
         <details open>
           <summary class="centered">Info</summary>

@@ -1,7 +1,7 @@
 /* i am a comment (a browser ignores comments as it renders the code) */
 
 html {
-    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels */
     font-family: "Source Code Pro", monospace; /* from google fonts */
     color: whitesmoke;
     background-color: #1A1A1A;
@@ -19,7 +19,7 @@ p, li {
 }
 
 body {
-    width: 800px; /* forces body to always be 800px */
+    width: 800px; /* forces the body to always be 800px */
     margin: 0 auto; /* first value: top & bottom; second value: left & right (2 values order) */
     background-color: #2B2B2B;
     padding: 0 30px 30px 30px; /* 4 values order: top, right, bottom, left = clockwise (for margin the same logic) */
@@ -62,7 +62,7 @@ h5, h6 {
 }
 
 img {
-    display: block; /* images are inline elements -> give them block-level behaviour to make the auto margin trick working */
+    display: block; /* images are inline elements - give them block-level behavior to make the auto margin trick working */
     margin: 0 auto;
 }
 

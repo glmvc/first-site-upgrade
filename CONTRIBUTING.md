@@ -2,22 +2,29 @@
 
 ## 🚧 prerequisite knowledge
 
-- the principles of **[open source](https://opensource.org/ "open source initiative homepage")** and code licensing
+- the principles of **[open source](https://opensource.org/ "open source initiative website")** and code licensing
     - [open source etiquette](https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette "open source etiquette article on mdn")
-- version control: **[git](https://git-scm.com/ "git homepage")** and **[github](https://github.com/ "github homepage")**
+- version control: **[git](https://git-scm.com/ "git website")** and **[github](https://github.com/ "github website")**
     - [get started with github](https://docs.github.com/en/get-started "get started with github documentation")
     - [github git guides](https://github.com/git-guides "github git guide article")
     - [git cheat sheet](https://training.github.com/ "github training git cheat sheets")
 - used **web technologies** (currently mainly [html](https://developer.mozilla.org/en-US/docs/Web/HTML "html resources on mdn"), [css](https://developer.mozilla.org/en-US/docs/Web/CSS "css resources on mdn") and [js](https://developer.mozilla.org/en-US/docs/Web/JavaScript "javascript resources on mdn"))
     - [learn web development](https://developer.mozilla.org/en-US/docs/Learn "learn web development article on mdn")
 - integrated development environments (ides)
-    - **[visual studio code](https://code.visualstudio.com/ "visual studio code homepage")** is *strictly advised* for this project
+    - **[visual studio code](https://code.visualstudio.com/ "visual studio code website")** is *strictly advised* for this project
 
 ## 🎩 style guide
 
 a **style guide** for files and code has *not yet* been defined
 
-> the **main goal** is always to make the project *look* and *feel* like it was created and maintained by a single person
+however, the following resources provide a **basis**
+
+- [html/css style guide](https://google.github.io/styleguide/htmlcssguide.html "html/css style guide by google")
+- [html/css code guide](https://codeguide.co/ "code guide for html and css by mdo")
+- [css guidelines](https://cssguidelin.es/ "css guidelines by harry roberts")
+- [cube css](https://cube.fyi/ "cube css methodology")
+
+> the **main goal** is *always* to make the project *look* and *feel* like it was created and maintained by a **single person**
 
 ## 🏗️ setting up git and github
 
@@ -169,10 +176,11 @@ the following steps use **git on the command line**, but if you're already famil
 ### ⚙️ general
 
 - [ ] **format code** with the specified formatter
-- [ ] **optimize files** with the appropriate tools:
-    - [image compression tool](https://tinypng.com/ "tinypng homepage")
+- [ ] **check** and **optimize files** with the appropriate tools
+    - [image compression tool](https://tinypng.com/ "tinypng website")
     - [svg optimizer](https://jakearchibald.github.io/svgomg/ "svgomg tool")
-- [ ] **validate and test changes** with the *appropriate tools*
+    - [font analyzer](https://wakamaifondue.com/ "wakamai fondue font tool")
+- [ ] **validate and test changes** with the appropriate tools
     - [w3c validators](https://www.w3.org/developers/tools/ "w3c validators and tools")
     - [pagespeed insights](https://pagespeed.web.dev/ "pagespeed insights tool")
     - [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/ "google chrome lighthouse overview article")
@@ -184,10 +192,12 @@ the following steps use **git on the command line**, but if you're already famil
 - [ ] **browser developer tools** also have a bunch of utilities for testing (performance, accessibility, etc.)
     - [chrome devtools](https://developer.chrome.com/docs/devtools/ "google chrome developer tools")
     - [firefox devtools](https://firefox-source-docs.mozilla.org/devtools-user/ "firefox developer tools")
+    - [safari devtools](https://developer.apple.com/safari/tools/ "safari developer tools")
 - [ ] **test with javascript disabled** in the browser (`noscript`)
 - [ ] the **[404 site](https://glmvc.github.io/first-site-upgrade/404.html "first-site-upgrade 404 site") ([`404.html`](404.html "first-site-upgrade 404 html file on github"))** is a **special site** and *must not* be skipped during testing
 - [ ] **test for print**, as sites are also available and styled for it
-- [ ] **keep the [changelog (`CHANGELOG.md`)](CHANGELOG.md "first-site-upgrade changelog markdown file on github") up to date** according to the changes made
+- [ ] **keep the [changelog (`CHANGELOG.md`)](CHANGELOG.md "first-site-upgrade changelog markdown file on github")** and **[readme (`README.md`)](README.md "first-site-upgrade readme markdown file on github") up-to-date** according to the changes made
+    - [pagespeed insights for readme (svg api)](https://github.com/ankurparihar/readme-pagespeed-insights "pagespeed insights for readme github repository")
 
 ### `</>` html related changes
 

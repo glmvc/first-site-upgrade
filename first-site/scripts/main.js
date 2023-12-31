@@ -1,6 +1,6 @@
 /* i am a comment
    (a browser ignores text marked as comments) */
-// i am single line comment
+// i am a single line comment
 
 const correctedHeading = document.querySelector('h1');
 correctedHeading.textContent = 'Hello, World!';
@@ -32,7 +32,7 @@ myImage.onclick = function() {
 }
 
 
-// personalised welcome message code:
+// personalized welcome message code:
 
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h2');
