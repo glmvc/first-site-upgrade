@@ -337,15 +337,15 @@
               class="centered box-shadow"
               width="400"
               height="225"
-              poster="images/hello-world-video-poster.png"
+              poster="images/hello-world-video-poster.jpeg"
               controls
               loop
               muted
               playsinline
               autoplay
             >
-              <source src="videos/hello-world.webm" type="video/webm" />
-              <source src="videos/hello-world.mp4" type="video/mp4" />
+              <source src="videos/hello-world.webm" type="video/webm; codecs=av01.0.08M.08.0.110.06.06.06.0" />
+              <source src="videos/hello-world.mp4" type="video/mp4; codecs=avc1.4D0028" />
               <track kind="descriptions" src="videos/hello-world.vtt" srclang="en-US" label="English (US)" />
               <p>
                 Sorry, your browser doesn't support HTML 5 video. But don't worry, here's a
@@ -452,7 +452,7 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th id="planet-group" colspan="2" scope="col">
+                    <th id="planet-group" colspan="2" scope="colgroup">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="160"
@@ -605,7 +605,7 @@
                     <td headers="planet-neptun planet-ice planet-jovian planet-notes">The icy planet very far out</td>
                   </tr>
                   <tr>
-                    <th id="planet-dwarf" colspan="2" scope="rowgroup" headers="planet-group">Dwarf planets*</th>
+                    <th id="planet-dwarf" colspan="2" scope="row" headers="planet-group">Dwarf planets*</th>
                     <th id="planet-pluto" scope="row" headers="planet-dwarf planet-name"><s>Pluto</s></th>
                     <td headers="planet-pluto planet-dwarf planet-mass">0.0146</td>
                     <td headers="planet-pluto planet-dwarf planet-diameter">2,370</td>
@@ -775,7 +775,7 @@
             <h6>Enhance your coding senses:</h6>
             <figure>
               <audio id="audio" class="box-shadow" controls loop preload="auto">
-                <source src="audios/cyberpunk.ogg" type="audio/ogg" />
+                <source src="audios/cyberpunk.ogg" type="audio/ogg; codecs=vorbis" />
                 <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
                 <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
                 <p>

@@ -39,7 +39,7 @@ however, the following resources provide a **basis**
 
 for *more complex* changes and tasks, you'll have to use [git](https://git-scm.com/doc "git documentation"), a client like [github desktop](https://docs.github.com/en/get-started/using-github/github-desktop "github desktop article on github docs"), or the [github cli](https://docs.github.com/en/get-started/using-github/github-cli "github cli article on github docs")
 
-the following steps use **git on the command line**, but if you're already familiar with one of the options mentioned above, feel free to use the one you prefer
+the following steps use **git on the command-line**, but if you're already familiar with one of the options mentioned above, feel free to use the one you prefer
 
 1. **[create a fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo "fork a repo article on github docs")** of the project repository (*"copy" the project on github*)
 

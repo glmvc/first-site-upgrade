@@ -585,7 +585,7 @@ function debounce(callback, delay = 100) {
     const dayOfBirth = String(dateOfBirth.getDate()).padStart(2, "0");
     const yearOfBirth = dateOfBirth.getFullYear(dateOfBirth);
     const birthDate = `${monthOfBirth}-${dayOfBirth}`;
-    // const birthDate = "12-31"; /* testing */
+    // const birthDate = "02-24"; /* testing */
 
     const today = new Date();
     const currentMonth = String(today.getMonth() + 1).padStart(2, "0"); // + 1 because january is 0
