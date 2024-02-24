@@ -514,7 +514,7 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
     </figure>
     ```
 
-- [x] **[Video](https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/ "Pixabay video source")** *embedded* within the `<article>`, *assigned* **intrinsic dimensions**, *supplemented* with a **poster** and **controls**, *played* in a **loop** and **automatically**, *provided* in **multiple formats** (**`WebM`** and **`MP4`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the video file**:
+- [x] **[Video](https://pixabay.com/videos/hello-world-pc-retro-monitor-28320/ "Pixabay video source")** *embedded* within the `<article>`, *assigned* **intrinsic dimensions**, *supplemented* with a **poster** and **controls**, *played* in a **loop** and **automatically**, *provided* in **multiple formats** (**`WebM`** and **`MPEG-4`**-**`MP4`**) with the corresponding **codecs** (**`AV1`** and **`AVC`**-**`H.264`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the video file**:
 
     ```html
     <figure class="centered">
@@ -522,15 +522,15 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
         class="centered box-shadow"
         width="400"
         height="225"
-        poster="images/hello-world-video-poster.png"
+        poster="images/hello-world-video-poster.jpeg"
         controls
         loop
         muted
         playsinline
         autoplay
       >
-        <source src="videos/hello-world.webm" type="video/webm" />
-        <source src="videos/hello-world.mp4" type="video/mp4" />
+        <source src="videos/hello-world.webm" type="video/webm; codecs=av01.0.08M.08.0.110.06.06.06.0" />
+        <source src="videos/hello-world.mp4" type="video/mp4; codecs=avc1.4D0028" />
         <track kind="descriptions" src="videos/hello-world.vtt" srclang="en-US" label="English (US)" />
         <p>
           Sorry, your browser doesn't support HTML 5 video. But don't worry, here's a
@@ -553,12 +553,12 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
     </figure>
     ```
 
-- [x] **[Audio](https://pixabay.com/music/electronic-cyberpunk-2099-10701/ "Pixabay audio source")** *embedded* within the `<footer>`, *supplemented* with **controls**, *played* in a **loop**, *indicated* to the browser that the **whole file can be downloaded**, *provided* in **multiple formats** (**`Ogg`** and **`MP3`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the audio file**:
+- [x] **[Audio](https://pixabay.com/music/electronic-cyberpunk-2099-10701/ "Pixabay audio source")** *embedded* within the `<footer>`, *supplemented* with **controls**, *played* in a **loop**, *indicated* to the browser that the **whole file can be downloaded**, *provided* in **multiple formats** (**`Ogg`** and **`MPEG-1 Audio Layer 3`**-**`MP3`**) with the corresponding **codecs** (**`Vorbis`**), *described* with a **description** using the **`WebVTT` format**, and *enhanced* with a **fallback text** and **hyperlink to the audio file**:
 
     ```html
     <figure>
       <audio id="audio" class="box-shadow" controls loop preload="auto">
-        <source src="audios/cyberpunk.ogg" type="audio/ogg" />
+        <source src="audios/cyberpunk.ogg" type="audio/ogg; codecs=vorbis" />
         <source src="audios/cyberpunk.mp3" type="audio/mpeg" />
         <track kind="descriptions" src="audios/cyberpunk.vtt" srclang="en-US" label="English (US)" />
         <p>
@@ -711,7 +711,7 @@ Best of all, there's *plenty more* to come! Take a look at the **"Future Feature
           </colgroup>
           <thead>
             <tr>
-              <th id="..." colspan="2" scope="col">...</th>
+              <th id="..." colspan="2" scope="colgroup">...</th>
               <th id="..." scope="col">...</th>
               <th id="..." scope="col" abbr="...">...</th>
               ...
